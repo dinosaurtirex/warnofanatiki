@@ -1,0 +1,11 @@
+//Doit etre synchro avec EntityWorld.h
+
+WorldIndices_Default is 0
+WorldIndices_Groups is 1
+WorldIndices_Team is 2
+WorldIndices_Alliance is 3
+WorldIndices_Fires is 4
+WorldIndices_Smokes is 5
+WorldIndices_IA_Objective is 6
+WorldIndices_IA_Group is 7
+WorldIndices_Mimetic_Units is 8

@@ -1,0 +1,139 @@
+template Template_CircleDescriptor
+[
+    RadiusGRU,
+    Color = [220, 222, 221, 127],
+    Thickness = 700,
+    ShowDistanceText = false,
+    TextColor = [230, 230, 230, 255],
+    TextSize = 3500
+] is TFeedbackLineOfSightCircleDescriptor
+(
+    RadiusGRU = <RadiusGRU>
+    Color = <Color>
+    Thickness = <Thickness>
+    ShowText = <ShowDistanceText>
+    TextLayout = '%1m'
+    TextColor = <TextColor>
+    TextSize = <TextSize>
+)
+
+FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
+(
+    AnimationDuration = 0.30
+
+    RenderRangeGRU = 4240
+    DefaultVisionRangeGRU = 3534
+
+    BorderColor = [255, 255, 255, 255]
+    BorderThickness = 2500
+    BorderRadiusStartFadeGRU = 4240
+    BorderRadiusEndFadeGRU = 4594
+
+    FillColor = [255, 0, 0, 170] //[178, 153, 163, 255]
+    FillRadiusStartFadeGRU = 4240
+    FillRadiusEndFadeGRU = 4594
+
+    CircleDotDescriptor = TFeedbackLineOfSightCircleDescriptor
+    (
+        RadiusGRU = 5.43625985322
+        Color = [216, 201, 181, 127]
+        Thickness = 650
+        ShowText = false
+        TextLayout = 'Nop %1'
+        TextColor = [0, 0, 0, 0]
+        TextSize = 0
+    )
+
+    CirclesDescriptors =
+    [
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 100
+            Thickness = 1000
+            ShowDistanceText = true
+            TextSize = 3500
+            Color = [216, 201, 181, 80]
+        ),
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 500
+            Thickness = 1000
+            ShowDistanceText = true
+            TextSize = 3500
+            Color = [216, 201, 181, 80]
+        ),
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 1000
+            Thickness = 1000
+            TextSize = 5000
+            ShowDistanceText = true
+        ),
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 1500
+            Thickness = 1000
+            ShowDistanceText = true
+            TextSize = 3500
+            Color = [216, 201, 181, 80]
+        ),
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 2000
+            Thickness = 1200
+            TextSize = 5000
+            ShowDistanceText = true
+        ),
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 2500
+            Thickness = 1000
+            ShowDistanceText = true
+            TextSize = 3500
+        ),
+    ]
+
+    CircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor
+    (
+        RadiusGRU = 1177
+        Color = [236, 221, 201, 200]
+        Thickness = 2000
+        ShowText = true
+        TextLayout = "Error %1"
+        TextColor = [230, 230, 230, 255]
+        TextSize = 5000
+    )
+
+    DeactivatedCircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor
+    (
+        RadiusGRU = 1177
+        Color = [150, 150, 150, 100]
+        Thickness = 1500
+        ShowText = true
+        TextLayout = "Error %1"
+        TextColor = [150, 150, 150, 255]
+        TextSize = 5000
+    )
+
+    RaysAngleInDegree = 70
+    RayColor = [216, 201, 181, 127]
+    RayThickness = 1600
+    RayStartDistanceStartFadeGRU = 177
+    RayStartDistanceEndFadeGRU = 283
+    RayEndDistanceStartFadeGRU = 3533.2
+    RayEndDistanceEndFadeGRU = 3533.5
+)
+
+FeedbackLineOfSightResource is TFeedbackLineOfSightResource
+(
+    UserInputLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_LineOfSight
+    DisplayLineOfSightMapping = $/KeyboardOption/Mapping_LineOfSight
+    Descriptor = FeedbackLineOfSightDescriptor
+    Camera = $/M3D/Misc/CameraPrincipale
+    World3D = $/M3D/Scene/DefaultWorld
+    RenderLayer = TRenderLayerSelector(RenderLayerName = "Calque_3DLineOfSight")
+    WorldFloorTerrainHeightProxy = $/M3D/Scene/WorldFloorTerrainHeightProxy
+    MaterialGrid = $/M3D/Shader/Material3DLineOfSightGrid
+
+    ShowAllWeaponsRanges = $/GUIOption/LoSShowAllWeapons
+)

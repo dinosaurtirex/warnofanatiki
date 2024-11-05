@@ -1,0 +1,447 @@
+StrategicScriptedLabelResources is TUIScriptedAnimatedLabelResources
+(
+    Layer = $/UserInterface/UILayer_Labels
+    WorldFloorProxy = $/M3D/Scene/WorldFloorOutMapProxy
+
+    LabelMagnificationMultiplier = 1.0
+
+    AnimationDurationInSecond = 2.0
+
+    LabelDescriptors = MAP
+    [
+        ("Primary", InfoStrategicObjectiveLabel(AnimPriority = 100)),
+        ("Bonus", BonusStrategicObjectiveLabel),
+        ("InfoObj", InfoStrategicObjectiveLabel(AnimPriority = 25)),
+        ("CapturePoint", CaptureStrategicObjectiveLabel),
+        ("fixed", InfoStrategicFixedLabel()),
+    ]
+
+    FeedbackThicknessCapture = 700.0
+    FlagBorderColor = RGBA[184.0, 184.0, 184.0, 255.0] //La couleur de la bordure autour du drapeau
+    FlagBorderWidth = 2 // La largeur de la bordure autour du drapeau
+    FlagNotchWidth = 0.2 //Par exemple, 0.2 = l'encoche du drapeau fait 20% de la largeur du "FlagContainer"
+
+    NationaliteTextureTokens = MAP
+    [
+        (ENationalite/OTAN, "CommonTexture_MotherCountryFlag_NATO_small"),
+        (ENationalite/PACT, "CommonTexture_MotherCountryFlag_PACT_small"),
+    ]
+    NoOwnerTexture = "CommonTexture_MotherCountryFlag_NoNation_small"
+    NoOwnerPlayerColorIndex = PlayerColor/Gris
+)
+
+BonusStrategicObjectiveLabel is StrategicObjectiveLabelTemplate
+(
+    NewAnimatedLabelToken = "OBJ_NEWS"
+    AnimPriority = 50
+)
+
+private template InfoStrategicObjectiveLabel
+[
+    AnimPriority : int,
+]
+is  TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 0.0
+    AltitudeMaxSize = 100.0
+    MinScale = 0.0
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = "OBJ_NEWI"
+    AnimPriority = <AnimPriority>
+
+    LabelTransformation = TLabelTransformPreTranslateFaceCamFakePerspective
+    (
+        ScalePerAltitudeConstReso = 0.6
+        Camera = $/M3D/Misc/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        ConstnessFactor = 0.6
+    )
+
+    ComponentDescriptor = BUCKListDescriptor
+    (
+        Axis = ~/ListAxis/Vertical
+        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+        ComponentFrame = TUIFramePropertyRTTI
+        (
+            MagnifiableWidthHeight = [0, 0]
+            MagnifiableOffset = [0, -100]
+        )
+        Elements =
+        [
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        PixelWidthHeight = [DistanceBetweenExternalAndInternalBorder * 2.0 + 1.0, DistanceBetweenExternalAndInternalBorder + 1.0]
+                        MagnifiableWidthHeight = [50, 0]
+                    )
+                )
+            ),
+
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        MagnifiableWidthHeight = [32.0, 8.0]
+                        AlignementToAnchor = [0.5, 0.0]
+                        AlignementToFather = [0.5, 0.0]
+                    )
+
+                    FitStyle = ~/ContainerFitStyle/FitToContent
+
+                    Components =
+                    [
+
+
+                        ObjectiveLabelText
+                        (
+                            ElementName = "Title"
+
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                MagnifiableWidthHeight = [150, 0.0]
+                                AlignementToFather = [0.5, 0.5]
+                                AlignementToAnchor = [0.5, 0.5]
+                            )
+
+                            TypefaceToken = "Eurostyle_Medium"
+                            TextSize = "20"
+                            TextColor = "ObjectiveLabel/Primary/Title"
+
+                            Alignment = UIText_Center
+
+                            HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+                        )
+
+
+                    ]
+                )
+            ),
+
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        PixelWidthHeight = [DistanceBetweenExternalAndInternalBorder * 2.0 + 1.0, DistanceBetweenExternalAndInternalBorder + 1.0]
+                        MagnifiableWidthHeight = [50, 0]
+                    )
+                )
+            )
+        ]
+
+        BackgroundComponents =
+        [
+            PanelRoundedCorner
+            (
+                BackgroundBlockColorToken = 'SM_LDhint_texte_gen'
+                BorderLineColorToken = 'SM_LDhint_texte'
+                BorderThicknessToken = '2'
+            ),
+            BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [ 2.0, 100.0 ]
+                    AlignementToAnchor = [ 0.0, 0.0 ]
+                    AlignementToFather = [ 0.0, 0.0 ]
+                    MagnifiableOffset = [-4,0]
+                )
+
+                ElementName = "Pole"
+
+                HasBackground = true
+                BackgroundBlockColorToken = 'SM_LDhint_texte'
+            ),
+        ]
+
+        ForegroundComponents =
+        [
+            BUCKTextDescriptor
+            (
+                ElementName = "HeadingText"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    //RelativeWidthHeight = [1.0, 0.0]
+                    MagnifiableOffset = [0.0, -5.0]
+                    AlignementToAnchor = [0.5, 1.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+                ParagraphStyle = paragraphStyleTextCenter
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+
+                TextDico = ~/LocalisationConstantes/dico_maps
+                TextColor = "BlancTexte"
+                TextSize = "22"
+            )
+        ]
+    )
+)
+//-------------------------------------------------------------------------------------
+private template InfoStrategicFixedLabel
+[
+    AnimPriority : int = 50,
+]
+is  TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 0.0
+    AltitudeMaxSize = 100.0
+    MinScale = 0.0
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = "OBJ_NEWI"
+    AnimPriority = <AnimPriority>
+
+    LabelTransformation = TLabelTransformPreTranslateFaceCamFakePerspective
+    (
+        ScalePerAltitudeConstReso = 0.6
+        Camera = $/M3D/Misc/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        ConstnessFactor = 0.6
+    )
+
+    ComponentDescriptor = BUCKListDescriptor
+    (
+        Axis = ~/ListAxis/Vertical
+        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+        ComponentFrame = TUIFramePropertyRTTI
+        (
+            MagnifiableWidthHeight = [0, 0]
+            MagnifiableOffset = [0, -140]
+            AlignementToAnchor = [0.5, 0.0]
+            AlignementToFather = [0.5, 0.0]
+        )
+        Elements =
+        [
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        PixelWidthHeight = [DistanceBetweenExternalAndInternalBorder * 2.0 + 1.0, DistanceBetweenExternalAndInternalBorder + 1.0]
+                        MagnifiableWidthHeight = [50, 0]
+                    )
+                )
+            ),
+
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        MagnifiableWidthHeight = [32.0, 8.0]
+                        AlignementToAnchor = [0.5, 0.0]
+                        AlignementToFather = [0.5, 0.0]
+                    )
+
+                    FitStyle = ~/ContainerFitStyle/FitToContent
+
+                    Components =
+                    [
+                        BUCKTextDescriptor
+                        (
+                            ElementName = "Title"
+
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                MagnifiableWidthHeight = [150, 0.0]
+                                AlignementToFather = [0.5, 0.5]
+                                AlignementToAnchor = [0.5, 0.5]
+                                )
+                            ParagraphStyle = paragraphStyleTextCenter
+                            TextStyle = "Default"
+                            VerticalFitStyle = ~/FitStyle/FitToContent
+                            HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+
+                            BigLineAction = ~/BigLineAction/MultiLine
+                            // TextToken = 'PIU_weap'
+                            // TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                            TextDico = ~/LocalisationConstantes/dico_maps
+
+                            HasBackground = true
+                            BackgroundBlockColorToken = 'SM_LDhint_texte_gen'
+
+                            TypefaceToken = "Bombardier"
+                            TextSize = "16"
+                            TextColor = "ObjectiveLabel/Primary/Title"
+
+
+
+                        )
+
+
+                    ]
+                )
+            ),
+
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        PixelWidthHeight = [DistanceBetweenExternalAndInternalBorder * 2.0 + 1.0, DistanceBetweenExternalAndInternalBorder + 1.0]
+                        MagnifiableWidthHeight = [50, 0]
+                    )
+                )
+            )
+        ]
+
+        BackgroundComponents =
+        [
+            // PanelRoundedCorner
+            // (
+            //     BackgroundBlockColorToken = 'SM_LDhint_texte_gen'
+            //     BorderLineColorToken = 'SM_LDhint_texte'
+            //     BorderThicknessToken = '2'
+            // ),
+            BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [ 2.0, 140.0 ]
+                    AlignementToAnchor = [ 0.0, 0.0 ]
+                    AlignementToFather = [ 0.0, 0.0 ]
+                    MagnifiableOffset = [-4,0]
+                )
+
+                ElementName = "Pole"
+
+                HasBackground = true
+                BackgroundBlockColorToken = 'SM_LDhint_texte'
+
+                Components =
+                [
+                ]
+            ),
+        ]
+
+        ForegroundComponents =
+        [
+            BUCKTextDescriptor
+            (
+                ElementName = "HeadingText"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    //RelativeWidthHeight = [1.0, 0.0]
+                    MagnifiableOffset = [0.0, -5.0]
+                    AlignementToAnchor = [0.5, 1.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+                ParagraphStyle = paragraphStyleTextCenter
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+
+                TextDico = ~/LocalisationConstantes/dico_maps
+                TextColor = "BlancTexte"
+                TextSize = "22"
+            )
+        ]
+    )
+)
+//-------------------------------------------------------------------------------------
+CaptureStrategicObjectiveLabel is StrategicObjectiveLabelTemplate
+(
+    NewAnimatedLabelToken = "OBJ_NEWCP"
+    AnimPriority = 50
+)
+
+private template StrategicObjectiveLabelTemplate
+[
+    NewAnimatedLabelToken : string = "",
+    AnimPriority : int,
+]
+is TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 0.0
+    AltitudeMaxSize = 500000.0
+    MinScale = 0.0
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = <NewAnimatedLabelToken>
+    AnimPriority = <AnimPriority>
+
+    LabelTransformation = TLabelTransformPreTranslateFaceCamFakePerspective
+    (
+        ScalePerAltitudeConstReso = 0.6
+        Camera = $/M3D/Misc/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        ConstnessFactor = 0.6
+    )
+
+    ComponentDescriptor = BUCKListDescriptor
+    (
+        Axis = ~/ListAxis/Vertical
+        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+        ComponentFrame = TUIFramePropertyRTTI
+        (
+            AlignementToAnchor = [ 0.5, 1.0 ]
+        )
+
+        Elements =
+        [
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKContainerDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        MagnifiableWidthHeight = [ 1.0, 1.0 ]
+                    )
+
+                    Components =
+                    [
+                        //Poteau du drapeau
+                        BUCKContainerDescriptor
+                        (
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                MagnifiableWidthHeight = [ 2.0, 60.0 ]
+                                AlignementToAnchor = [ 0.5, 1.0 ]
+                                AlignementToFather = [ 0.5, 1.0 ]
+                            )
+
+                            ElementName = "Pole"
+
+                            HasBackground = true
+                            BackgroundBlockColorToken = 'Steelman_Objective_Pole'
+                        ),
+                        //Forme du drapeau (ce container est récupéré dans le C++ et la texture du drapeau est découpée puis appliquée à l'intérieur)
+                        BUCKHintableAreaDescriptor
+                        (
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                MagnifiableWidthHeight = [ 48.0, 30.0 ]
+                                MagnifiableOffset = [4, -59.0]
+                                AlignementToFather = [ 0.5, 1.0 ]
+                            )
+
+                            ElementName = "FlagContainer"
+
+                            HintStandardBUCKComponent = BUCKSpecificStrategicHint
+                            MaskEvents = true //Évite que le hint du terrain s'affiche si la souris est immobile sur le drapeau
+                        )
+                    ]
+                )
+            )
+        ]
+    )
+)

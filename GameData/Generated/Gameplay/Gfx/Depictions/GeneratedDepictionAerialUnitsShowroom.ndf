@@ -1,0 +1,5783 @@
+// Ne pas éditer, ce fichier est généré par DepictionAerialUnitsFileWriter_Specific_Showroom
+
+
+Gfx_A109BA_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A109BA_BEL
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_A10_Thunderbolt_II_ATGM_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_A10_Thunderbolt_II_ATGM_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US_train
+        ),
+    ]
+)
+Gfx_A10_Thunderbolt_II_Rkt_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_Rkt_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_A10_Thunderbolt_II_Rkt_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_Rkt_US_train
+        ),
+    ]
+)
+Gfx_A10_Thunderbolt_II_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_A10_Thunderbolt_II_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_US_train
+        ),
+    ]
+)
+Gfx_A37B_Dragonfly_HE_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_HE_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_A37B_Dragonfly_HE_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_HE_US_train
+        ),
+    ]
+)
+Gfx_A37B_Dragonfly_NPLM_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_NPLM_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_A37B_Dragonfly_NPLM_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_NPLM_US_train
+        ),
+    ]
+)
+Gfx_A37B_Dragonfly_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_A37B_Dragonfly_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_US_train
+        ),
+    ]
+)
+Gfx_AH1E_Cobra_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1E_Cobra_US,
+    ]
+)
+Gfx_AH1F_ATAS_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_ATAS_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1F_ATAS_US,
+    ]
+)
+Gfx_AH1F_CNITE_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_CNITE_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1F_CNITE_US,
+    ]
+)
+Gfx_AH1F_Cobra_NG_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_NG_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1F_Cobra_NG_US,
+    ]
+)
+Gfx_AH1F_Cobra_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1F_Cobra_US,
+    ]
+)
+Gfx_AH1F_HeavyHog_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_HeavyHog_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1F_HeavyHog_US,
+    ]
+)
+Gfx_AH1S_Cobra_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1S_Cobra_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH1S_Cobra_US,
+    ]
+)
+Gfx_AH64_Apache_ATAS_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_ATAS_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH64_Apache_ATAS_US,
+    ]
+)
+Gfx_AH64_Apache_NG_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_NG_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH64_Apache_NG_US,
+    ]
+)
+Gfx_AH64_Apache_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH64_Apache_US,
+    ]
+)
+Gfx_AH64_Apache_emp1_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp1_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH64_Apache_emp1_US,
+    ]
+)
+Gfx_AH64_Apache_emp2_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp2_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH64_Apache_emp2_US,
+    ]
+)
+Gfx_AH6C_Little_Bird_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH6C_Little_Bird_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_AH6C_Little_Bird_US,
+    ]
+)
+Gfx_AH6G_Little_Bird_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH6G_Little_Bird_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_III_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_III_SS11_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_SS11_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alouette_III_SS11_FR,
+    ]
+)
+Gfx_Alouette_III_reco_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_reco_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_II_CMD_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_II_CMD_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_II_reco_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_BEL
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_II_reco_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alouette_II_trans_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_trans_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Alpha_Jet_A_clu_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_clu_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_A_clu_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_clu_RFA_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_A_he_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_he_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_A_he_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_he_RFA_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_A_nplm_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_nplm_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_A_nplm_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_nplm_RFA_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_A_rkt_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_rkt_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_A_rkt_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_rkt_RFA_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_E_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_E_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_FR_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_E_NPLM_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_NPLM_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_E_NPLM_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_NPLM_FR_train
+        ),
+    ]
+)
+Gfx_Alpha_Jet_HE2_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_HE2_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Alpha_Jet_HE2_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_HE2_BEL_train
+        ),
+    ]
+)
+Gfx_Bo_105_CMD_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_CMD_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Bo_105_PAH_1A1_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1A1_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Bo_105_PAH_1_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Bo_105_reco_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_reco_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Bo_105_trans_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_trans_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Buccaneer_S2B_ATGM_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_ATGM_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Buccaneer_S2B_ATGM_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_ATGM_UK_train
+        ),
+    ]
+)
+Gfx_Buccaneer_S2B_GBU_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_GBU_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Buccaneer_S2B_GBU_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_GBU_UK_train
+        ),
+    ]
+)
+Gfx_Buccaneer_S2B_HE_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_HE_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Buccaneer_S2B_HE_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_HE_UK_train
+        ),
+    ]
+)
+Gfx_Buccaneer_S2B_SEAD_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_SEAD_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Buccaneer_S2B_SEAD_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_SEAD_UK_train
+        ),
+    ]
+)
+Gfx_CH47D_Chinook_supply_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH47D_Chinook_supply_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
+        ),
+    ]
+)
+Gfx_CH47_Chinook_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
+        ),
+    ]
+)
+Gfx_CH47_Chinook_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
+        ),
+    ]
+)
+Gfx_CH47_Super_Chinook_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Super_Chinook_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
+        ),
+    ]
+)
+Gfx_CH53G_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_CH53G_trans_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_trans_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_CM170_Magister_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_CM170_Magister_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_FR_train
+        ),
+    ]
+)
+Gfx_CM170_Magister_SS11_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_CM170_Magister_SS11_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR_train
+        ),
+    ]
+)
+Gfx_EF111_Raven_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_EF111_Raven_US
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_EF111_Raven_US_train
+        ),
+    ]
+)
+Gfx_EH60A_EW_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_EH60A_EW_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Ecureuil_20mm_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_20mm_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Ecureuil_reco_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_reco_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_F104G_Starfighter_AT_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_AT_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F104G_Starfighter_AT_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_AT_RFA_train
+        ),
+    ]
+)
+Gfx_F104G_Starfighter_HE_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_HE_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F104G_Starfighter_HE_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_HE_RFA_train
+        ),
+    ]
+)
+Gfx_F104G_Starfighter_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F104G_Starfighter_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_RFA_train
+        ),
+    ]
+)
+Gfx_F111E_Aardvark_CBU_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_CBU_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111E_Aardvark_CBU_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_CBU_US_train
+        ),
+    ]
+)
+Gfx_F111E_Aardvark_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111E_Aardvark_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_US_train
+        ),
+    ]
+)
+Gfx_F111E_Aardvark_napalm_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_napalm_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111E_Aardvark_napalm_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_napalm_US_train
+        ),
+    ]
+)
+Gfx_F111F_Aardvark_CBU_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_CBU_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111F_Aardvark_CBU_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_CBU_US_train
+        ),
+    ]
+)
+Gfx_F111F_Aardvark_LGB2_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB2_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111F_Aardvark_LGB2_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB2_US_train
+        ),
+    ]
+)
+Gfx_F111F_Aardvark_LGB_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111F_Aardvark_LGB_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB_US_train
+        ),
+    ]
+)
+Gfx_F111F_Aardvark_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111F_Aardvark_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_US_train
+        ),
+    ]
+)
+Gfx_F111F_Aardvark_napalm_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_napalm_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F111F_Aardvark_napalm_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_napalm_US_train
+        ),
+    ]
+)
+Gfx_F117_Nighthawk_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F117_Nighthawk_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F117_Nighthawk_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F117_Nighthawk_US_train
+        ),
+    ]
+)
+Gfx_F15C_Eagle_AA2_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA2_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F15C_Eagle_AA2_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA2_US_train
+        ),
+    ]
+)
+Gfx_F15C_Eagle_AA_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F15C_Eagle_AA_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US_train
+        ),
+    ]
+)
+Gfx_F15E_StrikeEagle_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F15E_StrikeEagle_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F15E_StrikeEagle_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F15E_StrikeEagle_US_train
+        ),
+    ]
+)
+Gfx_F16A_AA_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16A_AA_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_AA_BEL_train
+        ),
+    ]
+)
+Gfx_F16A_CBU_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_CBU_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16A_CBU_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_CBU_BEL_train
+        ),
+    ]
+)
+Gfx_F16C_LGB_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16C_LGB_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16C_LGB_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16C_LGB_US_train
+        ),
+    ]
+)
+Gfx_F16E_AA2_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA2_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_AA2_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA2_US_train
+        ),
+    ]
+)
+Gfx_F16E_AA_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_AA_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA_US_train
+        ),
+    ]
+)
+Gfx_F16E_AGM_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AGM_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_AGM_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AGM_US_train
+        ),
+    ]
+)
+Gfx_F16E_CBU_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_CBU_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_CBU_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_CBU_US_train
+        ),
+    ]
+)
+Gfx_F16E_HE_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_HE_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_HE_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_HE_US_train
+        ),
+    ]
+)
+Gfx_F16E_SEAD_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_SEAD_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_SEAD_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_SEAD_US_train
+        ),
+    ]
+)
+Gfx_F16E_TER_HE_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_TER_HE_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_TER_HE_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_TER_HE_US_train
+        ),
+    ]
+)
+Gfx_F16E_napalm_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_napalm_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F16E_napalm_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_napalm_US_train
+        ),
+    ]
+)
+Gfx_F4E_Phantom_II_AA_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AA_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4E_Phantom_II_AA_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AA_US_train
+        ),
+    ]
+)
+Gfx_F4E_Phantom_II_AT_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AT_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4E_Phantom_II_AT_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AT_US_train
+        ),
+    ]
+)
+Gfx_F4E_Phantom_II_CBU_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_CBU_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4E_Phantom_II_CBU_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_CBU_US_train
+        ),
+    ]
+)
+Gfx_F4E_Phantom_II_HE_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_HE_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4E_Phantom_II_HE_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_HE_US_train
+        ),
+    ]
+)
+Gfx_F4E_Phantom_II_napalm_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_napalm_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4E_Phantom_II_napalm_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_napalm_US_train
+        ),
+    ]
+)
+Gfx_F4F_Phantom_II_AA_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4F_Phantom_II_AA_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA_train
+        ),
+    ]
+)
+Gfx_F4F_Phantom_II_AT_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AT_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4F_Phantom_II_AT_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AT_RFA_train
+        ),
+    ]
+)
+Gfx_F4F_Phantom_II_HE1_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4F_Phantom_II_HE1_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA_train
+        ),
+    ]
+)
+Gfx_F4F_Phantom_II_HE2_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE2_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4F_Phantom_II_HE2_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE2_RFA_train
+        ),
+    ]
+)
+Gfx_F4F_Phantom_II_RKT2_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_RKT2_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4F_Phantom_II_RKT2_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_RKT2_RFA_train
+        ),
+    ]
+)
+Gfx_F4_Phantom_AA_F3_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Phantom_AA_F3_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4_Phantom_AA_F3_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Phantom_AA_F3_UK_train
+        ),
+    ]
+)
+Gfx_F4_Wild_Weasel_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F4_Wild_Weasel_US,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US_train
+        ),
+    ]
+)
+Gfx_F8P_Crusader_AA2_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_AA2_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F8P_Crusader_AA2_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_AA2_FR_train
+        ),
+    ]
+)
+Gfx_F8P_Crusader_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_F8P_Crusader_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_FR_train
+        ),
+    ]
+)
+Gfx_G91_R3_Gina_HE_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_HE_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_G91_R3_Gina_HE_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_HE_RFA_train
+        ),
+    ]
+)
+Gfx_G91_R3_Gina_NPL_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_NPL_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_G91_R3_Gina_NPL_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_NPL_RFA_train
+        ),
+    ]
+)
+Gfx_G91_R3_Gina_RKT_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_RKT_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_G91_R3_Gina_RKT_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_RKT_RFA_train
+        ),
+    ]
+)
+Gfx_Gazelle_20mm_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_20mm_reco_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_reco_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_CMD_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_CMD_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_HOT_2_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_2_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_HOT_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_Mistral_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_Mistral_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_SNEB_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_SNEB_reco_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_reco_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_reco_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_reco_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Gazelle_trans_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_trans_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Harrier_CLU_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_CLU_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_CLU_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_CLU_UK_train
+        ),
+    ]
+)
+Gfx_Harrier_GR5_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_GR5_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_GR5_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_GR5_UK_train
+        ),
+    ]
+)
+Gfx_Harrier_HE1_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE1_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_HE1_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE1_UK_train
+        ),
+    ]
+)
+Gfx_Harrier_HE2_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE2_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_HE2_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE2_UK_train
+        ),
+    ]
+)
+Gfx_Harrier_RKT1_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT1_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_RKT1_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT1_UK_train
+        ),
+    ]
+)
+Gfx_Harrier_RKT2_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_RKT2_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK_train
+        ),
+    ]
+)
+Gfx_Harrier_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Harrier_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_UK_train
+        ),
+    ]
+)
+Gfx_Jaguar_ATGM_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_ATGM_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_ATGM_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_ATGM_FR_train
+        ),
+    ]
+)
+Gfx_Jaguar_CLU_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_CLU_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_CLU_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_CLU_UK_train
+        ),
+    ]
+)
+Gfx_Jaguar_HE1_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE1_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_HE1_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE1_UK_train
+        ),
+    ]
+)
+Gfx_Jaguar_HE2_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE2_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_HE2_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE2_UK_train
+        ),
+    ]
+)
+Gfx_Jaguar_HE_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_HE_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE_FR_train
+        ),
+    ]
+)
+Gfx_Jaguar_RKT_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_RKT_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_FR_train
+        ),
+    ]
+)
+Gfx_Jaguar_RKT_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_RKT_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_UK_train
+        ),
+    ]
+)
+Gfx_Jaguar_SEAD2_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD2_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_SEAD2_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD2_FR_train
+        ),
+    ]
+)
+Gfx_Jaguar_SEAD_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_SEAD_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD_FR_train
+        ),
+    ]
+)
+Gfx_Jaguar_clu_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_clu_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_clu_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_clu_FR_train
+        ),
+    ]
+)
+Gfx_Jaguar_nplm_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_nplm_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Jaguar_nplm_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_nplm_FR_train
+        ),
+    ]
+)
+Gfx_Ka_50_AA_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_AA_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Ka_50_AA_SOV,
+    ]
+)
+Gfx_Ka_50_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Ka_50_SOV,
+    ]
+)
+Gfx_L39ZO_CLU_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_CLU_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_L39ZO_CLU_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_CLU_DDR_train
+        ),
+    ]
+)
+Gfx_L39ZO_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_L39ZO_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_DDR_train
+        ),
+    ]
+)
+Gfx_L39ZO_HE1_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_L39ZO_HE1_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_DDR_train
+        ),
+    ]
+)
+Gfx_L39ZO_HE1_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_L39ZO_HE1_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_SOV_train
+        ),
+    ]
+)
+Gfx_L39ZO_NPLM_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_NPLM_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_L39ZO_NPLM_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_NPLM_SOV_train
+        ),
+    ]
+)
+Gfx_Lynx_AH_Mk1_LBH_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_LBH_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Lynx_AH_Mk1_TOW_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_TOW_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Lynx_AH_Mk1_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictions = 
+    [
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "base_tourelle_01",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Lynx_AH_Mk1_UK_turret1"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_UK_Tourelle_01 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+    ]
+)
+Gfx_Lynx_AH_Mk7_I_TOW2_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW2_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Lynx_AH_Mk7_I_TOW_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Lynx_AH_Mk7_SNEB_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_SNEB_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Lynx_AH_Mk7_SNEB_UK,
+    ]
+)
+Gfx_MH47D_Super_Chinook_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MH47D_Super_Chinook_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = 30
+        ),
+    ]
+)
+Gfx_MH_60A_DAP_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MH_60A_DAP_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_MiG_17PF_POL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_17PF_POL
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_17PF_POL_train
+        ),
+    ]
+)
+Gfx_MiG_21PFM_AA_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_AA_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21PFM_AA_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_AA_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21PFM_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21PFM_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21bis_AA2_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21bis_AA2_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21bis_AA3_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA3_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21bis_AA3_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA3_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21bis_CLU_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_CLU_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21bis_CLU_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_CLU_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21bis_HE_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_HE_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21bis_HE_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_HE_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21bis_NPLM_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_NPLM_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_21bis_NPLM_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_NPLM_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_21bis_RKT2_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR
+    SubDepictionGenerators = 
+    [
+        ShowroomRocketSubDepictionTemplate
+        (
+            RocketCount = 4
+            RocketMeshDescriptor = $/GFX/DepictionResources/Modele_Missile_S_24_240mm
+            UnitMeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR
+            WeaponIndex = 2
+        ),
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_AT2_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT2_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_AT2_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT2_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_AT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_AT_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_CLU_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_CLU_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_CLU_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_CLU_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_KMGU_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_KMGU_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_KMGU_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_KMGU_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_RKT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_RKT_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_RKT_DDR,
+        ShowroomRocketSubDepictionTemplate
+        (
+            AirStartGroupIndex = 1
+            GroundStartGroupIndex = 1
+            RocketCount = 2
+            RocketMeshDescriptor = $/GFX/DepictionResources/Modele_Missile_S_24_240mm
+            UnitMeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_RKT_DDR
+            WeaponIndex = 2
+        ),
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_RKT_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23BN_nplm_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_nplm_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23BN_nplm_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_nplm_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23MF_AA_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_AA_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23MF_AA_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_AA_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23MF_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23MF_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23MLD_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MLD_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23MLD_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MLD_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_23ML_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23ML_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_23ML_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23ML_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_23P_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23P_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_23P_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23P_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_25BM_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25BM_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_25BM_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25BM_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_25RBF_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25RBF_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_25RBF_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25RBF_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27K_AT1_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT1_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27K_AT1_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT1_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27K_AT2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27K_AT2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT2_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27K_LGB_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_LGB_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27K_LGB_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_LGB_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27M_CLU_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_CLU_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27M_CLU_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_CLU_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27M_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27M_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27M_bombe_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_bombe_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27M_bombe_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_bombe_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27M_napalm_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_napalm_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27M_napalm_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_napalm_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27M_rkt_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_rkt_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27M_rkt_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_rkt_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_27M_sead_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_27M_sead_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_29_AA2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_29_AA2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA2_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_29_AA3_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA3_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_29_AA3_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA3_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_29_AA_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_29_AA_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_DDR_train
+        ),
+    ]
+)
+Gfx_MiG_29_AA_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_29_AA_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_31M_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31M_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_31M_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31M_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_31_AA1_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA1_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_31_AA1_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA1_SOV_train
+        ),
+    ]
+)
+Gfx_MiG_31_AA2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_MiG_31_AA2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA2_SOV_train
+        ),
+    ]
+)
+Gfx_Mi_14PL_AT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_AT_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_14PL_AT_DDR,
+    ]
+)
+Gfx_Mi_14PL_recon_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_recon_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_24D_AA_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_AA_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24D_AA_DDR,
+    ]
+)
+Gfx_Mi_24D_Desant_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_Desant_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24D_Desant_SOV,
+    ]
+)
+Gfx_Mi_24D_s5_AT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s5_AT_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24D_s5_AT_DDR,
+    ]
+)
+Gfx_Mi_24D_s8_AT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s8_AT_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24D_s8_AT_DDR,
+    ]
+)
+Gfx_Mi_24K_reco_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24K_reco_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24K_reco_SOV,
+    ]
+    SubDepictions = 
+    [
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "as_2_1",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_24K_reco_SOV_turret2_as_2_1"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24K_reco_SOV_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "as_2_2",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_24K_reco_SOV_turret2_as_2_2"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24K_reco_SOV_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+    ]
+)
+Gfx_Mi_24P_AA_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_AA_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24P_AA_SOV,
+    ]
+)
+Gfx_Mi_24P_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24P_SOV,
+    ]
+)
+Gfx_Mi_24P_s8_AT2_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT2_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24P_s8_AT2_DDR,
+    ]
+)
+Gfx_Mi_24P_s8_AT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24P_s8_AT_DDR,
+    ]
+)
+Gfx_Mi_24VP_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24VP_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24VP_SOV,
+    ]
+)
+Gfx_Mi_24V_AA_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AA_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24V_AA_SOV,
+    ]
+)
+Gfx_Mi_24V_AT_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AT_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24V_AT_SOV,
+    ]
+)
+Gfx_Mi_24V_RKT_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_RKT_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24V_RKT_SOV,
+    ]
+)
+Gfx_Mi_24V_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_24V_SOV,
+    ]
+)
+Gfx_Mi_26_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_26_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_CMD_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_CMD_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_gunship_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_gunship_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_reco_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_reco_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_rocket_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_rocket_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_trans_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_2_trans_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_6_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_6_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8K_CMD_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8K_CMD_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8MTPI_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTPI_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8MTV_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTV_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8MTV_SOV,
+    ]
+)
+Gfx_Mi_8PPA_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8PPA_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8R_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8R_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8TB_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TB_DDR,
+    ]
+)
+Gfx_Mi_8TB_reco_Marine_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_reco_Marine_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TB_reco_Marine_DDR,
+    ]
+)
+Gfx_Mi_8TV_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_DDR,
+    ]
+)
+Gfx_Mi_8TV_Gunship_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_Gunship_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_Gunship_SOV,
+        ShowroomRocketSubDepictionTemplate
+        (
+            AirStartGroupIndex = 2
+            GroundStartGroupIndex = 1
+            RocketCount = 2
+            RocketMeshDescriptor = $/GFX/DepictionResources/Modele_Missile_S_24_240mm
+            UnitMeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_Gunship_SOV
+            WeaponIndex = 3
+        ),
+    ]
+)
+Gfx_Mi_8TV_PodGatling_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_PodGatling_DDR,
+    ]
+    SubDepictions = 
+    [
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_gatling_d1",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_DDR_turret1_guv_gatling_d1"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR_Tourelle_01 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_gatling_g1",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_DDR_turret1_guv_gatling_g1"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR_Tourelle_01 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_gatling_d2",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_DDR_turret2_guv_gatling_d2"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_gatling_g2",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_DDR_turret2_guv_gatling_g2"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+    ]
+)
+Gfx_Mi_8TV_PodGatling_PodAGL_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_PodGatling_PodAGL_SOV,
+    ]
+    SubDepictions = 
+    [
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_gatling_d",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_PodAGL_SOV_turret1_guv_gatling_d"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV_Tourelle_01 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_gatling_g",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_PodAGL_SOV_turret1_guv_gatling_g"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV_Tourelle_01 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_agl_d",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_PodAGL_SOV_turret2_guv_agl_d"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "guv_agl_g",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_PodGatling_PodAGL_SOV_turret2_guv_agl_g"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+    ]
+)
+Gfx_Mi_8TV_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_SOV,
+    ]
+)
+Gfx_Mi_8TV_UPK_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_UPK_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_UPK_DDR,
+    ]
+    SubDepictions = 
+    [
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "base_tourelle_02_d",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_UPK_DDR_turret2_base_tourelle_02_d"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_UPK_DDR_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "base_tourelle_02_g",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Mi_8TV_UPK_DDR_turret2_base_tourelle_02_g"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_UPK_DDR_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+    ]
+)
+Gfx_Mi_8TV_non_arme_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_non_arme_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8TV_s57_16_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_16_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_s57_16_SOV,
+    ]
+)
+Gfx_Mi_8TV_s57_32_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_s57_32_DDR,
+    ]
+)
+Gfx_Mi_8TV_s57_32_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_s57_32_SOV,
+    ]
+)
+Gfx_Mi_8TV_s80_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s80_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8TV_s80_SOV,
+    ]
+)
+Gfx_Mi_8TZ_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TZ_SOV
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8T_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mi_8T_DDR,
+    ]
+)
+Gfx_Mi_8T_non_arme_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_non_arme_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_8_supply_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8_supply_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mi_9_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_9_DDR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Mirage_2000_C_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_2000_C_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_2000_C_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_2000_C_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_5_BA_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_BA_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_BEL_train
+        ),
+    ]
+)
+Gfx_Mirage_5_BA_CLU_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_CLU_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_BA_CLU_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_CLU_BEL_train
+        ),
+    ]
+)
+Gfx_Mirage_5_BA_MIRSIP_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_MIRSIP_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_BA_MIRSIP_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_MIRSIP_BEL_train
+        ),
+    ]
+)
+Gfx_Mirage_5_BA_NPLM_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_NPLM_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_BA_NPLM_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_NPLM_BEL_train
+        ),
+    ]
+)
+Gfx_Mirage_5_BA_RKT_BEL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_RKT_BEL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_BA_RKT_BEL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_RKT_BEL_train
+        ),
+    ]
+)
+Gfx_Mirage_5_F_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_F_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_5_F_clu_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_clu_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_F_clu_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_clu_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_5_F_nplm_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_nplm_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_5_F_nplm_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_nplm_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_F1_CT_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_CT_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_F1_CT_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_CT_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_F1_C_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_F1_C_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_III_E_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_III_E_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_III_E_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_III_E_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_IV_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_IV_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_FR_train
+        ),
+    ]
+)
+Gfx_Mirage_IV_SEAD_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_SEAD_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Mirage_IV_SEAD_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_SEAD_FR_train
+        ),
+    ]
+)
+Gfx_OH58A_reco_NG_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_OH58A_reco_NG_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_OH58C_CMD_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_CMD_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_OH58C_Scout_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_Scout_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_OH58D_Combat_Scout_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Combat_Scout_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_OH58D_Combat_Scout_US,
+    ]
+)
+Gfx_OH58D_Kiowa_Warrior_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Kiowa_Warrior_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_OH58D_Kiowa_Warrior_US,
+    ]
+)
+Gfx_OH58_CS_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_OH58_CS_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Pchela_1T_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Pchela_1T_SOV
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Pchela_1T_SOV_train
+        ),
+    ]
+)
+Gfx_Puma_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Puma_HET_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_HET_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Puma_PC_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_PC_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Puma_Pirate_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_Pirate_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Puma_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_UK
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Su_17M4_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17M4_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_17M4_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17M4_SOV_train
+        ),
+    ]
+)
+Gfx_Su_17_cluster_POL_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17_cluster_POL
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_17_cluster_POL,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17_cluster_POL_train
+        ),
+    ]
+)
+Gfx_Su_22_AT2_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT2_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_AT2_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT2_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_AT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_AT_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_AT_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_AT_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_SOV_train
+        ),
+    ]
+)
+Gfx_Su_22_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_HE2_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_HE2_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_HE2_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_HE2_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_RKT_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_RKT_DDR
+    SubDepictionGenerators = 
+    [
+        ShowroomRocketSubDepictionTemplate
+        (
+            RocketCount = 4
+            RocketMeshDescriptor = $/GFX/DepictionResources/Modele_Missile_S_24_240mm
+            UnitMeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_RKT_DDR
+            WeaponIndex = 2
+        ),
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_RKT_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_SEAD_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_SEAD_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_SEAD_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_SEAD_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_UPK_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_UPK_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR_train
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "pod_upk_d",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Su_22_UPK_DDR_turret2_pod_upk_d"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+        TSubDepiction
+        (
+            Anchors = 
+            [
+                "pod_upk_g",
+            ]
+            Depiction = TDepictionTemplate
+            (
+                CoatingName = "Su_22_UPK_DDR_turret2_pod_upk_g"
+                DepictionAlternatives = 
+                [
+                    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR_Tourelle_02 ),
+                ]
+                Selector = OnlyHighDepictionSelector
+            )
+        ),
+    ]
+)
+Gfx_Su_22_clu_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_clu_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_clu_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_clu_DDR_train
+        ),
+    ]
+)
+Gfx_Su_22_nplm_DDR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_nplm_DDR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_22_nplm_DDR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_nplm_DDR_train
+        ),
+    ]
+)
+Gfx_Su_24MP_EW_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_EW_SOV
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_EW_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24MP_SEAD2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SEAD2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24MP_SEAD2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SEAD2_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24MP_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24MP_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_AT1_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT1_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_AT1_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT1_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_AT2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_AT2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT2_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_LGB2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_LGB2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB2_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_LGB_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_LGB_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_clu2_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu2_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_clu2_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu2_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_clu_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_clu_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_nplm_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_nplm_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_nplm_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_nplm_SOV_train
+        ),
+    ]
+)
+Gfx_Su_24M_thermo_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_thermo_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_24M_thermo_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_thermo_SOV_train
+        ),
+    ]
+)
+Gfx_Su_25T_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25T_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_25T_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25T_SOV_train
+        ),
+    ]
+)
+Gfx_Su_25_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_25_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_SOV_train
+        ),
+    ]
+)
+Gfx_Su_25_clu_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_clu_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_25_clu_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_clu_SOV_train
+        ),
+    ]
+)
+Gfx_Su_25_he_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_he_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_25_he_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_he_SOV_train
+        ),
+    ]
+)
+Gfx_Su_25_nplm_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_nplm_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_25_nplm_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_nplm_SOV_train
+        ),
+    ]
+)
+Gfx_Su_25_rkt_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_rkt_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_25_rkt_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_rkt_SOV_train
+        ),
+    ]
+)
+Gfx_Su_27S_SOV_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_27S_SOV
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Su_27S_SOV,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Su_27S_SOV_train
+        ),
+    ]
+)
+Gfx_Super_Etendard_AT_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_AT_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Super_Etendard_AT_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_AT_FR_train
+        ),
+    ]
+)
+Gfx_Super_Etendard_CLU_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_CLU_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Super_Etendard_CLU_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_CLU_FR_train
+        ),
+    ]
+)
+Gfx_Super_Etendard_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Super_Etendard_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_FR_train
+        ),
+    ]
+)
+Gfx_Super_Etendard_HE_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_HE_FR
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Super_Etendard_HE_FR,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_HE_FR_train
+        ),
+    ]
+)
+Gfx_Super_Puma_FR_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Puma_FR
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_Tornado_ADV_HE_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_ADV_HE_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK_train
+        ),
+    ]
+)
+Gfx_Tornado_ADV_SEAD_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_SEAD_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_ADV_SEAD_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_SEAD_UK_train
+        ),
+    ]
+)
+Gfx_Tornado_ADV_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_ADV_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_UK_train
+        ),
+    ]
+)
+Gfx_Tornado_ADV_clu_UK_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_clu_UK
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_ADV_clu_UK,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_clu_UK_train
+        ),
+    ]
+)
+Gfx_Tornado_IDS_AT1_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_IDS_AT1_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA_train
+        ),
+    ]
+)
+Gfx_Tornado_IDS_CLUS_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_CLUS_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_IDS_CLUS_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_CLUS_RFA_train
+        ),
+    ]
+)
+Gfx_Tornado_IDS_HE1_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_HE1_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_IDS_HE1_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_HE1_RFA_train
+        ),
+    ]
+)
+Gfx_Tornado_IDS_MW1_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_MW1_RFA
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_Tornado_IDS_MW1_RFA,
+    ]
+    SubDepictions = 
+    [
+        ShowroomLandingGear
+        (
+            MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_MW1_RFA_train
+        ),
+    ]
+)
+Gfx_UH1A_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH1A_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH1D_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH1D_Supply_RFA_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_Supply_RFA
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH1H_Huey_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_Huey_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH1H_supply_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_supply_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH1M_gunship_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH1M_gunship_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+    SubDepictionGenerators = 
+    [
+        SubGenerators_Showroom_UH1M_gunship_US,
+    ]
+)
+Gfx_UH60A_Black_Hawk_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH60A_CO_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_CO_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)
+Gfx_UH60A_Supply_US_Showroom_Autogen is ShowroomAerialDepictionTemplate
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Supply_US
+    Operators = 
+    [
+        DepictionOperator_Reset_Generic,
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_1"
+            RotationAxis = float3[0, 0, 1]
+            RotationInDegree = -30
+        ),
+        TCosmeticFixedBoneRotationOperatorDesc
+        (
+            BoneName = "bloc_moteur_2"
+            RotationAxis = float3[0, 1, 0]
+            RotationInDegree = -30
+        ),
+    ]
+)

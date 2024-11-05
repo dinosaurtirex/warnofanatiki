@@ -1,0 +1,14 @@
+export Modele_FV105_Sultan_BEL is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/BEL/CMD/FV105_Sultan/FV105_Sultan.fbx'
+)
+
+export Modele_FV105_Sultan_BEL_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/BEL/CMD/FV105_Sultan_MID/FV105_Sultan_MID.fbx'
+)
+
+export Modele_FV105_Sultan_BEL_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/BEL/CMD/LODS/FV105_Sultan_LOW.fbx'
+)

@@ -1,0 +1,272 @@
+template BUCKZoomableContentDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    ChildFitToContent : bool = false,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+]
+is TBUCKZoomableContentDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = ~/ContainerFitStyle/None
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = false
+    IsClippable = true
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+)
+
+template BUCKNonZoomableContentDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    ChildFitToContent : bool = false,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+]
+is TBUCKNonZoomableContentDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = ~/ContainerFitStyle/None
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = false
+    IsClippable = true
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+)
+
+template BUCKZoomableContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    ChildFitToContent : bool = false,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    ZoomableElements : LIST<TBUCKContainerDescriptor>,                      // Liste des éléments qui vont être zoomés
+    NonZoomableElements : LIST<TBUCKContainerDescriptor> = [],              // Liste des éléments qui ne doivent pas être zoomés
+    NonZoomableElementsName : LIST<string> = [],                            // Noms des éléments qui ne doivent pas être zoomés
+    MaxZoom : float = 0.0,                                                  // Valeur maximale du zoom
+    ZoomFactor : float = 0.0,                                               // Coefficien de multiplication du défilement souris
+]
+is TBUCKZoomableContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = ~/ContainerFitStyle/None
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = true
+    IsClippable = true
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    // -- BUCKContainerDescriptor
+
+    SensibleAreaName = <ElementName> + 'SensibleArea'
+    ZoomableContentName = <ElementName> + 'ZoomableContent'
+    NonZoomableContentName = <ElementName> + 'NonZoomableContent'
+    NonZoomableElementsName = <NonZoomableElementsName>
+    MaxZoom = <MaxZoom>
+    ZoomFactor = <ZoomFactor>
+
+    Components = <Components> +
+    [
+        BUCKZoomableContentDescriptor
+        (
+            ElementName = <ElementName> + 'ZoomableContent'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            Components = <ZoomableElements>
+        ),
+        BUCKNonZoomableContentDescriptor
+        (
+            ElementName = <ElementName> + 'NonZoomableContent'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            Components = <NonZoomableElements>
+        ),
+        BUCKSensibleAreaDescriptor
+        (
+            ElementName = <ElementName> + 'SensibleArea'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+            MaskEvents = true
+        ),
+    ]
+)

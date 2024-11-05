@@ -1,0 +1,17 @@
+// TVisionUnitType
+EVisionUnitType is TBaseClass
+(
+    Undefined            is 0
+    AlwaysOnGround       is 1
+    AntiRadar            is 3
+    AlwaysInHighAltitude is 7
+    Building             is 9
+    Deposit              is 10
+)
+
+// TVisionOpticsAltitudeConfig
+EVisionOpticsAltitudeConfig is TBaseClass
+(
+    DontUse                              is 0
+    UseOnRS_TBAWithGroundOpticsLerp      is 1
+)

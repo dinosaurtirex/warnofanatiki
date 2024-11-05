@@ -1,0 +1,131 @@
+template BUCKTypingTextDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKTextDescriptor
+    ParagraphStyle : TParagraphStyle = TParagraphStyle(),
+
+    TextStyle : string,
+
+    TypefaceToken : string = "",
+
+    BigLineAction : int = ~/BigLineAction/CutByDots,
+    ColorMode : int = ~/ColorMode/Override,
+    HorizontalFitStyle : int = ~/FitStyle/UserDefined,
+    VerticalFitStyle : int = ~/FitStyle/UserDefined,
+
+    TextDico : string,
+    TextToken : string = "",
+    TextSize : string = "",
+    TextColor : string = "",
+
+    HasUnderline : bool = false,
+    UnderlineColor : string = "",
+    UnderlineThickness : string = "",
+
+    LocalRenderLayer : int = 0,
+
+    Hint : TBUCKHintableAreaDescriptor = nil,
+    // -- BUCKTextDescriptor
+
+    AnimDuration : float = 0.0,                             // Durée de l'animation totale, qui est cyclique
+    AnimTextInSec : float = 0.0,                            // Temps en seconde que met le texte à s'afficher complètement (au début de chaque cycle)
+]
+is TBUCKTypingTextDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKTextDescriptor
+    ParagraphStyle = <ParagraphStyle>
+
+    TextStyle = <TextStyle>
+
+    TypefaceToken = <TypefaceToken>
+
+    BigLineAction = <BigLineAction>
+    ColorMode = <ColorMode>
+    HorizontalFitStyle = <HorizontalFitStyle>
+    VerticalFitStyle = <VerticalFitStyle>
+
+    TextDico = <TextDico>
+    TextToken = <TextToken>
+    TextSize = <TextSize>
+    TextColor = <TextColor>
+
+    HasUnderline = <HasUnderline>
+    UnderlineColor = <UnderlineColor>
+    UnderlineThickness = <UnderlineThickness>
+
+    Components = <Hint> != nil ? [<Hint>] : []
+    // ++ BUCKTextDescriptor
+
+    AnimDuration = <AnimDuration>
+    AnimTextInSec = <AnimTextInSec>
+)

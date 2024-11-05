@@ -1,0 +1,14 @@
+export Modele_M1_Abrams_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Char/M1_Abrams/M1_Abrams.fbx'
+)
+
+export Modele_M1_Abrams_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Char/M1_Abrams_MID/M1_Abrams_MID.fbx'
+)
+
+export Modele_M1_Abrams_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Char/M1_Abrams_LOW/M1_Abrams_LOW.fbx'
+)

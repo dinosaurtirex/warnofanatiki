@@ -1,0 +1,14 @@
+export Modele_Ural_4320_ZU_SOV is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/Vehicule/Ural_4320_ZU/Ural_4320_ZU.fbx'
+)
+
+export Modele_Ural_4320_ZU_SOV_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/Vehicule/Ural_4320_ZU_MID/Ural_4320_ZU_MID.fbx'
+)
+
+export Modele_Ural_4320_ZU_SOV_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/Vehicule/Ural_4320_ZU_LOW/Ural_4320_ZU_LOW.fbx'
+)

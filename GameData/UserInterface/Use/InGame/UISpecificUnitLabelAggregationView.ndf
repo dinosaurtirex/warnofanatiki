@@ -1,0 +1,216 @@
+private interstice is 4.0
+public UnitLabelAggregationWidth is ~/LabelUnitIconSize + interstice
+public UnitLabelAggregationHeight is ~/LabelUnitIconSize + interstice
+private AggregationLocalLayerAdditionalHeight is 24.0
+
+//----------------------------------------------------------------------
+// Icône d'évacuation
+UnitLabelUnitEvacIconBUCKComponent is BUCKTextureDescriptor
+(
+    ElementName = "EvacuationIcon"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [23.0, 23.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+    TextureToken = "icone_evacuation"
+    LocalRenderLayer = 1
+)
+//----------------------------------------------------------------------
+private UnitLabelAggregationViewDescriptor is BUCKLocalLayerContainerDescriptor
+(
+    ElementName = "LocalLayerContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [UnitLabelAggregationWidth, UnitLabelAggregationHeight]
+        MagnifiableOffset = [0.0, ~/LabelUnitIconSize * -1.0]
+    )
+
+    NbLayersToLock = 7
+
+    Components =
+    [
+        TBUCKSpecificLabelUnitIconForAggregationDescriptor
+        (
+            ElementName = "UnitIcon"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [ ~/LabelUnitIconSize, ~/LabelUnitIconSize ]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+
+            TextureDrawer = "ColorMultiply"
+            UniformDrawer = $/UserInterface/UIUniformDrawer
+
+            HasBackground = true
+            LocalRenderLayer = 2
+            BackgroundLocalRenderLayer = 1
+            OverlayLocalRenderLayer = 4
+            TerrainIconMagnifiableSize = 40
+
+            MoraleAndHPGaugesDescription = ~/MoraleAndHPGaugesDescription
+            SmartChipDescription = ~/SmartChipDescription
+            LeavingDistrictChronoDescription = ~/LeavingDistrictChronoDescription
+        ),
+        CurrentUnitLabelUpperList
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 1.0]
+            )
+        ),
+        CarriedUnitNameList(
+            ComponentFrame = TUIFramePropertyRTTI(
+                MagnifiableOffset = [0.0, ~/LabelUnitIconSize]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+        ),
+    ]
+)
+//----------------------------------------------------------------------
+
+private UnitLabelAggregationViewNameOnlyDescriptor is BUCKLocalLayerContainerDescriptor
+(
+    ElementName = "LocalLayerContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableOffset = [0.0, ~/LabelUnitIconSize * -1.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    FitStyle = ~/ContainerFitStyle/FitToContent
+    NbLayersToLock = 6
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 0.0]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+
+            ChildFitToContent = true
+            Axis = ~/ListAxis/Vertical
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = CurrentUnitLabelUpperList()
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = TSmartChipListDescriptor
+                    (
+                        UniformDrawer = $/UserInterface/UIUniformDrawer
+                        ElementName = "SmartChipList"
+
+                        Description = ~/SmartChipDescription
+
+                        AlignementToFather = [0.5, 0.0]
+                        AlignementToAnchor = [0.5, 0.0]
+                        LocalRenderLayer = 2
+                    )
+                )
+            ]
+        ),
+    ]
+)
+//----------------------------------------------------------------------
+// Nom du joueur
+UnitLabelUnitPlayerNameBUCKComponent is BUCKTextDescriptor
+(
+    ElementName = "PlayerName"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+
+    TextStyle = "PlayerName"
+    HasBackground = false
+    TextPadding = TRTTILength4(Magnifiable = [1.0, 1.0, 1.0, 1.0])
+    HorizontalFitStyle = ~/FitStyle/FitToContent
+    VerticalFitStyle = ~/FitStyle/FitToContent
+
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/CutByDots
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+    TextColor = "Fulda_Turquoise"
+    TextSize = "20"
+    LocalRenderLayer = 1
+)
+//-------------------------------------------------------------------------------------
+// L'etiquette aggregée
+private template UISpecificInGameUnitLabelViewForAggregationDescriptor
+[
+    MainComponentDescriptor : TBUCKContainerDescriptor,
+]
+is TUISpecificInGameUnitLabelViewForAggregationDescriptor
+(
+    MainComponentDescriptor = <MainComponentDescriptor>
+
+    ExperienceTexturesResources     = ~/ExperienceTexturesResources
+
+    // Animation Concealed
+    // Temps de durée d'un blink
+    AnimConcealedBlinkDuration = 2.0
+    // Animation Panicked
+    // Temps de durée d'un blink
+    AnimPanickedBlinkDuration = 1.5
+    // Animation Shaken
+    // Temps de pause entre les séries de blink (0 => pas de pause)
+    AnimShakenPauseTime = 3.0
+    // Temps de durée d'un blink
+    AnimShakenBlinkDuration = 1.5
+    // Nombre de blinks par série (-1 => infini)
+    AnimShakenNbBlinks = 3
+    // Alpha Minimum atteint pour les animation de "suppress"
+    SuppressAnimAlphaMinimum = 20
+    // Alpha Minimum atteint pour l'animation "cachée"
+    ConcealedAnimAlphaMinimum = 20
+
+    // Textures
+    NormalBackgroundTexture = "CommonTexture_Label_Background"
+    CarriedUnitIconUnknown  = "UseInGame_Transport_UNKNOW"
+
+    // Overlay Icon
+    RoutTexture            = 'icone_rout'
+    PinnedTexture          = 'icone_pinned'
+    StunTexture            = 'icone_stun'
+    LeavingDistrictTexture = 'icone_leave'
+    RoutTextureColorToken            = "Rouge"
+    PinnedTextureColorToken          = "Rouge"
+    StunTextureColorToken            = 'Blanc220'
+    LeavingDistrictTextureColorToken = 'Blanc220'
+)
+//----------------------------------------------------------------------
+// L'etiquette
+UISpecificUnitLabelAggregationViewDescriptor is UISpecificInGameUnitLabelViewForAggregationDescriptor
+(
+    MainComponentDescriptor = ~/UnitLabelAggregationViewDescriptor
+)
+UISpecificUnitLabelAggregationViewNameOnlyDescriptor is UISpecificInGameUnitLabelViewForAggregationDescriptor
+(
+    MainComponentDescriptor = ~/UnitLabelAggregationViewNameOnlyDescriptor
+)

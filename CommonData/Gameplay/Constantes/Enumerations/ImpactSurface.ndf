@@ -1,0 +1,12 @@
+// TImpactSurface : défini dans WeaponSystem/EnumMimeticImpact.h
+EImpactSurface is TBaseClass
+(
+    Ground          is 0
+    Water           is 1
+    Air             is 2
+    Wall            is 3
+    Vehicle         is 4
+    FlyingVehicle   is 5
+    Missile         is 6
+    Ricochet        is 7
+)

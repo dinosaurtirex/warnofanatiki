@@ -1,0 +1,41 @@
+// Enum TTypeStrategicDetailedCount
+ETypeStrategicDetailedCount is TBaseClass
+(
+    CMD_Inf         is 0
+    CMD_Veh         is 1
+    CMD_Tank        is 2
+    CMD_Hel         is 3
+    Reco            is 4
+    Reco_Hel        is 5
+    Reco_Inf        is 6
+    Reco_Veh        is 7
+    Supply          is 8
+    Supply_Hel      is 9
+    Support         is 10
+    Transport       is 11
+    Infantry        is 12
+    Engineer        is 13
+    Armor           is 14
+    Armor_Heavy     is 15
+    Ifv             is 16
+    AA              is 17
+    AA_Veh          is 18
+    AA_Hel          is 19
+    Manpad          is 20
+    AT              is 21
+    AT_Veh          is 22
+    AT_Gun          is 23
+    AT_Hel          is 24
+    Mortar          is 25
+    Howitzer        is 26
+    Mlrs            is 27
+    Hel_Support     is 28
+    Hel_Transport   is 29
+    Air_AA          is 30
+    Air_Sead        is 31
+    Air_AT          is 32
+    Air_Support     is 33
+    Battalion       is 34
+    NotCounted      is 35
+    Length          is 36
+)

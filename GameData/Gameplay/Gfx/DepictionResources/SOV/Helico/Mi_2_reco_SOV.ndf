@@ -1,0 +1,14 @@
+export Modele_Mi_2_reco_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco/Mi_2_reco.fbx'
+)
+
+export Modele_Mi_2_reco_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco/Mi_2_reco.fbx'
+)
+
+export Modele_Mi_2_reco_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_2_reco/Mi_2_reco.fbx'
+)

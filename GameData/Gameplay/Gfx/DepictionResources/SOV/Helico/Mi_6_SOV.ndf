@@ -1,0 +1,16 @@
+export Modele_Mi_6_SOV is     ModelDescriptor( FileName = Mi_6_SOV )
+export Modele_Mi_6_SOV_MID is ModelDescriptor( FileName = Mi_6_SOV_MID )
+export Modele_Mi_6_SOV_LOW is ModelDescriptor( FileName = Mi_6_SOV_LOW )
+
+Mi_6_SOV is     'GameData:/Assets/3D/Units/URSS/Helico/Mi_6_supply/Mi_6_supply.fbx'
+Mi_6_SOV_MID is 'GameData:/Assets/3D/Units/URSS/Helico/Mi_6_supply/Mi_6_supply.fbx'
+Mi_6_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/Helico/Mi_6_supply/Mi_6_supply.fbx'
+
+
+//export Modele_Mi_6_SOV is     ModelDescriptor( FileName = Mi_26_SOV )
+//export Modele_Mi_6_SOV_MID is ModelDescriptor( FileName = Mi_26_SOV_MID )
+//export Modele_Mi_6_SOV_LOW is ModelDescriptor( FileName = Mi_26_SOV_LOW )
+
+// Mi_6_POL is     'GameData:/Assets/3D/Units/URSS/Helico/Mi_26/Mi_26.fbx'
+// Mi_6_POL_MID is 'GameData:/Assets/3D/Units/URSS/Helico/Mi_26_MID/Mi_26_MID.fbx'
+// Mi_6_POL_LOW is 'GameData:/Assets/3D/Units/URSS/Helico/LODS/Mi_26_LOW.fbx'

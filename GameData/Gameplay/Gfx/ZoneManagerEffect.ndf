@@ -1,0 +1,84 @@
+// Note : les chaines sont dans le dico INTERFACE_INGAME
+private WargameZoneNames is TZoneNamesDico
+(
+    CampToZoneNames = MAP[
+        (0, [
+            "ZONEOTAN_A",
+            "ZONEOTAN_B",
+            "ZONEOTAN_C",
+            "ZONEOTAN_D",
+            "ZONEOTAN_E",
+            "ZONEOTAN_F",
+            "ZONEOTAN_G",
+            "ZONEOTAN_H",
+            "ZONEOTAN_I",
+            "ZONEOTAN_J",
+            "ZONEOTAN_K",
+            "ZONEOTAN_L",
+            "ZONEOTAN_M",
+            "ZONEOTAN_N",
+            "ZONEOTAN_O",
+            "ZONEOTAN_P",
+            "ZONEOTAN_Q",
+            "ZONEOTAN_R",
+            "ZONEOTAN_S",
+            "ZONEOTAN_T",
+            "ZONEOTAN_U",
+            "ZONEOTAN_V",
+            "ZONEOTAN_W",
+            "ZONEOTAN_X",
+            "ZONEOTAN_Y",
+            "ZONEOTAN_Z",
+        ]),
+        (1, [
+            "ZONEPACT_A",
+            "ZONEPACT_B",
+            "ZONEPACT_C",
+            "ZONEPACT_D",
+            "ZONEPACT_E",
+            "ZONEPACT_F",
+            "ZONEPACT_G",
+            "ZONEPACT_H",
+            "ZONEPACT_I",
+            "ZONEPACT_J",
+            "ZONEPACT_K",
+            "ZONEPACT_L",
+            "ZONEPACT_M",
+            "ZONEPACT_N",
+            "ZONEPACT_O",
+            "ZONEPACT_P",
+            "ZONEPACT_Q",
+            "ZONEPACT_R",
+            "ZONEPACT_S",
+            "ZONEPACT_T",
+            "ZONEPACT_U",
+            "ZONEPACT_V",
+            "ZONEPACT_W",
+            "ZONEPACT_X",
+            "ZONEPACT_Y",
+            "ZONEPACT_Z",
+        ]),
+    ]
+)
+
+private deploiementZoneManagerDescriptor is TDeploiementZoneManagerDescriptor
+(
+    AreaManagerProxy = $/M3D/Scene/DeploymentZoneManagerProxy
+    ZoneNamesDico = WargameZoneNames
+)
+
+private commandementZoneManagerDescriptor is TCommandementZoneManagerDescriptor
+(
+    AreaManagerProxy = $/M3D/Scene/CommandZoneManagerProxy
+    ZoneNamesDico = WargameZoneNames
+)
+
+private zoneManagerForIAStratDescriptor is TZoneManagerForIAStratDescriptor
+(
+    AreaManagerProxy = $/M3D/Scene/IAStratZoneManagerProxy
+)
+
+private strategicZoneManagerForIAStratDescriptor is TStrategicIAZoneManagerDescriptor
+(
+    AreaManagerProxy = $/M3D/Scene/IAStratZoneManagerProxy
+)

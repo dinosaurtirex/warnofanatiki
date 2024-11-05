@@ -1,0 +1,107 @@
+export ModernWarfareModularUnitFireDescriptorForTestIA is TEntityDescriptor
+(
+    World        = WorldIndices_Fires
+    DescriptorId      = GUID:{00000000-0000-0000-0000-000013000000}
+    ClassNameForDebug = 'WargameFireForTestIA'
+
+    ModulesDescriptors           =
+    [
+        TTypeUnitModuleDescriptor(),
+        TPositionModuleDescriptor(),
+        TApparenceModelModuleDescriptor
+        (
+            Depiction  = Template_DescriptorFire_Depiction
+            (
+                Radius = 70
+                Density = 0.1
+                FX = $/GFX/GameFx/fx_binder_fire
+            )
+            DefaultVisibility = True
+        ),
+        TFireModuleDescriptor
+        (
+            TimeToLive                = 40
+            TimeBeforeSpreading       = 10
+            TimeBeforeSpreadAttempt   = 2
+            SpreadProbability         = 0.25
+            IsNewFireProbability      = 0.10
+            RadiusGRU                 = 35
+            AmmunitionForBurn         = Ammo_FireWithHighSpreadProbaForTestIA // Faut bien mettre quelque chose... -> et quelque chose qui fait au moins 1 de PhysicalDamages si on veut pas péter un test
+            TimeBetweenBurns          = 1
+            SmokeDescriptor           = ~/ModernWarfareModularUnitSmokeDescriptorForTestIA
+        ),
+        TLinkTeamModuleDescriptor(),
+    ]
+)
+
+export Ammo_FireWithHighSpreadProbaForTestIA is TAmmunitionDescriptor
+(
+    DescriptorId                = GUID:{00000000-0000-0000-0600-00000f270000}
+    Name                        = 'FireHSP'
+    Caliber                     = 'Napalm'
+    WeaponCursorType            = Weapon_Cursor_MachineGun
+    Arme                        = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType              = EProjectileType/Obus
+    TempsEntreDeuxTirs          = 1.0
+    PorteeMaximaleGRU           = 1060
+    AltitudeAPorteeMaximaleGRU  = 1
+    AltitudeAPorteeMinimaleGRU  = 1
+    AngleDispersion             = 0.01
+    RadiusSplashPhysicalDamagesGRU = 18
+    PhysicalDamages             = 2.0
+    RadiusSplashSuppressDamagesGRU = 18
+    SuppressDamages             = 100.0
+    TirIndirect                 = True
+    ImpactHappening             = ['helicoGroundPuff'] //stub
+    ShotWithoutPhysics          = False
+    MaximalSpeedGRU             = 300.0
+    FluidFriction               = 0.01
+    NoiseDissimulationMalus     = 3.0
+    ShotsBeforeMaxNoise         = 1
+    SupplyCost                  = 200
+    HitRollRuleDescriptor       = TDiceHitRollRuleDescriptor
+    (
+        DescriptorId          = GUID:{0dcec000-0000-0000-0000-0000000dcec0}
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Targeted, 0.0),
+            (EBaseHitValueModifier/Idling, 0.0),
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Moving, 0.0),
+        ]
+        DistanceToTarget = True
+    )
+    TempsDeVisee                = 2.0
+    TempsEntreDeuxSalves        = 4.0
+    NbTirParSalves              = 20
+    NbrProjectilesSimultanes    = 1
+    AffichageMunitionParSalve   = 40
+    FireDescriptor              = ~/Descriptor_FireWithHighSpreadProba
+    FireTriggeringProbability   = 1.0
+    CanHarmAirplanes            = True
+)
+
+export Descriptor_FireWithHighSpreadProba is TEntityDescriptor
+(
+    World        = WorldIndices_Fires
+    DescriptorId      = GUID:{00000000-0000-0000-0000-000014000000}
+    ClassNameForDebug = 'FireWithHighSpreadProba'
+    ModulesDescriptors           = [
+        TTypeUnitModuleDescriptor(),
+        TPositionModuleDescriptor(),
+        TFireModuleDescriptor
+        (
+            TimeToLive                     = 60
+            TimeBeforeSpreading            = 1
+            TimeBeforeSpreadAttempt        = 0.5
+            SpreadProbability              = 1
+            IsNewFireProbability           = 1
+            RadiusGRU                      = 18
+            AmmunitionForBurn              = ~/Ammo_Degats_incendie
+            TimeBetweenBurns               = 1
+            OverridenSpreadDescriptor      = nil
+            SmokeDescriptor                = Descriptor_Smoke_FumiNapalm
+        ),
+        TLinkTeamModuleDescriptor(),
+    ]
+)

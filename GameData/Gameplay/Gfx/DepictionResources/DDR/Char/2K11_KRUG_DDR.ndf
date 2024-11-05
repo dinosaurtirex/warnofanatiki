@@ -1,0 +1,17 @@
+export ModelFile_2K11_KRUG_DDR is 'GameData:/Assets/3D/Units/DDR/DCA/2K11_KRUG/2K11_KRUG.fbx'
+export Modele_2K11_KRUG_DDR is ModelDescriptor
+(
+    FileName     = ModelFile_2K11_KRUG_DDR
+)
+
+export ModelFile_2K11_KRUG_DDR_MID is 'GameData:/Assets/3D/Units/DDR/DCA/2K11_KRUG_MID/2K11_KRUG_MID.fbx'
+export Modele_2K11_KRUG_DDR_MID is ModelDescriptor
+(
+    FileName     = ModelFile_2K11_KRUG_DDR_MID
+)
+
+export ModelFile_2K11_KRUG_DDR_LOW is 'GameData:/Assets/3D/Units/DDR/DCA/2K11_KRUG_LOW/2K11_KRUG_LOW.fbx'
+export Modele_2K11_KRUG_DDR_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_2K11_KRUG_DDR_LOW
+)

@@ -1,0 +1,82 @@
+template BUCKDraggableContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    PointerDistanceBeforeDrag : float = 0.0,                            // La distance minimal entre l'endroit du click et la souris avant de déclencher le drag
+]
+is TBUCKDraggableContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    PointerDistanceBeforeDrag = <PointerDistanceBeforeDrag>
+)

@@ -1,0 +1,10 @@
+// Enum ProjectileType // A maintenir synchro avec EugIA_ModernWarfare/ModernWarfareArmeArmure.h
+EProjectileType is TBaseClass
+(
+    Obus                             is 0
+    Artillerie                       is 1
+    Balle                            is 2
+    Bombe                            is 3
+    Grenade                          is 4
+    GuidedMissile                    is 5
+)

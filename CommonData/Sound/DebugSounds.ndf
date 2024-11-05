@@ -1,0 +1,12 @@
+// Sons de debug, utilisés pour le développement et le diagnostic du moteur son
+export Sound_DebugBeep_440Hz is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/SoundSettings_Default
+    TheSoundStream = TSoundStream(FileName = "CommonData:/Assets/Sounds/SFX/beep_440Hz.wav")
+)
+
+export Sound_DebugBeep_880Hz is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/SoundSettings_Default
+    TheSoundStream = TSoundStream(FileName = "CommonData:/Assets/Sounds/SFX/beep_880Hz.wav")
+)

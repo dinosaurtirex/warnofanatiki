@@ -1,0 +1,17 @@
+export Modele_LandRover_WOMBAT_Gurkhas_UK is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Vehicule/LandRover_Para_WOMBAT/LandRover_Para_WOMBAT.fbx'
+)
+
+export Modele_LandRover_WOMBAT_Gurkhas_UK_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Vehicule/LandRover_Para_WOMBAT_MID/LandRover_Para_WOMBAT_MID.fbx'
+)
+
+export Modele_LandRover_WOMBAT_Gurkhas_UK_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Vehicule/LODS/LandRover_Para_WOMBAT_LOW.fbx'
+)
+
+
+

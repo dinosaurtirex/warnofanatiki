@@ -1,0 +1,11 @@
+// Enum EAllowablePointerEventType // a maintenir synchro avec EugUserInterface\UIPointerEvent.h
+EAllowablePointerEventType is TBaseClass
+(
+    None                        is 0x0000
+    Move                        is 0x0001
+    Button1                     is 0x0002
+    Button2                     is 0x0004
+    Button3                     is 0x0008
+    Scroll                      is 0x0010
+    DoubleClic                  is 0x0040
+)

@@ -1,0 +1,38 @@
+export Modele_TestUnit_ModelAvion_Strategic is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelAvion )
+export Modele_TestUnit_ModelHelico_Strategic is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelHelico )
+export Modele_TestUnit_ModelInfantry_Strategic is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelInfantry )
+export Modele_TestUnit_ModelTank_Strategic is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelTank )
+export Modele_TestUnit_Airport_Strategic is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelBuilding )
+
+export Modele_TestUnit_ModelTank is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelTank )
+export Modele_TestUnit_ModelVehicule is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelVehicule )
+export Modele_TestUnit_ModelHelico is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelHelico )
+export Modele_TestUnit_ModelAvion is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelAvion )
+export Modele_TestUnit_ModelBateau is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelBateau )
+export Modele_TestUnit_ModelInfantry is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelInfantry )
+export Modele_TestUnit_ModelBuilding is CommonMeshDesc( ModelFile = ~/Private_ModelFile_TestUnit_ModelBuilding )
+
+// TestCamo
+unnamed ModelDescriptor
+(
+    FileName = 'CommonData:/Assets/3D/Misc/OneMeterBox.fbx'
+)
+
+unnamed ModelDescriptor
+(
+    FileName = 'CommonData:/Assets/3D/Misc/OneMeterBox.fbx'
+    TextureDirectory = 'CommonData:/Assets/3D/Misc/Camo1'
+)
+
+unnamed ModelDescriptor
+(
+    FileName = 'CommonData:/Assets/3D/Misc/OneMeterBox.fbx'
+    TextureDirectory = 'CommonData:/Assets/3D/Misc/Camo2'
+)
+
+unnamed ModelDescriptor
+(
+    FileName = 'CommonData:/Assets/3D/Misc/OneMeterBox.fbx'
+    TextureDirectory = 'CommonData:/Assets/3D/Misc/Camo3'
+)
+

@@ -1,0 +1,15 @@
+export Modele_M551A1_TTS_Sheridan_CMD_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Char/M551A1_TTS_Sheridan_CMD/M551A1_TTS_Sheridan.fbx'
+)
+
+export Modele_M551A1_TTS_Sheridan_CMD_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Char/M551A1_TTS_Sheridan_CMD/M551A1_TTS_Sheridan.fbx'
+)
+
+export Modele_M551A1_TTS_Sheridan_CMD_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Char/M551A1_TTS_Sheridan_CMD/M551A1_TTS_Sheridan.fbx'
+)
+

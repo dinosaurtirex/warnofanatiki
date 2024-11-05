@@ -1,0 +1,110 @@
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_CZ"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_CZ.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_FR"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_FR.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_BEL"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_BEL.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_NL"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_NL.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_LUX"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_LUX.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_GER"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_GER.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_POL"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_POL.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_UK"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_UK.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_US"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_US.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_USSR"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_USSR.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_CAN"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_CAN.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_DAN"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_DAN.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_SWE"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_SWE.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_NOR"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_NOR.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_NK"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_NK.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_ROK"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_ROK.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_CHI"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_CHI.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_JAP"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_JAP.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_ANZ"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_ANZ.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_HON"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_HON.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_TCH"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_CZ.csv"
+)
+unnamed TLocalisationDicoResource
+(
+    DicoToken = "NAMES_ESP"
+    FileName = "GameData:/Gameplay/Unit/Names/UNITNAMES_ESP.csv"
+)

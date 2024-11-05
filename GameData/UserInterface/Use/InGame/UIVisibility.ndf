@@ -1,0 +1,31 @@
+
+
+AllInGameRanges is TVisibilityRangeContainer
+(
+    AltitudeMax is 15000000
+
+    ItemList =
+    [
+        // L'altitude min correspond au moment où on veut être sûr que plus rien n'est visible,
+        // On fait correspondre cette altitude à ~/SeuilZoomAffichageZoneDeploiement dans Visibility.ndf
+        // pour que les transitions soient jolies
+        // c'est une coupure nette, mais on utilise un OpacityControl pour assurer une transition douce plus tôt
+        ZoomRenfortArrow is TVisibilityRange
+        (
+            AltitudeMax = AltitudeMax
+            AltitudeMin = 100000
+        ),
+        ZoomCommandArea is TVisibilityRange
+        (
+            AltitudeMax = AltitudeMax
+            AltitudeMin = 100000
+        ),
+    ]
+)
+
+InGameVisibilityHelper is TSimpleHelperVisibility
+(
+    RangeList = ~/AllInGameRanges
+    Camera = $/M3D/Misc/CameraPrincipale
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+)

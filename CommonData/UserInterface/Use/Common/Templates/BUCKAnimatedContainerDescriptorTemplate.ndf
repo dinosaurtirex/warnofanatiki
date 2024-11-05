@@ -1,0 +1,359 @@
+//------------------------------------------------
+
+// A garder synchro avec BUCKAnimatedContainer.h
+AnimationTrigger is TBaseClass
+(
+    ManualTrigger is 0
+    OnSelfSetVisible is 1
+    OnSelfSetInvisible is 2
+)
+
+//------------------------------------------------
+
+template BUCKAnimatedContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+
+    RequiredTags : LIST<string> = [],
+
+    ForbiddenTags : LIST<string> = [],
+
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    ButtonNameForTrigger : string = "", // Doit être dans les Components du composant !
+    ButtonUniqueNameForTrigger : string = "", // Permet d'accèder à un bouton en dehors du composant, ne pas utiliser en même temps que ButtonNameForTrigger
+
+    UseRewind : bool = true, // Si true, lorsque l'animation est redeclenchée apres avoir jouée, elle va rejouer à l'envers
+
+    ParametersByTrigger : MAP<int, TUIAnimationParametersRTTI>, // Les paramètre des l'animation rangé par déclencheur (mettre des valeurs négatives pour les déclencheurs customs)
+]
+is TBUCKAnimatedContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    ButtonNameForTrigger = <ButtonNameForTrigger>
+    ButtonUniqueNameForTrigger = <ButtonUniqueNameForTrigger>
+
+    UseRewind = <UseRewind>
+
+    ParametersByTrigger = <ParametersByTrigger>
+)
+
+//------------------------------------------------
+
+template BUCKSimpleAnimatedContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+
+    RequiredTags : LIST<string> = [],
+
+    ForbiddenTags : LIST<string> = [],
+
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    ButtonNameForTrigger : string = "", // Doit être dans les Components du composant !
+    ButtonUniqueNameForTrigger : string = "", // Permet d'accèder à un bouton en dehors du composant, ne pas utiliser en même temps que ButtonNameForTrigger
+
+    TriggerWhenSetVisible : bool = false, // ElementName d'un bouton déclenchant l'animation, il doit être dans les Components du composant !
+    TriggerWhenSetInvisible : bool = false, // Declenche l'animation avant la disparition du conteneur à l'écran
+
+    AnimationTotalDuration : float, // Duree de l'animation
+    AnimationModifier : TUIAnimationModifierRTTI,
+
+] is BUCKAnimatedContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    ButtonNameForTrigger = <ButtonNameForTrigger>
+    ButtonUniqueNameForTrigger = <ButtonUniqueNameForTrigger>
+
+    AnimationParameters is TUIAnimationParametersRTTI
+    (
+        TotalDuration = <AnimationTotalDuration>
+        ModifierDescriptors =
+        [
+            <AnimationModifier>,
+        ]
+    )
+
+    ParametersByTrigger = MAP
+    [
+        (
+            ~/AnimationTrigger/ManualTrigger, AnimationParameters
+        ),
+    ] +
+    ( <TriggerWhenSetVisible> ? MAP
+        [
+            (
+                ~/AnimationTrigger/OnSelfSetVisible, AnimationParameters
+            ),
+        ] : MAP []
+    ) +
+    ( <TriggerWhenSetInvisible> ? MAP
+        [
+            (
+                ~/AnimationTrigger/OnSelfSetInvisible, AnimationParameters
+            ),
+        ] : MAP []
+    )
+)
+
+//------------------------------------------------
+
+template BUCKTranslationAnimatedContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+
+    RequiredTags : LIST<string> = [],
+
+    ForbiddenTags : LIST<string> = [],
+
+    FramePropertyBeforeAnimation : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    ButtonNameForTrigger : string = "", // ElementName d'un bouton déclenchant l'animation, il doit être dans les Components du composant !
+    ButtonUniqueNameForTrigger : string = "", // Permet d'accèder à un bouton en dehors du composant, ne pas utiliser en même temps que ButtonNameForTrigger
+
+    TriggerWhenSetVisible : bool = false, // Declenche l'animation lors de l'apparition du conteneur à l'écran
+    TriggerWhenSetInvisible : bool = false, // Declenche l'animation avant la disparition du conteneur à l'écran
+
+    AnimationTotalDuration : float, // Duree de l'animation
+    AnimationModificator : int = ~/AnimModificator/None,
+    AnimationModificatorParameters : List<float> = [],
+
+    FramePropertyAfterAnimation : TUIFramePropertyRTTI, // Position finale du conteneur a la fin de l'animation
+
+] is BUCKSimpleAnimatedContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <FramePropertyBeforeAnimation>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    ButtonNameForTrigger = <ButtonNameForTrigger>
+    ButtonUniqueNameForTrigger = <ButtonUniqueNameForTrigger>
+
+    TriggerWhenSetVisible = <TriggerWhenSetVisible>
+    TriggerWhenSetInvisible = <TriggerWhenSetInvisible>
+
+    AnimationTotalDuration = <AnimationTotalDuration>
+
+    AnimationModifier = TUIAnimationFramePropertyModifierRTTI
+    (
+        Duration = <AnimationTotalDuration>
+        StartTime = 0.0
+        Modificator = <AnimationModificator>
+        ModificatorParameters = <AnimationModificatorParameters>
+
+        // Some animations end at the start position
+        FinalFramePropertyIsInitialFrameProperty is (
+            <AnimationModificator> == ~/AnimModificator/LinearRect
+            | <AnimationModificator> == ~/AnimModificator/CubicRect
+            | <AnimationModificator> == ~/AnimModificator/ParabolicArch
+            | <AnimationModificator> == ~/AnimModificator/SquareTooth
+            | <AnimationModificator> == ~/AnimModificator/InvMaxed
+            ) ? true : false
+
+        InitialFrameProperty = <FramePropertyBeforeAnimation>
+        FinalFrameProperty = <FramePropertyAfterAnimation>
+        ForcedFinalFrameProperty = FinalFramePropertyIsInitialFrameProperty ? <FramePropertyBeforeAnimation> : <FramePropertyAfterAnimation>
+    )
+)
+
+//------------------------------------------------

@@ -1,0 +1,56 @@
+// Ne pas éditer, ce fichier est auto-généré !
+
+Generated_ResistanceFamily_Enum is TResistanceFamilyList
+(
+    Values = [
+        "ResistanceFamily_avion",
+        "ResistanceFamily_batiment",
+        "ResistanceFamily_blindage",
+        "ResistanceFamily_canon",
+        "ResistanceFamily_helico",
+        "ResistanceFamily_infanterie",
+        "ResistanceFamily_toit",
+        "ResistanceFamily_vehicule",
+        "ResistanceFamily_vehicule_leger",
+    ]
+)
+
+Generated_DamageFamily_Enum is TDamageFamilyList
+(
+    Values = [
+        "DamageFamily_ap",
+        "DamageFamily_ap_missile",
+        "DamageFamily_artillerie",
+        "DamageFamily_assaut",
+        "DamageFamily_balle",
+        "DamageFamily_balleaa",
+        "DamageFamily_balledca",
+        "DamageFamily_balle_mg",
+        "DamageFamily_bombe",
+        "DamageFamily_cac",
+        "DamageFamily_clu_sol_ap",
+        "DamageFamily_cluster",
+        "DamageFamily_cluster_ap",
+        "DamageFamily_fmballe",
+        "DamageFamily_flamme",
+        "DamageFamily_frag",
+        "DamageFamily_grenades",
+        "DamageFamily_he",
+        "DamageFamily_he_dca",
+        "DamageFamily_he_autocanon",
+        "DamageFamily_howz",
+        "DamageFamily_howz_bombe",
+        "DamageFamily_mmgballe",
+        "DamageFamily_missile_he",
+        "DamageFamily_pmballe",
+        "DamageFamily_roquette",
+        "DamageFamily_smoke",
+        "DamageFamily_superhe",
+        "DamageFamily_superhe_sol",
+        "DamageFamily_suppress",
+        "DamageFamily_suppressap",
+        "DamageFamily_thermobarique",
+        "DamageFamily_roquette_ap",
+        "DamageFamily_suppressdca",
+    ]
+)

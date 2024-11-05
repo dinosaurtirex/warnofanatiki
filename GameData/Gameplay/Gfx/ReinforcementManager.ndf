@@ -1,0 +1,5 @@
+private reinforcementManager is TReinforcementManager
+(
+    LandCorridorTextOffset = 5000
+    AerialCorridorTextOffset = 5000
+)

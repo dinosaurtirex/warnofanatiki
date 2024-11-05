@@ -1,0 +1,14 @@
+export Modele_AIFV_B_MILAN_BEL is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/BEL/Antichar/AIFV_B_MILAN/AIFV_B_MILAN.fbx'
+)
+
+export Modele_AIFV_B_MILAN_BEL_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/BEL/Antichar/AIFV_B_MILAN_MID/AIFV_B_MILAN_MID.fbx'
+)
+
+export Modele_AIFV_B_MILAN_BEL_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/BEL/Antichar/LODS/AIFV_B_MILAN_LOW.fbx'
+)

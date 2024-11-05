@@ -1,0 +1,49 @@
+//-----------------------------------------------------------------------------
+// A maintenir synchro avec les valeurs de CapaciteEnum.h
+//-----------------------------------------------------------------------------
+
+CapaciteDeclenchementType_ordre_cibles_sequencielles  is 0
+CapaciteDeclenchementType_ordre_zone                  is 1
+CapaciteDeclenchementType_automatique                 is 2
+CapaciteDeclenchementType_suppression                 is 3
+CapaciteDeclenchementType_ordre_cibles_une_seule_fois is 4
+CapaciteDeclenchementType_post_ordre                  is 5
+
+CapaciteTypeCible_position               is 0
+CapaciteTypeCible_unite                  is 1
+CapaciteTypeCible_soi                    is 2
+CapaciteTypeCible_autour_soi             is 3
+CapaciteTypeCible_unite_meme_descripteur is 4
+
+CapaciteTargetFilter_tout                      is 0
+CapaciteTargetFilter_ennemi                    is 1
+CapaciteTargetFilter_allie                     is 2
+CapaciteTargetFilter_neutre                    is 3
+CapaciteTargetFilter_joueur                    is 4
+CapaciteTargetFilter_allie_different_de_caster is 5
+
+CapaciteWoundedFilterType_tout is 0
+CapaciteWoundedFilterType_oui  is 1
+CapaciteWoundedFilterType_non  is 2
+
+CapaciteAreaShape_circulaire    is 0
+CapaciteAreaShape_soi           is 1
+
+CapaciteCumulEffect_oui             is 0
+CapaciteCumulEffect_jamais          is 1
+CapaciteCumulEffect_autres_lanceurs is 2
+
+CapaciteFeedbackActivationMask_never       is 0
+CapaciteFeedbackActivationMask_player      is 1
+CapaciteFeedbackActivationMask_allied      is 1+2 // allié inclut forcément le joueur
+CapaciteFeedbackActivationMask_enemy       is 4
+CapaciteFeedbackActivationMask_anyalliance is CapaciteFeedbackActivationMask_allied | CapaciteFeedbackActivationMask_enemy
+CapaciteFeedbackActivationMask_highlighted is 8
+CapaciteFeedbackActivationMask_selected    is 16
+CapaciteFeedbackActivationMask_anytime     is 32
+CapaciteFeedbackActivationMask_soloselected is 64
+CapaciteFeedbackActivationMask_always      is -1
+
+
+CapaciteInfluenceMapType_global is 0
+CapaciteInfluenceMapType_zones  is 1

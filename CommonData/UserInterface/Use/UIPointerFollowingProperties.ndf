@@ -1,0 +1,19 @@
+// Ces valeurs doivent matcher les valeurs décrites dans EugUserInterface/UIPointerFollowingProperties.h
+
+export HorizontalPlacement is TBaseClass
+(
+    export Left is 0
+    export Right is 1
+)
+
+export VerticalPlacement is TBaseClass
+(
+    export Up is 0
+    export Down is 1
+)
+
+export OutOfBorderAction is TBaseClass
+(
+    export StickToBorder is 0
+    export SwitchPlacement is 1
+)

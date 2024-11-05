@@ -1,0 +1,8 @@
+
+//A maintenir synchro avec Engine\Code\Eugen\CPP\EugIA_Common\DeploymentModeEnum.h
+EDeploymentMode is TBaseClass
+(
+    NotSpecified            is 0
+    Skirmish                is 1
+    Breakthrough            is 2
+)

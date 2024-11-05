@@ -1,0 +1,29 @@
+
+// À maintenir synchro avec SoundFilter.h
+TSoundFilter_None           is 0
+TSoundFilter_Normalize      is 1
+TSoundFilter_RadioVehicule  is 20
+TSoundFilter_RadioOutside   is 21
+TSoundFilter_RadioAirplane  is 22
+
+template Template_UnitAcknow [ Identifier : string, Filter : int ] is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/AcknowUnit_SoundSettings
+    TheSoundStream       = TSoundStream
+    (
+        FileName = 'GameData:/Assets/Sons/Acknows/' + <Identifier> + '.ogg'
+    )
+    Filter = <Filter>
+)
+
+template TemplateSoundDescriptor
+[
+    FileName  : string = ''
+] is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/HUD_SoundSettings
+    TheSoundStream = TSoundStream
+    (
+        FileName = <FileName>
+    )
+)

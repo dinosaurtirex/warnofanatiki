@@ -1,0 +1,95 @@
+template BUCKTextureAnimationDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    HidePointerEvents : bool = false,
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    TextureList : LIST<string> = [],                                                  // La liste des tokens de texture de l'animation
+    TextureDrawer : string = 'ColorMultiply',                                         // Le drawer de texture utilisé pour l'animation
+
+    AnimDuration : float,                                                             // La durée de l'animation
+    AlphaAnimDuration : float = 0.0,                                                  // La durée de l'animation de transparence (si 0, aucune animation de transparence n'est appliquée)
+    IsCyclic : bool = false,                                                          // Faire boucler l'animation
+
+    LocalRenderLayer : int = 0,                                                       // Layer local pour le composant
+]
+is TBUCKTextureAnimationDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    TextureList = <TextureList>
+    TextureDrawer = <TextureDrawer>
+
+    AnimDuration = <AnimDuration>
+    AlphaAnimDuration = <AlphaAnimDuration>
+    IsCyclic = <IsCyclic>
+)

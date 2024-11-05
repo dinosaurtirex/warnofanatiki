@@ -1,0 +1,53 @@
+private DefaultCommonTextStyle is TTextStyle
+(
+    ColorBottom = [  0,  0,  0,  0]
+    ColorUp     = [  0,  0,  0,  0]
+    ColorStroke = [  0,  0,  0,  0]
+    Stroke = false
+    FontSize = 1
+)
+
+CommonStyleGuide is TUIStyleGuide
+(
+    Typeface = MAP [
+        ("UIMainFont", $/M3D/Typefaces/Typeface_Debug),
+    ]
+
+    TextStylesMap = MAP [
+        ("Default",                                     MAP [ ( ~/ComponentState/Normal, DefaultCommonTextStyle ), ]),
+    ]
+
+    //LineSizes
+    LineSizesMap = MAP[
+        ("1",                                           MAP [ ( ~/ComponentState/Normal,     TFloatRTTI ( Value = 1 ) ), ]),
+        ("Editor/Button/Border",                        MAP [ ( ~/ComponentState/Normal,    TFloatRTTI ( Value = LigneTresFine )), ]),
+    ]
+
+//Colors
+
+    //BlockColors
+    BlockColorsMap = MAP[
+        ("Console/Background",                          MAP [ ( ~/ComponentState/Normal,    TColorRTTI ( Color = Common_GrisSombre )), ]),
+        ("Editor/Container/Background",                 MAP [ ( ~/ComponentState/Normal,    TColorRTTI ( Color = Common_GrisSombre )), ]),
+        ("Editor/Button/Background",                    MAP [
+                                                            ( ~/ComponentState/Normal,      TColorRTTI ( Color = Common_GrisSombre )),
+                                                            ( ~/ComponentState/Clicked,     TColorRTTI ( Color = Common_GrisTresSombre ) ),
+                                                            ]),
+    ]
+
+    //LineColors
+    LineColorsMap = MAP [
+        ("Console/Border",                              MAP [ ( ~/ComponentState/Normal,    TColorRTTI ( Color = Common_White )), ]),
+        ("Editor/Container/Border",                     MAP [ ( ~/ComponentState/Normal,    TColorRTTI ( Color = Common_GrisTresSombre )), ]),
+        ("Editor/Button/Border",                        MAP [
+                                                            ( ~/ComponentState/Grayed,      TColorRTTI ( Color = Common_GrisMoyen ) ),
+                                                            ( ~/ComponentState/Normal,      TColorRTTI ( Color = Common_GrisTresSombre ) ),
+                                                            ( ~/ComponentState/Highlighted, TColorRTTI ( Color = Common_White ) ),
+                                                            ( ~/ComponentState/Clicked,     TColorRTTI ( Color = Common_White ) ),
+                                                        ]),
+    ]
+
+    //TextColors
+    TextColorsMap = MAP [
+    ]
+)

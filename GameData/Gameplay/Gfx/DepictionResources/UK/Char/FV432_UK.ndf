@@ -1,0 +1,19 @@
+export Modele_FV432_UK is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/APC/FV432/FV432.fbx'
+)
+
+export Modele_FV432_UK_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/APC/FV432_MID/FV432_MID.fbx'
+)
+
+export Modele_FV432_UK_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/APC/LODS/FV432_LOW.fbx'
+)
+
+export Modele_FV432_UK_Tourelle_01 is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Char/Chieftain_Mk11/L37_t1.fbx'
+)

@@ -1,0 +1,52 @@
+private bonusPrecision is 3
+
+export HitRollParams is TRollParameters
+(
+    // Distance parcouru par la cible entre deux tirs successifs au delà de laquelle on considère que l'unité a bougé
+    DistanceToleranceGRU = 7067
+
+    // Chance to pierce if weaponPenetrationLevel > armorLevel - PiercingThresholdBias
+    PiercingThresholdBias = 1
+
+    // Success if roll > DiceNumberFaces - modifiersum
+    DicesNumberFaces =
+    [
+        100,    // Hit
+        1,      // Pierce
+        100,    // Critic
+    ]
+
+    // Uniquement sur Hit
+    // Si distance/maxRange < Valeur dans le tableau, on gagne le premier bonus valide. /!\Interpolation entre les paliers si InterpolateRangeTable est à true/!\
+    InterpolateRangeTable = true
+    RangeModifiersTable =
+    [
+        (0.05, 300),
+        (0.17, 70),
+        (0.33, 50),
+        (0.50, 30),
+        (0.67, 15),
+        (1.00, 0),
+        (9999, 0)  // Au cas où on vise au delà de la portée pour certains calculs pas de bonus de precision
+    ]
+
+    // Uniquement sur Hit
+    SuccessiveHitModifiersTable =
+    [
+        (0,  0), //     successiveHits <= 0    ->  0
+        (1,  1*bonusPrecision), // 0 < successiveHits <= 1    ->  1
+        (2,  2*bonusPrecision), // 1 < successiveHits <  inf  ->  2
+        (3,  3*bonusPrecision),
+        (4,  4*bonusPrecision),
+        (5,  5*bonusPrecision),
+        (6,  6*bonusPrecision),
+        (7,  7*bonusPrecision),
+        (8,  8*bonusPrecision),
+        (9,  9*bonusPrecision),
+        (10,  10*bonusPrecision),
+    ]
+    // Note : un autre modificateur entre en compte. Ce modificateur est défini dans l'ODS des paliers de dégâts de suppression.
+
+    // défini quel sera le minimum, cad qu'on prend le max entre BaseHitChance - ECM et MinimalHitChanceWithECM
+    MinimalHitChanceWithECM = 10
+)

@@ -1,0 +1,41 @@
+
+// A maintenir synchro avec EugIA_Specific/EnumSmartGroupGrade.h
+ESmartGroupGrade is TBaseClass
+(
+    NoGrade is 0
+    Major is 1
+    LieutenantColonel is 2
+    Captain is 3
+    FirstLieutenant is 4
+    SecondLieutenant is 5
+    Sergeant is 6
+    WarrantOfficer is 7
+)
+
+private GroupRules is TDeckGroupRules
+(
+    MaxNbSmartGroupByCombatGroup = 6
+    MaxNbPackBySmartGroup = 3
+    CanUseSamePackInSameSmartGroupSlot = true
+
+    MaxNbCombatGroupForGameMode = MAP
+    [
+    (GameSkirmish, 4),
+    (GameChallenge, 5)
+    ]
+
+    CombatGroupDefaultName = "SGRP_TAB"
+    SmartGroupDefaultName = "SGR_DEFLT"
+
+    SmartGroupLeaderGradeList = MAP
+    [
+        (~/ESmartGroupGrade/NoGrade, "SGR_EMPT"),
+        (~/ESmartGroupGrade/Sergeant, "SGR_GRD3"),
+        (~/ESmartGroupGrade/WarrantOfficer, "SGR_GRD4"),
+        (~/ESmartGroupGrade/SecondLieutenant, "SGR_GRD5"),
+        (~/ESmartGroupGrade/FirstLieutenant, "SGR_GRD6"),
+        (~/ESmartGroupGrade/Captain, "SGR_GRD7"),
+        (~/ESmartGroupGrade/Major, "SGR_GRD8"),
+        (~/ESmartGroupGrade/LieutenantColonel, "SGR_GRD9"),
+    ]
+)

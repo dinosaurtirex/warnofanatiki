@@ -1,0 +1,26 @@
+"ID";"DICO";"TOKEN";"REFTEXT";"COMMENT";"CONTEXT";"CONSTRAINT";"DO NOT TRANSLATE";"DLCS"
+"5dbede7b31e06b7d059f18dfd5893282";"EarlyLocalisation.cpp";"0";"Error";;;;;
+"15778040a5df66cc023e636090d73578";"EarlyLocalisation.cpp";"1";"Fatal Error";;;;;
+"2c4542aa320c85e73e78bbfd0baebf36";"EarlyLocalisation.cpp";"2";"Corrupted installation detected. Please verify the game cache integrity or reinstall.";;;;;
+"4df81b526aff3b9b184b2c662093d441";"EarlyLocalisation.cpp";"3";"You have not purchased this game.";;;;;
+"4b51ab401c00b24e9d1c4c469f8bd91d";"EarlyLocalisation.cpp";"4";"Game did not terminate properly. Do you want to load the last known good configuration ?";;;;;
+"9af49531bede945e38a63714d66ed317";"EarlyLocalisation.cpp";"5";"Game did not terminate properly.";;;;;
+"92c7822f2326b6c8eb49aa2754a0c4f8";"EarlyLocalisation.cpp";"6";"Unable to reset the last known good configuration file, do you want to set up the default configuration?";;;;;
+"0437b1267f570167e948a4f7b7026c67";"EarlyLocalisation.cpp";"7";"Connection to %1 client failed.";;;;;
+"e8b2a21cc579c78bd42600bf480fed85";"EarlyLocalisation.cpp";"8";"Game requires Windows 7 or later to run.";;;;;
+"318b6c898f0438e96094964a47ce2f0f";"EarlyLocalisation.cpp";"9";"Checking operating system";;;;;
+"57dccd0ebee963cf82d4d55d30e450f0";"EarlyLocalisation.cpp";"A";"Game requires Windows 7 SP1, please update Windows.";;;;;
+"c7bdeaa2b5a93a8ffc07344ba905e0f7";"EarlyLocalisation.cpp";"B";"Only one instance of game can be launched at a time. Make sure the game is not running in the background or reboot the machine.";;;;;
+"4ba6f47db3e91b524de72ca7def3f4d3";"EarlyLocalisation.cpp";"C";"A dll needed to run the game is missing. Please verify the game cache integrity or reinstall.";;;;;
+"138a5963c2e0a44e65c18847e671ff42";"EarlyLocalisation.cpp";"D";"Requested mod '%1' could not be loaded.";;;;;
+"3a97fcb4ffa01f0901df294de2bba287";"EarlyLocalisation.cpp";"E";"WMVCore.dll not found! Videos will not be played.\nFor more informations, please visit the technical forum.";;;;;
+"8aca05fdb44f76464957255e15495d43";"EarlyLocalisation.cpp";"F";"Some datas are missing, you should reinstall the game or its last content.";;;;;
+"70b78f27e1847daf9699187947f82ecc";"EarlyLocalisation.cpp";"G";"Unable to access graphic device, your hardware or Direct3D configuration is incompatible with this game.\n\nReason:\n";;;;;
+"c3c7067f40e66fde94df48bced982e96";"EarlyLocalisation.cpp";"H";"Critical graphic error";;;;;
+"8548a3b668adee008525f4a4153ade19";"EarlyLocalisation.cpp";"I";"Other processus (%1.exe) has crashed. The game will now exit.";;;;;
+"c8ed813f85b624f156738d64d69bf83e";"EarlyLocalisation.cpp";"J";"XAudio_2_7.dll is missing";;;;;
+"4181ecbe1a97d23856b97dba5c5b186b";"EarlyLocalisation.cpp";"K";"XAudio_2_7.dll is missing, sound will not be available.\nPlease install DirectX June 2010 Redistributable.";;;;;
+"af596ee0d52a479061f5119f4eaae4c8";"EarlyLocalisation.cpp";"L";"Game did not terminate properly. Do you want to disable all mods to avoid interferences ?";;;;;
+"f018fe0d0bbd55397c1d443a73e94c2e";"EarlyLocalisation.cpp";"M";"Game need a GPU supporting at least DirectX 11_0 level feature.\nCheck your GPU capabilities and DirectX version.";;;;;
+"ccc5830553ec8cd72544c1257115b9a1";"EarlyLocalisation.cpp";"P";"Game is not installed.";;;;;
+"8fb7a81872d625fe86a1b7d1aec41ba0";"EarlyLocalisation.cpp";"R";"Checking the integrity of the data files is recommended. This might take several minutes.\nCheck data integrity now?";;;;;

@@ -1,0 +1,8 @@
+// Keep this list synchronized with InterfaceMultiprojet/UIMouseWidgetSelector.h
+TextStyle_Bonus         is 0
+TextStyle_WithinRange   is 1
+TextStyle_OutOfRange    is 2
+TextStyle_Unseen        is 3
+TextStyle_Blocked       is 4
+TextStyle_Invalid       is 5
+TextStyle_NotEfficient  is 6

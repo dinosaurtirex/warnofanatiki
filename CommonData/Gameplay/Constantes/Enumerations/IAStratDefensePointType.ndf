@@ -1,0 +1,10 @@
+// Enum EDefensePointType // a maintenir synchro avec EugIAStrat_Common\EnumIAStratDefensePointType.h
+EDefensePointType is TBaseClass
+(
+    UnknowDefensePoint  is 0x0000
+    HardCover           is 0x0001
+    NearCover           is 0x0002
+    Objective           is 0x0004
+    Hidden              is 0x0008
+    All                 is 0xffff
+)

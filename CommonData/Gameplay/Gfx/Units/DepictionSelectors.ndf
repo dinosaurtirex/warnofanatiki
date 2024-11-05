@@ -1,0 +1,58 @@
+export LodHighLowLimit_Infantry  is 200
+export LodLowNoneLimit_Infantry is 1200
+
+export PixelConstantValuesSpecific is TBaseClass
+(
+    // Pixel Constant par defaut wargame
+    export DefaultFactor                       is  0.55
+    export DefaultScaleMax                     is  3.14
+    export DefaultMinReferenceAltitude         is  18550.0
+
+    // Pixel Constant des avions
+    export AirplaneFactor                      is  0.65
+    export AirplaneScaleMax                    is  3.14
+    export AirplaneMinReferenceAltitude        is  18550.0
+
+    // Pixel Constant des infanteries
+    export InfantryFactor                      is  0.75
+    export InfantryScaleMax                    is  3.14
+    export InfantryMinReferenceAltitude        is  18550.0
+
+    // Pixel Constant des impacts
+    export ImpactFactor                        is  0.4
+    export ImpactScaleMax                      is  3.14
+    export ImpactMinReferenceAltitude          is  18550.0
+)
+
+
+export OnlyHighDepictionSelector is TConstantAlternativeSelector(Key = [LOD_High])
+
+
+//selecteur séparé pour les soldats pour faire un réglage indépendant des tanks
+export CommonPilotDepictionSelector is TPilotLodSelector
+(
+    HighLowLimitInMeter = LodHighLowLimit_Infantry
+    LowNoneLimitInMeter = LodLowNoneLimit_Infantry
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+    OptionalLimit = $/GraphicOption/ModelQuality
+)
+
+export CommonVehicleScaler is TCameraScaler
+(
+    ScaleFactor = PixelConstantValuesSpecific/DefaultFactor
+    ScaleMax = PixelConstantValuesSpecific/DefaultScaleMax
+    ScaleMinReferenceAltitude = PixelConstantValuesSpecific/DefaultMinReferenceAltitude
+    Camera = $/M3D/Misc/CameraPrincipale
+    ScaleOption = $/GUIOption/UnitScalingEnabled
+)
+
+export CommonInfantryScaler is TCameraScaler
+(
+    ScaleFactor = PixelConstantValuesSpecific/InfantryFactor
+    ScaleMax = PixelConstantValuesSpecific/InfantryScaleMax
+    ScaleMinReferenceAltitude = PixelConstantValuesSpecific/InfantryMinReferenceAltitude
+    Camera = $/M3D/Misc/CameraPrincipale
+    ScaleOption = $/GUIOption/UnitScalingEnabled
+)
+
+export CommonIdentityScaler is TIdentityScaler()

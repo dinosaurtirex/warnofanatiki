@@ -1,0 +1,14 @@
+export Modele_M113A2_TOW_US is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/APC/M113A2_TOW/M113A2_TOW.fbx'
+)
+
+export Modele_M113A2_TOW_US_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/APC/M113A2_TOW_MID/M113A2_TOW_MID.fbx'
+)
+
+export Modele_M113A2_TOW_US_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/APC/M113A2_TOW_LOW/M113A2_TOW_LOW.fbx'
+)

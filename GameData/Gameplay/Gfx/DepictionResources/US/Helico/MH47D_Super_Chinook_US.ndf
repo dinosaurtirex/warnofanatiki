@@ -1,0 +1,14 @@
+export Modele_MH47D_Super_Chinook_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/MH47D_Chinook/MH47D_Chinook.fbx'
+)
+
+export Modele_MH47D_Super_Chinook_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/MH47D_Chinook/MH47D_Chinook.fbx'
+)
+
+export Modele_MH47D_Super_Chinook_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/MH47D_Chinook/MH47D_Chinook.fbx'
+)

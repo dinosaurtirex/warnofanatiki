@@ -1,0 +1,14 @@
+export Modele_M163_PIVADS_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/DCA/M163_Pivads/M163_Pivads.fbx'
+)
+
+export Modele_M163_PIVADS_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/DCA/M163_Pivads_MID/M163_Pivads_MID.fbx'
+)
+
+export Modele_M163_PIVADS_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/DCA/LODS/M163_Pivads_LOW.fbx'
+)

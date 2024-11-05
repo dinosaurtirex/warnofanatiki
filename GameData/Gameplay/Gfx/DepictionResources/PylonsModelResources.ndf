@@ -1,0 +1,34 @@
+template CommonMeshDesc [ ModelFile ]  is TResourceMultiMaterialMesh
+(
+    FileName = <ModelFile>
+)
+
+export ModelPylon1 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_1.fbx' )
+export ModelPylon2 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_2.fbx' )
+export ModelPylon3 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_3.fbx' )
+export ModelPylon4 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_4.fbx' )
+export ModelPylon5 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_5.fbx' )
+export ModelPylon6 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_6.fbx' )
+export ModelPylon7 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_7.fbx' )
+
+export PodModelPylon4 is  CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/US/LAU_10A/LAU_10A_x4.fbx' )
+export PodModelPylon6 is  CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/UK/Helico/Gazelle_SNEB/SNEB_x6.fbx' )
+export PodModelPylon7 is  CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/US/Helico/AH_6C_Little_Bird/Pod_Rockets_7_Little_Bird.fbx' )
+export PodModelPylon19 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/US/Helico/Cobra_AH_1F/Pod_Rockets_19.fbx' )
+
+export PodSOVModelPylon_5  is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/SOV/B_13L_rocket_pod/B_13L_rocket_pod_x5.fbx' )
+export PodSOVModelPylon_16 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/SOV/UB_32_rocket_pod/UB_16_rocket_pod_x16.fbx' )
+export PodSOVModelPylon_17 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/SOV/Pod_Rockets_SOV_17/Pod_Rockets_SOV_17.fbx' )
+export PodSOVModelPylon_20 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/SOV/B8V20_A_rocket_pod/B8V20_A_rocket_pod_x20.fbx' )
+export PodSOVModelPylon_Airplane_20 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/SOV/B8M1_Spikey/B8M1_Spikey_x20.fbx' )
+export PodSOVModelPylon_32 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/SOV/UB_32_rocket_pod/UB_32_rocket_pod_x32.fbx' )
+export PodSOVModelPylon_33 is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_17/Pod_Rockets_SOV_33.fbx' )
+
+export PodFRModelPylon_4  is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/FR/Type_100_4.fbx' ) // ce pod a 4 boites
+
+export PodFRModelResource is  CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/FR/JL_100R.fbx' ) // ce pod a 19 boites
+export PodRFAModelResource is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/FR/JL_100R.fbx' ) // ce pod a 19 boites
+export PodUKModelResource is  CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/UK/LAU_5003/LAU_5003_x19.fbx' ) // ce pod a 19 boites
+export PodUSModelResource is  CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/US/LAU_32/LAU_32_x7.fbx' ) // ce pod a 7 boites
+
+export ATGMModelResource is CommonMeshDesc( ModelFile = 'GameData:/Assets/3D/Units/Ammo/Pylones/Pylone_ATGM.fbx' )

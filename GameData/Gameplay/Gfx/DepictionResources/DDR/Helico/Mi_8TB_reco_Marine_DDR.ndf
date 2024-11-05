@@ -1,0 +1,17 @@
+export Modele_Mi_8TB_reco_Marine_DDR is ModelDescriptor
+(
+    FileName = ModelFile_Mi_8TB_DDR
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TB_reco_Marine/'
+)
+
+export Modele_Mi_8TB_reco_Marine_DDR_MID is ModelDescriptor
+(
+    FileName = ModelFile_Mi_8TB_DDR_MID
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TB_reco_Marine_MID/'
+)
+
+export Modele_Mi_8TB_reco_Marine_DDR_LOW is ModelDescriptor
+(
+    FileName = ModelFile_Mi_8TB_DDR_LOW
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TB_reco_Marine_LOW/'
+)

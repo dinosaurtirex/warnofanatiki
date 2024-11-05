@@ -1,0 +1,5 @@
+//Maintenir synchro avec TMissionType
+MissionType_Tutorial is 0
+MissionType_Strategic_Tutorial is 1
+MissionType_Challenge is 2
+MissionType_Strategic is 3

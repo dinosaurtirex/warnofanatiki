@@ -1,0 +1,87 @@
+
+private LDHintDefaultComponent is LDHintStandardComponentWithPause()
+private LDHintDefaultComponentWithoutPause is LDHintStandardComponent
+(
+    HasButtons = false
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [1200.0, 0.0]
+        MagnifiableOffset = [0.0, 300.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+)
+
+private LDHintDefaultComponentWithoutPause_2 is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [600.0, 80.0]
+        MagnifiableOffset = [0.0, 300.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Components =
+    [
+        PanelRoundedCorner
+        (
+            BorderLineColorToken = 'LDHintSolo_texte'
+            BackgroundBlockColorToken = 'LDHintSolo_fond'
+        ),
+        BUCKTextDescriptor
+        (
+
+            ElementName = 'Text1'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            ParagraphStyle = ~/LDHintParagraphStyleCentered
+            TextStyle = "Default"
+
+            HorizontalFitStyle = ~/FitStyle/UserDefined
+            VerticalFitStyle = ~/FitStyle/UserDefined
+
+            TypefaceToken = "Eurostyle"
+            BigLineAction = ~/BigLineAction/MultiLine
+
+            TextColor = "LDHintSolo_texte_or"
+            TextSize = "30"
+
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+        )
+    ]
+)
+
+private LDHintAlertComponent is LDHintStandardComponent
+(
+    TextureToken = "LDHintCampaign_InfoTexture"
+    TextureMagnifiableWidthHeight = [32.0, 32.0]
+)
+
+unnamed TUICommonLDHintResource
+(
+    ComponentByName = MAP[
+        ( "DefaultComponent", ~/LDHintDefaultComponent ),
+        ( "HintComponent", ~/LDHintDefaultComponentWithoutPause ),
+        ( "AlertComponent", ~/LDHintAlertComponent ),
+        ( "CampaignComponent", ~/LDHintDefaultComponentWithoutPause_2 ),
+        ( "CampaignComponentWithoutPause", ~/LDHintDefaultComponent ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+// Liste des Textures
+//-------------------------------------------------------------------------------------
+
+unnamed TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ("LDHintCampaign_InfoTexture", MAP[(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/icone_info.png' ))] ),
+    ]
+)
+
+

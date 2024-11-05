@@ -1,0 +1,10 @@
+// Enum à maintenir synchro avec CommonData:/Python/Eugen/defines/game_difficulty_values.py
+// et CommonData:/Gameplay/Constantes/EnumerationsNdf/GameDifficulty.ndf
+
+EGameDifficulty is TBaseClass
+(
+    //Classé du plus facile au plus difficile
+    Easy is 0
+    Medium is 1
+    Hard is 2
+)

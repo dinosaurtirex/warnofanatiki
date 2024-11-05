@@ -1,0 +1,271 @@
+
+//------------------------------------------------
+
+template TreeLineButton
+[
+    LineButtonTexture : string = "StyleDeskTexture_SortingCheckBox",
+    LineButtonTextureColor : string = "",
+    LeftClickSound : TSoundDescriptor = nil,
+] is BUCKButtonDescriptor
+(
+    ElementName = "TreeLineButton"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [25.0, 25.0]
+    )
+
+    IsTogglable = true
+    LeftClickSound = <LeftClickSound>
+
+    Components =
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            TextureToken = <LineButtonTexture>
+            TextureColorToken = <LineButtonTextureColor>
+        )
+    ]
+)
+
+//------------------------------------------------
+
+template TreeViewLine
+[
+    LineMainComponentExtendWeight : float = 0.0,
+    LineMainComponentDescriptor : TBUCKContainerDescriptor,
+    LineButtonDescriptor : TBUCKButtonDescriptor,
+] is BUCKListDescriptor
+(
+    ElementName = "TreeViewLine"
+
+    ComponentFrame = TUIFramePropertyRTTI()
+
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    InterItemMargin = TRTTILength( Magnifiable = 10.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = <LineButtonDescriptor>
+        ),
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = <LineMainComponentExtendWeight>
+            ComponentDescriptor = <LineMainComponentDescriptor>
+        )
+    ]
+)
+
+//------------------------------------------------
+
+template TreeViewLineAndRack
+[
+    LineMainComponentExtendWeight : float = 0.0,
+    LineMainComponentDescriptor : TBUCKContainerDescriptor,
+    LineButtonDescriptor : TBUCKButtonDescriptor,
+] is BUCKListDescriptor
+(
+    ElementName = "TreeViewLineAndRack"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+
+    InterItemMargin = TRTTILength( Magnifiable = 0.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = TreeViewLine
+            (
+                LineMainComponentExtendWeight = <LineMainComponentExtendWeight>
+                LineMainComponentDescriptor = <LineMainComponentDescriptor>
+                LineButtonDescriptor = <LineButtonDescriptor>
+            )
+        ),
+        // On ajoute TreeViewRack ici via cpp, le parseur ndf ne supporte pas la recursion
+    ]
+)
+
+//------------------------------------------------
+
+template TreeViewRack
+[
+    ElementName : string = "",
+
+    HorizontalOffset : float = 0.0,
+
+    LineMainComponentExtendWeight : float = 0.0,
+    LineMainComponentDescriptor : TBUCKContainerDescriptor,
+    LineButtonDescriptor : TBUCKButtonDescriptor,
+] is BUCKRackDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [-1.0 * <HorizontalOffset>, 0.0]
+        MagnifiableOffset = [<HorizontalOffset>, 0.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    InterItemMargin = TRTTILength( Magnifiable = 0.0)
+
+    BladeDescriptor = TreeViewLineAndRack
+    (
+        LineMainComponentExtendWeight = <LineMainComponentExtendWeight>
+        LineMainComponentDescriptor = <LineMainComponentDescriptor>
+        LineButtonDescriptor = <LineButtonDescriptor>
+    )
+)
+
+//------------------------------------------------
+
+template BUCKTreeViewDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis : int = ~/ListAxis/Vertical,
+    BreadthComputationMode : int = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty,
+
+    BackgroundComponents : LIST<TBUCKContainerDescriptor> = [],
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [],
+
+    FirstMargin : TRTTILength = TRTTILength(),
+    InterItemMargin : TRTTILength = TRTTILength(),
+    LastMargin : TRTTILength = TRTTILength(),
+
+    AssumeChildrenAreFixedSize : bool = false,
+    AssumeChildrenAreClippable : bool = false,
+
+    // Elements : LIST<TBUCKListElementDescriptor> = [], // On ne doit pas avoir d'élements, il faut définir le descripteur des lames
+    // -- BUCKListDescriptor
+
+    // ++ BUCKRackDescriptor
+    // BladeDescriptor : TBUCKContainerDescriptor, // Il faut utiliser LineMainComponentExtendWeight/TreeViewLineComponentDescriptor/TreeViewLineButtonDescriptor pour modifier l'apparence du rack
+    // -- BUCKRackDescriptor
+
+    LineMainComponentExtendWeight : float = 0.0,
+    TreeViewLineComponentDescriptor : TBUCKContainerDescriptor,
+
+    TreeViewLineButtonDescriptor : TBUCKButtonDescriptor = TreeLineButton()
+]
+is TBUCKTreeViewDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis = <Axis>
+    BreadthComputationMode = <BreadthComputationMode>
+
+    BackgroundComponents = <BackgroundComponents>
+    ForegroundComponents = <ForegroundComponents>
+
+    FirstMargin = <FirstMargin>
+    InterItemMargin = <InterItemMargin>
+    LastMargin = <LastMargin>
+
+    AssumeChildrenAreFixedSize = <AssumeChildrenAreFixedSize>
+    AssumeChildrenAreClippable = <AssumeChildrenAreClippable>
+
+    // Elements = <Elements>
+    // -- BUCKListDescriptor
+
+    // ++ BUCKRackDescriptor
+    BladeDescriptor = TreeViewLineAndRack
+    (
+        LineMainComponentExtendWeight = <LineMainComponentExtendWeight>
+        LineMainComponentDescriptor = <TreeViewLineComponentDescriptor>
+        LineButtonDescriptor = <TreeViewLineButtonDescriptor>
+    )
+    // -- BUCKRackDescriptor
+
+    TreeViewRackDescriptor = TreeViewRack
+    (
+        ElementName = "TreeViewRack"
+
+        HorizontalOffset = 25.0 + 12
+        LineMainComponentExtendWeight = <LineMainComponentExtendWeight>
+        LineMainComponentDescriptor = <TreeViewLineComponentDescriptor>
+        LineButtonDescriptor = <TreeViewLineButtonDescriptor>
+    )
+)

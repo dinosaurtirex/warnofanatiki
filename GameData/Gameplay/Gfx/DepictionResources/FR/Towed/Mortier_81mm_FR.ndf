@@ -1,0 +1,17 @@
+export Modele_Mortier_81mm_FR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/FR/Artillerie/VAB_Mortar_81/Mortier_81mm_MO81_61C.fbx'
+)
+
+export Modele_Mortier_81mm_FR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/FR/Artillerie/VAB_Mortar_81/Mortier_81mm_MO81_61C.fbx'
+)
+
+export Modele_Mortier_81mm_FR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/FR/Artillerie/VAB_Mortar_81/Mortier_81mm_MO81_61C.fbx'
+)
+
+
+

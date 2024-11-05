@@ -1,0 +1,14 @@
+export Modele_BMP_2AG_SOV is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/APC/BMP2_AG/BMP2_AG.fbx'
+)
+
+export Modele_BMP_2AG_SOV_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/APC/BMP2_AG/BMP2_AG.fbx'
+)
+
+export Modele_BMP_2AG_SOV_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/APC/BMP2_AG/BMP2_AG.fbx'
+)

@@ -1,0 +1,14 @@
+export Modele_BM24M_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/BM24M/BM24M.fbx'
+)
+
+export Modele_BM24M_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/BM24M_MID/BM24M_MID.fbx'
+)
+
+export Modele_BM24M_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/LODS/BM24M_LOW.fbx'
+)

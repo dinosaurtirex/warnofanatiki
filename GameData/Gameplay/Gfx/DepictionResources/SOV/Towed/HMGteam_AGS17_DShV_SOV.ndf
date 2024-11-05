@@ -1,0 +1,17 @@
+export Modele_HMGteam_AGS17_DShV_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_HMGteam_AGS17_SOV
+)
+
+export Modele_HMGteam_AGS17_DShV_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_HMGteam_AGS17_SOV_MID
+)
+
+export Modele_HMGteam_AGS17_DShV_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_HMGteam_AGS17_SOV_LOW
+)
+
+
+

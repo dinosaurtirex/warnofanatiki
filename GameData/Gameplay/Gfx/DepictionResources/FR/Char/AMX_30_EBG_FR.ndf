@@ -1,0 +1,14 @@
+export Modele_AMX_30_EBG_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Char/AMX_30_EBG/AMX_30_EBG.fbx'
+)
+
+export Modele_AMX_30_EBG_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Char/AMX_30_EBG_MID/AMX_30_EBG_MID.fbx'
+)
+
+export Modele_AMX_30_EBG_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Char/AMX_30_EBG_LOW/AMX_30_EBG_LOW.fbx'
+)

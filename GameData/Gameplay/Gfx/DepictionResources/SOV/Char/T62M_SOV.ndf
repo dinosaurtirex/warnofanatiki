@@ -1,0 +1,18 @@
+export Modele_T62M_SOV is ModelDescriptor
+(
+    FileName = T62M_SOV
+)
+
+export Modele_T62M_SOV_MID is ModelDescriptor
+(
+    FileName = T62M_SOV_MID
+)
+
+export Modele_T62M_SOV_LOW is ModelDescriptor
+(
+    FileName = T62M_SOV_LOW
+)
+
+T62M_SOV is 'GameData:/Assets/3D/Units/URSS/Char/T62M/T62M.fbx'
+T62M_SOV_MID is 'GameData:/Assets/3D/Units/URSS/Char/T62M_MID/T62M_MID.fbx'
+T62M_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/Char/T62M_LOW/T62M_LOW.fbx'

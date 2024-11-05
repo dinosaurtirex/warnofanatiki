@@ -1,0 +1,34 @@
+BUCKSpecificAutoDeployMainComponentDescriptor is BUCKSpecificButton
+(
+    ElementName = 'AutoDeployButton'
+
+    RoundedCorner = true
+    RoundedVertexes = [true, true, false, false]
+
+    ButtonMagnifiableWidthHeight = [DeploymentVerticalListWidth - 31 - 7, 31.0]
+    ButtonMagnifiableOffset = [0.0, 0.0]
+
+    TextStyle = "Default"
+    TextSizeToken = "SD2_Moyen"
+    TextToken = "DSI_ADBtn"
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+    IsTogglable = true
+    TextPadding = TRTTILength4(Magnifiable = [6.0, 0.0, 6.0, 0.0])
+    BigLineAction = ~/BigLineAction/ResizeFont
+
+    HintableAreaComponent = BUCKSpecificHintableArea
+    (
+        HintTitleToken = "DSI_ADHT"
+        HintBodyToken = "DSI_ADHB"
+        HintExtendedToken = "DSI_ADHE"
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+    )
+)
+
+UISpecificAutoDeployViewDescriptor is TUISpecificAutoDeployViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificAutoDeployMainComponentDescriptor
+    MainComponentContainerUniqueName = "SpecificAutoDeployMainComponentDescriptor"
+    AutoDeployOngoingTextToken = "AD_OnG"
+    AutoDeployLaunchTextToken = "DSI_ADBtn"
+)

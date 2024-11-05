@@ -1,0 +1,19 @@
+export Modele_OT_62_TOPAS_POL is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/POL/APC/OT_62_TOPAS/OT_62_TOPAS.fbx'
+)
+
+export Modele_OT_62_TOPAS_POL_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/POL/APC/OT_62_TOPAS_MID/OT_62_TOPAS_MID.fbx'
+)
+
+export Modele_OT_62_TOPAS_POL_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/POL/APC/LODS/OT_62_TOPAS_LOW.fbx'
+)
+
+// Modele_OT_62_TOPAS_POL_Tourelle_02 is ModelDescriptor
+// (
+//     FileName = ModelFile_NVT_127_Tourelle_02
+// )

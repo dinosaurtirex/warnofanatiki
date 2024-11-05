@@ -1,0 +1,98 @@
+
+//-------------------------------------------------------------------------------------
+
+UIStrategicLDVideoViewDescriptor is TUICommonLDVideoViewDescriptor
+(
+    Components = MAP
+    [
+        (
+            "FullScreenCutSceneVideo", ~/CommonFullScreenCutSceneVideo
+        ),
+        (
+            "DefaultSubtitleDescriptor", ~/StrategicDefaultSubtitleDescriptor
+        ),
+        ("cutscene_Steelman_DDR", Steelman_video( TextureToken = 'general_DDR')),
+        ("cutscene_Steelman_RFA", Steelman_video( TextureToken = 'general_RFA')),
+        ("cutscene_Steelman_US", Steelman_video( TextureToken = 'general_US')),
+        ("cutscene_Steelman_SOV", Steelman_video( TextureToken = 'general_SOV')),
+        ("cutscene_Steelman_UK", Steelman_video( TextureToken = 'general_UK')),
+
+    ]
+    MainComponentDescriptor = BUCKContainerDescriptor(ComponentFrame=TUIFramePropertyRTTI())
+    MainComponentContainerUniqueName = "CutSceneVideoContainer"
+    SkipVideoOption = $/MiscOptions/SkipMovies
+    ShowSubtitles = $/GameplayOption/ShowSubtitles
+    VideoLoadingPriority = 1000
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicDefaultSubtitleDescriptor is BUCKTextDescriptor
+(
+    ElementName = "SubtitleText"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [0.8, 0.0]
+        MagnifiableWidthHeight = [0.0, 60.0]
+        AlignementToFather = [0.5, 1.0]
+        AlignementToAnchor = [0.5, 1.0]
+        MagnifiableOffset = [0.0, -40.0]
+    )
+
+    ParagraphStyle = ~/VideoSubtitleParagraphStyle
+    TextStyle = "DefaultSubtitle"
+
+    TypefaceToken = "Liberator"
+
+    BigLineAction = ~/BigLineAction/MultiLine
+
+    TextColor = "Subtitle/Text"
+    TextSize = "Subtitle/StrategicText"
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+)
+template Steelman_video
+[
+    TextureToken : string = 'general_DDR'
+]
+ is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [1345, 600.0]
+        MagnifiableOffset = [0,-89]
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+
+    Components =
+    [
+
+
+
+        BUCKVideoDescriptor
+        (
+            ElementName = "CutSceneVideo"
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+               RelativeWidthHeight = [1,1]
+               AlignementToAnchor = [0.5, 0.5]
+               AlignementToFather = [0.5, 0.5]
+            )
+
+            SoundVolume = 3.0
+        ),
+        BUCKTextureDescriptor
+        (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                        RelativeWidthHeight = [1,1]
+                        AlignementToAnchor = [0.0, 0.0]
+                        AlignementToFather = [0.0, 0.0]
+                    )
+                TextureToken = <TextureToken>
+            )
+    ]
+)

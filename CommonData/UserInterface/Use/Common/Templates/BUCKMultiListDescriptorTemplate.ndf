@@ -1,0 +1,363 @@
+template BUCKMultiListContentElementDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+]
+is TBUCKMultiListContentElementDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+)
+//-------------------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------------------
+template BUCKMultiListTitleButtonDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "1",
+    BorderLineColorToken : string = "MarronPanel_noir",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKButtonDescriptor
+    Mapping : TEugBMutablePBaseClass = nil,
+    HoverSound : TSoundDescriptor = nil,
+    LeftClickSound : TSoundDescriptor = nil,
+    AllowMultipleInputsPerFrame : bool = false,
+    Grayed : bool = false,
+    // IsTogglable : bool = true,                                     // Toujours togglable pour trier dans les deux sens
+    // -- BUCKButtonDescriptor
+
+    // ++ BUCKCheckBoxDescriptor
+    ToggledByDefault : bool = false,
+    // -- BUCKCheckBoxDescriptor
+
+    SortingType : int = ~/MultiListSorting/None,
+    ShowCheckbox : bool = true,
+    CheckBoxBorderLineColorToken : string = 'MarronPanel_noir',
+]
+is TBUCKMultiListTitleButtonDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components =
+    (<ShowCheckbox> ?
+        [
+            BUCKListDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, (<FitStyle> == ~/ContainerFitStyle/None ? 1.0 : 0.0)]
+                )
+
+                Axis = ~/ListAxis/Horizontal
+                BreadthComputationMode = (<FitStyle> == ~/ContainerFitStyle/None ? ~/BreadthComputationMode/ComputeBreadthFromFrameProperty : ~/BreadthComputationMode/ComputeBreadthFromLargestChild)
+
+                Elements =
+                [
+                    BUCKListElementDescriptor
+                    (
+                        ExtendWeight = (<FitStyle> == ~/ContainerFitStyle/None ? 1.0 : 0.0)
+
+                        ComponentDescriptor = BUCKContainerDescriptor
+                        (
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [(<FitStyle> == ~/ContainerFitStyle/None ? 1.0 : 0.0), (<FitStyle> == ~/ContainerFitStyle/None ? 1.0 : 0.0)]
+                            )
+
+                            FitStyle = <FitStyle>
+                            Components = <Components>
+                        )
+                    ),
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKTextureDescriptor
+                        (
+                            ElementName = "SortingTexture" + <ElementName>
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                MagnifiableWidthHeight = DefaultCheckBoxDims
+                                AlignementToFather = [0.0, 0.5]
+                                AlignementToAnchor = [0.0, 0.5]
+                            )
+
+                            TextureToken   = "StyleDeskTexture_SortingCheckBox"
+                            TextureColorToken = 'MarronPanel_noir'
+                            HasBorder = true
+                            BorderLineColorToken = <CheckBoxBorderLineColorToken>
+                            BorderThicknessToken = '2'
+                        )
+                    ),
+                ]
+            )
+        ]
+        : <Components>
+    )
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKButtonDescriptor
+    Mapping  = <Mapping>
+    HoverSound = <HoverSound>
+    LeftClickSound = <LeftClickSound>
+    AllowMultipleInputsPerFrame = <AllowMultipleInputsPerFrame>
+    Grayed = <Grayed>
+    IsTogglable = true
+    // -- BUCKButtonDescriptor
+
+    // ++ BUCKCheckBoxDescriptor
+    ToggledByDefault = <ToggledByDefault>
+    // -- BUCKCheckBoxDescriptor
+
+    SortingType = <SortingType>
+)
+
+template BUCKMultiListDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    FirstMargin : TRTTILength = TRTTILength (Magnifiable = 0.0),
+    InterItemMargin : TRTTILength = TRTTILength (Magnifiable = 0.0),
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+
+    RackName : string,                                                                  // ElementName du Rack où seront insérés les éléments
+    ColumnNames : LIST<string> = [],                                                    // Liste des ElementName des composants d'une ligne du Rack
+    SortableColumnNames : LIST<string> = [],                                            // Map des [ElementName -> trie] des composants triables d'une ligne du Rack
+    SortingCriteriaListByPriority : LIST<string> = [],
+
+    TitleDescriptor : TBUCKContainerDescriptor = nil,                                   // Descriptor de l'en-tête de la MultiList (optionnel)
+    ContentDescriptor : TBUCKContainerDescriptor,                                       // Descriptor du Container qui contient les données
+]
+is TBUCKMultiListDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    RackName = <RackName>
+    ColumnNames = <ColumnNames>
+    SortableColumnNames = <SortableColumnNames>
+    SortingCriteriaListByPriority = <SortingCriteriaListByPriority>
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+            FirstMargin  = <FirstMargin>
+            InterItemMargin = <InterItemMargin>
+            Elements = (<TitleDescriptor> != nil ?
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = <TitleDescriptor>
+                ) ] : [])
+          + [
+                BUCKListElementDescriptor
+                (
+                    ExtendWeight = 1.0
+                    ComponentDescriptor = <ContentDescriptor>
+                )
+            ]
+        )
+    ]
+)

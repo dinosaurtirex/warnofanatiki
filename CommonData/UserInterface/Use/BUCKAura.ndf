@@ -1,0 +1,210 @@
+
+// The BUCKAura is a generic template allowing to add easily any shadow-like visual to components.
+// You can choose the sides to show using the bitmask ETexturePosition
+// Border textures will be tiled automatically
+
+ETexturePosition is TBaseClass
+(
+    Top is 1
+    Bottom is 2
+    Left is 4
+    Right is 8
+    TopAndLeft is 5
+    TopAndRight is 9
+    BottomAndLeft is 6
+    BottomAndRight is 10
+    All is 15
+)
+
+template AuraDescriptor
+[
+    ElementName : string = "",
+    RelativeWidthHeight : float2 = [1.0, 1.0],
+    MagnifiableWidthHeight : float2 = [0.0, 0.0],
+    MagnifiableOffset : float2 = [0.0, 0.0],
+    AlignementToFather : float2 = [0.5, 0.5],
+    AlignementToAnchor : float2 = [0.5, 0.5],
+
+    AuraBorderSize : float = 24.0,
+
+    TexturePosition : int = ETexturePosition/All,
+    TextureDrawer  : string = "ColorMultiply_Additive",
+    TopTextureToken : string = '',
+    BottomTextureToken : string = '',
+    LeftTextureToken : string = '',
+    RightTextureToken : string = '',
+    TopLeftTexture : string = '',
+    TopRightTexture : string = '',
+    BottomRightTexture : string = '',
+    BottomLeftTexture : string = '',
+]
+is BUCKContainerDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = <RelativeWidthHeight>
+        MagnifiableWidthHeight = [<MagnifiableWidthHeight>[0] + <AuraBorderSize> * 2.0, <MagnifiableWidthHeight>[1] + <AuraBorderSize> * 2.0]
+        MagnifiableOffset = <MagnifiableOffset>
+        AlignementToFather = <AlignementToFather>
+        AlignementToAnchor = <AlignementToAnchor>
+    )
+
+    Components =
+    // Borders
+    // Top
+    ((<TexturePosition> & ETexturePosition/Top) == 0 ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [<AuraBorderSize> * -2.0, <AuraBorderSize>]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
+            )
+
+            TextureToken = <TopTextureToken>
+            TextureDrawer  = <TextureDrawer>
+            TileTextureInComponent = True
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+    // Right
+    ((<TexturePosition> & ETexturePosition/Right) == 0 ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize> * -2.0]
+                AlignementToAnchor = [1.0, 0.5]
+                AlignementToFather = [1.0, 0.5]
+            )
+
+            TextureToken = <RightTextureToken>
+            TextureDrawer  = <TextureDrawer>
+            TileTextureInComponent = True
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+    // Bottom
+    ((<TexturePosition> & ETexturePosition/Bottom) == 0 ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [<AuraBorderSize> * -2.0, <AuraBorderSize>]
+                AlignementToAnchor = [0.5, 1.0]
+                AlignementToFather = [0.5, 1.0]
+            )
+
+            TextureToken = <BottomTextureToken>
+            TextureDrawer  = <TextureDrawer>
+            TileTextureInComponent = True
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+
+    // Left
+    ((<TexturePosition> & ETexturePosition/Left) == 0 ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize> * -2.0]
+                AlignementToAnchor = [0.0, 0.5]
+                AlignementToFather = [0.0, 0.5]
+            )
+
+            TextureToken = <LeftTextureToken>
+            TextureDrawer  = <TextureDrawer>
+            TileTextureInComponent = True
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+
+    // Corners
+    // Top-left Corner
+    ((<TexturePosition> & ETexturePosition/TopAndLeft) != ETexturePosition/TopAndLeft ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize>]
+                AlignementToAnchor = [0.0, 0.0]
+                AlignementToFather = [0.0, 0.0]
+            )
+
+            TextureToken = <TopLeftTexture>
+            TextureDrawer  = <TextureDrawer>
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+    // Top-right Corner
+    ((<TexturePosition> & ETexturePosition/TopAndRight) != ETexturePosition/TopAndRight ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize>]
+                AlignementToAnchor = [1.0, 0.0]
+                AlignementToFather = [1.0, 0.0]
+            )
+
+            TextureToken = <TopRightTexture>
+            TextureDrawer  = <TextureDrawer>
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+    // Bottom-right Corner
+    ((<TexturePosition> & ETexturePosition/BottomAndRight) != ETexturePosition/BottomAndRight ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize>]
+                AlignementToAnchor = [1.0, 1.0]
+                AlignementToFather = [1.0, 1.0]
+            )
+
+            TextureToken = <BottomRightTexture>
+            TextureDrawer  = <TextureDrawer>
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+            ClipTextureToComponent = true
+        )
+    ]) +
+    // Bottom-left Corner
+    ((<TexturePosition> & ETexturePosition/BottomAndLeft) != ETexturePosition/BottomAndLeft ? [] :
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [<AuraBorderSize>, <AuraBorderSize>]
+                AlignementToAnchor = [0.0, 1.0]
+                AlignementToFather = [0.0, 1.0]
+            )
+
+            TextureToken = <BottomLeftTexture>
+            TextureDrawer  = <TextureDrawer>
+            TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0])
+            ClipTextureToComponent = true
+        )
+    ])
+)

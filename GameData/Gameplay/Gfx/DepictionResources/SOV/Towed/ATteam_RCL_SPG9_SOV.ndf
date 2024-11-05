@@ -1,0 +1,20 @@
+export ModelFile_ATteam_RCL_SPG9_SOV is 'GameData:/Assets/3D/Units/URSS/APC/GTMU_1D_SPG9/SPG9.fbx'
+export Modele_ATteam_RCL_SPG9_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_ATteam_RCL_SPG9_SOV
+)
+
+export ModelFile_ATteam_RCL_SPG9_SOV_MID is 'GameData:/Assets/3D/Units/URSS/APC/GTMU_1D_SPG9_MID/SPG9_MID.fbx'
+export Modele_ATteam_RCL_SPG9_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_ATteam_RCL_SPG9_SOV_MID
+)
+
+export ModelFile_ATteam_RCL_SPG9_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/APC/GTMU_1D_SPG9_LOW/SPG9_LOW.fbx'
+export Modele_ATteam_RCL_SPG9_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_ATteam_RCL_SPG9_SOV_LOW
+)
+
+
+

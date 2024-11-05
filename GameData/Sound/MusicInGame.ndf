@@ -1,0 +1,4 @@
+export soundAndMusic is TSoundAndMusicSwitchDescriptor
+(
+    SoundServiceVolumesDescriptor = $/SoundSettings/soundServicesVolumesDescriptor
+)

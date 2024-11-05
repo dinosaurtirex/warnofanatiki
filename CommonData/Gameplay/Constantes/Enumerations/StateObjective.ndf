@@ -1,0 +1,9 @@
+
+//A maintenir synchro avec Engine/Code/Eugen/CPP/EugIA_Common/EnumStateObjective.h
+EStateObjective is TBaseClass
+(
+    Failed is 0
+    Succes is 1
+    Incomplete is 2
+    Ended is 3
+)

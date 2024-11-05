@@ -1,0 +1,235 @@
+template HostGameLine
+[
+    ListElementName : string,
+
+    TitleToken : string,
+
+    ComponentDescriptor = TBUCKContainerDescriptor,
+]
+is
+BUCKListDescriptor
+(
+    ElementName = <ListElementName>
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    FirstMargin = TRTTILength(Magnifiable = 50.0)
+    InterItemMargin = TRTTILength(Magnifiable = 50.0)
+    LastMargin = TRTTILength(Magnifiable = 50.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKSpecificTextWithHint
+            (
+                ElementName = <ListElementName> + "Text"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [350.0, 0.0]
+                    AlignementToFather = [0.0, 0.5]
+                    AlignementToAnchor = [0.0, 0.5]
+                )
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    VerticalAlignment = ~/UIText_VerticalCenter
+                    Alignment = UIText_Right
+                )
+
+                VerticalFitStyle = ~/FitStyle/FitToContent
+
+                TextStyle = "TextStyleEcranMoniteur"
+                TypefaceToken = "IBM"
+                TextColor = 'Blanc'
+                TextSize = '24' //'StandardTextInModal'
+
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextToken = <TitleToken>
+
+                HasAutoHint = true
+                AutoHintElementName = <ListElementName> + "TextAutoHint"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [300.0, 0.0]
+                    AlignementToFather = [0.0, 0.5]
+                    AlignementToAnchor = [0.0, 0.5]
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                Components =
+                [
+                    <ComponentDescriptor>
+                ]
+            )
+        )
+    ]
+)
+
+BUCKSpecificOutGameHostPanelMainComponentDescriptor is SpecificModalWindow
+(
+    TitleToken = "T_HOST"
+    ContentMagnifiableWidthHeight = [0.0, 450.0]
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "CreateButton"
+                TextToken = "BTN_CREATE"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
+            )
+        ),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = GameTypeChoiceButton
+        ),
+        // ligne,
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDottedLine
+        ),
+        BUCKListElementSpacer( Magnifiable = 20.0 ),
+        //-------------------------------------------------------------------------------------
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                ElementName = "GameName"
+                TextToken = "gameName"
+                HasText = true
+                EditableTextElementName = "GameNameEditable"
+                MaxChars = 50
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDropdown
+            (
+                ElementName = "GameVisibility"
+                TextToken = "gameVisibi"
+                DropdownElementName = "GameVisibiDropdown"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDropdown
+            (
+                ElementName = "Gametype"
+                TextToken = "Gametype"
+                DropdownElementName = "GametypeDropdown"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDropdown
+            (
+                ElementName = "Spectate"
+                TextToken = "Spectate"
+                DropdownElementName = "SpectateDropdown"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDropdown
+            (
+                ElementName = "FilterDeck"
+                TextToken = "GPS_Filter"
+                DropdownElementName = "FilterDeckDropdown"
+            )
+        ),
+        BUCKListElementSpacer( Magnifiable = 20.0 ),
+        // ligne,
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDottedLine
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalErrorText
+        )
+    ]
+)
+
+private GameTypeChoiceButtonManager is TBUCKRadioButtonManager()
+
+GameTypeChoiceButton is BUCKListDescriptor
+(
+    ElementName = "GameTypeChoiceButtonsList"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    InterItemMargin = TRTTILength(Magnifiable = 20.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "SkirmishButton"
+                TextToken = "SGP_SKIR"
+                IsFilled = false
+                IsTogglable = true
+                RadioButtonManager = GameTypeChoiceButtonManager
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "StrategicButton"
+                TextToken = "SGP_CAMP"
+                IsFilled = false
+                IsTogglable = true
+                RadioButtonManager = GameTypeChoiceButtonManager
+            )
+        ),
+    ]
+)
+
+FilterDeckPolicy is TBaseClass
+(
+    All                     is 0
+    OnlyEastFront           is 1
+    OnlyNormandyFront       is 2
+    OnlyMediterraneanFront  is 3
+)
+
+UISpecificOutGameHostPanelViewDescriptor is TUISpecificOutGameHostPanelViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificOutGameHostPanelMainComponentDescriptor
+    MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    TagMap = MAP
+    [
+        (~/FilterDeckPolicy/All,                    ("DEFAULT", "GPS_FilAll")),
+    ]
+)

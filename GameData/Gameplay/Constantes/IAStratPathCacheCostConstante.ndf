@@ -1,0 +1,4 @@
+IAStratPathCacheCostConstante is TBaseClass
+(
+    IAStratPathCacheCostPathfindType is [$/Pathfind/PathfindTypes/Flying, $/Pathfind/PathfindTypes/Vehicle]
+)

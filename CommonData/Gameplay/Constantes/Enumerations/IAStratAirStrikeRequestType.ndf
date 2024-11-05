@@ -1,0 +1,9 @@
+// Enum EAirStrikeRequestType // a maintenir synchro avec EugIAStrat_Common\MacroAction_AirStrike_Common.h
+EAirStrikeRequestType is TBaseClass
+(
+    All                         is 0x0000
+    Defense                     is 0x0001
+    Attack                      is 0x0002
+    OpportunisticSingleTarget   is 0x0004
+    OpportunisticTargetInGroup  is 0x0008
+)

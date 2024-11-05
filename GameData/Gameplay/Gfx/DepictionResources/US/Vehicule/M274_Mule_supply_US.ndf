@@ -1,0 +1,14 @@
+export Modele_M274_Mule_supply_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M274_Mule_supply/M274_Mule_supply.fbx'
+)
+
+export Modele_M274_Mule_supply_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M274_Mule_supply_MID/M274_Mule_supply_MID.fbx'
+)
+
+export Modele_M274_Mule_supply_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M274_Mule_supply_LOW/M274_Mule_supply_LOW.fbx'
+)

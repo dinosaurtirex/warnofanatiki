@@ -1,0 +1,10 @@
+//A maintenir synchro avec les valeur correspondantes dans AllianceRelationEnum.h
+AllianceRelation is TBaseClass
+(
+    tout   is 0
+    allie  is 1
+    joueur is 2
+    ennemi is 3
+    neutre is 4
+    vide   is 5
+)

@@ -1,0 +1,7 @@
+// Enum TUnitsKnowledge // a maintenir synchro avec EugIAStrat_Common\IAStratBasicTypes.h
+EUnitsKnowledge is TBaseClass
+(
+    All             is 0x0001
+    Seen            is 0x0002
+    HasShot         is 0x0004
+)

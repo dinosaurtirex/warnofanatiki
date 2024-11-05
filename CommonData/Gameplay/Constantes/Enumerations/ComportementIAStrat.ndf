@@ -1,0 +1,8 @@
+//Type de comportement quand utilisé par l'ia strat à maintenir avec /EnumComportementIAStrat.h
+EGameplayBehavior is TBaseClass
+(
+    Nothing                      is 0
+    TacticalAttackInCover        is 1
+    TacticalAttackNearCover      is 2
+    RetreatOnOutOfAmmo           is 4
+)

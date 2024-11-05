@@ -1,0 +1,16 @@
+// TImpactSurface : défini dans WeaponSystem/EnumMimeticImpact.h
+EImpactProjectile is TBaseClass
+(
+    Bullet              is 0
+    APShell             is 1
+    HEShell             is 2
+    Artillery           is 3
+    ArtilleryCluster    is 4
+    Bomb                is 5
+    APMissile           is 6
+    HEMissile           is 7
+    Fire                is 8
+    Smoke               is 9
+    ClusterBomb         is 10
+    FinalBlow           is 11
+)

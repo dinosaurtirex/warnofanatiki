@@ -1,0 +1,63 @@
+//-------------------------------------------------------------------------
+//----------------------------- STRATEGY ----------------------------------
+//-------------------------------------------------------------------------
+export EasyBreakthroughStrategy is TIAGeneralStrategy
+(
+    StrategyName = "EasyBTAI"
+    FirstGenerator = EasyBT_Choose_Strategy
+    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
+    TransitionList =
+    [
+        EasyBT_Transition_DefMod,
+        EasyBT_Transition_AtkMod,
+
+        EasyBTDef_Transition_StartToDeploy,
+        EasyBTDef_Transition_StartToCommand,
+        EasyBTDef_Transition_DeployToCommand,
+
+        EasyBTAtk_Transition_StartToPhaseCommand,
+        EasyBTAtk_Transition_StartToEasy,
+        EasyBTAtk_Transition_DeployToPhaseCommand,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//---------------------------- CONDITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export EasyBT_Condition_GotoDefMod is TSequenceCondition_IsAttackingAlliance
+(
+    IsAttackingAlliance = false
+)
+
+export EasyBT_Condition_GotoAtkMod is TSequenceCondition_Not
+(
+    Condition = ~/EasyBT_Condition_GotoDefMod
+)
+//-------------------------------------------------------------------------
+//--------------------------- TRANSITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export EasyBT_Transition_DefMod is TIAGeneralStrategyTransition
+(
+    Origine = EasyBT_Choose_Strategy
+    Condition = EasyBT_Condition_GotoDefMod
+    Destination = EasyBTDef_Choose_Strategy
+)
+
+export EasyBT_Transition_AtkMod is TIAGeneralStrategyTransition
+(
+    Origine = EasyBT_Choose_Strategy
+    Condition = EasyBT_Condition_GotoAtkMod
+    Destination = EasyBTAtk_Choose_Strategy
+)
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export EasyBT_Choose_Strategy is TSequenceGeneratorDescriptor
+(
+    // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+    ]
+)

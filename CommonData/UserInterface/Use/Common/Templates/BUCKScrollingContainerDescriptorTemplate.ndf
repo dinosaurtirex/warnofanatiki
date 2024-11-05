@@ -1,0 +1,408 @@
+template BUCKScrollbarDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis : int = ~/ListAxis/Vertical,
+    BreadthComputationMode : int = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty,
+
+    BackgroundComponents : LIST<TBUCKContainerDescriptor> = [],
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [],
+
+    FirstMargin : TRTTILength = TRTTILength(),
+    InterItemMargin : TRTTILength = TRTTILength(),
+    LastMargin : TRTTILength = TRTTILength(),
+
+    AssumeChildrenAreFixedSize : bool = false,
+    AssumeChildrenAreClippable : bool = false,
+    // -- BUCKListDescriptor
+
+    GoToBeginningButton : TBUCKButtonDescriptor = nil,
+    GoToBeginningButtonName : string = "",
+    GoToEndingButton : TBUCKButtonDescriptor = nil,
+    GoToEndingButtonName : string = "",
+    ElevatorCageArea : TBUCKSensibleAreaDescriptor = nil,
+    ElevatorCageAreaName : string = "",
+    ElevatorButtonName : string = "",
+
+]
+is TBUCKScrollbarDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis = <Axis>
+    BreadthComputationMode = <BreadthComputationMode>
+
+    BackgroundComponents = <BackgroundComponents>
+    ForegroundComponents = <ForegroundComponents>
+
+    FirstMargin = <FirstMargin>
+    InterItemMargin = <InterItemMargin>
+    LastMargin = <LastMargin>
+
+    AssumeChildrenAreFixedSize = <AssumeChildrenAreFixedSize>
+    AssumeChildrenAreClippable = <AssumeChildrenAreClippable>
+    // -- BUCKListDescriptor
+
+    GoToBeginningButtonName = <GoToBeginningButtonName>
+    GoToEndingButtonName = <GoToEndingButtonName>
+    ElevatorCageAreaName = <ElevatorCageAreaName>
+    ElevatorButtonName = <ElevatorButtonName>
+
+    Elements =
+    (<GoToBeginningButton> != nil ?
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = <GoToBeginningButton>
+        )
+    ] : []) +
+
+    [
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = <ElevatorCageArea>
+        )
+    ] +
+
+    (<GoToEndingButton> != nil ?
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = <GoToEndingButton>
+        )
+    ] : [])
+)
+
+// -------------------------------------------------------------------------------------------------
+
+template BUCKSliderDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    // ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis : int = ~/ListAxis/Vertical,
+    BreadthComputationMode : int = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty,
+
+    BackgroundComponents : LIST<TBUCKContainerDescriptor> = [],
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [],
+
+    FirstMargin : TRTTILength = TRTTILength(),
+    InterItemMargin : TRTTILength = TRTTILength(),
+    LastMargin : TRTTILength = TRTTILength(),
+
+    AssumeChildrenAreFixedSize : bool = false,
+    AssumeChildrenAreClippable : bool = false,
+    // -- BUCKListDescriptor
+
+    // ++ BUCKScrollbarDescriptor
+    GoToBeginningButton : TBUCKButtonDescriptor = nil,
+    GoToBeginningButtonName : string = "",
+    GoToEndingButton : TBUCKButtonDescriptor = nil,
+    GoToEndingButtonName : string = "",
+    ElevatorCageArea : TBUCKSensibleAreaDescriptor = nil,
+    ElevatorCageAreaName : string = "",
+    ElevatorButtonName : string = "",
+    // -- BUCKScrollbarDescriptor
+]
+is TBUCKSliderDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = true
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis = <Axis>
+    BreadthComputationMode = <BreadthComputationMode>
+
+    BackgroundComponents = <BackgroundComponents>
+    ForegroundComponents = <ForegroundComponents>
+
+    FirstMargin = <FirstMargin>
+    InterItemMargin = <InterItemMargin>
+    LastMargin = <LastMargin>
+
+    AssumeChildrenAreFixedSize = <AssumeChildrenAreFixedSize>
+    AssumeChildrenAreClippable = <AssumeChildrenAreClippable>
+    // -- BUCKListDescriptor
+
+    // ++ BUCKScrollbarDescriptor
+    GoToBeginningButtonName = <GoToBeginningButtonName>
+    GoToEndingButtonName = <GoToEndingButtonName>
+    ElevatorCageAreaName = <ElevatorCageAreaName>
+    ElevatorButtonName = <ElevatorButtonName>
+
+    Elements =
+    (<GoToBeginningButton> != nil ?
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = <GoToBeginningButton>
+        )
+    ] : []) +
+
+    [
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = <ElevatorCageArea>
+        )
+    ] +
+
+    (<GoToEndingButton> != nil ?
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = <GoToEndingButton>
+        )
+    ] : [])
+    // -- BUCKScrollbarDescriptor
+)
+
+// -------------------------------------------------------------------------------------------------
+
+template BUCKScrollingContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    FitToMaximumSize : TRTTILength2 = nil,                      // Taille limite lors du'un FitToContent
+    // -- BUCKContainerDescriptor
+
+    CanScrollVertically : bool = true,                          // Autorise le scrolling vertical même si on a pas de visuel de scrollbar défini
+    CanScrollHorizontally : bool = true,                        // Autorise le scrolling horizontal même si on a pas de visuel de scrollbar défini
+
+    VerticalScrollbar : TBUCKScrollbarDescriptor = nil,         // Définition de la scrollbar verticale, ne s'affiche pas si laissée a null
+    HorizontalScrollbar : TBUCKScrollbarDescriptor = nil,       // Définition de la scrollbar horizontale, ne s'affiche pas si laissée a null
+
+    BackgroundComponents : LIST<TBUCKContainerDescriptor> = [], // Composants non scrollables de background
+    Components : LIST<TBUCKContainerDescriptor> = [],           // Composants scrollables
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [], // Composants non scrollables de foreground
+
+    ScrollStepSize : float2 = [0.0, 0.0],                       // La taille forcée d'un scroll (souris / bouton)
+    ExternalScrollbar : bool = false,                           // L'apparition des scrollbars ne réduit pas la zone de scroll
+]
+is TBUCKScrollingContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    CanScrollVertically = <CanScrollVertically>
+    CanScrollHorizontally = <CanScrollHorizontally>
+
+    VerticalScrollbar = <VerticalScrollbar>
+    HorizontalScrollbar = <HorizontalScrollbar>
+    ScrollingContentName = <ElementName> + "ContentContainer"
+    ScrollStepSize = <ScrollStepSize>
+    ExternalScrollbar = <ExternalScrollbar>
+
+    Components =
+    <BackgroundComponents> +
+    [
+        TBUCKScrollingContentContainerDescriptor
+        (
+            ElementName = <ElementName> + "ContentContainer"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [(((<FitStyle> & ~/ContainerFitStyle/FitToContentHorizontally) == 0) ? 1.0 : 0.0) , (((<FitStyle> & ~/ContainerFitStyle/FitToContentVertically) == 0) ? 1.0 : 0.0)]
+            )
+
+            ChildFitToContent = true
+            FitStyle = <FitStyle>
+            FitToMaximumSize = <FitToMaximumSize>
+
+            ClipContent = true
+            IsClippable = <IsClippable>
+
+            Components = <Components>
+        )
+    ] +
+    <ForegroundComponents>
+)

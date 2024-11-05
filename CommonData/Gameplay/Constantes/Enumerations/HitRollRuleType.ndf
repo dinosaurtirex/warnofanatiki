@@ -1,0 +1,12 @@
+// Fichier écrit à la main
+
+//Correspondance : HitRollRuleEnums.h
+//Doit être synchro avec HitRollRuleExporter.py
+EBaseHitValueModifier is TBaseClass
+(
+    Base            is 0
+    Idling          is 1
+    Moving          is 2
+    Targeted        is 3
+    Length          is 4
+)

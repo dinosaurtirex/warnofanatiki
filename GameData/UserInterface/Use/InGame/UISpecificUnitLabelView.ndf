@@ -1,0 +1,385 @@
+//----------------------------------------------------------------------
+// Icône d'unité
+private UnitLabelUnitIcon is TBUCKSpecificLabelUnitIconDescriptor
+(
+    ElementName = "UnitIcon"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [ ~/LabelUnitIconSize, ~/LabelUnitIconSize ]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
+    )
+
+    ChildFitToContent = true
+    LocalRenderLayer = 2
+
+    TextureDrawer = "ColorMultiply"
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBorder = false
+    BorderThicknessToken = "2"
+    BorderLineColorToken = "Blanc"
+    HasBackground = true
+    BackgroundLocalRenderLayer = 1
+
+    MoraleAndHPGaugesDescription = ~/MoraleAndHPGaugesDescription
+    SmartChipDescription = ~/SmartChipDescription
+)
+//----------------------------------------------------------------------
+private LabelSupplyGaugeWidthHeight is [4.0, 30.0]
+//----------------------------------------------------------------------
+UnitLabelUnitSupplyGauge is TSupplyGaugeDescriptor
+(
+    ElementName = "SupplyGauge"
+    Description = TSupplyGaugeDescription
+    (
+        InterItemMagnifiableSize = 2.0
+        PlusBarMagnifiableSize = 1.0
+        MagnifiableExtraVOffset = -2.0
+        MagnifiableWidthHeight = ~/LabelSupplyGaugeWidthHeight
+        ColorOverflowToken = "ColorCode/vert"
+        ColorToken = "Gold"
+        MaxSupplyGauge = 5000
+        SupplyStep = 1000
+        GraduationStep = 125
+        LineThicknessPixelSize = 1.0
+        LineColorToken = "UnitLabel/SupplyGaugeBorder"
+        FilledColorToken = "UnitLabel/SupplyGauge"
+        BackgroundColorToken = "Black40"
+    )
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+    LocalRenderLayer = 1
+)
+//----------------------------------------------------------------------
+// Morale Gauge & Health point gauge
+MoraleAndHPGaugesDescription is TMoraleAndHPGaugesDescription
+(
+    MoraleGaugeColorTokens = ["moral_color_bad_1", "moral_color_bad_2", "moral_color_bad_3", "moral_color_bad_4"]
+    // HP value of each HP square.
+    // If it equals 1, a 12 HP unit will display 12 HP squares on its label. It if equals 2, 6 HP squares will be displayed.
+    HPElementHealthValue = 2
+    MagnifiableWidthOneHPLabelBlock = 5.0
+
+    MoraleMagnifiableWidthHeight = [32.0, 3.0]
+    HPMagnifiableHeight = 4.0 //La largeur est calculée dans le code à partir de MagnifiableWidthOneHPLabelBlock
+    MagnifiableSpacing = 1.0
+
+    HPGraduationThicknessToken = "1"
+    HPGraduationColorToken = "Noir"
+    HPFillColorToken = "White"
+    HPBackgroundColorToken = "Noir"
+)
+//----------------------------------------------------------------------
+// Message de critiques
+UnitLabelBottomComponent is TLabelBottomDescriptor
+(
+    ElementName = "LabelBottomMessage"
+    MagnifiableHeight = 15.0
+    CriticTitleMagnifiableWidth = 120.0
+    LeavingDistrictMagnifiableWidth = 100.0
+    AlignementToAnchor = [0.5, 0.0]
+    AlignementToFather = [0.5, 1.0]
+    MagnifiableOffset = [0.0, ~/ReticleMagnifiableSize * 0.5]
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+    LeavingDistrictTextToken = "DIST_LEAVE"
+    TextStyle = "Default"
+    TypefaceToken = "IBM"
+    LeavingDistrictTextColor = "Cyan"
+    CriticTitleTextColor = "UnitLabel/CriticTitle"
+    TextSize = "UnitLabel/TextElement"
+    TextFormatScript = ~/DefaultTextFormatScript
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    CriticTitleGradientColor0 = "Label/Gradient0"
+    CriticTitleGradientColor1 = "Label/Gradient1"
+
+    LeavingDistrictGradientColor0 = "Label/Gradient05"
+    LeavingDistrictGradientColor1 = "Label/Gradient1"
+
+    LocalRenderLayer = 1
+    LeavingDistrictChronoDescription = ~/LeavingDistrictChronoDescription
+)
+//----------------------------------------------------------------------
+// Composant principal
+private UnitLabelUnitBUCKComponentDescriptor is BUCKLocalLayerContainerDescriptor
+(
+    ElementName = "LocalLayerContainer"
+
+    NbLayersToLock = 6
+
+    Components = [
+        ~/UpperLabel,
+        ~/UnitLabelBottomComponent,
+    ]
+)
+//-------------------------------------------------------------------------------------
+private CurrentUnitIconAndRightLabel is BUCKSensibleAreaDescriptor
+(
+    ElementName = "UnitIconSensibleArea"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+
+    FitStyle = ~/ContainerFitStyle/FitToContent
+    MaskEvents = false
+
+    Components =
+    [
+        ~/UnitLabelUnitIcon,
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [1.0, 0.0]
+                RelativeWidthHeight = [0.0, 1.0]
+            )
+
+            Axis = ~/ListAxis/Horizontal
+            FirstMargin = TRTTILength(Magnifiable = 2.0)
+            InterItemMargin = TRTTILength(Magnifiable = 2.0)
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/UnitLabelUnitSupplyGauge
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = LabelFeedbackIcons()
+                ),
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------------------
+private template LabelFeedbackIcon
+[
+    FeedbackTexture : string,
+    FeedbackRefillTexture : string,
+] is TLabelFeedbackIconDescriptor
+(
+    FeedbackTexture = <FeedbackTexture>
+    FeedbackRefillTexture = <FeedbackRefillTexture>
+)
+//-------------------------------------------------------------------------------------
+template LabelFeedbackIcons
+[
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+] is TBUCKSpecificLabelFeedbackIconsDescriptor
+(
+    ElementName = "FeedbackIcons"
+    ComponentFrame = <ComponentFrame>
+
+    IsClippable = true
+
+    AnimDuration = 1.0
+    AnimMinAlpha = 50
+
+    TextureMagnifiableSize = 24.0
+
+    LocalRenderLayer = 1
+    TextureDrawer = "ColorMultiply"
+
+    RadarTexture = "icone_radar"
+    ReturnFireTexture = "icone_riposte"
+
+    Icons = MAP
+    [
+        (~/InGameUnitLabelUpdateFeedbackType/Fuel, LabelFeedbackIcon
+            (
+                FeedbackTexture = "icone_fuel"
+                FeedbackRefillTexture = "icone_fuel_refill"
+            )
+        ),
+        (~/InGameUnitLabelUpdateFeedbackType/Life, LabelFeedbackIcon
+            (
+                FeedbackTexture = "icone_life"
+                FeedbackRefillTexture = "icone_life_refill"
+            )
+        ),
+        (~/InGameUnitLabelUpdateFeedbackType/Bullets, LabelFeedbackIcon
+            (
+                FeedbackTexture = "icone_bullets"
+                FeedbackRefillTexture = "icone_bullets_refill"
+            )
+        ),
+        (~/InGameUnitLabelUpdateFeedbackType/Missile, LabelFeedbackIcon
+            (
+                FeedbackTexture = "icone_missile"
+                FeedbackRefillTexture = "icone_missile_refill"
+            )
+        ),
+        (~/InGameUnitLabelUpdateFeedbackType/Shell, LabelFeedbackIcon
+            (
+                FeedbackTexture = "icone_shell"
+                FeedbackRefillTexture = "icone_shell_refill"
+            )
+        ),
+    ]
+)
+//-------------------------------------------------------------------------------------
+// nom & nb unités d'infanterie
+private UpperLabel is BUCKListDescriptor
+(
+    ElementName = "UpperLabel"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableOffset = [0.0, ~/ReticleMagnifiableSize * -0.5]
+        MagnifiableWidthHeight = [2000.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 1.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    ClipContent = false
+
+    // Penser a modifier la taille en Pixel du LabelUnitBUCKComponent si on aggrandit ce composant !
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = CurrentUnitLabelUpperList()
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/CurrentUnitIconAndRightLabel
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = CarriedUnitNameList()
+        ),
+    ]
+)
+//-------------------------------------------------------------------------------------
+// L'etiquette sur l'unité
+private template UISpecificInGameUnitLabelViewDescriptor
+[
+    MainComponentDescriptor : TBUCKContainerDescriptor,
+]
+is TUISpecificInGameUnitLabelViewForUnitLabelDescriptor
+(
+    MainComponentDescriptor = <MainComponentDescriptor>
+
+    ExperienceTexturesResources     = ~/ExperienceTexturesResources
+
+    // Animation Concealed
+    // Temps de durée d'un blink
+    AnimConcealedBlinkDuration = 2.0
+    // Animation Panicked
+    // Temps de durée d'un blink
+    AnimPanickedBlinkDuration = 1.5
+    // Animation Shaken
+    // Temps de pause entre les séries de blink (0 => pas de pause)
+    AnimShakenPauseTime = 3.0
+    // Temps de durée d'un blink
+    AnimShakenBlinkDuration = 1.5
+    // Nombre de blinks par série (-1 => infini)
+    AnimShakenNbBlinks = 3
+    // Alpha Minimum atteint pour les animation de "suppress"
+    SuppressAnimAlphaMinimum = 20
+    // Alpha Minimum atteint pour l'animation "cachée"
+    ConcealedAnimAlphaMinimum = 20
+
+    // Textures
+    NormalBackgroundTexture = "CommonTexture_Label_Background"
+    CarriedUnitIconUnknown  = "UseInGame_Transport_UNKNOW"
+)
+//-------------------------------------------------------------------------------------
+// L'etiquette sur l'unité
+private template UnitReticleDescriptor
+[
+    MainComponentDescriptor : TBUCKContainerDescriptor,
+]
+is TUnitReticleDescriptor
+(
+    MainComponentDescriptor = <MainComponentDescriptor>
+    ReticleMagnifiableSize = ~/ReticleMagnifiableSize
+
+    // Animation Concealed
+    // Temps de durée d'un blink
+    AnimConcealedBlinkDuration = 2.0
+    // Animation Panicked
+    // Temps de durée d'un blink
+    AnimPanickedBlinkDuration = 1.5
+    // Animation Shaken
+    // Temps de pause entre les séries de blink (0 => pas de pause)
+    AnimShakenPauseTime = 3.0
+    // Temps de durée d'un blink
+    AnimShakenBlinkDuration = 1.5
+    // Nombre de blinks par série (-1 => infini)
+    AnimShakenNbBlinks = 3
+    // Alpha Minimum atteint pour les animation de "suppress"
+    SuppressAnimAlphaMinimum = 20
+    // Alpha Minimum atteint pour l'animation "cachée"
+    ConcealedAnimAlphaMinimum = 20
+
+    // Textures
+    NormalBackgroundTexture = "CommonTexture_Label_Background"
+)
+//-------------------------------------------------------------------------------------
+UISpecificUnitLabelViewDescriptor is UISpecificInGameUnitLabelViewDescriptor
+(
+    MainComponentDescriptor = UnitLabelUnitBUCKComponentDescriptor
+)
+//-------------------------------------------------------------------------------------
+UISpecificUnitLabelReticleDescriptor is UnitReticleDescriptor
+(
+    MainComponentDescriptor = BUCKLocalLayerContainerDescriptor
+    (
+        ElementName = "LocalLayerContainer"
+        ComponentFrame = TUIFramePropertyRTTI
+        (
+            MagnifiableWidthHeight = [~/ReticleMagnifiableSize, ~/ReticleMagnifiableSize]
+            AlignementToAnchor = [0.5, 0.5]
+            AlignementToFather = [0.5, 0.5]
+        )
+
+        NbLayersToLock = 4
+
+        Components = [
+            BUCKTextureDescriptor
+            (
+                ElementName = "Surrounding"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+
+                BackgroundLocalRenderLayer = 1
+                LocalRenderLayer = 2
+                HasBorder = false
+                BorderThicknessToken = "2"
+                BorderLineColorToken = "Blanc"
+
+                TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+                ClipTextureToComponent = false
+            ),
+            BUCKTextureDescriptor
+            (
+                ElementName = "TerrainIcon"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+
+                LocalRenderLayer = 3
+                TextureFrame   = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+                TextureColorToken = "playerHelper/Otan_line"
+            )
+        ]
+    )
+)

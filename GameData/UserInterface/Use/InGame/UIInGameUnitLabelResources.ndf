@@ -1,0 +1,105 @@
+
+//A maintenir synchro avec WarGame\Code\Eugen\CPP\InterfaceSpecific\UISpecificUnitLabelFeedbackType.h
+InGameUnitLabelUpdateFeedbackType is TBaseClass
+(
+    Life is 0
+    Fuel is 1
+    Bullets is 2
+    Missile is 3
+    Shell is 4
+)
+
+SpecificInGameUnitLabelResources is TUISpecificInGameUnitLabelResources
+(
+    UILayer                         = $/UserInterface/UILayer_Labels
+    UI3DLayer                       = $/UserInterface/UI3DLayer_General
+    Camera                          = $/M3D/Misc/CameraPrincipale
+
+    CameraMoverHelperProxy          = $/M3D/Scene/IngameCameraMoverHelperProxy
+    OpacityControlByFloat           = $/M3D/Shader/UnitLabelOpacity
+    FadeFactorForShaderParameter    = $/M3D/Scene/MaskAlphaFade
+
+    LabelInAggregatMagnifiableBox = [18, 16]        // taille des boites rouges dans le debug (label agregé)
+    LabelMagnifiableBox = [18, 12]                  // taille des boites cyan dans le debug (label non agregé)
+    MagnifiableOffsetCenter = [0.0, -37.0]
+    MagnifiableOffsetAggregatCenter = [0.0, -40]
+
+    NbMaxAggregatedUnits = 12
+
+    // Valeur de transparence de la version de l'étiquette pour les ghost
+    GhostLabelVersionTransparency = 0.5
+    GhostLabelDeploymentVersionTransparency = 0.9
+
+    UI3DTransformation = TModernWarfareLabelTransformation
+    (
+        Camera = $/M3D/Misc/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        RefResolution = [ 1920.0, 1080.0 ]
+    )
+
+    DamageTypeNameToFeedbackType = MAP
+    [
+        (DamageFamily_balle, ~/InGameUnitLabelUpdateFeedbackType/Bullets),
+        (DamageFamily_balleaa, ~/InGameUnitLabelUpdateFeedbackType/Bullets),
+        (DamageFamily_balledca, ~/InGameUnitLabelUpdateFeedbackType/Bullets),
+        (DamageFamily_ap_missile, ~/InGameUnitLabelUpdateFeedbackType/Missile),
+    ]
+
+    // Smart Orders
+    SmartOrderLabelTokens = MAP
+    [
+        // Faire le lien avec PlayerMissionConstantes.ndf
+        (
+            1,
+            "ORD_AIATTS"
+        ),
+        (
+            2,
+            "ORD_AIDEFS"
+        ),
+        (
+            4,
+            "ORD_AIARFS"
+        ),
+        (
+            5,
+            "ORD_AIARCS"
+        ),
+        (
+            6,
+            "ORD_AIARAS"
+        ),
+        (
+            7,
+            "ORD_AIAAAS"
+        ),
+        (
+            9,
+            "ORD_AISUPL"
+        ),
+        (
+            10,
+            "ORD_INVLS"
+        ),
+    ]
+
+    // Textures
+    TerrainTypeToTexture = MAP
+    [
+        (ETerrainType/ForetLegere,  "CommonTexture_Couvert_Moyen"),
+        (ETerrainType/ForetDense,   "CommonTexture_Couvert_Moyen"),
+        (ETerrainType/LightSmoke,   "CommonTexture_Couvert_Moyen"),
+        (ETerrainType/MediumSmoke,  "CommonTexture_Couvert_Moyen"),
+        (ETerrainType/PetitBatiment,"CommonTexture_Couvert_Lourd"),
+        (ETerrainType/Batiment,     "CommonTexture_Couvert_Lourd"),
+        (ETerrainType/Ruin,         "CommonTexture_Couvert_Lourd"),
+    ]
+
+    // Couleurs du reticule de visee
+    AimingDefaultColor = "Cyan"
+    AimingWhileMovingColor = "Cyan50p"
+
+    ReloadingDefaultColor = "Vert"
+    ReloadingWhileMovingColor = "Vert50p"
+)
+

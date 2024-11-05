@@ -1,0 +1,32 @@
+private LandReinforcementArrowDescriptor is TUIPathDescriptor
+(
+    Color                 = [0, 0, 0, 0]
+    PlaqueSurLeSol        = true
+    RenderLayerSelector = TRenderLayerSelector(RenderLayerName='Calque_Fleche_GD')
+    Material              = $/M3D/Shader/MaterialBezierLine_Bichrome
+    Width                 = 1500
+    ArrowLength           = 2500
+    ArrowWidth            = 2500
+    SizeMultiplierHelper  = PathAndArrowSizeMultiplierHelper
+    OpacityControlByFloat = $/M3D/Shader/AreaTextOpacity
+)
+
+private AerialReinforcementArrowDescriptor is TUIPathDescriptor
+(
+    Color                 = [0, 0, 0, 0]
+    PlaqueSurLeSol        = true
+    RenderLayerSelector   = TRenderLayerSelector(RenderLayerName='Calque_Fleche_GD')
+    Material              = $/M3D/Shader/MaterialBezierLine_Bichrome
+    Width                 = 1000
+    ArrowLength           = 1000
+    ArrowWidth            = 1000
+    SizeMultiplierHelper  = PathAndArrowSizeMultiplierHelper
+    OpacityControlByFloat = $/M3D/Shader/AreaTextOpacity
+)
+
+ReinforcementResource is TReinforcementResource
+(
+    LandReinforcementArrowDescriptor = ~/LandReinforcementArrowDescriptor
+    AerialReinforcementArrowDescriptor = ~/AerialReinforcementArrowDescriptor
+    DefaultReinforcementColor = RGBA[255,255,255,255]
+)

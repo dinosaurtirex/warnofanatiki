@@ -1,0 +1,91 @@
+RatioDeLaTailleDuFeu is 0.8 // Utilisé pour modifier la taille visuelle des feux (1.0 = 100% = taille normale)
+
+OnlyHighDepictionSelector is TConstantAlternativeSelector(Key = [LOD_High])
+
+template Template_DescriptorFire_Depiction
+[
+    Radius,
+    Density,
+    FX = $/GFX/GameFx/fx_binder_fire,
+] is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = TIdentityScaler()
+        Selector = OnlyHighDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High(
+                MeshDescriptor = $/GFX/DepictionResources/Rien
+            ),
+        ]
+
+        Operators = [ TCosmeticWhenInWorldOperatorDesc( Happening = ["fx_fire"] ) ]
+
+        Actions = MAP
+        [
+            (
+                ["fx_fire"],
+                TIntroduceMobileHappening( Happening = TCompositeHappening
+                (
+                    SubHappenings =
+                    [
+                        TSequencingActionHappening
+                        (
+                            ActionDescriptor = TActionCall
+                            (
+                                Action = <FX>
+                                NamedParams =
+                                MAP[
+                                    ('parRadiusPhysical', <Radius> * ~/RatioDeLaTailleDuFeu),
+                                    ('parDensityFire', <Density>)
+                                ]
+                            )
+                        ),
+                        $/SoundDescriptors/SoundHappening_Incendie,
+                    ]
+                ))
+            )
+        ]
+    )
+)
+
+template Template_DescriptorSmoke_Depiction
+[
+  Radius,
+  Height,
+  Density,
+] is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = TIdentityScaler()
+        Selector = OnlyHighDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High(
+                MeshDescriptor = $/GFX/DepictionResources/Rien
+            ),
+        ]
+
+        Operators = [ TCosmeticWhenInWorldOperatorDesc( Happening = ["fx_smoke"] ) ]
+
+        Actions = MAP
+        [
+            (
+                ["fx_smoke"],
+                TIntroduceMobileHappening( Happening = TSequencingActionHappening
+                (
+                    ActionDescriptor = TActionCall
+                    (
+                        Action = $/GFX/GameFx/fx_binder_smoke_screen
+                        NamedParams = MAP
+                        [
+                            ('Radius', <Radius>),
+                            ('Height', <Height>),
+                            ('Density', <Density>)
+                        ]
+                    )
+                ))
+            ),
+        ]
+    )
+)

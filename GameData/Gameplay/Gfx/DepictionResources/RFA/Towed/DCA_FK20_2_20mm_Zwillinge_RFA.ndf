@@ -1,0 +1,58 @@
+export Modele_DCA_FK20_2_20mm_Zwillinge_RFA is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge.fbx'
+)
+
+export Modele_DCA_FK20_2_20mm_Zwillinge_RFA_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge_MID/DCA_FK20_2_20mm_Zwillinge_MID.fbx'
+)
+
+export Modele_DCA_FK20_2_20mm_Zwillinge_RFA_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/RFA/Canon/LODS/DCA_FK20_2_20mm_Zwillinge_LOW.fbx'
+)
+
+export DeployAnimation_DCA_FK20_2_20mm_Zwillinge_RFA is TResourceMatrixArrayAnimation
+(
+    FileName   = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge_Deploy.fbx'
+    PlayInLoop     = false
+)
+
+export DepictionOperator_Deployable_DCA_FK20_2_20mm_Zwillinge_RFA is DepictionOperator_AnimationDeployable
+(
+    DeployAnimation = TResourceMatrixArrayAnimation
+    (
+        FileName   = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge_Deploy.fbx'
+        PlayInLoop     = false
+    )
+
+    FoldAnimation = TResourceMatrixArrayAnimation
+    (
+        FileName   = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge_Fold.fbx'
+        PlayInLoop     = false
+    )
+
+    IdleAnimation = TResourceMatrixArrayAnimation
+    (
+        FileName   = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge_Idle.fbx'
+        PlayInLoop     = true
+    )
+
+    MoveFrontAnimation = TResourceMatrixArrayAnimation
+    (
+        FileName   = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge_Move.fbx'
+        PlayInLoop     = true
+    )
+
+    MoveBackAnimation = TResourceMatrixArrayAnimation
+    (
+        FileName   = 'GameData:/Assets/3D/Units/RFA/Canon/DCA_FK20_2_20mm_Zwillinge/DCA_FK20_2_20mm_Zwillinge_Move_Back.fbx'
+        PlayInLoop     = true
+    )
+
+    DeployFromMoveTime  = 1.5
+    DeployFromTurnTime  = 1.5
+    FoldForMoveTime  = 1.5
+    FoldForTurnTime  = 1.5
+)

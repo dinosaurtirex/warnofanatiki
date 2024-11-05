@@ -1,0 +1,377 @@
+// à maintenir synchro avec EugIA_Specific\StrategicBattleState.h, EStrategicBattleType
+EStrategicBattleType_None is 0
+EStrategicBattleType_GroundStrategicBattle is 1
+EStrategicBattleType_GroundAirStrategicBattle is 2
+EStrategicBattleType_AirGroundStrategicBattle is 3
+EStrategicBattleType_AerialStrategicBattle is 4
+
+private AutoresolveInfantryTagsToCheck is [ 'Steelman_infanterie_autoresolve' ]
+private AirUnitTagsToCheck is [ 'Helo', 'Avion' ]
+
+private NoRecoAdvantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 0.5
+    // Alexis test à remplacer quand NoInfantryAdvantage fonctionnera
+    TextToken = 'CA_RECO'
+    HintToken = 'CAH_RECO'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = ['Char_Reco', 'Helo_Reco', 'Infanterie_Reco', 'Vehicule_Reco']
+    TagToCheckAgainst = ['Char_Reco', 'Helo_Reco', 'Infanterie_Reco', 'Vehicule_Reco']
+)
+
+private NoAAAdvantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 1
+    TextToken = 'CA_AA'
+    HintToken = 'CAH_AA'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'Helo', 'Avion' ]
+    TagToCheckAgainst = [ 'Canon_AA', 'Avion_Chasseur','Canon_AA_Standard', 'Avion','Helo_AA' ]
+)
+private NoHeavyTank_advantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 0.5
+    TextToken = 'CA_HT'
+    HintToken = 'CAH_HT'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'SM_charLourd' ]
+    TagToCheckAgainst = [ 'SM_charLourd' ]
+)
+
+private NoATAdvantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 1
+    TextToken = 'CA_AT'
+    HintToken = 'CAH_AT'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'Char', 'ChasseurDeChar','Avion_AT','Helo_Gunship','Helo_AT']
+    TagToCheckAgainst = [ 'Char', 'ChasseurDeChar','Avion_AT','Helo_Gunship','Helo_AT']
+)
+private NoCMD_Advantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 2
+    TextToken = 'CA_CMD'
+    HintToken = 'CAH_CMD'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'Commandant','Helo_CMD']
+    TagToCheckAgainst = [ 'Commandant','Helo_CMD']
+)
+private NoInfantryAdvantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 1
+    TextToken = 'CA_INF'
+    HintToken = 'CAH_INF'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = ~/AutoresolveInfantryTagsToCheck
+    TagToCheckAgainst = ~/AutoresolveInfantryTagsToCheck
+)
+private NoSupply_Advantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 0.5
+    TextToken = 'CA_supply'
+    HintToken = 'CAH_supply'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'Helo_Logistique', 'Vehicule_Logistique']
+    TagToCheckAgainst = [ 'Helo_Logistique', 'Vehicule_Logistique']
+)
+private NoAirSupport_Advantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 0.5
+    TextToken = 'CA_airsup'
+    HintToken = 'CAH_airsup'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'Avion']
+    TagToCheckAgainst = [ 'Avion']
+)
+private NoHeloSupport_Advantage is TCombatAdvantageDefinition
+(
+    AdvantageValue = 0.5
+    TextToken = 'CA_HELO'
+    HintToken = 'CAH_helosu'
+    ShowTextForAdvantageWinner = false
+    TagToCheck = [ 'Helo']
+    TagToCheckAgainst = [ 'Helo']
+)
+private DCA_air is TCombatAdvantageDefinition
+(
+    AdvantageValue = 15
+    TextToken = 'CA_DCA'
+    HintToken = 'CAH_DCA'
+    ShowTextForAdvantageWinner = true
+    TagToCheck = [ 'Canon_AA', 'IsFortifiedAntiAir' ]
+    TagToCheckAgainst = [ 'Avion_SEAD']
+)
+private interception_air_air is TCombatAdvantageDefinition
+(
+    AdvantageValue = 15
+    TextToken = 'CA_intAA'
+    HintToken = 'CAH_intAA'
+    ShowTextForAdvantageWinner = true
+    TagToCheck = [ 'Avion_Chasseur' ]
+    TagToCheckAgainst = [ 'Avion_Chasseur']
+)
+
+private VeryLuckyDefender is TStrategicAutoresolveAlea
+(
+    TriggerWeight = 5
+    ModificationValue = -1.0
+    TextToken = "AAR_DVL"
+)
+
+private LuckyDefender is TStrategicAutoresolveAlea
+(
+    TriggerWeight = 20
+    ModificationValue = -0.25
+    TextToken = "AAR_DL"
+)
+
+private NeutralLuck is TStrategicAutoresolveAlea
+(
+    TriggerWeight = 60
+)
+
+private InterceptionNeutralLuck is TStrategicAutoresolveAlea
+(
+    TriggerWeight = 83
+)
+
+private LuckyAttacker is TStrategicAutoresolveAlea
+(
+    TriggerWeight = 20
+    ModificationValue = 0.25
+    TextToken = "AAR_AL"
+)
+
+// private VeryLuckyAttacker is TStrategicAutoresolveAlea
+// (
+//     TriggerWeight = 16
+//     ModificationValue = 15
+//     TextToken = "AAR_AVL"
+// )
+
+private LuckyHostile is TStrategicAutoresolveAlea
+(
+    TriggerWeight = 16
+    ModificationValue = 15
+    TextToken = "AAR_HL"
+)
+
+
+
+StrategicAutoresolveConstantes is TStrategicAutoResolveConstantes
+(
+    AleasByCombatType = MAP
+    [
+        ( EStrategicBattleType_GroundStrategicBattle,
+            [
+                // ~/VeryLuckyDefender,
+                ~/LuckyDefender,
+                ~/NeutralLuck,
+                ~/LuckyAttacker,
+                // ~/VeryLuckyAttacker,
+            ]
+        ),
+        ( EStrategicBattleType_AerialStrategicBattle,
+            [
+
+                ~/InterceptionNeutralLuck,
+                ~/LuckyHostile,
+
+            ]
+        ),
+        ( EStrategicBattleType_AirGroundStrategicBattle,
+            [
+                ~/InterceptionNeutralLuck,
+                ~/LuckyHostile,
+            ]
+        ),
+    ]
+
+    PertesAttaquant = perte_mixte_0
+    PertesDefenseur = perte_mixte_0
+
+    PawnPowerBonusFactorByTerrainTypeAndPlayerSide = [
+        // EStrategicBattlePlayerSide::Attacker
+        MAP
+        [
+        ],
+        // EStrategicBattlePlayerSide::Defender
+        MAP
+        [
+            (~/ETerrainType/StrategicForest,    0.10),
+            (~/ETerrainType/StrategicSemiUrban, 0.20),
+            (~/ETerrainType/StrategicUrban,     0.30),
+        ],
+    ]
+    ApplyPawnPowerBonusOnSupportUnit = true
+
+    AvantagesByCombatType = MAP
+    [
+        ( EStrategicBattleType_GroundStrategicBattle, MAP
+            [
+                ( ~/EAutoresolveAvantage_NoRecoVersusReco,          ~/NoRecoAdvantage ),
+                ( ~/EAutoresolveAvantage_NoAntiAirVersusAir,        ~/NoAAAdvantage ),
+                ( ~/EAutoresolveAvantage_NoAntiTankVersusTank,      ~/NoATAdvantage ),
+                ( ~/EAutoresolveAvantage_NoHeavyTank_vs_HeavyTank,  ~/NoHeavyTank_advantage ),
+                ( ~/EAutoresolveAvantage_NoInfantry_vs_Infantry,    ~/NoInfantryAdvantage ),
+                ( ~/EAutoresolveAvantage_NoCMD_vs_CMD,              ~/NoCMD_Advantage ),
+                ( ~/EAutoresolveAvantage_NoSupply_vs_Supply,        ~/NoSupply_Advantage ),
+                ( ~/EAutoresolveAvantage_NoAir_vs_Air,              ~/NoAirSupport_Advantage ),
+                // Alexis: je retire car les hélo sont parfois dans des btn sans qu'on ait l'info.
+                // ( ~/EAutoresolveAvantage_NoHelo_vs_Helo,            ~/NoHeloSupport_Advantage ),
+            ]
+        ),
+        ( EStrategicBattleType_AerialStrategicBattle, MAP
+            [
+                ( ~/EAutoresolveAvantage_interception_air_air,   ~/interception_air_air ),
+            ]
+        ),
+        ( EStrategicBattleType_AirGroundStrategicBattle, MAP
+            [
+                ( ~/EAutoresolveAvantage_DCA_air,   ~/DCA_air ),
+            ]
+        ),
+    ]
+    CombatNoAntiAirAdvantageType = ~/EAutoresolveAvantage_NoAntiAirVersusAir
+
+    AirUnitTags = ~/AirUnitTagsToCheck
+    InfantryUnitTags = ~/AutoresolveInfantryTagsToCheck
+
+    VictoryTypeByBalanceOfPowerByTerrainType =MAP
+    [
+        (
+            ~/ETerrainType/Default,
+            [
+                ( -1.5,     EVictoryType/TotalDefeat),
+                ( -1.0,     EVictoryType/MajorDefeat),
+                ( -0.5,     EVictoryType/MinorDefeat),
+
+                ( 0.0,      EVictoryType/Draw),
+
+                ( 0.5,      EVictoryType/MinorVictory),
+                ( 1.0,      EVictoryType/MajorVictory),
+                ( 1.5,      EVictoryType/TotalVictory),
+            ]
+        ),
+    ]
+
+    // -------------
+    // Combat Aerien
+    // -------------
+
+    PertePourAttaquantSelonDecalageCombatAerien = PertePourAttaquantSelonDecalageForCombatAerien//PertePourAttaquantSelonDecalageForCombatAerien
+    PertePourDefenseurSelonDecalageCombatAerien = PertePourAttaquantSelonDecalageForCombatAerien//PertePourDefenseurSelonDecalageForCombatAerien
+
+    VictoryTypeByBalanceOfPowerCombatAerien =
+    [
+        ( -2,    EVictoryType/TotalDefeat),
+        ( -1,    EVictoryType/MajorDefeat),
+        ( -0,    EVictoryType/MinorDefeat),
+        ( 1,    EVictoryType/Draw),
+        ( 2,    EVictoryType/MinorVictory),
+        ( 3,     EVictoryType/MajorVictory),
+        ( 4,    EVictoryType/TotalVictory),
+    ]
+
+
+    // -------------
+    // Combat Sol Air \ combat Attaquant Defenseur : cas où l'avion est en supériorité sur une zonee t qu'une DCA devient active (cas rare)
+    // -------------
+
+    PertePourAttaquantSelonDecalageCombatSolAir = PertePourAttaquantSelonDecalageForCombatAerien
+    PertePourDefenseurSelonDecalageCombatSolAir = PertePourAttaquantSelonDecalageForCombatAerien
+
+    VictoryTypeByBalanceOfPowerCombatSolAir =
+    [
+        ( -0.01,    EVictoryType/MinorDefeat),
+        ( 0,    EVictoryType/MinorVictory),
+    ]
+
+
+    //-------------------------------------------------------------------------------------
+    // Combat Air Sol // combat attaquant defenseur : cas où l'avion entre dans le cercle d'une DCA / l'avion est attaquant et DCA
+    //-------------------------------------------------------------------------------------
+
+    PertePourAttaquantSelonDecalageCombatAirSol = testPerte
+    PertePourDefenseurSelonDecalageCombatAirSol = testPerte
+
+    VictoryTypeByBalanceOfPowerCombatAirSol =
+    [
+        ( -0.01,    EVictoryType/MinorDefeat),
+        ( 0,    EVictoryType/MinorVictory),
+    ]
+
+    //-1 = perdre tous les PA possibles
+    APLossForInterceptorAndPassingPawnByVictoryTypeForAttackerAirBattle =
+    [
+        (-1 , -1), //TotalDefeat
+        (-1 , -1), //MajorDefeat
+        (-1 , -1), //MinorDefeat
+        (-1 , -1), //Draw
+        (-1 , 0), //MinorVictory
+        (-1 , 0), //MajorVictory
+        (-1 , 0), //TotalVictory
+        (-1 , 0), //NotSpecified
+    ]
+    // il s'agit du coût en PA des DCA quand elles se battent contre un avion.
+    APLossForInterceptorAndPassingPawnByVictoryTypeForAttackerAirGroundBattle =
+    [
+        (-1 , -1), //TotalDefeat
+        (-1 , -1), //MajorDefeat
+        (-1 , -1), //MinorDefeat
+        (-1 , -1), //Draw
+        (-1 , 0), //MinorVictory
+        (-1 , 0), //MajorVictory
+        (-1 , 0), //TotalVictory
+        (-1 , 0), //NotSpecified
+    ]
+
+    APLossForInterceptorAndPassingPawnByVictoryTypeForAttackerGroundAirBattle =
+    [
+        (-1 , -1), //TotalDefeat
+        (-1 , -1), //MajorDefeat
+        (-1 , -1), //MinorDefeat
+        (-1 , -1), //Draw
+        (-1 , -1), //MinorVictory
+        (-1 , -1), //MajorVictory
+        (-1 , -1), //TotalVictory
+        (-1 , -1), //NotSpecified
+    ]
+)
+
+// Pertes.
+// négatif = défavorable à  la défense et attaque ;  positif = favorable à  l'attaque et défense.
+// en cas de victoire de l'ATQ avec un ratio de 3.5 par exemple,
+// on appliquera une perte en ATQ correspondante au lerp entre les ratios 3 et 4
+// on appliquera une perte en DEF correspondante au lerp entre les ratios -3 et -4
+
+// ATTENTION: les colonnes sont affiché dynamiquement dans UISpecificStrategicAutoResolveViewDescriptor/PertesSurTerrainBlade
+// il n'est pas nécessaire que les colonnes soit consécutive
+perte_mixte_0 is
+[
+(-2 ,   0.60),
+(-1.5 , 0.45),
+(-1 ,   0.35),
+(-0.5 , 0.25),
+(0 ,    0.20),
+(0.5 ,  0.15),
+(1 ,    0.10),
+(1.5 ,  0.07),
+(2 ,    0.03),
+]
+
+//-------------------------------------------------------------------------------------/
+testPerte is
+[
+       // (-0.5,    0.30),
+       // (0,       0.0),
+        ( -0.01,    0.1),
+        ( 0,    0.05),
+       // (0.5,     0.10),
+]
+PertePourAttaquantSelonDecalageForCombatAerien is
+[
+       (-0.5,    0.30),
+       (0,       0.20),
+       (0.5,     0.10),
+]

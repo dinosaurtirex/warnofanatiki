@@ -1,0 +1,14 @@
+export Modele_AML_60_Gendarmerie_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_60_Gendarmerie/AML_60_Gendarmerie.fbx'
+)
+
+export Modele_AML_60_Gendarmerie_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_60_Gendarmerie/AML_60_Gendarmerie.fbx'
+)
+
+export Modele_AML_60_Gendarmerie_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_60_Gendarmerie/AML_60_Gendarmerie.fbx'
+)

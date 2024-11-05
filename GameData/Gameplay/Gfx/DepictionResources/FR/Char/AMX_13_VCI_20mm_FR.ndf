@@ -1,0 +1,14 @@
+export Modele_AMX_13_VCI_20mm_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Char/AMX_13_VCI_20mm/AMX_13_VCI_20mm.fbx'
+)
+
+export Modele_AMX_13_VCI_20mm_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Char/AMX_13_VCI_20mm_MID/AMX_13_VCI_20mm_MID.fbx'
+)
+
+export Modele_AMX_13_VCI_20mm_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Char/AMX_13_VCI_20mm_LOW/AMX_13_VCI_20mm_LOW.fbx'
+)

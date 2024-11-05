@@ -1,0 +1,124 @@
+template BUCKDropdownDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = true,                                    // Par défaut il est a true pour ne pas s'updater dans le cas ou il se trouverai dans un composant qui peut changer les états (Ex : BUCKMovable)
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKButtonDescriptor
+    Mapping : TEugBMutablePBaseClass = nil,
+    HoverSound : TSoundDescriptor = nil,
+    LeftClickSound : TSoundDescriptor = nil,
+    AllowMultipleInputsPerFrame : bool = false,
+    Grayed : bool = false,
+    //IsTogglable : bool = true,                                            // TOUJOURS true dans le cas des dropdowns
+    IsFocusable : bool = true,
+    FocusMapping : TEugBMutablePBaseClass = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_SPACE ) ),
+    // -- BUCKButtonDescriptor
+
+    // ++ BUCKDropdownDescriptor
+    Layer : TUILayer = nil,                                                 // Le layer pour faire apparaître la drop down (doit être au dessus de tout le monde)
+    FloatingContainerDescriptor : TBUCKContainerDescriptor = nil,           // Le descripteur du conteneur des items
+    ItemDescriptor : TBUCKButtonDescriptor = nil,                           // Le descriptor d'un item de la dropdown
+    FloatingListElementName : string = "",                                  // L'ElementName du conteneur des items
+    MainTextElementName : string = "",                                      // L'ElementName du texte de l'item actuellement choisi
+    ItemTextElementName : string = "",                                      // L'ElementName du texte des l'items
+    ItemTextHintableAreaName : string = "",                                 // L'ElementName du hint de l'item
+    ItemValues : LIST<PAIR<int, string>> = [],                              // Les paires d'items
+    ItemsDico : string = "",                                                // Le token de dico des items
+    // -- BUCKDropdownDescriptor
+]
+is TBUCKDropdownDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKButtonDescriptor
+    Mapping  = <Mapping>
+    HoverSound = <HoverSound>
+    LeftClickSound = <LeftClickSound>
+    AllowMultipleInputsPerFrame = <AllowMultipleInputsPerFrame>
+    Grayed = <Grayed>
+    IsTogglable = true
+    IsFocusable = <IsFocusable>
+    FocusMapping = <FocusMapping>
+    // -- BUCKButtonDescriptor
+
+    // ++ BUCKDropdownDescriptor
+    Layer = <Layer>
+    FloatingContainerDescriptor = <FloatingContainerDescriptor>
+    ItemDescriptor = <ItemDescriptor>
+    FloatingListElementName = <FloatingListElementName>
+    MainTextElementName = <MainTextElementName>
+    ItemTextElementName = <ItemTextElementName>
+    ItemTextHintableAreaName = <ItemTextHintableAreaName>
+    ItemValues = <ItemValues>
+    ItemsDico = <ItemsDico>
+    // -- BUCKDropdownDescriptor
+)

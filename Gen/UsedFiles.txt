@@ -1,0 +1,5 @@
+GameData:/Localisation/fanatiki/COMPANIES.csv
+GameData:/Localisation/fanatiki/INTERFACE_INGAME.csv
+GameData:/Localisation/fanatiki/INTERFACE_OUTGAME.csv
+GameData:/Localisation/fanatiki/PLATOONS.csv
+GameData:/Localisation/fanatiki/UNITS.csv

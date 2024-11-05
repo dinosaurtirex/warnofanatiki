@@ -1,0 +1,504 @@
+private StrategicLobbyConfirmButton is SoloNavigationButton
+(
+    TextToken = "AB_LAUNCH"
+    ElementName = "StrategicLobbyConfirmButton"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    IsEmphasized = true
+)
+
+private StrategicLobbyInviteCodeButton is SoloNavigationButton
+(
+    ElementName = "StrategicLobbyInviteCodeButton"
+    TextToken = "CB_INVCOD"
+    HintTitleToken = "CB_INVCOD"
+    HintBodyToken = "OLB_INVICB"
+    HintExtendedToken = "OLB_INVICE"
+    TextSizeToken = "22"
+    ButtonMagnifiableWidthHeight = [125.0, 35.0]
+)
+
+private StrategicLobbySwitchPrivacyButton is SoloNavigationButton
+(
+    ElementName = "StrategicLobbySwitchPrivacyButton"
+    TextToken = "GS_SPUBLI"
+    HintTitleToken = "GS_ACCESS"
+    HintBodyToken = "GS_ACCESSB"
+    HintExtendedToken = "GS_ACCESSE"
+    TextSizeToken = "22"
+    ButtonMagnifiableWidthHeight = [125.0, 35.0]
+)
+
+private StrategicLobbySwitchButton is SoloNavigationButton
+(
+    ElementName = "StrategicLobbySwitchTeamButton"
+    TextToken = "OLB_SWTCHT"
+    HintTitleToken = "OLB_SWTCHT"
+    HintBodyToken = "OLB_SWTCHB"
+    HintExtendedToken = "OLB_SWTCHE"
+)
+private StrategicLobbyBackButton is SoloNavigationButton
+(
+    TextToken = "NV_LEAVE"
+    ElementName = "StrategicLobbyBackButton"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+    HintableAreaElementName = "LeaveButtonHintableArea"
+    HintTitleToken = "OLB_LEAVET"
+    HintBodyToken = "OLB_LEAVEB"
+    HintExtendedToken = "OLB_LEAVEE"
+)
+
+private StrategicLobbyCancelButton is SoloNavigationButton
+(
+    TextToken = "AB_OPCANCL"
+    ElementName = "StrategicLobbyCancelButton"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+)
+
+private StategicPlayerButtonManager is TBUCKRadioButtonManager()
+
+template PlayerContainer
+[
+    ElementName : string,
+]
+is BUCKButtonDescriptor
+(
+    ElementName = <ElementName> + "Button"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    IsTogglable = true
+    RadioButtonManager = ~/StategicPlayerButtonManager
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableOffset = [15.0, 20.0]
+                RelativeWidthHeight = [0.95, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+
+            ChildFitToContent = true
+
+            Elements =
+            [
+
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ElementName = <ElementName> + "Filler"
+
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0.0, 8.0]
+                        )
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = StrategicPlayersComponent (ElementName = <ElementName>)
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0,178]
+                        )
+                    )
+                ),
+                // displays divisions (permet d'afficher attacking side)
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ElementName = <ElementName> + "Divisions"
+
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToFather  = [0.5, 0.0]
+                            AlignementToAnchor  = [0.5, 0.0]
+                        )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = ~/UIText_Left
+                            VerticalAlignment = ~/UIText_VerticalCenter
+                        )
+
+                        TextPadding = TRTTILength4(Magnifiable = [2.0, 2.0, 2.0, 2.0])
+                        HorizontalFitStyle = ~/FitStyle/FitToContent
+                        VerticalFitStyle = ~/FitStyle/FitToContent
+
+                        TextStyle = 'Default'
+                        TypefaceToken = "Eurostyle_Medium"
+
+                        TextSize = '30'
+
+                        TextDico = ~/LocalisationConstantes/dico_maps
+                        TextColor = "Noir_noHL"
+                    )
+                ),
+                // display logo army and name
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 0.0]
+                            MagnifiableWidthHeight = [0.0, 80.0]
+                        )
+
+                        Components =
+                        [
+                            BUCKTextureDescriptor
+                            (
+                                ElementName = <ElementName> + "BackgroundTexture"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    MagnifiableWidthHeight = [80.0, 80.0]
+                                    AlignementToAnchor = [0.0, 0.0]
+                                    AlignementToFather = [0.0, 0.0]
+                                    MagnifiableOffset = [20.0, -20.0]
+                                )
+                            ),
+                            MissionDescriptionText
+                            (
+                                ElementName = <ElementName> + "Army"
+
+                                Alignment = UIText_Center
+                                TypefaceToken = "Eurostyle"
+                                TextSize = '14'
+                            )
+                        ]
+                    )
+                ),
+                // displays briefing
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = MissionDescriptionText
+                    (
+
+                        ElementName = <ElementName> + "General"
+                        Alignment = UIText_Left
+                        TypefaceToken = "Eurostyle"
+                        TextSize = '13'
+                    )
+                ),
+
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------------------
+template StrategicPlayersComponent
+[
+    ElementName : string,
+]
+ is BUCKContainerDescriptor
+ (
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [0.9, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            Axis = ~/ListAxis/Horizontal
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+            FirstMargin = TRTTILength(Magnifiable = 16.0)
+            LastMargin = TRTTILength(Magnifiable = 16.0)
+
+            HasBorder = true
+            BorderLineColorToken = 'Noir'
+            BorderThicknessToken = '1'
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0.0,50.0]
+                        )
+                    )
+                ),
+                // player
+                BUCKListElementDescriptor
+                (
+                    ExtendWeight = 1.0
+                    ComponentDescriptor = StrategicPlayersRack
+                    (
+                        ElementName = <ElementName>
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+template StrategicPlayersRack
+[
+    ElementName : string,
+]
+is BUCKRackDescriptor
+(
+    ElementName = <ElementName> + "StrategicPlayersRack"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    FirstMargin = TRTTILength(Magnifiable = 8.0)
+    LastMargin = TRTTILength(Magnifiable = 8.0)
+    InterItemMargin = TRTTILength(Magnifiable = 8.0)
+
+    BladeDescriptor = BUCKSpecificOutGameStrategicLobbyPlayerViewDescriptor
+)
+
+BUCKSpecificOutGameStrategicLobbyMainComponentDescriptor is BUCKContainerDescriptor
+(
+    ElementName = "StrategicLobbyMainContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        // MagnifiableWidthHeight = [1720.0, 0.0]
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    Components =
+    [
+        // ~/StrategicLobbyFullPanel
+        BUCKTranslationAnimatedContainerDescriptor
+        (
+            ElementName = "StrategicLobbyAnimatedContainer"
+            FramePropertyBeforeAnimation = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                AlignementToAnchor = [0.5, 1.0]
+                AlignementToFather = [0.5, 1.0]
+            )
+
+            AnimationTotalDuration = 0.2
+            AnimationModificator = ~/AnimModificator/CubicStep
+            AnimationModificatorParameters = [0.0, 1.0]
+
+            FramePropertyAfterAnimation = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                AlignementToAnchor = [0.5, 0.31]
+                AlignementToFather = [0.5, 1.0]
+            )
+
+            Components =
+            [
+                ~/StrategicLobbyFullPanel
+            ]
+        )
+    ]
+)
+
+StrategicLobbyLeftPageButtons is BUCKListDescriptor
+(
+    ElementName = "StrategicLobbyLeftPageButtons"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 1.0]
+        AlignementToFather = [0.5, 1.0]
+        MagnifiableOffset = [0.0, -50.0]
+    )
+    Axis = ~/ListAxis/Vertical
+    InterItemMargin = TRTTILength(Magnifiable = 30.0)
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKListDescriptor
+            (
+                ElementName = "StrategicLobbyLeftPageTopButtons"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToAnchor = [0.5, 0.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+
+                Axis = ~/ListAxis/Horizontal
+                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+                InterItemMargin = TRTTILength(Magnifiable = 20.0)
+
+                Elements =
+                [
+                    BUCKListElementDescriptor( ComponentDescriptor = ~/StrategicLobbyInviteCodeButton ),
+                    BUCKListElementDescriptor( ComponentDescriptor = ~/StrategicLobbySwitchPrivacyButton ),
+                ]
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKListDescriptor
+            (
+                ElementName = "StrategicLobbyLeftPageBottomButtons"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToAnchor = [0.5, 0.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+
+                Axis = ~/ListAxis/Horizontal
+                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+                InterItemMargin = TRTTILength(Magnifiable = 20.0)
+
+                Elements =
+                [
+                    BUCKListElementDescriptor( ComponentDescriptor = ~/StrategicLobbyBackButton ),
+                    BUCKListElementDescriptor( ComponentDescriptor = ~/StrategicLobbyCancelButton ),
+                    BUCKListElementDescriptor( ComponentDescriptor = ~/StrategicLobbySwitchButton ),
+                ]
+            )
+        )
+    ]
+)
+
+StrategicLobbyRightPageButtons is BUCKListDescriptor
+(
+    ElementName = "StrategicLobbyRightPageButtons"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 1.0]
+        AlignementToFather = [0.5, 1.0]
+        MagnifiableOffset = [0.0, -50.0]
+    )
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    InterItemMargin = TRTTILength(Magnifiable = 20.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor( ComponentDescriptor = ~/StrategicLobbyConfirmButton )
+    ]
+)
+
+
+//-------------------------------------------------------------------------------------
+
+StrategicLobbyFullPanel is BUCKTextureDescriptor
+(
+    ElementName = "StrategicLobbyFullPanel"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [1214.0, 806.0]
+        AlignementToFather = [0.5, 1.0]
+        AlignementToAnchor = [0.5, 1.0]
+        MagnifiableOffset = [0, 25.0]
+    )
+
+
+
+
+    TextureToken = "mission_dossierVide"
+    HidePointerEvents = true
+
+    Components =
+    [
+        StrategicLobbyLeftPage,
+        StrategicLobbyRightPage,
+        LobbyTopTabContent(MagnifiableOffset = [78.0, -23.0]),
+    ]
+)
+
+StrategicLobbyLeftPage is BUCKContainerDescriptor
+(
+    ElementName = "StrategicLobbyLeftPage"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+       MagnifiableWidthHeight = [526.0, 745.0+30]
+       MagnifiableOffset = [71.0, 31.0]
+    )
+
+    Components =
+    [
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+            Components =
+            [
+                PlayerContainer
+                (
+                    ElementName = "LeftPlayer"
+                )
+            ]
+        ),
+        StrategicLobbyLeftPageButtons
+    ]
+)
+
+StrategicLobbyRightPage is BUCKContainerDescriptor
+(
+    ElementName = "StrategicLobbyRightPage"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [520.0,741.0+35]
+        MagnifiableOffset = [285.0, 31.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Components =
+    [
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+            Components =
+            [
+                PlayerContainer
+                (
+                    ElementName = "RightPlayer"
+                )
+            ]
+
+        ),
+        StrategicLobbyRightPageButtons
+    ]
+)
+//-------------------------------------------------------------------------------------
+
+
+UISpecificOutGameStrategicLobbyViewDescriptor is TUISpecificOutGameStrategicLobbyViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificOutGameStrategicLobbyMainComponentDescriptor
+    MainComponentContainerUniqueName = "LobbyContainer" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    SinglePlayerViewDescriptor = ~/UISpecificOutGameStrategicLobbyPlayerViewDescriptor
+)

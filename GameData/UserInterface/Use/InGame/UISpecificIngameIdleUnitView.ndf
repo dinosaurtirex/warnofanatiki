@@ -1,0 +1,53 @@
+UIIdleUnitViewDescriptor is TUISpecificIdleUnitViewDescriptor
+(
+    MainComponentDescriptor = ~/IdleUnitButton
+    MainComponentContainerUniqueName = "SpecificIdleUnitMainComponentDescriptor"
+)
+
+IdleUnitButton is BUCKSpecificButton
+(
+    ElementName = "NextIdleUnitButton"
+    ButtonMagnifiableWidthHeight = [31.0, 31.0]
+    ButtonAlignementToAnchor = [0, 0]
+    ButtonAlignementToFather = [0, 0]
+
+    HasBackgroundTexture = true
+    BackgroundTexture = 'icone_idle_unit'
+
+    RoundedCorner = true
+    RoundedVertexes = [true, true, false, false]
+
+    Components = [ ~/IdleUnitNumberText ]
+    Mapping = $/KeyboardOption/Mapping_NextIdleUnit
+)
+
+IdleUnitNumberText is BUCKTextDescriptor
+(
+    ElementName = "IdleUnitNumberText"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [1, 0.0]
+        AlignementToAnchor = [1, 0.0]
+        MagnifiableWidthHeight = [20, 15]
+        MagnifiableOffset = [-2, -2]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+       Alignment = UIText_Right
+       VerticalAlignment = UIText_VerticalCenter
+    )
+    TextStyle = "Default"
+
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle = ~/FitStyle/UserDefined
+
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/MultiLine
+
+    TextColor = "SD2_Blanc184"
+    TextSize = "SD2_Petit"
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+)
+

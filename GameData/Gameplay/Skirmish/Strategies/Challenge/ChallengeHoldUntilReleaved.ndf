@@ -1,0 +1,153 @@
+//-------------------------------------------------------------------------
+//----------------------------- STRATEGY ----------------------------------
+//-------------------------------------------------------------------------
+export ChallengeHoldUntilRelieved is TIAGeneralStrategy
+(
+    StrategyName = "ChalHolAI"
+    FirstGenerator = ChalHoldUntilRelieved_Choose_Strategy
+    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
+    TransitionList =
+    [
+        ChalHoldUntilRelieved_Transition_StartToPhaseCommand,
+        ChalHoldUntilRelieved_Transition_StartToGeneric,
+        ChalHoldUntilRelieved_Transition_DeployToCommandPhase,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//---------------------------- CONDITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Condition_GotoGeneric is TSequenceCondition_True
+(
+)
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Condition_CommandPhase is TSequenceCondition_Phase
+(
+    PhaseType = CommandPhase
+)
+
+//-------------------------------------------------------------------------
+//--------------------------- TRANSITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Transition_StartToPhaseCommand is TIAGeneralStrategyTransition
+(
+    Origine = ChalHoldUntilRelieved_Choose_Strategy
+    Condition = ChalHoldUntilRelieved_Condition_CommandPhase
+    Destination = ChalHoldUntilRelieved_Phase_Command
+)
+export ChalHoldUntilRelieved_Transition_StartToGeneric is TIAGeneralStrategyTransition
+(
+    Origine = ChalHoldUntilRelieved_Choose_Strategy
+    Condition = ChalHoldUntilRelieved_Condition_GotoGeneric
+    Destination = ChalHoldUntilRelieved_Phase_Deploiement
+)
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Transition_DeployToCommandPhase is TIAGeneralStrategyTransition
+(
+    Origine = ChalHoldUntilRelieved_Phase_Deploiement
+    Condition = ChalHoldUntilRelieved_Condition_CommandPhase
+    Destination = ChalHoldUntilRelieved_Phase_Command
+)
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Choose_Strategy is TSequenceGeneratorDescriptor
+(
+    // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+        ~/Support_Transports,
+        ~/Supply_Skirmish,
+    ]
+)
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Phase_Deploiement is TSequenceGeneratorDescriptor
+(
+    NbMacroActionAllowedToProduceSimultaneous = 4
+    GeneratorList =
+    [
+        ~/Support_Transports,
+        ~/Supply_Skirmish,
+
+        ~/CaptureOneObjectif, //Dependant du deck estimation 125
+
+        ~/Defense_Objectif, //Chere mais dépendant du nombre d'objectif et de la capture
+
+        ~/Attack_Objectives, //Environ 300
+
+        ~/Attack_Main, //Environ 400
+
+        ~/Reco_Autogen,
+        ~/Attack_Adaptive,          // Environ 200
+
+        ~/Airstrike_Assault,
+        ~/Airstrike_Offense,
+
+        ~/Attack_Helo, //Environ 250
+
+        ~/Artillery_TriggerHappy_1for2Corridors,
+
+        ~/CaptureAllZoneObjectif,
+
+        ~/Artillery_Expensive,
+
+        ~/Airstrike_AA,
+    ]
+    ScalingGeneratorList = ~/Challenge_Attack_Scaling
+)
+//-------------------------------------------------------------------------
+export ChalHoldUntilRelieved_Phase_Command is TSequenceGeneratorDescriptor
+(
+    NbMacroActionAllowedToProduceSimultaneous = 3
+    GeneratorList =
+    [
+        ~/Support_Transports,
+        ~/Supply_Skirmish,
+
+        ~/CaptureOneObjectif, //Dependant du deck estimation 125
+
+        ~/Defense_Objectif, //Chere mais dépendant du nombre d'objectif et de la capture
+
+        ~/Attack_Objectives, //Environ 300
+
+        ~/Attack_Main, //Environ 400
+
+        ~/Reco_Autogen,
+        ~/Attack_Adaptive,          // Environ 200
+
+        ~/Airstrike_Assault,
+        ~/Airstrike_Offense,
+
+        ~/Attack_Helo, //Environ 250
+
+        ~/Artillery_TriggerHappy_1for2Corridors,
+
+        ~/CaptureAllZoneObjectif,
+
+        ~/Artillery_Expensive,
+        ~/Attack_Adaptive,          // Environ 200
+
+        ~/Airstrike_AA,
+
+    ]
+    ScalingGeneratorList = ~/Challenge_HoldUntilRelieved_Scaling
+)
+
+Challenge_HoldUntilRelieved_Scaling is
+[
+    ~/Attack_Objectives_Autogen,
+
+    ~/Attack_Main_Autogen,
+    ~/Attack_Adaptive_Autogen,
+    ~/Attack_Adaptive_Autogen,
+    ~/Attack_Adaptive_Autogen,
+
+    ~/Airstrike_Assault_Autogen,
+
+    ~/Airstrike_Offense_Autogen,
+    ~/Airstrike_AA_Autogen,
+
+    ~/Artillery_TriggerHappy_Autogen,
+]

@@ -1,0 +1,15 @@
+export Modele_M270_MLRS_cluster_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Artillerie/M270_Cluster/M270_Cluster.fbx'
+)
+
+export Modele_M270_MLRS_cluster_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Artillerie/M270_Cluster_MID/M270_Cluster_MID.fbx'
+)
+
+export Modele_M270_MLRS_cluster_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Artillerie/LODS/M270_Cluster_LOW.fbx'
+)
+

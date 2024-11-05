@@ -1,0 +1,17 @@
+export Modele_BRDM_Malyu_P_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Antichar/BRDM_Malyutka/BRDM_Malyutka.fbx'
+)
+
+export Modele_BRDM_Malyu_P_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Antichar/BRDM_Malyutka/BRDM_Malyutka_MID.fbx'
+)
+
+export Modele_BRDM_Malyu_P_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Antichar/BRDM_Malyutka/BRDM_Malyutka_LOW.fbx'
+)
+
+
+

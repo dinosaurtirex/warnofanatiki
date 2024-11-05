@@ -1,0 +1,20 @@
+
+//Dico a maintenir synchro avec LocalisationConstantes.cpp
+LocalisationConstantes is TBaseClass
+(
+    dico_lang                            is "LANG"
+    dico_input                           is "INPUT"
+    dico_interface_outgame               is "OUTGAME"
+    dico_interface_options               is "OPTIONS"
+    dico_interface_ingame                is "INGAME"
+    dico_trophies                        is "TROPHIES"
+    dico_units                           is "UNITS"
+    dico_maps                            is "MAPS"
+    dico_credits                         is "CREDITS"
+    dico_manual                          is "MANUAL"
+    dico_companies                       is "COMPANIES"
+    dico_platoons                        is "PLATOONS"
+
+    dico_map                             is "MAP"
+    dico_dialogues                       is "MAPDIALOG"
+)

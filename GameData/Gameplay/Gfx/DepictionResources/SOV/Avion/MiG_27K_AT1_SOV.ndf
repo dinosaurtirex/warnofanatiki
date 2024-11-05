@@ -1,0 +1,19 @@
+export Modele_MiG_27K_AT1_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MIG_27K_Afghan_LGB/MIG_27K_AT.fbx'
+)
+
+export Modele_MiG_27K_AT1_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MIG_27K_Afghan_LGB/MIG_27K_AT.fbx'
+)
+
+export Modele_MiG_27K_AT1_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MIG_27K_Afghan_LGB/MIG_27K_AT.fbx'
+)
+
+export Modele_MiG_27K_AT1_SOV_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MIG_27K_Afghan_LGB/MIG_27K_LGB_train.fbx'
+)

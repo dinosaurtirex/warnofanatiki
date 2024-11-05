@@ -1,0 +1,254 @@
+
+// CONSTANTES POUR LE GAME DESIGN
+StrategicIAStratConstantes is TIAStratStrategicConstantesDescriptor
+(
+    NbAirplanesToKeepBeforeUsingAirDeny = 3
+    NbAirplanesToKeepBeforeUsingBombard = 1
+
+    DistanceMaxToAssignPawnToExistingGroupGRU = 530
+    DistanceMaxForPawnToBeAvailableForCurrentObjectiveGRU = 530
+
+    MaxCellsDistanceFromFrontlineAllowedOutOfSupply = 3.0
+
+    MaxFatigueToBeSelectedForStrategicBattle = 4 // indique le max de PA que peut avoir un pion pour participer à un combat mais aussi pour reculer le temps de récupérer sa fatigue.
+
+    AttackAndDefensePowerRatioForAttackersToMoveBack = 0.5
+
+    // Par defaut, tous les Fighter et AuxiliarySupport se placent au plus près de l'ennemi
+    PawnWithTagToPlaceFarthestFromEnemy = [
+        "AntiAir",
+    ]
+
+    StartBattleDescriptorByType = MAP
+    [
+        (
+            EStrategicBattleDescriptor/Default,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/Draw,  //NotActive
+                    EVictoryType/Draw,  //ToDefend
+                    EVictoryType/MinorDefeat,  //ToCapture
+                    EVictoryType/Draw,  //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/SuicideAttack,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/TotalDefeat,   //NotActive
+                    EVictoryType/TotalDefeat,   //ToDefend
+                    EVictoryType/TotalDefeat,   //ToCapture
+                    EVictoryType/TotalDefeat,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/MajorDefeat,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/MajorDefeat,   //NotActive
+                    EVictoryType/MajorDefeat,   //ToDefend
+                    EVictoryType/MajorDefeat,   //ToCapture
+                    EVictoryType/MajorDefeat,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/MinorDefeat,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/MinorDefeat,   //NotActive
+                    EVictoryType/MinorDefeat,   //ToDefend
+                    EVictoryType/MinorDefeat,   //ToCapture
+                    EVictoryType/MinorDefeat,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/Agressif,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/MinorDefeat,   //NotActive
+                    EVictoryType/MinorDefeat,   //ToDefend
+                    EVictoryType/MajorDefeat,   //ToCapture
+                    EVictoryType/MinorDefeat,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/Defensif, // utilise pour les pions en défense et fortifiés
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/MinorVictory,   //NotActive
+                    EVictoryType/MinorVictory,   //ToDefend
+                    EVictoryType/Draw,   //ToCapture
+                    EVictoryType/MinorVictory,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/Draw,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/Draw,   //NotActive
+                    EVictoryType/Draw,   //ToDefend
+                    EVictoryType/Draw,   //ToCapture
+                    EVictoryType/Draw,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/MinorVictor,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/MinorVictory,   //NotActive
+                    EVictoryType/MinorVictory,   //ToDefend
+                    EVictoryType/MinorVictory,   //ToCapture
+                    EVictoryType/MinorVictory,   //CapturedNotActive
+                ]
+            )
+        ),
+        (
+            EStrategicBattleDescriptor/MajorVictor,
+            TIAStartBattleDescriptor
+            (
+                MinVictoryNeededToAttackForObjectiveStatus =
+                [
+                    EVictoryType/MajorVictory,   //NotActive
+                    EVictoryType/MajorVictory,   //ToDefend
+                    EVictoryType/MajorVictory,   //ToCapture
+                    EVictoryType/MajorVictory,   //CapturedNotActive
+                ]
+            )
+        ),
+    ]
+
+    BombardTargetMinimumPowerValue = 5000.0
+
+    //Pour comparer les points on exprime le bonus de terrain en fonction de la distance diagonale de la map.(tous deux scoré sur 1.0)
+    //Pour un bonus de 0.1 on acceptera donc d'aller 10% plus loin par rapport à la diagonale de la map pour ne pas prendre un bonus
+    DefenseBonusByTerrainType = MAP
+    [
+        (~/ETerrainType/StrategicForest, 0.1),
+        (~/ETerrainType/StrategicSemiUrban, 0.25),
+        (~/ETerrainType/StrategicUrban, 0.25),
+    ]
+
+    TerrainThatGenerateDefensePoint =
+    [
+        (~/ETerrainType/StrategicSemiUrban),
+        (~/ETerrainType/StrategicUrban),
+    ]
+    DistanceInCellsFromEnemiesToActivateInnerDefensePoints = 5.0
+
+    MinAttackPowerToAttackInPriority = 8333.33 //Environ 5 de valeur d'attaque affiché
+    PrioritaryAttackTargetMaxDistanceFromFrontLine = 5
+
+    DefaultRankForPrioritaryDefensePoint = 0
+
+    NumberPositionRankToPlaceUnits = 3
+    MinimumRankForWeakestBattleUnitDefensePoint = 0 //Attention, ça commence à 0
+    MinimumRankForStrongestBattleUnitDefensePoint = 1 //Attention, ça commence à 0
+    MinimumRankForWeakestBattleUnitAttackPoint = 0 //Attention, ça commence à 0
+    MinimumRankForStrongestBattleUnitAttackPoint = 0 //Attention, ça commence à 0
+    MinimumRankForSupportUnit = 2 //Attention, ça commence à 0
+
+    GroupPoolsSortedByPriority =
+    [
+        TIAGroupPool
+        (
+            Name = "Attack"
+            // Le tag des unités pouvant rejoindre le groupe
+            PossibleTags = ["AllUnits"]
+            // Ce groupe sera créé pour les objectifs dont le status est le suivant
+            ZoneStatus = [ EStrategicZoneStatus/ToCapture, EStrategicZoneStatus/CapturedNotActive ]
+            // Ensemble des validateurs qui permettent de définir si un groupe est valide ou non.
+            // Si l'un des validateur fonctionne, alors le groupe est considéré comme valide.
+            Validators = [
+                TIAGroupValidator(
+                    BattleRole = EStrategicBattleRole/Fighter
+                    ExcludedTags = ["Helicopter", "AntiAir"]
+                    PawnsCount = 1
+                )
+            ]
+            // Les éléments du groupe seront choisis selon les critères définis ci dessous :
+            Elements = [
+                TIAGroupPoolElement(
+                    // Les meilleurs éléments en attaque seront choisis en premier, dans une limite de trois par poids de l'objectif
+                    Comparator = EIAGroupPoolElementComparatorType/BestAttack
+                    PawnsCountByObjectiveWeight = 6
+                ),
+                TIAGroupPoolElement(
+                    // Une fois que les éléments précédents auront été choisis, on complètera en
+                    // prenant autant de pions que possible dont l'attaque est proche de la moyenne.
+                    Comparator = EIAGroupPoolElementComparatorType/AverageAttack
+                ),
+            ]
+            Behaviors = [ TIAPawnsBehaviorExhausted, TIAPawnsBehaviorAttackTarget, TIAPawnsBehaviorNotSupplied, TIAPawnsBehaviorArtillery, TIAPawnsBehaviorAntiAir, TIAPawnsBehaviorMoveWithoutInfluence, TIAPawnsBehaviorAttack ]
+        ),
+        TIAGroupPool
+        (
+            Name = "Defense"
+            PossibleTags = ["AllUnits"]
+            ZoneStatus = [ EStrategicZoneStatus/ToDefend, EStrategicZoneStatus/NotActive ]
+            Validators = [
+                TIAGroupValidator(
+                    BattleRole = EStrategicBattleRole/Fighter
+                    ExcludedTags = ["Helicopter", "AntiAir"]
+                    PawnsCount = 1
+                ),
+                TIAGroupValidator(
+                    BattleRole = EStrategicBattleRole/AuxiliarySupport
+                    ExcludedTags = ["Helicopter", "AntiAir"]
+                    PawnsCount = 1
+                )
+            ]
+            Elements = [
+                TIAGroupPoolElement(
+                    Comparator = EIAGroupPoolElementComparatorType/AverageDefense
+                    PawnsCountByObjectiveWeight = 6
+                ),
+                TIAGroupPoolElement(
+                    Comparator = EIAGroupPoolElementComparatorType/AverageDefense
+                ),
+            ]
+            Behaviors = [ TIAPawnsBehaviorExhausted, TIAPawnsBehaviorAttackTarget, TIAPawnsBehaviorNotSupplied, TIAPawnsBehaviorArtillery, TIAPawnsBehaviorAntiAir, TIAPawnsBehaviorDefense ]
+        ),
+    ]
+
+    // Détermine quels types de pions doivent être couverts par les pions de support
+    PawnBattleRolesToCoverWithSupport = [ EStrategicBattleRole/Fighter, EStrategicBattleRole/AuxiliarySupport ]
+)
+
+EIAGroupPoolElementComparatorType is TBaseClass
+(
+    BestAttack is 0
+    BestDefense is 1
+    AverageAttack is 2
+    AverageDefense is 3
+)
+
+EStrategicZoneStatus is TBaseClass
+(
+    NotActive is 0
+    ToDefend is 1
+    ToCapture is 2
+    CapturedNotActive is 3
+)

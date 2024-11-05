@@ -1,0 +1,174 @@
+private LabelUnitIconSize is 36.0
+private ReticleMagnifiableSize is 40.0
+
+UpperNameAndUnitCountDescription is TNameAndUnitCountDescription
+(
+    TextFormatScript = ~/DefaultTextFormatScript
+
+    // All Texts
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+        OpticalAlignment = true
+    )
+
+    TypefaceToken = "UISecondFont"
+    UnitInfoTextSize = "14"
+
+    // Unit Name
+    UnitNameTextStyle = "Default"
+
+    // Unit Number
+    NbUnitsBackgroundColor = "SD2_Gris80"
+    NbUnitsTextStyle = "LabelUnitNameStroke"
+    NbUnitsTextColor = "Blanc"
+
+    UnitInfoVPadding = TRTTILength2(Magnifiable = [1.0, 1.0])
+    UnitNameHPadding = TRTTILength2(Magnifiable = [3.0, 3.0])
+    UnitNumberHPadding = TRTTILength2(Magnifiable = [1.0, 1.0])
+)
+
+CarriedNameAndUnitCountDescription is TNameAndUnitCountDescription
+(
+    TextFormatScript = ~/DefaultTextFormatScript
+
+    // All Texts
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+        OpticalAlignment = true
+    )
+
+    TypefaceToken = "UISecondFont"
+    UnitInfoTextSize = "10"
+
+    // Unit Name
+    UnitNameTextStyle = "Default"
+
+    // Unit Number
+    NbUnitsBackgroundColor = "SD2_Gris80"
+    NbUnitsTextStyle = "LabelUnitNameStroke"
+    NbUnitsTextColor = "Blanc"
+
+    UnitInfoVPadding = TRTTILength2(Magnifiable = [1.0, 1.0])
+    UnitNameHPadding = TRTTILength2(Magnifiable = [3.0, 3.0])
+    UnitNumberHPadding = TRTTILength2(Magnifiable = [1.0, 1.0])
+)
+
+LeavingDistrictChronoDescription is TLeavingDistrictChronoDescription
+(
+    ChronoDrawer = $/UserInterface/ChronoDrawerCommon
+    ChronoTexture = "icone_chrono_district"
+    ChronoBackgroundColor = "Noir"
+    ChronoForegroundColor = "Cyan"
+)
+//-------------------------------------------------------------------------------------
+// nom & nb unités d'infanterie
+private template CarriedUnitNameList
+[
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    ),
+] is TCarriedUnitLabelDescriptor
+(
+    ElementName = "CarriedUnitNameList"
+
+    ComponentFrame = <ComponentFrame>
+
+    IsClippable = false
+
+    BackgroundLocalRenderLayer = 4
+    LocalRenderLayer = 5
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    NameAndUnitCountDescription = ~/CarriedNameAndUnitCountDescription
+
+    Components =
+    (
+        [
+            // Size will be calculated in cpp
+            BUCKSensibleAreaDescriptor
+            (
+                ElementName = "CarriedUnitNameListSensibleArea"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToFather = [0.5, 1.0]
+                    AlignementToAnchor = [0.5, 1.0]
+                )
+                IsClippable = false
+            )
+        ]
+    )
+)
+//-------------------------------------------------------------------------------------
+private template CurrentUnitLabelUpperList
+[
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    ),
+    ChildFitToContent : bool = false,
+] is TBUCKSpecificLabelUpperListDescriptor
+(
+    ElementName = "LabelUpperList"
+
+    ComponentFrame = <ComponentFrame>
+
+    IsClippable = false
+
+    ChildFitToContent = <ChildFitToContent>
+
+    BackgroundLocalRenderLayer = 4
+    LocalRenderLayer = 5
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+    TextureDrawer = "ColorMultiply"
+
+    NameAndUnitCountDescription = ~/UpperNameAndUnitCountDescription
+
+    // Evacuation Icon
+    EvacuationIconTextureName = "icone_evacuation"
+    EvacuationIconMagnifiableSize = 23.0
+
+    // Reload Icon
+    ReloadIconMagnifiableSize = 22.0
+    ReloadIconDrawer = $/UserInterface/ChronoDrawerCommon
+    ReloadIconChronoTexture = "icone_reticule"
+    ReloadIconTextureToken = "icone_reticule_vide"
+    ReloadIconChronoBackgroundColor = "Transparent"
+    // A configurer via AimingDefaultColor
+    ReloadIconChronoForegroundColor = "Cyan"
+
+    // Player Name
+    PlayerNameTextStyle = "PlayerName"
+    PlayerNameTextColor = "Fulda_Turquoise"
+    PlayerNameTypefaceToken = "UIMainFont"
+
+    PlayerNameTextSize = "20"
+    PlayerNamePadding = TRTTILength4(Magnifiable = [1.0, 1.0, 1.0, 1.0])
+
+    Components =
+    (
+        [
+            // Size will be calculated in cpp
+            BUCKSensibleAreaDescriptor
+            (
+                ElementName = "UnitNameListSensibleArea"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToFather = [0.5, 1.0]
+                    AlignementToAnchor = [0.5, 1.0]
+                )
+                IsClippable = false
+            )
+        ]
+    )
+)

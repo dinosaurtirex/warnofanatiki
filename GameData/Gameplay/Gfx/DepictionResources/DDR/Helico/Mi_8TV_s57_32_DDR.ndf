@@ -1,0 +1,14 @@
+export Modele_Mi_8TV_s57_32_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_17/Mi_17.fbx'
+)
+
+export Modele_Mi_8TV_s57_32_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_17_MID/Mi_17_MID.fbx'
+)
+
+export Modele_Mi_8TV_s57_32_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/LODS/Mi_17_LOW.fbx'
+)

@@ -1,0 +1,17 @@
+export Modele_OH58A_reco_NG_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout/OH_58C_CMD.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout_NG'
+)
+
+export Modele_OH58A_reco_NG_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout/OH_58C_CMD.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout_NG'
+)
+
+export Modele_OH58A_reco_NG_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout/OH_58C_CMD.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout_NG'
+)

@@ -1,0 +1,14 @@
+export Modele_Mi_8_supply_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8T_Mun/Mi_8TZ.fbx'
+)
+
+export Modele_Mi_8_supply_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8T_Mun_MID/Mi_8T_Mun_MID.fbx'
+)
+
+export Modele_Mi_8_supply_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/LODS/Mi_8T_Mun_LOW.fbx'
+)

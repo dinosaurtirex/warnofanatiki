@@ -1,0 +1,17 @@
+export ModelFile_Mi_8TB_DDR is 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TB/Mi_8TB.fbx'
+export Modele_Mi_8TB_DDR is ModelDescriptor
+(
+    FileName = ModelFile_Mi_8TB_DDR
+)
+
+export ModelFile_Mi_8TB_DDR_MID is 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TB_MID/Mi_8TB_MID.fbx'
+export Modele_Mi_8TB_DDR_MID is ModelDescriptor
+(
+    FileName = ModelFile_Mi_8TB_DDR_MID
+)
+
+export ModelFile_Mi_8TB_DDR_LOW is 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TB_LOW/Mi_8TB_LOW.fbx'
+export Modele_Mi_8TB_DDR_LOW is ModelDescriptor
+(
+    FileName = ModelFile_Mi_8TB_DDR_LOW
+)

@@ -1,0 +1,295 @@
+
+ModeSelectorTree is TSoundServiceModeSelector
+(
+    Mode = TSoundAndMusicMode_None
+    SelectorsOff =
+    [
+        TSoundServiceModeSelector
+        (
+            Mode = TSoundAndMusicMode_DefaultSettings
+        ),
+        TSoundServiceModeSelector
+        (
+            Mode = TSoundAndMusicMode_NoFocus
+        ),
+        TSoundServiceModeSelector
+        (
+            Mode = TSoundAndMusicMode_VideoFullScreen
+            SelectorsOff =
+            [
+                TSoundServiceModeSelector( Mode = TSoundAndMusicMode_EscapeMenu ),
+                TSoundServiceModeSelector( Mode = TSoundAndMusicMode_PauseMode ),
+                TSoundServiceModeSelector( Mode = TSoundAndMusicMode_BlackBoards ),
+                TSoundServiceModeSelector( Mode = TSoundAndMusicMode_VideoInGame ),
+                TSoundServiceModeSelector( Mode = TSoundAndMusicMode_Ambience ),
+                TSoundServiceModeSelector
+                (
+                    Mode = TSoundAndMusicMode_Dialog
+                    SelectorsOff =
+                    [
+                        TSoundServiceModeSelector( Mode = TSoundAndMusicMode_Acknow2Ds ),
+                        TSoundServiceModeSelector( Mode = TSoundAndMusicMode_Acknow3Ds ),
+                    ]
+                ),
+                TSoundServiceModeSelector
+                (
+                    Mode = TSoundAndMusicMode_MusicOutgame
+                    SelectorsOff =
+                    [
+                        TSoundServiceModeSelector( Mode = TSoundAndMusicMode_MusicAuto )
+                    ]
+                )
+            ]
+        )
+    ]
+)
+
+template TemplateSoundAndMusicVolumes
+[
+    Music       = -1.0,
+    Hud         = -1.0,
+    Ambient     = -1.0,
+    Dialog      = -1.0,
+    Fx3D        = -1.0,
+    Acknow2D    = -1.0,
+    Acknow3D    = -1.0,
+    VideoInGame = -1.0,
+    Active      = true,
+    Fade        = true
+]
+
+is TSoundAndMusicVolumesDescriptor
+(
+    Active = <Active>
+    Fade   = <Fade>
+
+    Music       = <Music>
+    Hud         = <Hud>
+    Ambient     = <Ambient>
+    Dialog      = <Dialog>
+    Fx3D        = <Fx3D>
+    Acknow2D    = <Acknow2D>
+    Acknow3D    = <Acknow3D>
+    VideoInGame = <VideoInGame>
+)
+
+
+export soundServicesVolumesDescriptor is TSoundServiceVolumesDescriptor
+(
+    MusicFadeOutDuration = 1.0
+
+    HudFaderName             = "$/SoundSettings/HudVolumeControlFader"
+    GlobalAmbienceFaderName  = "$/SoundSettings/GlobalAmbienceFader"
+    GlobalMusicFaderName     = "$/SoundSettings/GlobalMusicFader"
+    VideoFullScreenFaderName = "$/SoundSettings/VideoFullScreenFader"
+    FxFaderName              = '$/SoundSettings/FXVolumeControlFader'
+    VoiceFaderName           = '$/SoundSettings/DialogGfxFader'
+    Acknow3DFaderName        = '$/SoundSettings/AcknowUnitFader'
+    VideoInGameFaderName     = '$/SoundSettings/VideoInGameFader'
+
+    HudFaderVelocity             = 10.0
+    GlobalAmbienceFaderVelocity  = 10.0
+    GlobalMusicFaderVelocity     = 10.0
+    VideoFullScreenFaderVelocity = 10.0
+    FxFaderVelocity              = 10.0
+    VoiceFaderVelocity           = 10.0
+    Acknow2DFaderVelocity        = 10.0
+    Acknow3DFaderVelocity        = 10.0
+    VideoInGameFaderVelocity     = 10.0
+
+    // temps en seconde de variation de volumes pour passer de 1.0 a 0.0
+    VolumeTransitions =
+    [
+        1.0, // Music
+        1.0, // Hud
+        1.0, // Ambient
+        0.0, // Dialog
+        0.1, //1.0, // Acknow2D
+        0.1, //1.0, // Acknow3D
+        0.1, //1.0, // Fx3D
+        1.0, // VideoInGame,
+    ]
+
+    ModeSelector = ~/ModeSelectorTree
+
+    ServicesMergeOrder =
+    [
+        TSoundAndMusicMode_DefaultSettings,
+        TSoundAndMusicMode_Ambience,
+        TSoundAndMusicMode_VideoInGame,
+        TSoundAndMusicMode_MusicAuto,
+        TSoundAndMusicMode_MusicOutgame,
+        TSoundAndMusicMode_Acknow2Ds,
+        TSoundAndMusicMode_Acknow3Ds,
+        TSoundAndMusicMode_Dialog,
+        TSoundAndMusicMode_BlackBoards,
+
+        TSoundAndMusicMode_EscapeMenu,
+        TSoundAndMusicMode_PauseMode,
+
+        TSoundAndMusicMode_VideoFullScreen, // apres music users...
+
+        TSoundAndMusicMode_NoFocus,
+    ]
+
+    // NE PAS CHANGER L'ORDRE.
+    SoundsVolumes =
+    [
+        // None
+        nil, // laisser cette case vide.
+
+        // TSoundAndMusicMode_DefaultSettings
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 1.0
+            Hud         = 1.0
+            Ambient     = 1.0
+            Dialog      = 1.0
+            Fx3D        = 1.0
+            Acknow2D    = 1.0
+            Acknow3D    = 1.0
+            VideoInGame = 1.0
+            Fade        = true
+        ),
+
+        // TSoundAndMusicMode_NoFocus
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 0.0
+            Hud         = 0.0
+            Ambient     = 0.0
+            Dialog      = 0.0
+            Fx3D        = 0.0
+            Acknow2D    = 0.0
+            Acknow3D    = 0.0
+            VideoInGame = 0.0
+            Fade        = false
+        ),
+
+        // TSoundAndMusicMode_VideoFullScreen
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 0.0
+            Hud         = 0.0
+            Ambient     = 0.0
+            Dialog      = 0.0
+            Fx3D        = 0.0
+            Acknow2D    = 0.0
+            Acknow3D    = 0.0
+            VideoInGame = 1.0
+            Fade        = false
+        ),
+
+        // TSoundAndMusicMode_VideoInGame
+        TemplateSoundAndMusicVolumes
+        (
+            Hud         = 0.0
+            Ambient     = 0.25
+            Fx3D        = 0.5
+            Acknow2D    = 0.5
+            Acknow3D    = 0.0
+            Dialog      = 1.0
+            VideoInGame = 1.0
+            Fade        = false
+        ),
+
+        // TSoundAndMusicMode_Dialog
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 0.3
+            Hud         = 0.2
+            Ambient     = 0.2
+            Dialog      = 1.0
+            Fx3D        = 0.1
+            Acknow2D    = 0.1
+            Acknow3D    = 0.1
+            VideoInGame = 0.2
+            Fade        = false
+        ),
+
+        // TSoundAndMusicMode_Acknow2Ds (AcknowHQ)
+        TemplateSoundAndMusicVolumes
+        (
+            Hud      = 1.0
+            Acknow2D = 1.0
+            Fade     = true
+        ),
+
+        // TSoundAndMusicMode_Acknow3Ds (Acknow Units)
+        TemplateSoundAndMusicVolumes
+        (
+            Acknow3D = 1.0
+            Fade     = true
+        ),
+
+        // TSoundAndMusicMode_MusicOutgame
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 1.0
+            Hud         = 1.0
+            Ambient     = 1.0
+            Dialog      = 1.0
+            Fx3D        = 1.0
+            Acknow2D    = 1.0
+            Acknow3D    = 1.0
+            VideoInGame = 1.0
+            Fade        = true
+        ),
+
+        // TSoundAndMusicMode_MusicAuto(Music dynamique ingame)
+        TemplateSoundAndMusicVolumes
+        (
+            Music = 1.0
+            Fade  = true
+        ),
+
+        // TSoundAndMusicMode_Ambience
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 1.0 // hack
+            Ambient     = 1.0
+            Dialog      = 1.0 // hack
+            Fx3D        = 1.0 // hack
+            Fade        = true
+        ),
+
+        // TSoundAndMusicMode_EscapeMenu
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 0.5
+            Ambient     = 0.001
+            Dialog      = 0.5
+            Fx3D        = 0.1
+            Acknow2D    = 0.0
+            Acknow3D    = 0.2
+            VideoInGame = 0.5
+            Fade        = true
+        ),
+
+        // TSoundAndMusicMode_BlackBoards
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 0.5
+            Ambient     = 0.01
+            Dialog      = 1.0
+            Fx3D        = 0.2
+            Acknow2D    = 0.1
+            Acknow3D    = 0.1
+            VideoInGame = 0.25
+            Fade        = true
+        ),
+
+        // TSoundAndMusicMode_PauseMode
+        TemplateSoundAndMusicVolumes
+        (
+            Music       = 0.1
+            Ambient     = 0.0001
+            Dialog      = 1.0
+            Fx3D        = 0.0001
+            Acknow2D    = 0.0001
+            Acknow3D    = 0.0001
+            VideoInGame = 0.2
+            Fade        = false
+        ),
+    ]
+)

@@ -1,0 +1,2 @@
+ZZ:/PC/Mesh/Pack/fanatiki/Mesh_All.spk
+ZZ:/PC/TextureProxy/Pack/fanatiki/Mesh_All.ndfbin

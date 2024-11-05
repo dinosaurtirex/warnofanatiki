@@ -1,0 +1,17 @@
+export Modele_M901A1_ITW_US is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Antichar/M901A1_ITV/M901A1_ITV.fbx'
+)
+
+export Modele_M901A1_ITW_US_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Antichar/M901A1_ITV_MID/M901A1_ITV_MID.fbx'
+)
+
+export Modele_M901A1_ITW_US_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Antichar/LODS/M901A1_ITV_LOW.fbx'
+)
+
+
+

@@ -1,0 +1,4 @@
+VisionConstantes is TVisionConstantesDescriptor
+(
+    PorteeDeVisionGlobaleGRU = 1413
+)

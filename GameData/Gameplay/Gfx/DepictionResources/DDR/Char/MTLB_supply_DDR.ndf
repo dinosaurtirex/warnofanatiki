@@ -1,0 +1,17 @@
+export Modele_MTLB_supply_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Antichar/MTLB_Shturm/MTLB_Supply.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/Antichar/MTLB_Shturm/'
+)
+
+export Modele_MTLB_supply_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Antichar/MTLB_Shturm_MID/MTLB_Supply_MID.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/Antichar/MTLB_Shturm_MID/'
+)
+
+export Modele_MTLB_supply_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Antichar/LODS/MTLB_Supply_LOW.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/Antichar/MTLB_Shturm_LOW/'
+)

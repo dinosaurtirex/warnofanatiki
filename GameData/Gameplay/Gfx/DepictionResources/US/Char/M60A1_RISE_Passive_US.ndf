@@ -1,0 +1,17 @@
+export ModelFile_M60A1_RISE_Passive_US is 'GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive/M60A1_RISE_Passive.fbx'
+export Modele_M60A1_RISE_Passive_US is ModelDescriptor
+(
+    FileName = ModelFile_M60A1_RISE_Passive_US
+)
+
+export ModelFile_M60A1_RISE_Passive_US_MID is 'GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive/M60A1_RISE_Passive.fbx'
+export Modele_M60A1_RISE_Passive_US_MID is ModelDescriptor
+(
+    FileName = ModelFile_M60A1_RISE_Passive_US_MID
+)
+
+export ModelFile_M60A1_RISE_Passive_US_LOW is 'GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive/M60A1_RISE_Passive.fbx'
+export Modele_M60A1_RISE_Passive_US_LOW is ModelDescriptor
+(
+    FileName = ModelFile_M60A1_RISE_Passive_US_LOW
+)

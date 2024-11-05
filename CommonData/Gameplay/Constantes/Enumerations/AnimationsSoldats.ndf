@@ -1,0 +1,9 @@
+// Enum ESoldierSuppressStatus // a maintenir synchro avec BlackHoleCommon/EnumSoldierSuppressStatus.h.h
+ESoldierSuppressStatus is TBaseClass
+(
+    Invalid     is 0
+    Operational is 1
+    Suppressed  is 2
+    Pinned      is 3
+    Cowering    is 4
+)

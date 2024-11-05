@@ -1,0 +1,17 @@
+export TransactionBase is TNDFTransactionFileList
+(
+    Files =
+    [
+        'CommonData:System/Globals.ndf',
+        'CommonData:/Gameplay/Gfx/DepictionResources/Templates.ndf',
+        'CommonData:/Gameplay/Gfx/DepictionResources/TestUnits_Resources.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/DepictionAnimationResources.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/Gfx_infanterie.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/PylonsModelResources.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/SubDepictionModelResources.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/StrategicPawnModelResources.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/TestDepiction.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/AllMissileResources.ndf',
+        'GameData:/Gameplay/Gfx/DepictionResources/DepictionTurrets.ndf',
+    ]
+)

@@ -1,0 +1,23 @@
+
+private PackTransactionFiles is [
+    'GFX/DepictionResources.ndfbin',
+    'GFX/UI.ndfbin',
+]
+
+unnamed TResourcePackLoader
+(
+    Packs =
+    [
+        TResourceDescriptorMeshPack
+        (
+            PackName = "Pack/fanatiki/Mesh_All.spk"
+            TransactionFiles = PackTransactionFiles
+            UseDecompressedBufferResourceThreshold = 2
+        ),
+        TResourceDescriptorProxyPack
+        (
+            PackName = "Pack/fanatiki/Mesh_All.ndfbin"
+            TransactionFiles = PackTransactionFiles
+        ),
+    ]
+)

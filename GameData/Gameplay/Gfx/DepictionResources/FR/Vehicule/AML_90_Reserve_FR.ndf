@@ -1,0 +1,17 @@
+export Modele_AML_90_Reserve_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90/AML_90.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90_Reserve'
+)
+
+export Modele_AML_90_Reserve_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90/AML_90.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90_Reserve'
+)
+
+export Modele_AML_90_Reserve_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90/AML_90.fbx'
+    TextureDirectory = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90_Reserve'
+)

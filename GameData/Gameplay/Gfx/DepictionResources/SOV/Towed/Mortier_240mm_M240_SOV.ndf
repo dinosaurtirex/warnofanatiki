@@ -1,0 +1,20 @@
+export ModelFile_Mortier_240mm_M240_SOV is 'GameData:/Assets/3D/Units/URSS/Canon/Mortier_240mm_M240/Mortier_240mm_M240.fbx'
+export Modele_Mortier_240mm_M240_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_240mm_M240_SOV
+)
+
+export ModelFile_Mortier_240mm_M240_SOV_MID is 'GameData:/Assets/3D/Units/URSS/Canon/Mortier_240mm_M240/Mortier_240mm_M240.fbx'
+export Modele_Mortier_240mm_M240_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_240mm_M240_SOV_MID
+)
+
+export ModelFile_Mortier_240mm_M240_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/Canon/Mortier_240mm_M240/Mortier_240mm_M240.fbx'
+export Modele_Mortier_240mm_M240_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_240mm_M240_SOV_LOW
+)
+
+
+

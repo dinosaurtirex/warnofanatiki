@@ -1,0 +1,17 @@
+export ModelFile_Mi_24D_s5_AT_DDR is 'GameData:/Assets/3D/Units/DDR/Helico/Mi_24_D/Mi_24_D_AT.fbx'
+export Modele_Mi_24D_s5_AT_DDR is ModelDescriptor
+(
+    FileName = ModelFile_Mi_24D_s5_AT_DDR
+)
+
+export ModelFile_Mi_24D_s5_AT_DDR_MID is 'GameData:/Assets/3D/Units/DDR/Helico/Mi_24_D_MID/Mi_24_D_AT_MID.fbx'
+export Modele_Mi_24D_s5_AT_DDR_MID is ModelDescriptor
+(
+    FileName = ModelFile_Mi_24D_s5_AT_DDR_MID
+)
+
+export ModelFile_Mi_24D_s5_AT_DDR_LOW is 'GameData:/Assets/3D/Units/DDR/Helico/Mi_24_D_LOW/Mi_24_D_AT_LOW.fbx'
+export Modele_Mi_24D_s5_AT_DDR_LOW is ModelDescriptor
+(
+    FileName = ModelFile_Mi_24D_s5_AT_DDR_LOW
+)

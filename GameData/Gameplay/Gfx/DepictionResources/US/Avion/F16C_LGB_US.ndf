@@ -1,0 +1,19 @@
+export Modele_F16C_LGB_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F16C_LGB/F16C_LGB.fbx'
+)
+
+export Modele_F16C_LGB_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F16C_LGB/F16C_LGB.fbx'
+)
+
+export Modele_F16C_LGB_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F16C_LGB/F16C_LGB.fbx'
+)
+
+export Modele_F16C_LGB_US_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F16C_LGB/F16C_LGB_Train.fbx'
+)

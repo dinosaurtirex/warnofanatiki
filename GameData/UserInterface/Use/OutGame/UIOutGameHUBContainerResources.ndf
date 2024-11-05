@@ -1,0 +1,39 @@
+
+outGameHUBContainerResource is TUISpecificOutGameHUBContainerResource
+(
+    ContentRefSize = [ 1920 , 1080 ]
+    SafeBoxMin     = [    0 ,    0 ]
+    SafeBoxSize    = [ 1920 , 1080 ]
+    //En partant du bas
+    ScreenMinY     = (154. + 18.)
+    ScreenMaxY     = (154. + 699. - 40.)
+    EventInterceptorLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_EscapeMenuInterceptor
+
+    ForegroundContent = BUCKContainerDescriptor
+    (
+        ComponentFrame = TUIFramePropertyRTTI
+        (
+            RelativeWidthHeight = [1.0, 1.0]
+        )
+
+        Components =
+        [
+            BUCKContainerDescriptor
+            (
+                UniqueName = "LobbyContainer"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+            ),
+            BUCKContainerDescriptor
+            (
+                UniqueName = "ChatContainer"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+            ),
+        ]
+    )
+)

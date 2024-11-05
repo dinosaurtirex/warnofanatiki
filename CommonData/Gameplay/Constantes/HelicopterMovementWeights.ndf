@@ -1,0 +1,133 @@
+// Définition des poids de déplacement des hélicoptères utilisés pour scorer les commandes calculées pour les hélico en fonction des waypoints
+// Ye who wandered in this place: BEWARE !!!!!!!
+// Ces poids sont sensibles. Il ne faut pas faire n'importe quoi avec. Si vous avez besoin de les changer, assurez vous que vous comprenez ce à quoi vous touchez.
+// Ou demandez à un dev de le faire à votre place.
+
+// Poids par défaut
+DefaultHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 1.0
+    Speed = 1.7
+    AnglesXY = 5.0
+    AngleZ = 2.5
+    AngularSpeedXY = 1.5
+    AnglularZSpeed = 4.0
+)
+
+// Poids utilisés en vol stationnaire
+StillHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 4.0
+    Speed = 1.7
+    AnglesXY = 6.0
+    AngleZ = 6.0
+    AngularSpeedXY = 2.0
+    AnglularZSpeed = 4.0
+)
+
+// Poids utilisés pour l'arrêt
+StoppingHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 0.8
+    Speed = 5.5
+    AnglesXY = 5.0
+    AngleZ = 5.0
+    AngularSpeedXY = 4.0
+    AnglularZSpeed = 8.0
+)
+
+// Poids utilisés pour l'arrêt avant atterissage
+StoppingBeforeLandingHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 1.0
+    Speed = 2.5
+    AnglesXY = 3.0
+    AngleZ = 2.5
+    AngularSpeedXY = 1.5
+    AnglularZSpeed = 4.0
+)
+
+// Poids utilisés pour l'atterissage
+LandingHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 10.0
+    Speed = 0.0
+    AnglesXY = 80.0
+    AngleZ = 0.0
+    AngularSpeedXY = 2.0
+    AnglularZSpeed = 7.0
+)
+
+// Poids utilisés pour le déplacement vers une cible
+TargetHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 1.0
+    Speed = 1.7
+    AnglesXY = 5.0
+    AngleZ = 2.5
+    AngularSpeedXY = 1.5
+    AnglularZSpeed = 4.0
+)
+
+// Poids par défaut utilisés pour les waypoints intermediaires
+DefaultIntermediateHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 1.0
+    Speed = 0
+    AnglesXY = 0
+    AngleZ = 2.0
+    AngularSpeedXY = 0
+    AnglularZSpeed = 0
+)
+
+// Poids utilisés pour les waypoints intermediaires lors d'un déplacement vers une cible
+TargetIntermediateHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 1.0
+    Speed = 0
+    AnglesXY = 0
+    AngleZ = 2.0
+    AngularSpeedXY = 0
+    AnglularZSpeed = 0
+)
+
+// Poids utilisés pour les waypoints intermediaires lors d'un atterissage
+LandingIntermediateHelicopterWeights is THelicopterWaypointWeightsDescriptor
+(
+    Position = 5.0
+    Speed = 5.0
+    AnglesXY = 0
+    AngleZ = 2.0
+    AngularSpeedXY = 0
+    AnglularZSpeed = 0
+)
+
+export HelicopterWeightsManager is THelicopterWeightsManager
+(
+    HelicopterWeights = MAP [
+        (~/StoppedFlying, ~/StillHelicopterWeights),
+        (~/MoveTowardTarget, ~/TargetHelicopterWeights),
+        (~/StoppingBeforeLanding, ~/StoppingBeforeLandingHelicopterWeights),
+        (~/Stopping, ~/StoppingHelicopterWeights),
+        (~/Landing, ~/LandingHelicopterWeights),
+    ]
+
+    IntermediateWaypointHelicopterWeights = MAP [
+        (~/MoveTowardTarget, ~/TargetIntermediateHelicopterWeights),
+        (~/Landing, ~/LandingIntermediateHelicopterWeights),
+    ]
+
+    DefaultHelicopterWeights = ~/DefaultHelicopterWeights
+    DefaultIntermediateWaypointsHelicopterWeights = ~/DefaultIntermediateHelicopterWeights
+
+    WaypointScoreThresholds = MAP [
+        (~/StoppedFlying, (40.0, 6.0)),
+        (~/MoveTowardTarget, (6.5, 6.0)),
+        (~/StoppingBeforeLanding, (4.0, 1.0)),
+        (~/Stopping, (1.0, 1.0)),
+        (~/Landing, (1.5, 3.0)),
+    ]
+
+    DefaultFinalWaypointScore = 10.0
+    DefaultIntermediateWayPointScoreTolerance = 10.0
+)

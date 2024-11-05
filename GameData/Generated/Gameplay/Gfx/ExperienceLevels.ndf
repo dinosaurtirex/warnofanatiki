@@ -1,0 +1,338 @@
+// Ne pas éditer, ce fichier est généré par ExperienceLevelsFileWriter_Specific
+
+
+export ExperienceLevelsPackDescriptor_XP_pack_SF_v2 is TExperienceLevelsPackDescriptor
+(
+    DescriptorId = GUID:{de68cb54-0860-40eb-a9a9-0c6381c23d4a}
+    ExperienceLevelsDescriptors = [
+        ExperienceLevelDescriptor_XP_pack_SF_v2_0 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{0e33fdd6-ecc8-4689-a7d3-2db2426f23fa}
+            LocalizationToken = "EXPLEVEL0"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 0.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE0'
+            HintBodyToken = 'xp_sf_0'
+            NameForDebug = "Exemple_XP_niveau_0"
+        ),
+        ExperienceLevelDescriptor_XP_pack_SF_v2_1 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{3e46df3f-7d07-4395-8704-adcea2546bff}
+            LocalizationToken = "EXPLEVEL1"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 2.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE1'
+            HintBodyToken = 'xp_sf_1'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_Ajoute_Tag_xp_regular,
+                $/GFX/EffectCapacity/UnitEffect_xp_trained_SF,
+            ]
+            NameForDebug = "Exemple_XP_niveau_1"
+        ),
+        ExperienceLevelDescriptor_XP_pack_SF_v2_2 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{1f19ff6d-8129-4790-ab2d-50ba3ad24f1d}
+            LocalizationToken = "EXPLEVEL2"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 4.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE2'
+            HintBodyToken = 'xp_sf_2'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_Ajoute_Tag_xp_veteran,
+                $/GFX/EffectCapacity/UnitEffect_xp_veteran_SF,
+            ]
+            NameForDebug = "Exemple_XP_niveau_2"
+        ),
+        ExperienceLevelDescriptor_XP_pack_SF_v2_3 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{c90a9454-c1f2-4998-ad21-c65ef6fda20d}
+            LocalizationToken = "EXPLEVEL3"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 6.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE3'
+            HintBodyToken = 'xp_sf_3'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_Ajoute_Tag_xp_elite,
+                $/GFX/EffectCapacity/UnitEffect_xp_elite_SF,
+            ]
+            NameForDebug = "Exemple_XP_niveau_3"
+        ),
+    ]
+    NameForDebug = "XP_pack_SF_v2"
+)
+export ExperienceLevelsPackDescriptor_XP_pack_artillery is TExperienceLevelsPackDescriptor
+(
+    DescriptorId = GUID:{14bf49c1-3074-45be-96d5-18cb6d3e59a3}
+    ExperienceLevelsDescriptors = [
+        ExperienceLevelDescriptor_XP_pack_artillery_0 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{5f906ed3-bef2-44b7-9bf7-d92817a02e07}
+            LocalizationToken = "EXPLEVEL0"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 0.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE0'
+            HintBodyToken = 'xp_art_0'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_rookie_arty,
+            ]
+            NameForDebug = "Exemple_XP_niveau_0"
+        ),
+        ExperienceLevelDescriptor_XP_pack_artillery_1 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{414f1830-c2b7-44e0-9924-18b0eca95a70}
+            LocalizationToken = "EXPLEVEL1"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 6.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE1'
+            HintBodyToken = 'xp_art_1'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_trained_arty,
+            ]
+            NameForDebug = "Exemple_XP_niveau_1"
+        ),
+        ExperienceLevelDescriptor_XP_pack_artillery_2 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{10647bbd-c6c6-419e-b765-117cf0352f46}
+            LocalizationToken = "EXPLEVEL2"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 8.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE2'
+            HintBodyToken = 'xp_art_2'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_veteran_arty,
+            ]
+            NameForDebug = "Exemple_XP_niveau_2"
+        ),
+        ExperienceLevelDescriptor_XP_pack_artillery_3 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{34677612-1040-443a-98e5-f6875f613fcd}
+            LocalizationToken = "EXPLEVEL3"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 12.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE3'
+            HintBodyToken = 'xp_art_3'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_elite_arty,
+            ]
+            NameForDebug = "Exemple_XP_niveau_3"
+        ),
+    ]
+    NameForDebug = "XP_pack_artillery"
+)
+export ExperienceLevelsPackDescriptor_XP_pack_avion is TExperienceLevelsPackDescriptor
+(
+    DescriptorId = GUID:{94e8f2e3-0089-4e07-aa6a-c393c441d15f}
+    ExperienceLevelsDescriptors = [
+        ExperienceLevelDescriptor_XP_pack_avion_0 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{8b0641a5-80f4-4e9c-9de3-9c44ffa42661}
+            LocalizationToken = "EXPLEVEL0"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 0.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE0'
+            HintBodyToken = 'xp_air_0'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_rookie_avion,
+            ]
+            NameForDebug = "Exemple_XP_niveau_0"
+        ),
+        ExperienceLevelDescriptor_XP_pack_avion_1 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{8cfe93be-3c6d-4162-980e-0b53b00d7489}
+            LocalizationToken = "EXPLEVEL1"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 6.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE1'
+            HintBodyToken = 'xp_air_1'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_trained_avion,
+            ]
+            NameForDebug = "Exemple_XP_niveau_1"
+        ),
+        ExperienceLevelDescriptor_XP_pack_avion_2 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{949d1360-b6d3-48b0-aef4-8e949cfdba1a}
+            LocalizationToken = "EXPLEVEL2"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 8.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE2'
+            HintBodyToken = 'xp_air_2'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_veteran_avion,
+            ]
+            NameForDebug = "Exemple_XP_niveau_2"
+        ),
+        ExperienceLevelDescriptor_XP_pack_avion_3 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{d03c4513-d194-43d7-9b98-9e42e29af99e}
+            LocalizationToken = "EXPLEVEL3"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 12.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE3'
+            HintBodyToken = 'xp_air_3'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_elite_avion,
+            ]
+            NameForDebug = "Exemple_XP_niveau_3"
+        ),
+    ]
+    NameForDebug = "XP_pack_avion"
+)
+export ExperienceLevelsPackDescriptor_XP_pack_helico is TExperienceLevelsPackDescriptor
+(
+    DescriptorId = GUID:{20d1deed-cbde-4b0c-9e2b-8ed3ef39ee47}
+    ExperienceLevelsDescriptors = [
+        ExperienceLevelDescriptor_XP_pack_helico_0 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{90a611ba-5525-477b-87ad-f6c70c898bc7}
+            LocalizationToken = "EXPLEVEL0"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 0.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE0'
+            HintBodyToken = 'xp_hel_0'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_rookie_helo,
+            ]
+            NameForDebug = "Exemple_XP_niveau_0"
+        ),
+        ExperienceLevelDescriptor_XP_pack_helico_1 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{7acce1d9-7ad9-4432-b1ba-4a62314262eb}
+            LocalizationToken = "EXPLEVEL1"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 4.8
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE1'
+            HintBodyToken = 'xp_hel_1'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_trained_helo,
+            ]
+            NameForDebug = "Exemple_XP_niveau_1"
+        ),
+        ExperienceLevelDescriptor_XP_pack_helico_2 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{d42c1d49-9b01-45e2-9439-f90686cce951}
+            LocalizationToken = "EXPLEVEL2"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 6.4
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE2'
+            HintBodyToken = 'xp_hel_2'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_veteran_helo,
+            ]
+            NameForDebug = "Exemple_XP_niveau_2"
+        ),
+        ExperienceLevelDescriptor_XP_pack_helico_3 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{1cf0d817-04a7-4554-8413-415eafcd2382}
+            LocalizationToken = "EXPLEVEL3"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 9.6
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE3'
+            HintBodyToken = 'xp_hel_3'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_elite_helo,
+            ]
+            NameForDebug = "Exemple_XP_niveau_3"
+        ),
+    ]
+    NameForDebug = "XP_pack_helico"
+)
+export ExperienceLevelsPackDescriptor_XP_pack_simple_v3 is TExperienceLevelsPackDescriptor
+(
+    DescriptorId = GUID:{a3f6efab-0560-4a32-88d5-b9cb5f0bd4d4}
+    ExperienceLevelsDescriptors = [
+        ExperienceLevelDescriptor_XP_pack_simple_v3_0 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{6f2eb026-5e57-410a-95e6-da089f5f79f2}
+            LocalizationToken = "EXPLEVEL0"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 0.0
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE0'
+            HintBodyToken = 'xp_std_0'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_rookie,
+            ]
+            NameForDebug = "Exemple_XP_niveau_0"
+        ),
+        ExperienceLevelDescriptor_XP_pack_simple_v3_1 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{d1f7870c-fdc3-4377-958c-c894756a6aa4}
+            LocalizationToken = "EXPLEVEL1"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 4.8
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE1'
+            HintBodyToken = 'xp_std_1'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_trained,
+            ]
+            NameForDebug = "Exemple_XP_niveau_1"
+        ),
+        ExperienceLevelDescriptor_XP_pack_simple_v3_2 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{a5c0959f-d6d1-4166-8e19-28753e8856e9}
+            LocalizationToken = "EXPLEVEL2"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 6.4
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE2'
+            HintBodyToken = 'xp_std_2'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_veteran,
+            ]
+            NameForDebug = "Exemple_XP_niveau_2"
+        ),
+        ExperienceLevelDescriptor_XP_pack_simple_v3_3 is TExperienceLevelDescriptor
+        (
+            DescriptorId = GUID:{6f9d9b6e-2aea-4697-a76c-438783c14d9c}
+            LocalizationToken = "EXPLEVEL3"
+            ThresholdAdditionalValue = 0.0
+            ThresholdPriceMultiplier = 9.6
+            IconsByNationality = [
+            ]
+            HintTitleToken = 'DES_UE_VE3'
+            HintBodyToken = 'xp_std_3'
+            LevelEffectsPacks = [
+                $/GFX/EffectCapacity/UnitEffect_xp_elite,
+            ]
+            NameForDebug = "Exemple_XP_niveau_3"
+        ),
+    ]
+    NameForDebug = "XP_pack_simple_v3"
+)

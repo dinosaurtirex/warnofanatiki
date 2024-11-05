@@ -1,0 +1,189 @@
+// Utiliser ce template pour les pions des unités stratégiques dans Steelman
+template StrategicPawnDepictionTemplate
+[
+    MeshSocle,
+    MeshTige,
+    MeshDescriptorPawn,
+    SubDepictionGenerators = []
+]
+is TDepictionTemplate
+(
+    Scaler = TConstantScaler( Scale = 6)
+    Selector = OnlyHighDepictionSelector
+    Operators = [DepictionOperator_Shader_Selection, DepictionOperator_Shader_GhostPawn, StrategicMoveSoundOperator ]
+    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <MeshSocle> ) ]
+
+    SubDepictions = [ TSubDepiction
+    (
+        Selectable = True
+        Depiction = TDepictionTemplate
+        (
+            Selector = OnlyHighDepictionSelector
+            DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <MeshTige> ) ]
+
+            SubDepictions = [ TSubDepiction
+            (
+                Selectable = True
+                Anchors = ["sommet"]
+                Depiction = TDepictionTemplate
+                (
+                    Selector = OnlyHighDepictionSelector
+                    DepictionAlternatives = [
+                        DepictionDescriptor_LOD_High( MeshDescriptor = <MeshDescriptorPawn> )
+                    ]
+                    SubDepictionGenerators = <SubDepictionGenerators>
+                )
+            ) ]
+        )
+    ) ]
+)
+
+StrategicInfantryPoseOperator is TCosmeticFreezeSkeletalAnimationOperatorDesc
+(
+    Animation = $/GFX/DepictionResources/FusilierRun
+    Cursor = 0.5
+)
+
+template StrategicInfantryPawnDepictionTemplate
+[
+    MeshSocle,
+    MeshDescriptorPawn,
+]
+is TDepictionTemplate
+(
+    Scaler = TConstantScaler( Scale = 7)
+    Selector = OnlyHighDepictionSelector
+    Operators = [DepictionOperator_Shader_Selection, DepictionOperator_Shader_GhostPawn]
+    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <MeshSocle> ) ]
+
+    SubDepictions = [ TSubDepiction
+    (
+        Selectable = True
+        Depiction = TDepictionTemplate
+        (
+            Selector = OnlyHighDepictionSelector
+            DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/MeshModele_Tige_courte ) ]
+
+            SubDepictions = [ TSubDepiction
+            (
+                Selectable = True
+                Anchors = ["sommet"]
+                Depiction = TDepictionTemplate
+                (
+                    Scaler = TConstantScaler( Scale = 2 )
+                    Selector = OnlyHighDepictionSelector
+                    Operators = [ StrategicInfantryPoseOperator ]
+                    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <MeshDescriptorPawn> ) ]
+                )
+            ) ]
+        )
+    ) ]
+)
+
+template StrategicAirplanePawnDepictionTemplate
+[
+    MeshSocle,
+    MeshDescriptorPawn,
+]
+is StrategicPawnDepictionTemplate
+(
+    MeshSocle = <MeshSocle>
+    MeshDescriptorPawn = <MeshDescriptorPawn>
+    MeshTige = $/GFX/DepictionResources/MeshModele_Tige_moyenne
+)
+
+template StrategicHelicopterPawnDepictionTemplate
+[
+    MeshSocle,
+    MeshDescriptorPawn,
+]
+is StrategicPawnDepictionTemplate
+(
+    MeshSocle = <MeshSocle>
+    MeshDescriptorPawn = <MeshDescriptorPawn>
+    MeshTige = $/GFX/DepictionResources/MeshModele_Tige_moyenne
+)
+
+template StrategicGroundVehiclePawnDepictionTemplate
+[
+    MeshSocle,
+    MeshDescriptorPawn,
+    SubDepictionGenerators = []
+]
+is StrategicPawnDepictionTemplate
+(
+    MeshSocle = <MeshSocle>
+    MeshDescriptorPawn = <MeshDescriptorPawn>
+    MeshTige = $/GFX/DepictionResources/MeshModele_Tige_courte
+    SubDepictionGenerators = <SubDepictionGenerators>
+)
+
+template StrategicMoveSound
+[
+    WavPath,
+]
+is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/SoundSettings_Strategic_Move
+    TheSoundStream = TSoundStream(FileName = <WavPath>)
+)
+
+StrategicMoveSoundOperator is TCosmeticStrategicMoveSoundOperatorDesc
+(
+    StartSounds =
+    [
+        //StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/Debug/beep_880.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_1.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_2.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_3.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_4.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_5.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_6.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_7.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_8.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_9.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_9.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_9.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_9.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_10.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_10.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_10.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_10.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_10.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Move_10.wav"),
+    ]
+    StopSounds =
+    [
+        // StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/Debug/beep_554.wav"),
+        // StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/Debug/beep_660.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_1.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_2.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_3.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_4.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_5.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_6.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_7.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_8.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_9.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_10.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_11.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_12.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_13.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_14.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_15.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_16.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_17.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_18.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_19.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_20.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_20.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_20.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_20.wav"),
+        StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_Pawn_Stop_20.wav"),
+    ]
+    RunSounds =
+    [
+        // StrategicMoveSound(WavPath = "GameData:/Assets/Sounds/Debug/beep_330_loop_1.wav"),
+    ]
+    OperatorId = "driveSound"
+)

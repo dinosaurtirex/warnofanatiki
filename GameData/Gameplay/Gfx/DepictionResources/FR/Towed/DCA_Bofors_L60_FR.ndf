@@ -1,0 +1,14 @@
+export Modele_DCA_Bofors_L60_FR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/FR/Canon/DCA_Bofors_L60/DCA_Bofors_L60.fbx'
+)
+
+export Modele_DCA_Bofors_L60_FR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/FR/Canon/DCA_Bofors_L60/DCA_Bofors_L60.fbx'
+)
+
+export Modele_DCA_Bofors_L60_FR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/FR/Canon/DCA_Bofors_L60/DCA_Bofors_L60.fbx'
+)

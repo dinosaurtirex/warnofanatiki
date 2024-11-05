@@ -1,0 +1,19 @@
+export Modele_MiG_21bis_NPLM_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM/MiG_21_PFM_AS.fbx'
+)
+
+export Modele_MiG_21bis_NPLM_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM_MID/MiG_21_PFM_AS_MID.fbx'
+)
+
+export Modele_MiG_21bis_NPLM_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Avion/LODS/MiG_21_PFM_AS_LOW.fbx'
+)
+
+export Modele_MiG_21bis_NPLM_DDR_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Avion/MiG_21_PFM/MiG_21_PFM_train.fbx'
+)

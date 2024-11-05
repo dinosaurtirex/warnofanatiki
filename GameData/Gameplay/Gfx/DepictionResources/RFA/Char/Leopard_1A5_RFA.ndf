@@ -1,0 +1,19 @@
+export Modele_Leopard_1A5_RFA is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Char/Leopard_1A5/Leopard_1A5.fbx'
+)
+
+export Modele_Leopard_1A5_RFA_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Char/Leopard_1A5_MID/Leopard_1A5_MID.fbx'
+)
+
+export Modele_Leopard_1A5_RFA_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Char/LODS/Leopard_1A5_LOW.fbx'
+)
+
+export Modele_Leopard_1A5_RFA_Tourelle_02 is ModelDescriptor
+(
+    FileName = ModelFile_MG3_t2
+)

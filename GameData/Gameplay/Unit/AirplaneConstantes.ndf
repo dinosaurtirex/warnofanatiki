@@ -1,0 +1,54 @@
+// Autres paramètres avions : DEMANDER AUX DEVS AVANT DE MODIFIER //
+MaxPitchSpeed is 30 // degrés/seconde
+MaxAltitudeGRU is 3534
+MinAltitudeForRollGRU is 707
+MinRollSpeedForRoll is 65 // degrés/seconde
+
+//Paramètrage visuels des avions
+ElevatorRotationMax is 18
+AileronRotationMax is 18
+RudderRotationMax is 20
+
+BombAttackStrategyDescriptor is TBombAttackStrategyDescriptor()
+
+DiveAttackStrategyDescriptor is TDiveAttackStrategyDescriptor
+(
+    MinPitchForDiveInDegree = 5 // Pitch minimal autorisé pour un Dive
+    MaxPitchForDiveInDegree = 65 // Pitch maximal autorisé pour un Dive
+    MinDiveAlignmentDuration = 0.5 // Durée minimale d'alignement lors d'un Dive, en secondes
+)
+
+DiveMissileAttackStrategyDescriptor is TDiveMissileAttackStrategyDescriptor
+(
+    MinPitchForDiveInDegree = 5 // Pitch minimal autorisé pour un Dive
+    MaxPitchForDiveInDegree = 65 // Pitch maximal autorisé pour un Dive
+    MinDiveAlignmentDuration = 0.5 // Durée minimale d'alignement lors d'un Dive, en secondes
+)
+
+DiveBombAttackStrategyDescriptor is TDiveBombAttackStrategyDescriptor
+(
+    MinPitchForDiveBombInDegree = 10 // Pitch minimal autorisé pour un DiveBomb
+    PitchForDiveBombInDegree = 45 // Pitch à essayer d'atteindre pour un DiveBomb
+    MaxPitchForDiveBombInDegree = 65  // Pitch maximal autorisé pour un DiveBomb
+    DiveBombRecoveryDuration = 10 // Temps en secondes pendant lequel l'avion vol à basse altitude après avoir largué ses bombes
+)
+
+DogfightAttackStrategyDescriptor is TDogfightAttackStrategyDescriptor
+(
+    MinDistanceBetweenFighterAndTargetForAttackOnSlowAirplaneStrategy = 0.20 // en ratio de l'agility radius
+    MaxDistanceBetweenFighterAndTargetForLateralMoveOnSlowAirplaneStrategy = 0.27 // en ratio de l'agility radius
+    SpeedRatioForAttackOnSlowAirplaneStrategy = 0.85
+    SpeedRatioForAttackOnVerySlowAirplaneStrategy = 0.45
+    MaxAngleDifferenceWithTargetInDegree = 60
+    MaxAngleToConsiderTargetAheadInDegree = 50
+    AngleToFakeTargetPositionInDegree = 60
+)
+
+StukaNosediveAttackStrategyDescriptor is TStukaNosediveAttackStrategyDescriptor
+(
+    DistanceNosediveGRU = 477
+    WaypointDistanceFromTargetGRU = 283
+    AgilityMultiplicator = 2.5
+)
+
+AirGroundMissileAttackStrategyDescriptor is TAirGroundMissileAttackStrategyDescriptor()

@@ -1,0 +1,106 @@
+ScenarioOverviewMainComponent is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+    Axis = ~/ListAxis/Vertical
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    InterItemMargin = TRTTILength(Magnifiable = 40.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 0.0]
+                    AlignementToFather  = [0.5, 0.0]
+                    AlignementToAnchor  = [0.5, 0.0]
+                )
+
+                TextToken = "MapOvrvw"
+                BigLineAction = ~/BigLineAction/ResizeFont
+
+                ParagraphStyle = paragraphStyleTextCenter
+                TextStyle = "TextStyleEcranMoniteur"
+                VerticalFitStyle = ~/FitStyle/FitToContent
+                TypefaceToken = "IBM"
+
+
+                TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                TextColor       = "White"
+                TextSize        = "24"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [900.0, 600.0]
+                )
+
+                Components =
+                [
+                    ScenarioOverviewComponent(ElementName = "ScenarioOverviewComponent")
+                ]
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "CloseButton"
+                TextToken = "BTN_CLOSE"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+                IsFilled = true
+                ButtonAlignementToAnchor = [0.5, 0.0]
+                ButtonAlignementToFather = [0.5, 0.0]
+            )
+        )
+    ]
+
+    ForegroundComponents =
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [1050.0, 850.0]
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
+            )
+            TextureToken = 'Outgame_modale_foreground'
+            TextureDrawer = 'ColorMultiply_Additive'
+        )
+    ]
+
+    BackgroundComponents =
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [1050.0, 850.0]
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
+            )
+            TextureToken = 'Outgame_modale_fond'
+            TextureDrawer = 'MonochromeMonitorEffect'
+        )
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+
+UIScenarioOverviewViewDescriptor is TUISpecificScenarioMapOverviewViewDescriptor
+(
+    MainComponentDescriptor = ~/ScenarioOverviewMainComponent
+    MainComponentContainerUniqueName = ""
+)

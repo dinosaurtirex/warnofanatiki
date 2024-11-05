@@ -1,0 +1,23 @@
+export ModelFile_A37B_Dragonfly_US_rkt is 'GameData:/Assets/3D/Units/US/Avion/A37B_Dragonfly_Reco/A37B_Dragonfly_rkt.fbx'
+export Modele_A37B_Dragonfly_US is ModelDescriptor
+(
+    FileName = ModelFile_A37B_Dragonfly_US_rkt
+)
+
+export ModelFile_A37B_Dragonfly_US_rkt_MID is 'GameData:/Assets/3D/Units/US/Avion/A37B_Dragonfly_Reco_MID/A37B_Dragonfly_rkt_MID.fbx'
+export Modele_A37B_Dragonfly_US_MID is ModelDescriptor
+(
+    FileName = ModelFile_A37B_Dragonfly_US_rkt_MID
+)
+
+export ModelFile_A37B_Dragonfly_US_rkt_LOW is 'GameData:/Assets/3D/Units/US/Avion/A37B_Dragonfly_Reco_LOW/A37B_Dragonfly_rkt_LOW.fbx'
+export Modele_A37B_Dragonfly_US_LOW is ModelDescriptor
+(
+    FileName = ModelFile_A37B_Dragonfly_US_rkt_LOW
+)
+
+export ModelFile_A37B_Dragonfly_US_train is 'GameData:/Assets/3D/Units/US/Avion/A37B_Dragonfly_Reco/A37B_Dragonfly_train.fbx'
+export Modele_A37B_Dragonfly_US_train is ModelDescriptor
+(
+    FileName = ModelFile_A37B_Dragonfly_US_train
+)

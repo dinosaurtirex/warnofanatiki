@@ -1,0 +1,20 @@
+export ModelFile_Mortier_2B14_82mm_SOV is 'GameData:/Assets/3D/Units/URSS/Canon/Mortier_2B14_82mm/Mortier_2B14_82mm.fbx'
+export Modele_Mortier_2B14_82mm_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_2B14_82mm_SOV
+)
+
+export ModelFile_Mortier_2B14_82mm_SOV_MID is 'GameData:/Assets/3D/Units/URSS/Canon/Mortier_2B14_82mm/Mortier_2B14_82mm.fbx'
+export Modele_Mortier_2B14_82mm_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_2B14_82mm_SOV_MID
+)
+
+export ModelFile_Mortier_2B14_82mm_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/Canon/Mortier_2B14_82mm/Mortier_2B14_82mm.fbx'
+export Modele_Mortier_2B14_82mm_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_2B14_82mm_SOV_LOW
+)
+
+
+

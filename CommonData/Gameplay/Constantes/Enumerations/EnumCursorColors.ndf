@@ -1,0 +1,7 @@
+// Keep this list synchronized with InterfaceMultiprojet/UIMouseWidgetSelector.h
+CursorColor_Default       is 0
+CursorColor_Inefficient   is 1
+CursorColor_OutOfRange    is 2
+CursorColor_Unseen        is 3
+CursorColor_Blocked       is 4
+CursorColor_Invalid       is 5

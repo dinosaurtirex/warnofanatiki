@@ -1,0 +1,22 @@
+export WargamePlayerXPCalculatorDescriptor is TModernWarfarePlayerXPCalculatorDescriptor
+(
+    XPMultiplierByVictoryType =
+    [
+        1.0, // TotalDefeat
+        1.25, // MajorDefeat
+        1.5, // MinorDefeat
+        1.75, // Draw
+        2.0, // MinorVictory
+        2.25, // MajorVictory
+        2.5, // TotalVictory
+    ]
+
+    XPMultiplierSkirmish = 1.0
+    XPMultiplierMulti = 1.25
+    XPMultiplierRanked = 1.5
+
+    GameDurationInMinForMaxXP = 35
+    MaxGameDurationXP = 30
+
+    MaxWinstreakMultiplier = 2.0
+)

@@ -1,0 +1,17 @@
+export Modele_AMX_30_B2_CMD_FR is ModelDescriptor
+(
+    FileName = ModelFile_AMX_30_B2_FR
+    TextureDirectory = 'GameData:/Assets/3D/Units/FR/Char/AMX_30B2_CMD/'
+)
+
+export Modele_AMX_30_B2_CMD_FR_MID is ModelDescriptor
+(
+    FileName = ModelFile_AMX_30_B2_FR_MID
+    TextureDirectory = 'GameData:/Assets/3D/Units/FR/Char/AMX_30B2_CMD_MID/'
+)
+
+export Modele_AMX_30_B2_CMD_FR_LOW is ModelDescriptor
+(
+    FileName = ModelFile_AMX_30_B2_FR_LOW
+    TextureDirectory = 'GameData:/Assets/3D/Units/FR/Char/AMX_30B2_CMD_LOW/'
+)

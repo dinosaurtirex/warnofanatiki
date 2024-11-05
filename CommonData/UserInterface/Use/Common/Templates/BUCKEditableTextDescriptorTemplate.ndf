@@ -1,0 +1,133 @@
+template BUCKEditableTextDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKEditableTextDescriptor
+    ClippingContainerName : string = "",                                                                              // Spécifie l'ElementName du ClippingContainer. Utile en cas de doublon
+    ClippingContainerFrameProperty : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] ), // Le FrameProperty du ClippingContainer. Permettra surtout de mettre des marges
+
+    HintComponentName : string = "",                                                                                  // L'ElementName du Hint qui apparaît tant que rien n'est écrit dans l'EditableText
+    HintComponentDescriptor : TBUCKContainerDescriptor = nil,                                                         // Le descriptor du Hint qui apparaît tant que rien n'est écrit dans l'EditableText
+                                                                                                                      //   (préférable que le FrameProperty soit le même que celui du clipping container pour la continuité)
+
+    SelectionColorToken : string = "",                                                                                // Couleur du fond du texte sélectionné
+
+    TypefaceToken : string,                                                                                           // Le token de la police du texte
+    TextColorToken : string = "",                                                                                     // Couleur du Texte
+    TextSizeToken : string = "",                                                                                      // Taille du texte
+
+    MaxChars : int = 0,                                                                                               // Le nombre maximum de charactères que contient l'EditableText (0 = infini)
+
+    TextStyle : string = "",                                                                                          // Le Token de TextStyle pour le texte
+
+    Flags : int = 0,                                                                                                  // Les Flags permettant de paramétrer le copy/paste etc...
+                                                                                                                      //   (Renseigner un EditableTextFlag défini dans UICommonEnum.ndf)
+    DontMaskEventOnValidate : bool = false,                                                                           // True = ne masquera pas l'évenement "Enter".
+    SelectTextOnFocus : bool = false,                                                                                 // True = sélectionne tout le texte quand on gagne le focus
+    // -- BUCKEditableTextDescriptor
+]
+is TBUCKEditableTextDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKEditableTextDescriptor
+    ClippingContainerName = (<ClippingContainerName> != "" ? <ClippingContainerName> : <ElementName> + "ClippingContainer")
+
+    HintComponentName = <HintComponentName>
+
+    SelectionColorToken = <SelectionColorToken>
+
+    TypefaceToken = <TypefaceToken>
+    TextColorToken = <TextColorToken>
+    TextSizeToken = <TextSizeToken>
+
+    MaxChars = <MaxChars>
+
+    TextStyle = <TextStyle>
+
+    Flags = <Flags>
+    DontMaskEventOnValidate = <DontMaskEventOnValidate>
+    SelectTextOnFocus = <SelectTextOnFocus>
+    // -- BUCKEditableTextDescriptor
+
+    Components = <Components> +
+    [
+        BUCKContainerDescriptor
+        (
+            ElementName = (<ClippingContainerName> != "" ? <ClippingContainerName> : <ElementName> + "ClippingContainer")
+            ComponentFrame = <ClippingContainerFrameProperty>
+
+            ClipContent = true
+            IsClippable = <IsClippable>
+            Components = (<HintComponentDescriptor> != nil ? [<HintComponentDescriptor>] : [])
+        )
+    ]
+)

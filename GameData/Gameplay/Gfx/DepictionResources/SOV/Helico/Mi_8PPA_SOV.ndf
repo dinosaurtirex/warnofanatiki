@@ -1,0 +1,14 @@
+export Modele_Mi_8PPA_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_8PPA/Mi_8PPA.fbx'
+)
+
+export Modele_Mi_8PPA_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_8PPA/Mi_8PPA.fbx'
+)
+
+export Modele_Mi_8PPA_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_8PPA/Mi_8PPA.fbx'
+)

@@ -1,0 +1,141 @@
+//--------------------------------------------------------------------------
+// BUCKGridDescriptor
+//--------------------------------------------------------------------------
+
+template BUCKGridDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable : bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+    // Ne pas utiliser l'attribut Components !!! Utiliser Elements !!!
+
+    // ++ BUCKListDescriptor
+    // Axis : int = ~/ListAxis/Vertical,                                                        // Dans une Grid c'est forcément vertical
+    // BreadthComputationMode : int = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty, // Dans une Grid c'est forcément ComputeBreadthFromLargestChild
+
+    BackgroundComponents : LIST<TBUCKContainerDescriptor> = [],
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [],
+
+    // FirstMargin : TRTTILength = TRTTILength(),                                               // Dans une Grid ce paramètre n'est pas utilisé
+    // InterItemMargin : TRTTILength = TRTTILength(),                                           // Dans une Grid ce paramètre n'est pas utilisé
+    // LastMargin : TRTTILength = TRTTILength(),                                                // Dans une Grid ce paramètre n'est pas utilisé
+
+    AssumeChildrenAreFixedSize : bool = false,
+    AssumeChildrenAreClippable : bool = false,
+
+    // Elements : LIST<TBUCKListElementDescriptor> = []                                         // Dans une Grid ce paramètre n'est pas utilisé
+    // -- BUCKListDescriptor
+
+    FirstElementMargin : TRTTILength2 = TRTTILength2(),                                         // Taille de la marge avant la première ligne et colonne de la grille en dimension 2
+    InterElementMargin : TRTTILength2 = TRTTILength2(),                                         // Taille de la marge entre les éléments de la grille en dimension 2
+    LastElementMargin : TRTTILength2 = TRTTILength2(),                                          // Taille de la marge après la dernière ligne et colonne de la grille en dimension 2
+
+    IncrementalStepRowMargin : TRTTILength = TRTTILength(),                                     // Pas incrémental horizontal. Permet de créer un décalage horizontal a chaque noouvell ligne
+
+    MaxElementsPerDimension : int2 = [0, 0],                                                    // Maximum d'éléments par ligne et colonne (défaut = 0)
+    ElementMinWidthHeight : float2 = [0.0, 0.0],                                                // Taille minimum des Elements d'une liste (défaut = 0)
+
+    RowAlignementToFather : float2 = [0.0, 0.0],                                                // Alignement des lignes vis à vis de la grille (par défaut = 0.0, 0.0)
+    RowAlignementToAnchor : float2 = [0.0, 0.0],                                                // Alignement des lignes vis à vis de l'ancrage (par défaut = 0.0, 0.0)
+
+    GridElements : MAP<int2, TBUCKContainerDescriptor> = MAP[],                                 // Elements dans la grille avec position (ligne, colonne)
+]
+is TBUCKGridDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = []
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKListDescriptor
+    Axis = ~/ListAxis/Vertical
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    BackgroundComponents = <BackgroundComponents>
+    ForegroundComponents = <ForegroundComponents>
+
+    FirstMargin = TRTTILength()
+    InterItemMargin = TRTTILength()
+    LastMargin = TRTTILength()
+
+    AssumeChildrenAreFixedSize = <AssumeChildrenAreFixedSize>
+    AssumeChildrenAreClippable = <AssumeChildrenAreClippable>
+    // -- BUCKListDescriptor
+
+    FirstElementMargin = <FirstElementMargin>
+    InterElementMargin = <InterElementMargin>
+    LastElementMargin = <LastElementMargin>
+
+    IncrementalStepRowMargin = <IncrementalStepRowMargin>
+
+    MaxElementsPerDimension = <MaxElementsPerDimension>
+    ElementMinWidthHeight = <ElementMinWidthHeight>
+
+    RowAlignementToFather = <RowAlignementToFather>
+    RowAlignementToAnchor = <RowAlignementToAnchor>
+
+    GridElements = <GridElements>
+)

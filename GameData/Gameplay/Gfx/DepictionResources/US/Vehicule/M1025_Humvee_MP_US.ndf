@@ -1,0 +1,19 @@
+export Modele_M1025_Humvee_MP_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_MP/M1025_Humvee_MP.fbx'
+)
+
+export Modele_M1025_Humvee_MP_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_MP_MID/M1025_Humvee_MP_MID.fbx'
+)
+
+export Modele_M1025_Humvee_MP_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_MP_LOW/M1025_Humvee_MP_LOW.fbx'
+)
+
+export Modele_M1025_Humvee_MP_US_Tourelle_01 is ModelDescriptor
+(
+    FileName = ModelFile_M60_t1
+)

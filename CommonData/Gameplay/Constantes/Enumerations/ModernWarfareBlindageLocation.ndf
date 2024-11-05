@@ -1,0 +1,9 @@
+// TModernWarfareBlindageLocation // A maintenir synchro avec EugIA_Common/ModernWarfareArmeArmure.h
+EArmorLocation is TBaseClass
+(
+    Default   is 0
+    Front     is 1
+    Sides     is 2
+    Rear      is 3
+    Top       is 4
+)

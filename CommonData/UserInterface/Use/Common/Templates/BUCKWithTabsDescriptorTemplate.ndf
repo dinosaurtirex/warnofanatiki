@@ -1,0 +1,300 @@
+template BUCKOneTabDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = true,                                // Par défaut il est a true pour ne pas s'updater dans le cas où il se trouverait dans un composant qui peut changer les états (Ex : BUCKMovable)
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKSensibleAreaDescriptor
+    MaskEvents : bool = true,                                           // Par défaut on masque les évenements
+    IgnoreMask : bool = false,
+    AreaShape : int = ~/AreaShape/Rect,
+    // -- BUCKSensibleAreaDescriptor
+
+    // ++ BUCKButtonDescriptor
+    // IsTogglable : bool = false,                                      // Les Tabs sont forcément togglable
+    // CannotDeselect : bool = false,                                   // Ce paramètre est défini gloablement dans le WithTabs
+    // ForceEvents : bool false,                                        // Ce paramètre est défini gloablement dans le WithTabs
+    // RadioButtonManager : TBUCKRadioButtonManager = nil,              // Les tabs ont forcément leur WithTabs comme RadioButtonManager
+    Mapping : TEugBMutablePBaseClass = nil,
+
+    HoverSound : TSoundDescriptor = nil,
+    LeftClickSound : TSoundDescriptor = nil,
+    AllowMultipleInputsPerFrame : bool = false,
+    Grayed : bool = false,
+    // IsFocusable : bool = false,                                      // Le focus est géré dans le WithTabs
+    // FocusMapping : TEugBMutablePBaseClass = nil,                     // Le focus est géré dans le WithTabs
+    // -- BUCKButtonDescriptor
+]
+is TBUCKOneTabDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKSensibleAreaDescriptor
+    MaskEvents = <MaskEvents>
+    IgnoreMask = <IgnoreMask>
+    AreaShape = <AreaShape>
+    // -- BUCKSensibleAreaDescriptor
+
+    // ++ BUCKButtonDescriptor
+    IsTogglable = true
+    CannotDeselect = false
+    ForceEvents = false
+    RadioButtonManager = nil
+    Mapping  = <Mapping>
+
+    HoverSound = <HoverSound>
+    LeftClickSound = <LeftClickSound>
+    AllowMultipleInputsPerFrame = <AllowMultipleInputsPerFrame>
+    Grayed = <Grayed>
+
+    IsFocusable = false
+    FocusMapping = nil
+    // -- BUCKButtonDescriptor
+)
+
+// -------------------------------------------------------------------------------------------------
+
+template BUCKWithTabsDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI,
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    // Components : LIST<TBUCKContainerDescriptor> = [],                              // On empêche d'ajouter des composants directement au container des tabs
+
+    // -- BUCKContainerDescriptor
+    CanReselectTabs : bool = false,                                                   // Permet de déclencher les events OnTabSelected lorsqu'on re-sélectionne l'onglet actuel
+    CannotDeselectTabs : bool = true,                                                 // Permet d'empêcher la déselection des tabs (Vrai par défaut)
+
+    InterMarginBetweenTabsAndContent : TRTTILength = TRTTILength(),                   // Défini l'écartement entre les tabs et le contenu
+    TabsAndContent : LIST<PAIR<TBUCKOneTabDescriptor,TBUCKContainerDescriptor>> = [], // Liste de PAIR des onglets->contenu associé
+
+    TabsListBackgroundColorToken : string = "",                                       // Donne un background a la ligne des tabs
+    RedefinedTabsContainer : TBUCKContainerDescriptor = nil,                          // Permet de redéfinir le conteneur des titre d'onglets
+
+    Axis : int,                                                                       // Axe de la liste d'onglets
+
+    IsFocusable : bool = false,                                                       // Détermine si les onglets sont focusables
+    ShowTabsFirst : bool = false,                                                     // Détermine si les onglets précèdent le contenu dans l'affichage
+]
+is TBUCKWithTabsDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+    // -- BUCKContainerDescriptor
+
+    CanReselectTabs = <CanReselectTabs>
+    CannotDeselectTabs = <CannotDeselectTabs>
+
+    TabsAndContent = <TabsAndContent>
+
+    IsFocusable = <IsFocusable>
+
+    Components =
+    [
+        BUCKListDescriptor                                                                  // Liste verticale qui contient la liste des onglets et le contenu
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = (<Axis> == ~/ListAxis/Horizontal ? [1.0, 0.0] : [0.0, 1.0])
+            )
+
+            InterItemMargin = <InterMarginBetweenTabsAndContent>
+
+            Axis = (<Axis> == ~/ListAxis/Horizontal ? ~/ListAxis/Vertical : ~/ListAxis/Horizontal)
+
+            Elements =
+            (<ShowTabsFirst> ? [] : [
+                BUCKListElementDescriptor
+                (
+                    ExtendWeight = 1.0
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ElementName = <ElementName> + "Content"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                        )
+                    )
+                )
+            ]) +
+            [
+                BUCKListElementDescriptor
+                (
+                    MinSize = TRTTILength( Magnifiable = 75.0 )
+                    ComponentDescriptor =
+                    ( <RedefinedTabsContainer> != nil ?
+                        <RedefinedTabsContainer>
+                    :
+                        BUCKContainerDescriptor
+                        (
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = (<Axis> == ~/ListAxis/Horizontal ? [1.0, 0.0] : [0.0, 1.0])
+                            )
+
+                            HasBackground = (<TabsListBackgroundColorToken> != "")
+                            BackgroundBlockColorToken = <TabsListBackgroundColorToken>
+
+                            FitStyle =  (<Axis> == ~/ListAxis/Horizontal ? ~/ContainerFitStyle/FitToContentVertically : ~/ContainerFitStyle/FitToContentHorizontally)
+                            Components =
+                            [
+                                BUCKListDescriptor                                // Liste horizontale qui contient les onglets
+                                (
+                                    ElementName = <ElementName> + "Tabs"
+
+                                    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+                                    Axis = <Axis>
+                                )
+                            ]
+                        )
+                    )
+                )
+            ] +
+            (<ShowTabsFirst> ? [
+                BUCKListElementDescriptor
+                (
+                    ExtendWeight = 1.0
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ElementName = <ElementName> + "Content"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                        )
+                    )
+                )
+            ] : [])
+
+        )
+    ]
+)

@@ -1,0 +1,17 @@
+export Modele_AT_D44_85mm_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Canon/AT_D44_85mm/AT_D44_85mm.fbx'
+)
+
+export Modele_AT_D44_85mm_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Canon/AT_D44_85mm_MID/AT_D44_85mm_MID.fbx'
+)
+
+export Modele_AT_D44_85mm_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Canon/LODS/AT_D44_85mm_LOW.fbx'
+)
+
+
+

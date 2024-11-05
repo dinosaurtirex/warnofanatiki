@@ -1,0 +1,104 @@
+
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+// Gauge
+template BUCKSimpleGaugeDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    Axis : int = ~/ListAxis/Horizontal,                                 // Axe de la jauge
+
+    GaugeMax : float = 0.0,                                             // Valeur max de la jauge
+
+    GraduationStep : float = 0.0,                                       // Afficher une graduation toutes les X unités (0 = sans graduation)
+    GraduationColorToken : string = "",                                 // Couleur des graduations
+    GraduationThicknessToken : string = "",                             // Épaisseur des graduations
+    InvertGauge : bool = false,                                         // Le remplissage de la gauge se fait dans le sens inverse (part du bas en vertical ou de la droite en horizontal)
+    LocalRenderLayer : int = 0,                                         // Layer local pour le composant
+    FilledContentColorToken : string = "",                              // Couleur du remplissage de la gauge
+    FilledBorderColorToken : string = "",                               // Couleur de la bordure du remplissage de la gauge
+    FilledBorderThicknessToken : string = "",                           // Épaisseur de la bordure du remplissage
+] is TBUCKSimpleGaugeDescriptor
+(
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Axis = <Axis>
+
+    GaugeMax = <GaugeMax>
+
+    GraduationStep = <GraduationStep>
+    GraduationColorToken = <GraduationColorToken>
+    GraduationThicknessToken = <GraduationThicknessToken>
+    FilledContentColorToken = <FilledContentColorToken>
+    FilledBorderColorToken = <FilledBorderColorToken>
+    FilledBorderThicknessToken = <FilledBorderThicknessToken>
+    InvertGauge = <InvertGauge>
+
+    Components = <Components>
+)

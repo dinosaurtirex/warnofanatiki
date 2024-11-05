@@ -1,0 +1,12 @@
+// Keep this list synchronized with EugIA/EnumWeaponCursors.h
+Weapon_Cursor_None                is 0
+Weapon_Cursor_UnguidedMissile     is 1
+Weapon_Cursor_GroundMissile       is 2
+Weapon_Cursor_AirMissile          is 3
+Weapon_Cursor_Canon               is 4
+Weapon_Cursor_FastCanon           is 5
+Weapon_Cursor_MachineGun          is 6
+Weapon_Cursor_CorrectedArtillery  is 7
+Weapon_Cursor_SuppressionFire     is 8
+Weapon_Cursor_Forbidden           is 9
+Weapon_Cursor_Inefficient         is 10

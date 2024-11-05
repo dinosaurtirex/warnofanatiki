@@ -1,0 +1,19 @@
+export Modele_M1025_Humvee_TOW_para_US is ModelDescriptor
+(
+    FileName     = ModelFile_M1025_Humvee_TOW_US
+)
+
+export Modele_M1025_Humvee_TOW_para_US_MID is ModelDescriptor
+(
+    FileName     = ModelFile_M1025_Humvee_TOW_US_MID
+)
+
+export Modele_M1025_Humvee_TOW_para_US_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_M1025_Humvee_TOW_US_LOW
+)
+
+export Modele_M1025_Humvee_TOW_para_US_Tourelle_01 is ModelDescriptor
+(
+    FileName = ModelFile_TOW_T1
+)

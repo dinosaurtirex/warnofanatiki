@@ -1,0 +1,79 @@
+
+unnamed TUICommonLDHintResource
+(
+    ComponentByName = MAP
+    [
+        ( "StrategicPlayerTurn",     LDHintInfoIngameScore_Steelman),
+
+        //-------------------------------------------------------------------------------------
+        // Dialogs
+        ( "green_hint_choice",       Steelman_newLDHINT( width = 1120)),
+
+        // WARNING : Vous ne devez pas mettre ici de données spécifiques à un seul scénario. Tout ce qui est ici sera livré au joueurs à la prochaine livraison avec le risque
+        // de leak si c'est dans un scenario qui ne doit pas sortir
+        ( "general_DDR",             Steelman_newLDHINT(Texture = 'general_DDR' portrait_name = 'ddr_gen_1' )),
+        ( "general_DDR_name",        ST_Component_1Texture_1Text_Portrait(portrait_name = 'ddr_gen_1')),
+        ( "major_DDR",               Steelman_newLDHINT(Texture = 'major_DDR' portrait_name = 'ddr_maj_1' )),
+        ( "major_DDR_name",          ST_Component_1Texture_1Text_Portrait(portrait_name = 'ddr_maj_1')),
+        ( "major_DDR_name2",         ST_Component_1Texture_1Text_Portrait(portrait_name = 'sov_gen_1')),
+
+        ( "general_US",              Steelman_newLDHINT(Texture = 'general_US' portrait_name = 'us_gen_1' )),
+        ( "major_US",                Steelman_newLDHINT(Texture = 'major_US' portrait_name = 'us_maj_1')),
+        ( "major_US_mini",           Steelman_newLDHINT(portrait_name = 'us_maj_1' width = 1120)),
+
+        ( "general_UK",              Steelman_newLDHINT(Texture = 'general_UK' portrait_name = 'uk_gen_1' )),
+        ( "major_UK",                Steelman_newLDHINT(Texture = 'major_UK' portrait_name = 'uk_maj_1')),
+
+        ( "general_RFA",             Steelman_newLDHINT(Texture = 'general_RFA' portrait_name = 'rfa_gen_1' )),
+        ( "general_RFA_name",        ST_Component_1Texture_1Text_Portrait(portrait_name = 'rfa_gen_1')),
+        ( "major_RFA",               Steelman_newLDHINT(Texture = 'major_RFA' portrait_name = 'rfa_maj_1' )),
+
+        ( "general_SOV",             Steelman_newLDHINT(Texture = 'general_SOV' portrait_name = 'sov_gen_1' )),
+        ( "major_SOV",               Steelman_newLDHINT(Texture = 'major_SOV' portrait_name = 'sov_maj_1' )),
+
+        ( "general_NL_name",          ST_Component_1Texture_1Text_Portrait(portrait_name = 'ddr_maj_1')),
+        ( "major_NL_name",          ST_Component_1Texture_1Text_Portrait(portrait_name = 'ddr_maj_1')),
+
+        ( "Steelman_LDHint_Portrait",          Steelman_LDHint_Portrait()),
+
+
+        ("pact_plays_first" , FullScreenImageEtTexte(TextureToken = 'PACT_Starting_Turn_Background')),
+        ("nato_plays_first" , FullScreenImageEtTexte(TextureToken = 'NATO_Starting_Turn_Background')),
+
+        ( "ST_Component_1Texture_1Text", ST_Component_1Texture_1Text()),
+        ( "ST_Popup_1Texture_5Text", ST_Popup_1Texture_5Text()),
+
+        ( "victory",            EndgameResultAnimationStrategic (victory = true )),
+        ( "draw",               EndgameResultAnimationStrategic (draw = true )),
+        ( "defeat",             EndgameResultAnimationStrategic ()),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+// Liste des Textures
+//-------------------------------------------------------------------------------------
+
+unnamed TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ( "general_DDR",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_DDR.png' ))] ),
+        ( "major_DDR",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/major_ddr.png' ))] ),
+
+        ( "general_RFA",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_rfa.png' ))] ),
+        ( "major_RFA",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/major_rfa.png' ))] ),
+
+        ( "general_SOV",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_SOV.png' ))] ),
+        ( "major_SOV",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/major_SOV.png' ))] ),
+
+        ( "general_US",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_US.png' ))] ),
+        ( "major_US",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/major_US.png' ))] ),
+
+        ( "general_UK",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/general_UK.png' ))] ),
+        ( "major_UK",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/major_UK.png' ))] ),
+
+        ( "PACT_Starting_Turn_Background",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/PACT_Starting_Turn_Background.png' ))] ),
+        ( "NATO_Starting_Turn_Background",        MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseStrategic/LDHint/NATO_Starting_Turn_Background.png' ))] ),
+    ]
+)
+

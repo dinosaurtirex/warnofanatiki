@@ -1,0 +1,46 @@
+//-------------------------------------------------------------------------
+export Challenge_Defense_Dynamic_Filler is TMacroActionDescriptor_CorridorDynamicDefense_Specific
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 1),
+        TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
+        TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
+        TMacroActionProductionSettingHolder(PoolModelList = [ ~/Pool_Defense_Filler]),
+    ]
+)
+
+//-------------------------------------------------------------------------
+export Challenge_CaptureAllZoneObjectif is Template_Capture_Command_Zone
+(
+    GenerationType = TGenerationType_BasedOnNumberOfObjectives
+    NumberLaunchBasedOnGenerationType = 1
+    AlsoConsiderTheseDescriptorsForMaintain = [Challenge_CaptureOneObjectif_LowCost, CaptureOneObjectif, CaptureHalfZoneObjectif_Floor, CaptureHalfZoneObjectif_Ceil]
+)
+
+//-------------------------------------------------------------------------
+export Challenge_CaptureOneObjectif_LowCost is Template_Capture_Command_Zone
+(
+    GenerationType = TGenerationType_FixedSize
+    NumberLaunchBasedOnGenerationType = 1
+    PoolModelList = [~/Pool_Commandant_LowCost_One_Mission]
+)
+
+//-------------------------------------------------------------------------
+export Pool_Commandant_LowCost_One_Mission is TPoolModel
+(
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{47715c5b-50b0-49b8-b12f-eb0e35ffb2a9}
+            Required = true
+            Nb = 1
+            IndexPriorityOverPrice = true
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Vehicule_CMD",
+                "Char_CMD",
+                "InfmapCommander",
+            ]
+        ),
+    ]
+)

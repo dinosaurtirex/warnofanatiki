@@ -1,0 +1,15 @@
+export Modele_M109A2_UK is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Artillerie/M109_A2/M109_A2.fbx'
+)
+
+export Modele_M109A2_UK_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Artillerie/M109_A2_MID/M109_A2_MID.fbx'
+)
+
+export Modele_M109A2_UK_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Artillerie/LODS/M109_A2_LOW.fbx'
+)
+

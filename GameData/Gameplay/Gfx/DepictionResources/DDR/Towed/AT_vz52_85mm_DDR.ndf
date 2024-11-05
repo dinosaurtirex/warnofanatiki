@@ -1,0 +1,20 @@
+export ModelFile_AT_vz52_85mm_DDR is 'GameData:/Assets/3D/Units/DDR/Canon/AT_vz52_85mm/AT_vz52_85mm.fbx'
+export Modele_AT_vz52_85mm_DDR is ModelDescriptor
+(
+    FileName     = ModelFile_AT_vz52_85mm_DDR
+)
+
+export ModelFile_AT_vz52_85mm_DDR_MID is 'GameData:/Assets/3D/Units/DDR/Canon/AT_vz52_85mm_MID/AT_vz52_85mm_MID.fbx'
+export Modele_AT_vz52_85mm_DDR_MID is ModelDescriptor
+(
+    FileName     = ModelFile_AT_vz52_85mm_DDR_MID
+)
+
+export ModelFile_AT_vz52_85mm_DDR_LOW is 'GameData:/Assets/3D/Units/DDR/Canon/AT_vz52_85mm_LOW/AT_vz52_85mm_LOW.fbx'
+export Modele_AT_vz52_85mm_DDR_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_AT_vz52_85mm_DDR_LOW
+)
+
+
+

@@ -1,0 +1,17 @@
+export ModelFile_Mi_24V_AT_SOV is 'GameData:/Assets/3D/Units/URSS/Helico/Mi_24V/Mi_24V_ATGM.fbx'
+export Modele_Mi_24V_AT_SOV is ModelDescriptor
+(
+    FileName = ModelFile_Mi_24V_AT_SOV
+)
+
+export ModelFile_Mi_24V_AT_SOV_MID is 'GameData:/Assets/3D/Units/URSS/Helico/Mi_24V_MID/Mi_24V_ATGM_MID.fbx'
+export Modele_Mi_24V_AT_SOV_MID is ModelDescriptor
+(
+    FileName = ModelFile_Mi_24V_AT_SOV_MID
+)
+
+export ModelFile_Mi_24V_AT_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/Helico/Mi_24V_LOW/Mi_24V_ATGM_LOW.fbx'
+export Modele_Mi_24V_AT_SOV_LOW is ModelDescriptor
+(
+    FileName = ModelFile_Mi_24V_AT_SOV_LOW
+)

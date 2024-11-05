@@ -1,0 +1,29 @@
+
+EAutoresolveAvantage_NoRecoVersusReco     is 0
+EAutoresolveAvantage_NoAntiAirVersusAir   is 1
+EAutoresolveAvantage_NoAntiTankVersusTank is 2
+EAutoresolveAvantage_DCA_air is 3
+EAutoresolveAvantage_NoHeavyTank_vs_HeavyTank is 4
+EAutoresolveAvantage_NoInfantry_vs_Infantry is 5
+EAutoresolveAvantage_NoCMD_vs_CMD is 6
+EAutoresolveAvantage_NoSupply_vs_Supply is 7
+EAutoresolveAvantage_NoAir_vs_Air is 8
+EAutoresolveAvantage_interception_air_air is 9
+EAutoresolveAvantage_NoHelo_vs_Helo is 10
+
+AutoresolveAvantage_Enum is EAutoresolveAdvantage
+(
+    Values = [
+        "EAutoresolveAvantage_NoRecoVersusReco",
+        "EAutoresolveAvantage_NoAntiAirVersusAir",
+        "EAutoresolveAvantage_NoAntiTankVersusTank",
+        "EAutoresolveAvantage_DCA_air",
+        "EAutoresolveAvantage_NoHeavyTank_vs_HeavyTank",
+        "EAutoresolveAvantage_NoInfantry_vs_Infantry",
+        "EAutoresolveAvantage_NoCMD_vs_CMD",
+        "EAutoresolveAvantage_NoSupply_vs_Supply",
+        "EAutoresolveAvantage_NoAir_vs_Air",
+        "EAutoresolveAvantage_interception_air_air",
+        "EAutoresolveAvantage_NoHelo_vs_Helo",
+    ]
+)

@@ -1,0 +1,19 @@
+export Modele_EF111_Raven_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/Raven_EF_111A/Raven_EF_111A.fbx'
+)
+
+export Modele_EF111_Raven_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/Raven_EF_111A_MID/Raven_EF_111A_MID.fbx'
+)
+
+export Modele_EF111_Raven_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/LODS/Raven_EF_111A_LOW.fbx'
+)
+
+export Modele_EF111_Raven_US_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/Raven_EF_111A/Raven_EF_111A_train.fbx'
+)
