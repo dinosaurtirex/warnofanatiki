@@ -7118,7 +7118,7 @@ Ammo_Bomb_ODAB_500PM_500kg_Thermobaric_x6 is TAmmunitionDescriptor
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 6
-    SupplyCost                        = 180.0
+    SupplyCost                        = 10.0
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -10713,7 +10713,7 @@ Ammo_Canon_AP_125_mm_2A46M_T80B is TAmmunitionDescriptor
     TraitsToken                       = [ 'autoloader', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=31)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=45)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDST80' ]
     FxPower                           = EFXPower/Moyen
@@ -10727,10 +10727,10 @@ Ammo_Canon_AP_125_mm_2A46M_T80B is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 1
-    PhysicalDamages                   = 1.0
+    PhysicalDamages                   = 4.0
     ShowDamageInUI                    = False
-    RadiusSplashSuppressDamagesGRU    = 44
-    SuppressDamages                   = 85.0
+    RadiusSplashSuppressDamagesGRU    = 74
+    SuppressDamages                   = 185.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -10749,7 +10749,7 @@ Ammo_Canon_AP_125_mm_2A46M_T80B is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 60),
+            (EBaseHitValueModifier/Idling, 80),
             (EBaseHitValueModifier/Moving, 50),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -23019,18 +23019,18 @@ Ammo_FM_AKS_74 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 0.5
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 525
+    PorteeMaximaleGRU                 = 1250
+    PorteeMaximaleTBAGRU              = 1225
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 64
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 2
+    RadiusSplashPhysicalDamagesGRU    = 3
     PhysicalDamages                   = 0.045
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 6
-    SuppressDamages                   = 4.0
+    SuppressDamages                   = 16.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -23095,18 +23095,18 @@ Ammo_FM_AK_74 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 0.5
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 525
+    PorteeMaximaleGRU                 = 1250
+    PorteeMaximaleTBAGRU              = 1225
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 64
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 2
-    PhysicalDamages                   = 0.045
+    RadiusSplashPhysicalDamagesGRU    = 3
+    PhysicalDamages                   = 0.8
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 6
-    SuppressDamages                   = 4.0
+    SuppressDamages                   = 6.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -28365,10 +28365,10 @@ Ammo_HMG_12_7_mm_NSVT is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 3
-    PhysicalDamages                   = 0.3
+    PhysicalDamages                   = 3
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 4
-    SuppressDamages                   = 28.0
+    SuppressDamages                   = 68.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -28666,7 +28666,7 @@ Ammo_HMG_team_12_7_mm_NSV is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.3
-    PorteeMaximaleGRU                 = 1400
+    PorteeMaximaleGRU                 = 2400
     PorteeMinimaleGRU                 = 53
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
@@ -28674,11 +28674,11 @@ Ammo_HMG_team_12_7_mm_NSV is TAmmunitionDescriptor
     DispersionAtMinRangeGRU              = 18
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 3
-    PhysicalDamages                   = 0.3
+    RadiusSplashPhysicalDamagesGRU    = 12
+    PhysicalDamages                   = 2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 4
-    SuppressDamages                   = 28.0
+    SuppressDamages                   = 88.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -35969,18 +35969,18 @@ Ammo_Lance_grenade_AGS17 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.7
     TempsEntreDeuxFx                  = 0.7
-    PorteeMaximaleGRU                 = 1400
+    PorteeMaximaleGRU                 = 2400
     PorteeMinimaleGRU                 = 62
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
     DispersionAtMinRangeGRU              = 18
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 11
-    PhysicalDamages                   = 0.6
+    RadiusSplashPhysicalDamagesGRU    = 41
+    PhysicalDamages                   = 3
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 21
-    SuppressDamages                   = 60.0
+    RadiusSplashSuppressDamagesGRU    = 41
+    SuppressDamages                   = 120.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -35999,7 +35999,7 @@ Ammo_Lance_grenade_AGS17 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 18),
+            (EBaseHitValueModifier/Idling, 80),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -38135,8 +38135,8 @@ Ammo_MMG_PKM_7_62mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 700
+    PorteeMaximaleGRU                 = 1450
+    PorteeMaximaleTBAGRU              = 1400
     PorteeMinimaleGRU                 = 35
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
@@ -38145,7 +38145,7 @@ Ammo_MMG_PKM_7_62mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 4
-    PhysicalDamages                   = 0.147
+    PhysicalDamages                   = 0.6
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 11
     SuppressDamages                   = 15.0
@@ -46404,18 +46404,18 @@ Ammo_Pod_GUV_AGS17 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.7
     TempsEntreDeuxFx                  = 0.7
-    PorteeMaximaleGRU                 = 1400
+    PorteeMaximaleGRU                 = 2400
     PorteeMinimaleGRU                 = 62
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
     DispersionAtMinRangeGRU              = 18
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 11
-    PhysicalDamages                   = 0.6
+    RadiusSplashPhysicalDamagesGRU    = 20
+    PhysicalDamages                   = 3.6
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 21
-    SuppressDamages                   = 60.0
+    SuppressDamages                   = 90.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -46434,7 +46434,7 @@ Ammo_Pod_GUV_AGS17 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 18),
+            (EBaseHitValueModifier/Idling, 45),
             (EBaseHitValueModifier/Moving, 2),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -51643,18 +51643,18 @@ Ammo_RocketArt_M21OF_122mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.5
     TempsEntreDeuxFx                  = 0.5
-    PorteeMaximaleGRU                 = 17650
+    PorteeMaximaleGRU                 = 29650
     PorteeMinimaleGRU                 = 3534
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 424
     DispersionAtMinRangeGRU              = 212
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 113
-    PhysicalDamages                   = 1.22
+    RadiusSplashPhysicalDamagesGRU    = 313
+    PhysicalDamages                   = 12.22
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 141
-    SuppressDamages                   = 171.0
+    RadiusSplashSuppressDamagesGRU    = 541
+    SuppressDamages                   = 1071.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -51680,12 +51680,12 @@ Ammo_RocketArt_M21OF_122mm is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 1
-    TempsDeVisee                      = 20.0
-    TempsEntreDeuxSalves              = 132.0
+    TempsDeVisee                      = 2.0
+    TempsEntreDeuxSalves              = 16.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 40
-    SupplyCost                        = 800.0
+    SupplyCost                        = 40.0
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
@@ -57106,8 +57106,8 @@ Ammo_SAW_RPK_7_62mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 700
+    PorteeMaximaleGRU                 = 1750
+    PorteeMaximaleTBAGRU              = 1700
     PorteeMinimaleGRU                 = 35
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
@@ -57116,7 +57116,7 @@ Ammo_SAW_RPK_7_62mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 3
-    PhysicalDamages                   = 0.147
+    PhysicalDamages                   = 0.7
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 8
     SuppressDamages                   = 12.0
@@ -57184,8 +57184,8 @@ Ammo_SAW_RPK_74_5_56mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 525
+    PorteeMaximaleGRU                 = 1250
+    PorteeMaximaleTBAGRU              = 1225
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 64
@@ -57193,7 +57193,7 @@ Ammo_SAW_RPK_74_5_56mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 2
-    PhysicalDamages                   = 0.135
+    PhysicalDamages                   = 0.635
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 6
     SuppressDamages                   = 12.0

@@ -1395,11 +1395,11 @@ Ammo_AA_R33_Vympel is TAmmunitionDescriptor
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 104
-    PhysicalDamages                   = 8.0
+    RadiusSplashPhysicalDamagesGRU    = 144
+    PhysicalDamages                   = 16.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 170
-    SuppressDamages                   = 712.0
+    RadiusSplashSuppressDamagesGRU    = 270
+    SuppressDamages                   = 912.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -1419,8 +1419,8 @@ Ammo_AA_R33_Vympel is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 40),
-            (EBaseHitValueModifier/Moving, 40),
+            (EBaseHitValueModifier/Idling, 99),
+            (EBaseHitValueModifier/Moving, 99),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
@@ -2116,8 +2116,8 @@ Ammo_AA_R60M_Vympel_helo is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 2.0
     TempsEntreDeuxFx                  = 2.0
-    PorteeMaximaleTBAGRU              = 2125
-    PorteeMaximaleHAGRU               = 3525
+    PorteeMaximaleTBAGRU              = 7125
+    PorteeMaximaleHAGRU               = 12525
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
@@ -2146,8 +2146,8 @@ Ammo_AA_R60M_Vympel_helo is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 55),
-            (EBaseHitValueModifier/Moving, 55),
+            (EBaseHitValueModifier/Idling, 95),
+            (EBaseHitValueModifier/Moving, 95),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
     )
@@ -7161,14 +7161,14 @@ Ammo_ATGM_9M112_1_Kobra is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'manual', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_ATGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=19)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=28)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileATGMGen2' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 2625
-    PorteeMinimaleGRU                 = 353
+    PorteeMaximaleGRU                 = 2925
+    PorteeMinimaleGRU                 = 253
     AngleDispersion                   = 0.0020001473227855013
     DispersionAtMaxRangeGRU              = 18
     DispersionAtMinRangeGRU              = 16
@@ -7198,7 +7198,7 @@ Ammo_ATGM_9M112_1_Kobra is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 45),
+            (EBaseHitValueModifier/Idling, 75),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -7210,7 +7210,7 @@ Ammo_ATGM_9M112_1_Kobra is TAmmunitionDescriptor
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
-    SupplyCost                        = 30
+    SupplyCost                        = 20
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     NbrProjectilesSimultanes          = 1
@@ -13691,10 +13691,10 @@ Ammo_SAM_9M311_Tunguska_x8 is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 78
-    PhysicalDamages                   = 7.0
+    PhysicalDamages                   = 16.0
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 95
-    SuppressDamages                   = 400.0
+    SuppressDamages                   = 800.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -13714,8 +13714,8 @@ Ammo_SAM_9M311_Tunguska_x8 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 50),
-            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Idling, 90),
+            (EBaseHitValueModifier/Moving, 90),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
@@ -13832,17 +13832,17 @@ Ammo_SAM_9M330_Tor_x8 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 3.5
     TempsEntreDeuxFx                  = 3.5
-    PorteeMinimaleTBAGRU              = 1000
+    PorteeMinimaleTBAGRU              = 500
     PorteeMaximaleTBAGRU              = 3000
-    PorteeMaximaleHAGRU               = 3525
+    PorteeMaximaleHAGRU               = 9525
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 125
-    PhysicalDamages                   = 7.0
+    RadiusSplashPhysicalDamagesGRU    = 325
+    PhysicalDamages                   = 16.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 154
-    SuppressDamages                   = 644.0
+    RadiusSplashSuppressDamagesGRU    = 354
+    SuppressDamages                   = 944.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -13862,7 +13862,7 @@ Ammo_SAM_9M330_Tor_x8 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 65),
+            (EBaseHitValueModifier/Idling, 99),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -16669,14 +16669,14 @@ Ammo_SAM_Strela1_x4 is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 4.0
     PorteeMaximaleTBAGRU              = 2650
     PorteeMaximaleHAGRU               = 2475
-    AngleDispersion                   = 0.0020001473227855013
+    AngleDispersion                   = 0.000020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 43
-    PhysicalDamages                   = 5.0
+    PhysicalDamages                   = 16.0
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 52
-    SuppressDamages                   = 220.0
+    SuppressDamages                   = 620.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -16697,8 +16697,8 @@ Ammo_SAM_Strela1_x4 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 50),
-            (EBaseHitValueModifier/Moving, 40),
+            (EBaseHitValueModifier/Idling, 95),
+            (EBaseHitValueModifier/Moving, 95),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
