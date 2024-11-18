@@ -8429,6 +8429,13 @@ private DivisionRules is TDeckDivisionRules
                 [
                     TDeckUniteRule
                     (
+                        UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Ka_50_SOV
+                        AvailableWithoutTransport = True
+                        NumberOfUnitInPack = 6
+                        NumberOfUnitInPackXPMultiplier = [1.0, 1.0, 1.0, 1.0]
+                    ),
+                    TDeckUniteRule
+                    (
                         UnitDescriptor = $/GFX/Unit/Descriptor_Unit_2K12_KUB_SOV
                         AvailableWithoutTransport = True
                         NumberOfUnitInPack = 4
@@ -8990,6 +8997,13 @@ private DivisionRules is TDeckDivisionRules
             (
                 UnitRuleList =
                 [
+                    TDeckUniteRule
+                    (
+                        UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Ka_50_SOV
+                        AvailableWithoutTransport = True
+                        NumberOfUnitInPack = 6
+                        NumberOfUnitInPackXPMultiplier = [1.0, 1.0, 1.0, 1.0]
+                    ),
                     TDeckUniteRule
                     (
                         UnitDescriptor = $/GFX/Unit/Descriptor_Unit_2S1_Gvozdika_SOV

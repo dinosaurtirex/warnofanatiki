@@ -2043,8 +2043,8 @@ Ammo_AA_R60M_Vympel is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 2.0
     TempsEntreDeuxFx                  = 2.0
-    PorteeMaximaleTBAGRU              = 2125
-    PorteeMaximaleHAGRU               = 3525
+    PorteeMaximaleTBAGRU              = 12125
+    PorteeMaximaleHAGRU               = 12525
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
@@ -2073,8 +2073,8 @@ Ammo_AA_R60M_Vympel is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 55),
-            (EBaseHitValueModifier/Moving, 55),
+            (EBaseHitValueModifier/Idling, 75),
+            (EBaseHitValueModifier/Moving, 85),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
     )
@@ -2547,13 +2547,13 @@ Ammo_AGM_9K121_Vikhr_x12 is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'semiAuto', 'TANDEM', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_AGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=26)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=36)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileAGMGen3' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 2800
+    PorteeMaximaleGRU                 = 6800
     PorteeMinimaleGRU                 = 353
     AngleDispersion                   = 0.020001473227855015
     DispersionAtMaxRangeGRU              = 177
@@ -2570,7 +2570,7 @@ Ammo_AGM_9K121_Vikhr_x12 is TAmmunitionDescriptor
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    MaximalSpeedGRU                   = 777
+    MaximalSpeedGRU                   = 1277
     MaxAccelerationGRU                = 353
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
@@ -2584,8 +2584,8 @@ Ammo_AGM_9K121_Vikhr_x12 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 70),
-            (EBaseHitValueModifier/Moving, 35),
+            (EBaseHitValueModifier/Idling, 90),
+            (EBaseHitValueModifier/Moving, 75),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
@@ -3857,8 +3857,8 @@ Ammo_AGM_AGM114A_x16 is TAmmunitionDescriptor
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    MaximalSpeedGRU                   = 1060
-    MaxAccelerationGRU                = 353
+    MaximalSpeedGRU                   = 16060
+    MaxAccelerationGRU                = 1353
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
     NoiseDissimulationMalus           = 2.0
@@ -4141,8 +4141,8 @@ Ammo_AGM_AGM114A_x8 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 2800
-    PorteeMinimaleGRU                 = 353
+    PorteeMaximaleGRU                 = 12800
+    PorteeMinimaleGRU                 = 1353
     AngleDispersion                   = 0.020001473227855015
     DispersionAtMaxRangeGRU              = 177
     DispersionAtMinRangeGRU              = 177
@@ -4173,7 +4173,7 @@ Ammo_AGM_AGM114A_x8 is TAmmunitionDescriptor
         [
             (EBaseHitValueModifier/Base, 0.0),
             (EBaseHitValueModifier/Idling, 70),
-            (EBaseHitValueModifier/Moving, 50),
+            (EBaseHitValueModifier/Moving, 70),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
@@ -14875,8 +14875,8 @@ Ammo_SAM_I_Hawk is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 3.5
     TempsEntreDeuxFx                  = 3.5
-    PorteeMaximaleTBAGRU              = 2650
-    PorteeMaximaleHAGRU               = 4950
+    PorteeMaximaleTBAGRU              = 12650
+    PorteeMaximaleHAGRU               = 12950
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
@@ -14949,8 +14949,8 @@ Ammo_SAM_I_Hawk_x3 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 4.5
     TempsEntreDeuxFx                  = 4.5
-    PorteeMaximaleTBAGRU              = 3175
-    PorteeMaximaleHAGRU               = 5650
+    PorteeMaximaleTBAGRU              = 12175
+    PorteeMaximaleHAGRU               = 12650
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0

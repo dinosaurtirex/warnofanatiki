@@ -1045,6 +1045,7 @@ Descriptor_Deck_Division_SOV_27_Gds_Rifle_multi is TDeckDivisionDescriptor
     DescriptionHintTitleToken = 'QTEOMZACJF'
     PackList = MAP
     [
+        (~/Descriptor_Deck_Pack_Ka_50_SOV_3, 3),
         (~/Descriptor_Deck_Pack_2S1_Gvozdika_SOV, 2),
         (~/Descriptor_Deck_Pack_2S23_Nona_SVK_SOV, 2),
         (~/Descriptor_Deck_Pack_2S3M1_Akatsiya_SOV, 2),

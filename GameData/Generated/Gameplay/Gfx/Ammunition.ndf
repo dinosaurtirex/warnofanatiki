@@ -941,7 +941,7 @@ Ammo_AutoCanon_AP_30mm_M230 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
-    PorteeMaximaleGRU                 = 1750
+    PorteeMaximaleGRU                 = 3750
     PorteeMinimaleGRU                 = 35
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
@@ -2120,7 +2120,7 @@ Ammo_AutoCanon_HE_30mm_M230 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
-    PorteeMaximaleGRU                 = 1750
+    PorteeMaximaleGRU                 = 3750
     PorteeMaximaleTBAGRU              = 1425
     PorteeMinimaleGRU                 = 35
     AffecteParNombre                  = True
@@ -27037,9 +27037,9 @@ Ammo_GatlingAir_Gsh_30_1_30mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.2
-    PorteeMaximaleGRU                 = 2100
-    PorteeMaximaleTBAGRU              = 2825
-    PorteeMaximaleHAGRU               = 3175
+    PorteeMaximaleGRU                 = 6100
+    PorteeMaximaleTBAGRU              = 6825
+    PorteeMaximaleHAGRU               = 6175
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 71
@@ -47482,7 +47482,7 @@ Ammo_RocketAir_B8_80mm_x10 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.25
-    PorteeMaximaleGRU                 = 2100
+    PorteeMaximaleGRU                 = 5100
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -47490,7 +47490,7 @@ Ammo_RocketAir_B8_80mm_x10 is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 8
-    PhysicalDamages                   = 0.8
+    PhysicalDamages                   = 1.4
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 16
     SuppressDamages                   = 80.0
@@ -48483,7 +48483,7 @@ Ammo_RocketAir_Hydra_70mm_SMOKE_x14 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.2
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 7275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 265
@@ -48560,7 +48560,7 @@ Ammo_RocketAir_Hydra_70mm_avion_SMOKE_x14 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.2
     TempsEntreDeuxFx                  = 0.2
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 265
@@ -48637,7 +48637,7 @@ Ammo_RocketAir_Hydra_70mm_x114 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.25
-    PorteeMaximaleGRU                 = 2100
+    PorteeMaximaleGRU                 = 6100
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -48714,7 +48714,7 @@ Ammo_RocketAir_Hydra_70mm_x14 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.25
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -48791,7 +48791,7 @@ Ammo_RocketAir_Hydra_70mm_x19 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.25
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -48868,7 +48868,7 @@ Ammo_RocketAir_Hydra_70mm_x19_avion is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.2
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -48945,7 +48945,7 @@ Ammo_RocketAir_Hydra_70mm_x38 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.25
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -49022,7 +49022,7 @@ Ammo_RocketAir_Hydra_70mm_x38_avion is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.2
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -49099,7 +49099,7 @@ Ammo_RocketAir_Hydra_70mm_x57 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.3
     TempsEntreDeuxFx                  = 0.25
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -49176,7 +49176,7 @@ Ammo_RocketAir_Hydra_70mm_x76 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 0.2
     TempsEntreDeuxFx                  = 0.2
-    PorteeMaximaleGRU                 = 2275
+    PorteeMaximaleGRU                 = 6275
     PorteeMinimaleGRU                 = 530
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 141
@@ -51094,7 +51094,7 @@ Ammo_RocketArt_9M27F_HE_220mm is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_MLRS
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz Index=1)
     ProjectileType                    = EProjectileType/Artillerie
-    ImpactHappening                   = [ 'RoquetteM26M270227Mm' ]
+    ImpactHappening                   = [ 'RoquetteBuratino220Mm' ]
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 2.0
     TempsEntreDeuxFx                  = 2.0
@@ -52033,18 +52033,18 @@ Ammo_RocketArt_M26_227mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 2.0
     TempsEntreDeuxFx                  = 2.0
-    PorteeMaximaleGRU                 = 42375
-    PorteeMinimaleGRU                 = 8481
+    PorteeMaximaleGRU                 = 92375
+    PorteeMinimaleGRU                 = 1481
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 424
     DispersionAtMinRangeGRU              = 212
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 168
-    PhysicalDamages                   = 2.27
+    RadiusSplashPhysicalDamagesGRU    = 368
+    PhysicalDamages                   = 59.27
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 198
-    SuppressDamages                   = 306.0
+    RadiusSplashSuppressDamagesGRU    = 498
+    SuppressDamages                   = 906.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
