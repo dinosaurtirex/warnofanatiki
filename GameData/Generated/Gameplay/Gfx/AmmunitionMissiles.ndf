@@ -7389,13 +7389,13 @@ Ammo_ATGM_9M113_KonkursM is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'manual', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_ATGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=20)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=23)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileATGMGen2' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 2625
+    PorteeMaximaleGRU                 = 3025
     PorteeMinimaleGRU                 = 353
     AngleDispersion                   = 0.0020001473227855013
     DispersionAtMaxRangeGRU              = 18
@@ -7426,7 +7426,7 @@ Ammo_ATGM_9M113_KonkursM is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 50),
+            (EBaseHitValueModifier/Idling, 65),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -7465,13 +7465,13 @@ Ammo_ATGM_9M113_KonkursM_late is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'manual', 'TANDEM', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_ATGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=23)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=25)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileATGMGen2' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 2625
+    PorteeMaximaleGRU                 = 3025
     PorteeMinimaleGRU                 = 353
     AngleDispersion                   = 0.0020001473227855013
     DispersionAtMaxRangeGRU              = 18
@@ -7502,7 +7502,7 @@ Ammo_ATGM_9M113_KonkursM_late is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 55),
+            (EBaseHitValueModifier/Idling, 70),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -7997,7 +7997,7 @@ Ammo_ATGM_9M119M_Refleks is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'manual', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_ATGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=21)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=31)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileATGMGen3' ]
     FxPower                           = EFXPower/UltraLourd
@@ -8034,7 +8034,7 @@ Ammo_ATGM_9M119M_Refleks is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 60),
+            (EBaseHitValueModifier/Idling, 90),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -10809,13 +10809,13 @@ Ammo_ATGM_9K115_Metis_M is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'manual', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_ATGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=17)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=19)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileATGMGen2' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 1250
+    PorteeMaximaleGRU                 = 2550
     PorteeMinimaleGRU                 = 177
     AngleDispersion                   = 0.0020001473227855013
     DispersionAtMaxRangeGRU              = 18
@@ -10846,7 +10846,7 @@ Ammo_ATGM_9K115_Metis_M is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 60),
+            (EBaseHitValueModifier/Idling, 65),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
@@ -13685,8 +13685,8 @@ Ammo_SAM_9M311_Tunguska_x8 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 4.0
     TempsEntreDeuxFx                  = 4.0
-    PorteeMaximaleTBAGRU              = 3000
-    PorteeMaximaleHAGRU               = 3525
+    PorteeMaximaleTBAGRU              = 9000
+    PorteeMaximaleHAGRU               = 9525
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
@@ -13833,7 +13833,7 @@ Ammo_SAM_9M330_Tor_x8 is TAmmunitionDescriptor
     TempsEntreDeuxTirs                = 3.5
     TempsEntreDeuxFx                  = 3.5
     PorteeMinimaleTBAGRU              = 500
-    PorteeMaximaleTBAGRU              = 3000
+    PorteeMaximaleTBAGRU              = 9000
     PorteeMaximaleHAGRU               = 9525
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
@@ -13862,7 +13862,7 @@ Ammo_SAM_9M330_Tor_x8 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 99),
+            (EBaseHitValueModifier/Idling, 85),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
