@@ -1,0 +1,17 @@
+export Modele_FV101_Scorpion_UK is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Char/FV101_Scorpion/FV101_Scorpion.fbx'
+)
+
+export Modele_FV101_Scorpion_UK_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Char/FV101_Scorpion_MID/FV101_Scorpion_MID.fbx'
+)
+
+export Modele_FV101_Scorpion_UK_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Char/LODS/FV101_Scorpion_LOW.fbx'
+)
+
+
+

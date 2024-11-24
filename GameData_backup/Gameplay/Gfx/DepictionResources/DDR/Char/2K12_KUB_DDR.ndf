@@ -1,0 +1,14 @@
+export Modele_2K12_KUB_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/DCA/2K12_KUB/2K12_KUB.fbx'
+)
+
+export Modele_2K12_KUB_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/DCA/2K12_KUB_MID/2K12_KUB_MID.fbx'
+)
+
+export Modele_2K12_KUB_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/DCA/LODS/2K12_KUB_LOW.fbx'
+)

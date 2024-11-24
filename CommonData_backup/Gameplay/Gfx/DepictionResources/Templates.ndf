@@ -1,0 +1,9 @@
+template ModelDescriptor
+[
+    FileName : string,
+    TextureDirectory : string = '',
+] is TResourceMultiMaterialMesh
+(
+    FileName = <FileName>
+    TextureDirectory = <TextureDirectory>
+)

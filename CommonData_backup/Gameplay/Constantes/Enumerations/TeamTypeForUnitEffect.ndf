@@ -1,0 +1,10 @@
+// A garder synchro avec EffectExporter.py et TeamIdentifierForUnitEffect.h
+
+ETeamTypeForUnitEffect is TBaseClass
+(
+    Undefined       is 0
+    Caster          is 1
+    Neutral         is 2
+    Target          is 3
+    Number          is 4
+)

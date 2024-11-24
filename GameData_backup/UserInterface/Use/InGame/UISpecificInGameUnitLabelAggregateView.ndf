@@ -1,0 +1,37 @@
+//--------------------------------------------------------------------------
+// LabelRackDescriptor
+//--------------------------------------------------------------------------
+LabelRackMainComponentDescriptor is TLabelRackDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableOffset = [0.0, 0.0]
+        AlignementToFather = [0.5, 0.5]
+        AlignementToAnchor = [0.5, 0.5]
+    )
+
+    RowAlignementToFather = [0.5, 0.0]
+    RowAlignementToAnchor = [0.5, 0.0]
+    OneLabelMagnifiableWidthHeight = [UnitLabelAggregationWidth, UnitLabelAggregationHeight]
+
+    DistrictComponent =
+        BUCKTextureDescriptor
+        (
+            ElementName = "DistrictIcon"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [53.0, 55.0]
+                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.5, 0.5]
+            )
+
+            TextureToken = "UseInGame_District"
+            TextureFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+        )
+)
+
+UISpecificInGameLabelRackForAggregation is TUISpecificInGameLabelRackDescriptor
+(
+    MainComponentDescriptor = ~/LabelRackMainComponentDescriptor
+    UnitLabelResources = ~/SpecificInGameUnitLabelResources
+)

@@ -1,0 +1,14 @@
+export Modele_AH64_Apache_NG_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/AH64A_Apache_NG/AH64A_Apache_NG.fbx'
+)
+
+export Modele_AH64_Apache_NG_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/AH64A_Apache_NG/AH64A_Apache_NG.fbx'
+)
+
+export Modele_AH64_Apache_NG_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/AH64A_Apache_NG/AH64A_Apache_NG.fbx'
+)

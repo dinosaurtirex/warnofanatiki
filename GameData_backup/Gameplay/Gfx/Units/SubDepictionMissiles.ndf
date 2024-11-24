@@ -1,0 +1,175 @@
+private LodHighNoneLimit_Missile is 400  //100
+
+template DepictionMissileSelector
+[
+    PhysicalProperty,
+    Value
+]
+is TSubDepictionMissileSelector
+(
+    HighNoneLimitInMeter = LodHighNoneLimit_Missile
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+    PhysicalProperty = <PhysicalProperty>
+    ThresholdAsUInt = <Value>
+)
+
+template DepictionInstancedMissilesSelector
+[
+    PhysicalProperty,
+]
+is TSubDepictionInstancedMissilesSelector
+(
+    HighNoneLimitInMeter = LodHighNoneLimit_Missile
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+    PhysicalProperty = <PhysicalProperty>
+)
+
+template DepictionInstancedRocketsSelector
+[
+    PhysicalProperty,
+    VisibleRocketCount,
+]
+is TSubDepictionInstancedRocketsSelector
+(
+    HighNoneLimitInMeter = LodHighNoneLimit_Missile
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+    PhysicalProperty = <PhysicalProperty>
+    VisibleRocketCount = <VisibleRocketCount>
+)
+
+template DepictionTowedMissileSelector
+[
+    TowedUnit,
+    Value
+] is TSubDepictionTowedMissileSelector
+(
+    HighNoneLimitInMeter = LodHighNoneLimit_Missile
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+    ThresholdAsUInt = <Value>
+    TowedUnit = <TowedUnit>
+)
+
+template TemplateDepictionMissile
+[
+    Selector,
+    ProjectileModelResource,
+    ShadowLessInitialValue,
+]
+is TDepictionTemplate
+(
+    ResidentMaterialTags = [ MaterialTagMech ]
+    AdditionalTextures = $/M3D/Shader/VehicleDestTextures
+    ShadowLessInitialValue = <ShadowLessInitialValue>
+    Selector = <Selector>
+    DepictionAlternatives = [
+        TDepictionDescriptor(
+            SelectorId = [LOD_High]
+            MeshDescriptor = <ProjectileModelResource>
+            ),
+    ]
+)
+
+template TemplateDepictionMissileTowed
+[
+    TowedUnit,
+    MissileNumber,
+    ProjectileModelResource
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = False
+    Selector = DepictionTowedMissileSelector( TowedUnit = <TowedUnit> Value = <MissileNumber> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionMissileGroundUnit
+[
+    PhysicalProperty,
+    MissileNumber,
+    ProjectileModelResource
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = False
+    Selector = DepictionMissileSelector( PhysicalProperty = <PhysicalProperty> Value = <MissileNumber> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionStaticMissilesGroundUnit
+[
+    PhysicalProperty,
+    ProjectileModelResource
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = False
+    Selector = DepictionInstancedMissilesSelector( PhysicalProperty = <PhysicalProperty> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionStaticRocketsGroundUnit
+[
+    PhysicalProperty,
+    ProjectileModelResource,
+    VisibleRocketCount,
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = False
+    Selector = DepictionInstancedRocketsSelector( PhysicalProperty = <PhysicalProperty> VisibleRocketCount = <VisibleRocketCount> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionStaticRocketsAirUnit
+[
+    PhysicalProperty,
+    ProjectileModelResource,
+    VisibleRocketCount,
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = True
+    Selector = DepictionInstancedRocketsSelector( PhysicalProperty = <PhysicalProperty> VisibleRocketCount = <VisibleRocketCount> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionMissileAirUnit
+[
+    PhysicalProperty,
+    MissileNumber,
+    ProjectileModelResource
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = True
+    Selector = DepictionMissileSelector( PhysicalProperty = <PhysicalProperty> Value = <MissileNumber> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionStaticMissilesAirUnit
+[
+    PhysicalProperty,
+    ProjectileModelResource
+]
+is TemplateDepictionMissile
+(
+    ShadowLessInitialValue = True
+    Selector = DepictionInstancedMissilesSelector( PhysicalProperty = <PhysicalProperty> )
+    ProjectileModelResource = <ProjectileModelResource>
+)
+
+template TemplateDepictionMissileShowroom
+[
+    ProjectileModelResource
+]
+is TDepictionTemplate
+(
+    Selector = OnlyHighDepictionSelector
+    DepictionAlternatives = [
+        TDepictionDescriptor(
+            SelectorId = [LOD_High]
+            MeshDescriptor = <ProjectileModelResource>
+            )
+    ]
+)
+

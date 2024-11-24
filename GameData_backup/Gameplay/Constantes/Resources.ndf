@@ -1,0 +1,7 @@
+unnamed TSpecificResourcesAccesser
+(
+    CommandPointResource = $/GFX/Resources/Resource_CommandPoints
+    StrategicPointResource = $/GFX/Resources/Resource_StrategicPoints
+    TicketResource = $/GFX/Resources/Resource_Tickets
+    FactoryResources = ~/FactoryResources
+)

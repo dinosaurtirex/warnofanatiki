@@ -1,0 +1,39 @@
+private Private_ModelFile_TestUnit_ModelTank is 'CommonData:/Assets/3D/Units/Tests/Char/Char_Test.fbx'
+private Private_ModelFile_TestUnit_ModelVehicule is 'CommonData:/Assets/3D/Units/Tests/Vehicule/Vehicule_Test.fbx'
+private Private_ModelFile_TestUnit_ModelHelico is 'CommonData:/Assets/3D/Units/Tests/Helico/Helico_Test.fbx'
+private Private_ModelFile_TestUnit_ModelAvion is 'CommonData:/Assets/3D/Units/Tests/Avion/Avion_Test.fbx'
+private Private_ModelFile_TestUnit_ModelBateau is 'CommonData:/Assets/3D/Units/Tests/Bateau/Bateau_Test.fbx'
+private Private_ModelFile_TestUnit_ModelInfantry is 'CommonData:/Assets/3D/Units/Tests/Infanterie/Infanterie_Test.fbx'
+private Private_ModelFile_TestUnit_ModelBuilding is 'CommonData:/Assets/3D/Building/Tests/BaseBuilding_Batiment_Placeholder.fbx'
+
+
+export Modele_TestUnit_Tank is ModelDescriptor
+(
+    FileName = Private_ModelFile_TestUnit_ModelTank
+)
+
+export Modele_TestUnit_Vehicule is ModelDescriptor
+(
+    FileName = Private_ModelFile_TestUnit_ModelVehicule
+)
+
+export Modele_TestUnit_Helico is ModelDescriptor
+(
+    FileName = Private_ModelFile_TestUnit_ModelHelico
+)
+
+export Modele_TestUnit_Avion is ModelDescriptor
+(
+    FileName = Private_ModelFile_TestUnit_ModelAvion
+)
+
+export Modele_TestUnit_Bateau is ModelDescriptor
+(
+    FileName = Private_ModelFile_TestUnit_ModelBateau
+)
+
+export Modele_TestUnit_Infantry is ModelDescriptor
+(
+    FileName = Private_ModelFile_TestUnit_ModelInfantry
+)
+

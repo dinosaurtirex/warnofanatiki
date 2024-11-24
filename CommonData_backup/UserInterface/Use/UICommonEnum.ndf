@@ -1,0 +1,215 @@
+
+//Enum a maintenir synchro avec UISmartText.h
+BigLineAction is TBaseClass
+(
+    CutByDots   is 0
+    MultiLine   is 1
+    BalancedMultiline is 2
+    ResizeFont  is 3
+    Banner      is 4
+)
+
+ColorMode is TBaseClass
+(
+    Multiply   is 0
+    Override   is 1
+    Deprecated is 2
+)
+
+//Enum a maintenir synchro avec BuckDescriptor.h
+TBorderSide is TBaseClass
+(
+    Default is 0 //Par défaut All pour les FramedComponent (un booléen permet d'indiquer l'absence de Border)
+    Top is 1
+    Bottom is 2
+    Left is 4
+    Right is 8
+    All is 15
+)
+
+FitStyle is TBaseClass
+(
+    UserDefined is 0
+    FitToParent is 1
+    FitToContent is 2
+    MaxBetweenParentAndContent is 3
+    MinBetweenParentAndContent is 4
+    MaxBetweenUserDefinedAndContent is 5
+    MinBetweenUserDefinedAndContent is 6
+)
+
+BreadthComputationMode is TBaseClass
+(
+    ComputeBreadthFromFrameProperty is 0
+    ComputeBreadthFromLargestChild is 1
+    ComputeBreadthFromLargestBetweenFatherAndChildren is 2
+)
+
+
+TacticCubeActionFunctionType is TBaseClass
+(
+    Orders is 1
+    TogglableOrders is 2
+    SmartOrders is 3
+)
+
+StrategicCubeActionFunctionType is TBaseClass
+(
+    Orders is 1
+    TogglableOrders is 2
+)
+
+//A maintenir synchro avec UIGenericOffscreenContainer.h
+TransitionType is TBaseClass
+(
+    None is 0
+    Fade is 1
+    FadeZoom is 2
+    TranslateZoomFade is 3
+)
+
+ListAxis is TBaseClass
+(
+    Horizontal is 0
+    Vertical is 1
+)
+
+// Maintenir synchro avec BUCKBeveledComponent.h
+CornerToDraw is TBaseClass
+(
+    None       is 0
+    UpperLeft  is 1
+    UpperRight is 2
+    LowerLeft  is 3
+    LowerRight is 4
+)
+
+// Maintenir synchro avec UICommonCheckBox.h
+CheckBoxFullState is TBaseClass
+(
+    // bits 0-1 : état décoché/coché/indeterminé
+    UNCHECKED       is 0x0
+    CHECKED         is 0x1
+    INDETERMINATE   is 0x2
+    // bit 2 : état inactif/actif
+    INACTIVE        is 0x0
+    ACTIVE          is 0x4
+    // bits 3-4 : état sans pointeur/survolé/pressé
+    UNTOUCHED       is 0x0
+    HOVERED         is 0x8
+    PRESSED         is 0x10
+)
+
+// Maintenir synchro avec TextStyle.h
+BigWordAction is TBaseClass
+(
+    BigWordNewLine  is 1
+    BigWordCut      is 2 // Not Implemented yet
+    BigWordLetRun   is 3
+)
+
+//Maintenir synchro avec UIGenericEditableText.h
+EditableTextFlag is TBaseClass
+(
+    H_CENTER is 0x0001
+    H_LEFT is 0x0002
+    V_TOP  is 0x0010
+    ONE_LINE is 0x0200
+    HIDE_CHARACTERS is 0x0800
+    COPY_DISABLED is 0x1000
+    PASTE_DISABLED is 0x2000
+    INPUT_DISABLED is 0x4000
+
+    PASSWORD is HIDE_CHARACTERS | COPY_DISABLED
+    READ_ONLY is PASTE_DISABLED | INPUT_DISABLED
+)
+
+// Maintenir synchro avec UIComponentState.h
+ComponentState is TBaseClass
+(
+    Normal                  is 0
+    Highlighted             is 1
+    Clicked                 is 2
+    Toggled                 is 3
+    ToggleHighlighted       is 4
+    ToggleClicked           is 5
+    Grayed                  is 6
+    ToggleGrayed            is 7
+    Intermediate            is 8
+    IntermediateHighlighted is 9
+)
+
+//Maintenir synchro avec BUCKContainer.h
+ContainerFitStyle is TBaseClass
+(
+    None                        is 0
+    FitToContentHorizontally    is 1
+    FitToContentVertically      is 2
+    FitToContent                is 3
+    FitToLargestBetweenChildAndParentHorizontally is 8
+    FitToLargestBetweenChildAndParentVertically is 16
+    FitToLargestBetweenChildAndParent is 24
+    MaxBetweenUserDefinedAndContentHorizontally is 32
+    MaxBetweenUserDefinedAndContentVertically is 64
+    MaxBetweenUserDefinedAndContent is 96
+)
+
+//Maintenir synchro avec UICommonModalManager.h
+ModalPriority is TBaseClass
+(
+    LDHint      is 0
+    Low         is 1
+    Normal      is 2
+    High        is 3
+)
+
+//Maintenir synchro aveec UIAnimFactor.h
+// Note : in the explanations of the modificators, the times '0', '1', 't0', 't1' etc. are relatives to the animation duration and have to be within [0.0, 1.0]
+// Note : if there are 2 parameters, the animation is at its start position at t0, and end position at t1.
+// Note : when rewinding, the animation is reversed. Hence, an animation which is faster at the beginning, will be faster at the end when rewinding.
+AnimModificator is TBaseClass
+(
+    None                    is 0        // Linear translation between 0 and 1.
+    CubicBezier             is 1        // Need 4 ModificatorParameters t0 to t3. Bezier animation using the 4 parameters.
+    LinearStep              is 2        // Need 2 ModificatorParameters t0 and t1. No animation between 0 and t0, linear in [t0, t1] and nothing after t1
+    CubicStep               is 3        // Need 2 ModificatorParameters t0 and t1. No animation between 0 and t0, cubic in [t0, t1] and nothing after t1
+    LinearRect              is 4        // Need 4 ModificatorParameters t0 to t3. Linear in each segment. Between t1 and t2, the animation is at its final position, and at t3 at its beginning
+    CubicRect               is 5        // Need 4 ModificatorParameters t0 to t3. Cubic in each segment. Between t1 and t2, the animation is at its final position, and at t3 at its beginning
+    NSawTooth               is 6        // Need 1 ModificatorParameter N. The animation will be played N times (each one being N times shorter that the requested total duration)
+    SquareAccelerate        is 7        // No parameter
+    SquareDecelerate        is 8        // No parameter
+    QuadraDecelerate        is 9        // No parameter
+    ParabolicArch           is 10       // No parameter
+    SquareTooth             is 11       // No parameter
+    InvMaxed                is 12       // Need 1 ModificatorParameter f. No idea what this is supposed to do
+)
+
+//Maintenir synchro avec UIGenericTextureComponent.h
+TextureResizeMode is TBaseClass
+(
+    UserDefined                is 0
+    FitToContent               is 1
+    FitToParent                is 2
+    VerticalFitToParent        is 3
+    HorizontalFitToParent      is 4
+    FitToParentConservingRatio is 5
+)
+
+//Maintenir synchro avec BUCKMultiList.h
+MultiListSorting is TBaseClass
+(
+    None                        is 0
+    Bool                        is 1
+    Integer                     is 2
+    Float                       is 3
+    String                      is 4
+    StringStartingWithNumber    is 5
+)
+
+//Maintenir synchro avec BUCKSensibleArea.h
+AreaShape is TBaseClass
+(
+    Rect           is 0
+    Disc           is 1
+    Length         is 2
+)

@@ -1,0 +1,17 @@
+export Modele_BTR_60_CMD_DDR is ModelDescriptor
+(
+    FileName = ModelFile_BTR_60_CMD_SOV
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/CMD/BTR_60_CMD/'
+)
+
+export Modele_BTR_60_CMD_DDR_MID is ModelDescriptor
+(
+    FileName = ModelFile_BTR_60_CMD_MID_SOV
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/CMD/BTR_60_CMD_MID/'
+)
+
+export Modele_BTR_60_CMD_DDR_LOW is ModelDescriptor
+(
+    FileName = ModelFile_BTR_60_CMD_SOV_LOW
+    TextureDirectory = 'GameData:/Assets/3D/Units/DDR/CMD/BTR_60_CMD_LOW/'
+)

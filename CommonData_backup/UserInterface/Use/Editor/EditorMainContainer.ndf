@@ -1,0 +1,112 @@
+private EditorDefaultButtonHeight is 38.0
+private EditorDefaultButtonDims is [ 168.0, EditorDefaultButtonHeight ]
+
+private EditorActionButtonContainer is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, EditorDefaultButtonDims[1] + 4.0]
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    HasBackground = true
+    BackgroundBlockColorToken = "Editor/Container/Background"
+
+    HasBorder = true
+    BorderThicknessToken = "1"
+    BorderLineColorToken = "Editor/Container/Border"
+
+    Components = [
+        // TOO : Ajouter les composants ici
+    ]
+)
+
+private EditorPossibleComponenentContainer is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 0.0]
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    HidePointerEvents = true
+
+    HasBackground = true
+    BackgroundBlockColorToken = "Editor/Container/Background"
+
+    HasBorder = true
+    BorderThicknessToken = "1"
+    BorderLineColorToken = "Editor/Container/Border"
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ElementName = "PossibleComponentList"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+
+            ClipContent = true
+
+            InterItemMargin = TRTTILength
+            (
+                Magnifiable = 2.0
+            )
+        )
+    ]
+)
+
+private LeftPanelContent is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [0.25, 0.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+
+    ClipContent = true
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/EditorActionButtonContainer
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/EditorPossibleComponenentContainer
+            ExtendWeight = 1.0
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [1.0, 0.0]
+                )
+            )
+            ExtendWeight = 1.0
+        ),
+    ]
+)
+
+EditorMainContainer is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    Components =
+    [
+        ~/LeftPanelContent
+    ]
+)

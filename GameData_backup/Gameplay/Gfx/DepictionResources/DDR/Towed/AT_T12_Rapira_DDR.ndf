@@ -1,0 +1,14 @@
+export Modele_AT_T12_Rapira_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Canon/AT_T12_Rapira/AT_T12_Rapira.fbx'
+)
+
+export Modele_AT_T12_Rapira_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Canon/AT_T12_Rapira_MID/AT_T12_Rapira_MID.fbx'
+)
+
+export Modele_AT_T12_Rapira_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Canon/LODS/AT_T12_Rapira_LOW.fbx'
+)

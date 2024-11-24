@@ -1,0 +1,19 @@
+export Modele_MiG_25RBF_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MiG_25RBF/MiG_25RBF.fbx'
+)
+
+export Modele_MiG_25RBF_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MiG_25RBF/MiG_25RBF.fbx'
+)
+
+export Modele_MiG_25RBF_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MiG_25RBF/MiG_25RBF.fbx'
+)
+
+export Modele_MiG_25RBF_SOV_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/MiG_25RBF/MiG_25RBF_train.fbx'
+)

@@ -1,0 +1,1091 @@
+
+PanelDeSelectionUnique is BUCKListDescriptor
+(
+    ElementName = 'SelectionPanelAndWeaponButtons'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 120.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    HidePointerEvents = true
+    Axis = ~/ListAxis/Horizontal
+    FirstMargin = TRTTILength (Magnifiable = 0.0)
+    InterItemMargin = TRTTILength( Magnifiable = 2.0 )
+
+    Elements =
+    [
+        // Selection Panel Button
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/PanelSelectionUnique_Nom
+        ),
+         // RoE
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ElementName = "PanelSelectionUnique_RoeShortcuts"
+                UniqueName = "PanelSelectionUniqueRoeShortcuts"
+
+                ComponentFrame = TUIFramePropertyRTTI()
+
+                FitStyle = ~/ContainerFitStyle/FitToContent
+
+                // envoie PanelSelectionUnique_RoeShortcutsContainer
+
+            )
+        ),
+        // Weapon buttons
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/PanelSelectionUnique_ListeDesArmes
+        ),
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner
+        (
+            Radius = 8
+            BackgroundBlockColorToken = 'TypeC'
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+private largeurPaneldetailUnit is 168.0
+// Main container for selection panel button
+PanelSelectionUnique_Nom is BUCKButtonDescriptor
+(
+    ElementName = "SelectionPanelButton"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight  = [~/largeurPaneldetailUnit, 120.0]
+        AlignementToAnchor = [0.0, 0.5]
+        AlignementToFather = [0.0, 0.5]
+    )
+
+    IsTogglable = true
+    Mapping = $/KeyboardOption/Mapping_ShowUnitInfos
+
+    Components =
+    [
+        PanelRoundedCorner
+        (
+            Radius = 8
+            BorderLineColorToken = "BoutonTemps_Line"
+            RoundedVertexes = [true, true, false, false]
+        ),
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+            FirstMargin = TRTTILength( Magnifiable = 4.0)
+
+            Elements =
+            [
+                // Nom de l'unité
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/SelectionPanelUnitTypeName
+                ),
+                // Nom du chef + CarriedUnit
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/NomDefamilleEtCarriedUnit
+                ),
+                // affichage PV
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/AffichagePV
+                ),
+                // interstice
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0.0, 4.0]
+                        )
+                    )
+                ),
+                // Expérience & status
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/SelectionPanelStressStatus
+                ),
+                // interstice
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0.0, 4.0]
+                        )
+                    )
+                ),
+                // Fuel
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/AffichageFuel
+                ),
+            ]
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+private NomDefamilleEtCarriedUnit is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
+    )
+
+    Components =
+    [
+        ~/SelectionPanel_nomsoldat,
+        ~/SelectionPanelCarriedUnitIcon,
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                AlignementToFather = [1.0, 0.0]
+                AlignementToAnchor = [1.0, 0.0]
+            )
+
+            FirstMargin = TRTTILength(Magnifiable = 8.0)
+            InterItemMargin = TRTTILength(Magnifiable = 8.0)
+            LastMargin = TRTTILength(Magnifiable = 8.0)
+            Axis = ~/ListAxis/Horizontal
+
+            Elements =
+            [
+                // ExpérienceName
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/ExperienceName
+                ),
+                // Expérience
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = ~/SelectionPanelUnitExperience
+                ),
+            ]
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+private AffichageNomEtPV is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+
+    FirstMargin = TRTTILength( Magnifiable = 5.0 )
+    InterItemMargin = TRTTILength( Magnifiable = 2.0 )
+    LastMargin = TRTTILength( Magnifiable = 5.0 )
+
+    Elements =
+    [
+        // Nom de l'unité
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/SelectionPanelUnitTypeName
+        ),
+        // affichage PV
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/AffichagePV
+        ),
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner (BackgroundBlockColorToken = 'Transparent')
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+private SelectionPanel_nomsoldat is BUCKTextDescriptor
+(
+    ElementName = 'UnitName'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+        AlignementToFather = [0.5, 0.5]
+        AlignementToAnchor = [0.5, 0.5]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+
+    TextStyle = "Default"
+
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle = ~/FitStyle/UserDefined
+    TypefaceToken = "Eurostyle"
+    BigLineAction = ~/BigLineAction/CutByDots
+
+    TextDico = ~/LocalisationConstantes/dico_units
+
+    TextColor = "White"
+    TextSize = "14"
+
+    // Hints
+    Hint = BUCKSpecificHintableArea
+    (
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+        HintTitleToken = "HSL_NAMET"
+        HintBodyToken = "HSL_NAMEB"
+        HintExtendedToken = "HSL_NAMEE"
+    )
+)
+
+// -------------------------------------------------------------------------------------------------
+
+private SelectionPanelStressStatus is BUCKContainerDescriptor
+(
+    ElementName = "StressStatusContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [-8.0, 24.0]
+        AlignementToFather  = [0.5, 0.0]
+        AlignementToAnchor  = [0.5, 0.0]
+    )
+
+    // HasBackground = true
+    BackgroundBlockColorToken = 'Orange'
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather  = [0.5, 0.5]
+                AlignementToAnchor  = [0.5, 0.5]
+            )
+            HasBackground = true
+            BackgroundBlockColorToken = 'Red'
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+            Axis = ~/ListAxis/Horizontal
+
+            Elements =
+            [
+                // nom de  la munition
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [72,16]
+                            )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Center
+                            VerticalAlignment = UIText_VerticalCenter
+                            InterLine = 0
+                        )
+
+                        TextStyle = "Default"
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle = ~/FitStyle/UserDefined
+
+                        TypefaceToken =   "Liberator"
+                        BigLineAction = ~/BigLineAction/CutByDots
+
+                        TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                        TextToken = "ST_MORAL"
+                        TextPadding = TRTTILength4(Magnifiable = [4.0, 4.0, 4.0, 4.0])
+                        TextColor = "BlancEquipe"
+                        TextSize = "12"
+
+                        // Hints
+                        Hint = BUCKSpecificHintableArea
+                        (
+                            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                            HintTitleToken = 'pi_mor'
+                            HintBodyToken = 'pi_morb'
+                        )
+
+                        Components =
+                        [
+                            PanelRoundedCorner
+                            (
+                                RoundedVertexes = [true, true, false, false]
+                                Radius = 4
+                            )
+                        ]
+                    )
+                ),
+                // valeur moral
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ElementName = 'StressStatus'
+
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [72,16]
+
+                            )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Center
+                            VerticalAlignment = UIText_VerticalCenter
+                            InterLine = 0
+                        )
+
+                        TextStyle = "Default"
+
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle   = ~/FitStyle/UserDefined
+                        TypefaceToken = "UIMainFont"
+                        BigLineAction = ~/BigLineAction/CutByDots
+                        TextPadding = TRTTILength4( Magnifiable = [4.0, 4.0, 4.0, 4.0] )
+
+                        TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+                        TextColor = "BlancEquipe"
+                        TextSize = "12"
+
+                        Hint = BUCKSpecificHintableArea
+                        (
+                            ElementName = "StressStatusHint"
+                            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                        )
+
+                        Components =
+                        [
+                            PanelRoundedCorner
+                            (
+                                RoundedVertexes = [false, false, true, true]
+                                Radius = 4
+
+                            )
+                        ]
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+private AffichageFuel is BUCKContainerDescriptor
+(
+    ElementName = 'AffichageFuel'
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0, 16.0]
+        AlignementToFather  = [0.5, 0.0]
+        AlignementToAnchor  = [0.5, 0.0]
+    )
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                AlignementToFather  = [0.5, 0.0]
+                AlignementToAnchor  = [0.5, 0.0]
+            )
+
+        Axis = ~/ListAxis/Horizontal
+        InterItemMargin = TRTTILength(Magnifiable = 2)
+        Elements =
+        [
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKTextDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        // AlignementToAnchor = [0.5, 0.0]
+                        // AlignementToFather = [0.5, 0.0]
+                    )
+
+                    ParagraphStyle = TParagraphStyle
+                    (
+                        Alignment = UIText_Center
+                        VerticalAlignment = UIText_VerticalCenter
+                        InterLine = 0
+                    )
+
+                    TextStyle = "Default"
+                    HorizontalFitStyle = ~/FitStyle/FitToContent
+                    VerticalFitStyle = ~/FitStyle/FitToContent
+
+                    TypefaceToken =   "Eurostyle"
+                    BigLineAction = ~/BigLineAction/CutByDots
+
+                    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                    TextToken = "UIPA_FUEL"
+
+                    TextColor = "BlancEquipe"
+                    TextSize = "12"
+
+                    // Hints
+                    Hint = BUCKSpecificHintableArea
+                    (
+                        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                        HintBodyToken = 'pi_fuel'
+                    )
+                )
+            ),
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKTextDescriptor
+                (
+                    ElementName = 'RemainingFuel'
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        // AlignementToAnchor = [0.5, 0.0]
+                        // AlignementToFather = [0.5, 0.0]
+                    )
+
+                    ParagraphStyle = TParagraphStyle
+                    (
+                        Alignment = UIText_Center
+                        VerticalAlignment = UIText_VerticalCenter
+                        InterLine = 0
+                    )
+
+                    TextStyle = "Default"
+
+                    HorizontalFitStyle = ~/FitStyle/FitToContent
+                    VerticalFitStyle = ~/FitStyle/FitToContent
+
+                    TypefaceToken = "UIMainFont"
+                    BigLineAction = ~/BigLineAction/CutByDots
+                    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                    TextToken = "T_SLASH3"
+
+                    TextColor =  "Blanc"
+                    TextSize = "12"
+
+                    Hint = BUCKSpecificHintableArea
+                    (
+                        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                        HintBodyToken = 'pi_fuel'
+                    )
+                )
+            ),
+        ]
+        )
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+// SelectionPanelUnitDivisionIcon
+// -------------------------------------------------------------------------------------------------
+
+// Unit Division Icon
+private SelectionPanelUnitDivisionIcon is BUCKTextureDescriptor
+(
+    ElementName = 'UnitDivisionIcon'
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [21.0, 13.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
+    )
+
+    TextureFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    // Hints à créer
+)
+
+// -------------------------------------------------------------------------------------------------
+
+// Unit name (e.g. John Doe)
+private SelectionPanelUnitName is BUCKTextDescriptor
+(
+    ElementName = 'UnitName'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+
+    TextStyle = "Default"
+
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle = ~/FitStyle/FitToContent
+    TextPadding = TRTTILength4(Magnifiable = [5.0, 0.0, 0.0, 0.0])
+    TypefaceToken = "Liberator"
+    BigLineAction = ~/BigLineAction/CutByDots
+
+    TextDico = ~/LocalisationConstantes/dico_units
+
+    TextColor = "White"
+    TextSize = "16"
+
+    // Hints
+    Hint = BUCKSpecificHintableArea
+    (
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+        HintTitleToken = "HSL_NAMET"
+        HintBodyToken = "HSL_NAMEB"
+        HintExtendedToken = "HSL_NAMEE"
+    )
+)
+// -------------------------------------------------------------------------------------------------
+
+// Experience
+private SelectionPanelUnitExperience is BUCKTextureDescriptor
+(
+    ElementName = 'ExperienceTexture'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [15.0, 15.0]
+    )
+
+    TextureFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+
+    Components =
+    [
+        BUCKSpecificHintableArea
+        (
+            ElementName = "ExperienceTextureHint"
+            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+private ExperienceName is BUCKTextDescriptor
+(
+    ElementName = 'ExperienceName'
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [70.0, 0.0]
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+
+    TextStyle = "Default"
+
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle   = ~/FitStyle/FitToContent
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/CutByDots
+
+    HasBackground = false
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+    TextColor = "Transparent"
+    TextSize = "14"
+)
+
+// -------------------------------------------------------------------------------------------------
+// SelectionPanelCarriedUnitIcon
+// -------------------------------------------------------------------------------------------------
+private SelectionPanelCarriedUnitIcon is BUCKTextureDescriptor
+(
+    ElementName = 'CarriedUnitIcon'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [20.0, 20.0]
+        MagnifiableOffset = [10.0, 0.0]
+    )
+    TextureFrame = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0])
+)
+
+// -------------------------------------------------------------------------------------------------
+// WeaponButtonsList
+// -------------------------------------------------------------------------------------------------
+
+// Horizontal list container for the weapon buttons
+private PanelSelectionUnique_ListeDesArmes is BUCKListDescriptor
+(
+    ElementName = 'WeaponButtonsList'
+    ComponentFrame = TUIFramePropertyRTTI()
+
+    Axis = ~/ListAxis/Horizontal
+    InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+    LastMargin = TRTTILength( Magnifiable = 4.0 )
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestBetweenFatherAndChildren
+
+    // Weapon Buttons connected through C++
+    // voir -> WeaponPanelWeaponButton
+    Elements = []
+)
+
+// -------------------------------------------------------------------------------------------------
+
+private AffichagePV is BUCKGaugeDescriptor
+(
+    ElementName = "DamageGauge"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [largeurPaneldetailUnit-16.0, 8.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+
+    //Bordure de la jauge
+    HasBorder = true
+    BorderThicknessToken = "1"
+    BorderLineColorToken = "H2_bleu_2"
+
+    //Une graduation tous les X PV
+    GraduationStep = 1
+
+    //Couleur des PV perdus
+    HasBackground = true
+    BackgroundBlockColorToken = "Fulda_BleuNoir"
+
+    //Graduations des PV perdus
+    GraduationThicknessToken = "1"
+    GraduationColorToken = "H2_bleu_2"
+
+    GaugeComponentNames = ['DamageGaugeValue']
+
+    Components =
+    [
+        BUCKGaugeValueDescriptor
+        (
+            ElementName = 'DamageGaugeValue'
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                // MagnifiableWidthHeight = [0,8]
+            )
+
+            //Couleur des PV restants
+            HasBackground = true
+            BackgroundBlockColorToken = "BleuPV"
+        ),
+        BUCKSpecificHintableArea
+        (
+            HintTitleToken = 'pi_dg'
+            HintBodyToken = 'pi_dgb'
+            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+        )
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+
+SelectionPanelUnitTypeName is BUCKTextDescriptor
+(
+    ElementName = "UnitType"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+
+    TextStyle = "Default"
+
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle = ~/FitStyle/UserDefined
+    TextPadding = TRTTILength4 (Magnifiable = [8.0,0.0,8.0,0.0])
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/ResizeFont
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+    TextColor = "White"
+    TextSize = "20"
+
+    // Hints
+    Hint = BUCKSpecificHintableArea
+    (
+        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+        HintBodyToken = "pi_name"
+    )
+)
+
+// ---------------------------------------------------------------------------------------------------
+
+template ShortcutButtonDescriptor
+[
+    ElementName : string = "",
+    ElementName_texture : string = "",
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [88.0, 0.0]
+        RelativeWidthHeight = [0.0, 1.0]
+    ),
+    HintTitleToken : string = "HUD_UNKN",
+    HintBodyToken : string = "HUD_UNKN",
+    HintExtendedToken : string = "HUD_UNKN",
+    TextureToken : string,
+]
+is BUCKButtonDescriptor
+(
+    UniqueName = ""
+    ComponentFrame = <ComponentFrame>
+
+    ElementName = <ElementName>
+    IsClippable = true
+
+    IsTogglable = false
+    CannotDeselect = false
+
+    MaskEvents = true
+    Mapping = nil
+
+    Components =
+    [
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                MagnifiableWidthHeight = [-4.0, -4.0]
+                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.5, 0.5]
+            )
+
+            Components =
+            [
+                PanelRoundedCorner
+                (
+                    Radius = 4
+                    BackgroundBlockColorToken = "BoutonTemps_Background"
+                    BorderLineColorToken = "BoutonTemps_Line"
+                )
+            ]
+        ),
+
+        BUCKTextDescriptor
+        (
+            ElementName = <ElementName> + "TextDescriptor"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                MagnifiableWidthHeight = [-28.0, 0.0]
+                MagnifiableOffset = [28.0, 0.0]
+                AlignementToFather = [0.0, 0.5]
+                AlignementToAnchor = [0.0, 0.5]
+            )
+
+            ParagraphStyle = TParagraphStyle
+            (
+                Alignment = UIText_Left
+                VerticalAlignment = UIText_VerticalCenter
+            )
+
+            ClipContent = true
+            TextStyle = "Default"
+
+            HorizontalFitStyle = ~/FitStyle/UserDefined
+            VerticalFitStyle = ~/FitStyle/UserDefined
+
+            BigLineAction   = ~/BigLineAction/MultiLine
+
+            TextColor       = "BlancEquipe"
+            TextSize        = "12"
+            TextDico        = ~/LocalisationConstantes/dico_interface_ingame
+            TextToken       = "ER_ROE"
+
+            TypefaceToken   = "UIMainFont"
+        ),
+
+        BUCKSpecificHintableArea
+        (
+            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+            HintTitleToken = <HintTitleToken>
+            HintBodyToken = <HintBodyToken>
+            HintExtendedToken = <HintExtendedToken>
+        ),
+
+        BUCKTextureDescriptor
+        (
+            ElementName = <ElementName_texture>
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [16.0, 16.0]
+                AlignementToAnchor = [0.0, 0.5]
+                AlignementToFather = [0.0, 0.5]
+                MagnifiableOffset = [8.0, 0.0]
+            )
+
+            TextureToken = <TextureToken>
+        )
+    ]
+)
+
+// ---------------------------------------------------------------------------------------------------
+
+template RoeShortcut
+[
+    Name : string,
+    TextureToken : string,
+    HintTitleToken : string,
+    HintBodyToken : string,
+] is ShortcutButtonDescriptor
+(
+    ElementName = <Name> + "ShortcutButton"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [88.0, 32.0]
+    )
+
+    TextureToken = <TextureToken>
+    ElementName_texture = <Name> + "ShortcutTexture"
+    HintTitleToken = <HintTitleToken>
+    HintBodyToken = <HintBodyToken>
+)
+
+// ---------------------------------------------------------------------------------------------------
+
+// list container for the roe shorctus
+private PanelSelectionUnique_RoeShortcuts is BUCKContainerDescriptor
+(
+    ElementName = "PanelSelectionUnique_RoeShortcutsContainer"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [120.0, 120.0]
+    )
+
+    HasBackground = true
+    BackgroundBlockColorToken = "TypeC"
+
+    HasBorder = true
+    BorderLineColorToken = "BoutonTemps_Line"
+
+    FitStyle = ~/ContainerFitStyle/MaxBetweenUserDefinedAndContentHorizontally
+
+    Components =
+    [
+        BUCKTextDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [0.0, 24.0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
+            )
+            FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+            ParagraphStyle = TParagraphStyle
+            (
+                Alignment = UIText_Center
+                VerticalAlignment = UIText_VerticalCenter
+                InterLine = 0
+            )
+
+            TextStyle = "Default"
+            TextToken = 'ER_TITLE'
+            VerticalFitStyle = ~/FitStyle/UserDefined
+            HorizontalFitStyle = ~/FitStyle/FitToContent
+            // TextPadding = TRTTILength4 (Magnifiable = [8.0, 0.0, 8.0, 0.0])
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+            TypefaceToken = "Liberator"
+            BigLineAction = ~/BigLineAction/CutByDots
+
+            TextColor = "White"
+            TextSize = "12"
+
+            Components =
+            [
+                BUCKGridDescriptor
+                (
+                    ElementName = 'RoeShortcutList'
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        MagnifiableOffset = [0,12]
+                    )
+
+                    FirstElementMargin = TRTTILength2(Magnifiable = [4.0, 8.0])
+                    InterElementMargin = TRTTILength2 (Magnifiable = [0.0, 0.0])
+                    LastElementMargin = TRTTILength2(Magnifiable = [4.0, 0.0])
+
+                    GridElements = MAP
+
+                    [
+                        ([0,0], RoeShortcut
+                            (
+                                Name = "RoeAdvance"
+                                TextureToken = "ROE_advance"
+                                HintTitleToken = 'ROE_adv_t'
+                                HintBodyToken = 'ROE_adv_b'
+                            )
+                        ),
+
+                         ([0,1], RoeShortcut
+                            (
+                                Name = "RoePathfind"
+                                TextureToken = "ROE_pathfind"
+                                HintTitleToken = 'ROE_move_t'
+                                HintBodyToken = 'ROE_move_b'
+                            )
+                        ),
+                         ([0,2], RoeShortcut
+                            (
+                                Name = "RoeSmartMove"
+                                TextureToken = "ROE_foot"
+                                HintTitleToken = 'ROE_foot_t'
+                                HintBodyToken = 'ROE_foot_b'
+                            )
+                        ),
+                         ([0,3], RoeShortcut
+                            (
+                                Name = "RoeResale"
+                                TextureToken = "ROE_sell"
+                                HintTitleToken = 'ROE_sell_t'
+                                HintBodyToken = 'ROE_sell_b'
+                            )
+                        ),
+                         ([1,0], RoeShortcut
+                            (
+                                Name = "RoeIdle"
+                                TextureToken = "ROE_idle"
+                                HintTitleToken = 'ROE_idle_t'
+                                HintBodyToken = 'ROE_idle_b'
+                            )
+                        ),
+                          ([1,1], RoeShortcut
+                            (
+                                Name = "RoeOutrange"
+                                TextureToken = "ROE_outranged"
+                                HintTitleToken = 'ROE_outr_t'
+                                HintBodyToken = 'ROE_outr_b'
+                            )
+                        ),
+                         ([2,0], RoeShortcut
+                            (
+                                Name = "RoeUnarmed"
+                                TextureToken = "ROE_unarmed"
+                                HintTitleToken = 'ROE_pce_t'
+                                HintBodyToken = 'ROE_pce_b'
+                            )
+                        ),
+                         ([2,1], RoeShortcut
+                            (
+                                Name = "RoeMissile"
+                                TextureToken = "ROE_atgm"
+                                HintTitleToken = 'ROE_miss_t'
+                                HintBodyToken = 'ROE_miss_b'
+                            )
+                        ),
+
+
+
+                    ]
+                )
+            ]
+        ),
+
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+
+UISpecificUnitSelectionRoeViewDescriptor is TUISpecificUnitSelectionRoeViewDescriptor
+(
+    MainComponentDescriptor = ~/PanelSelectionUnique_RoeShortcuts
+    MainComponentContainerUniqueName = "PanelSelectionUniqueRoeShortcuts" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+)
+
+// -------------------------------------------------------------------------------------------------
+
+UISpecificUnitSelectionPanelViewDescriptor is TUISpecificUnitSelectionPanelViewDescriptor
+(
+    MainComponentDescriptor = ~/PanelDeSelectionUnique
+    MainComponentContainerUniqueName = "UISpecificUnitSelectionPanelView" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    WeaponPanelExtendWeight = 1.0
+    WeaponPanelMinSize = TRTTILength( Magnifiable = 132.0 )
+    MaxNbWeaponToShow = ~/MaxNbWeaponToShowInUI
+
+    UnknownValueToken = "UK_VAL"
+    UnknownValueDicoToken = ~/LocalisationConstantes/dico_interface_ingame
+
+    ExperienceTextureTokens =
+    [
+        "CommonTexture_Chevron_0",
+        "CommonTexture_Chevron_1",
+        "CommonTexture_Chevron_2",
+        "CommonTexture_Chevron_3",
+    ]
+
+    HintTitleBySuppressValue = MAP
+    [
+        ("CALM", "SHT_CLM"),
+        ("ENGAGED", "SHT_ENG"),
+        ("WORRIED", "SHT_WOR"),
+        ("STRESSED", "SHT_STR"),
+        ("SHAKEN", "SHT_SHA"),
+        ("PINNED", "SHT_PIN"),
+        ("mrl_4", "SHT_MRL4"),
+        ("mrl_3", "SHT_MRL3"),
+        ("mrl_2", "SHT_MRL2"),
+        ("mrl_1", "SHT_MRL1")
+    ]
+
+    HintBodyBySuppressValue = MAP
+    [
+        ("CALM", "SHB_CLM"),
+        ("ENGAGED", "SHB_ENG"),
+        ("WORRIED", "SHB_WOR"),
+        ("STRESSED", "SHB_STR"),
+        ("SHAKEN", "SHB_SHA"),
+        ("PINNED", "SHB_PIN"),
+        ("mrl_4", "SHB_MRL4"),
+        ("mrl_3", "SHB_MRL3"),
+        ("mrl_2", "SHB_MRL2"),
+        ("mrl_1", "SHB_MRL1")
+    ]
+)

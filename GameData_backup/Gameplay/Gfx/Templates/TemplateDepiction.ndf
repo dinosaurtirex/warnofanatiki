@@ -1,0 +1,601 @@
+
+private DisabledOperatorMid is [
+    'weapon_effet_tag1_physic_fire_effect',
+    'weapon_effet_tag2_physic_fire_effect',
+    'weapon_effet_tag3_physic_fire_effect',
+    'weapon_effet_tag4_physic_fire_effect',
+    'airplane_parts',
+    'ikchain1',
+    'WaterRotors',
+]
+
+private DisabledOperatorLow is DisabledOperatorMid + [
+    'chassis',
+    'cannon_hydraulic_recoil',
+    'cannon_rocking_recoil',
+    'GroundPuff',
+    // 'rotary_cannon',
+    'Tracks',
+    'Wheels',
+]
+
+LOD_High is 'high'
+LOD_Mid  is 'mid'
+LOD_Low  is 'low'
+
+// ****************************************************************************************************************************************
+// *** Véhicules **************************************************************************************************************************
+// ****************************************************************************************************************************************
+template DepictionDescriptor_LOD_High
+[
+    MeshDescriptor : TResourceMultiMaterialMesh,
+    SelectorId = LOD_High
+]
+is TDepictionDescriptor
+(
+    SelectorId = [<SelectorId>]
+    MeshDescriptor = <MeshDescriptor>
+)
+// ****************************************************************************************************************************************
+template DepictionDescriptor_LOD_Mid
+[
+    MeshDescriptor : TResourceMultiMaterialMesh,
+    SelectorId = LOD_Mid
+]
+is TDepictionDescriptor
+(
+    SelectorId = [<SelectorId>]
+    MeshDescriptor = <MeshDescriptor>
+    DisabledOperators = DisabledOperatorMid
+)
+// ****************************************************************************************************************************************
+template DepictionDescriptor_LOD_Low
+[
+    MeshDescriptor : TResourceMultiMaterialMesh,
+    SelectorId = LOD_Low,
+    DisabledOperators = []
+]
+is TDepictionDescriptor
+(
+    SelectorId = [<SelectorId>]
+    MeshDescriptor = <MeshDescriptor>
+    DisabledOperators = DisabledOperatorLow + <DisabledOperators>
+)
+MaterialTagMech is 'Mechanical'
+// ****************************************************************************************************************************************
+// *** infantrie **************************************************************************************************************************
+// ****************************************************************************************************************************************
+AlternativeNone is TMeshlessDepictionDescriptor
+(
+    SelectorId = ['none']
+    ReferenceMeshForSkeleton = $/GFX/DepictionResources/Rien
+)
+
+template DepictionDescriptor_LOD_InfantryHigh
+[
+    MeshDescriptor : TResourceMultiMaterialMesh
+]
+is TDepictionDescriptor
+(
+    SelectorId = [LOD_High]
+    MeshDescriptor = <MeshDescriptor>
+)
+
+template DepictionDescriptor_LOD_InfantryLow
+[
+    MeshDescriptor : TResourceMultiMaterialMesh
+]
+is TDepictionDescriptor
+(
+    SelectorId = [LOD_Low]
+    MeshDescriptor = <MeshDescriptor>
+)
+
+template TemplateAllSubWeaponDepiction
+[
+    Alternatives,
+    Operators,
+] is TSubDepiction
+(
+    Anchors = ['arme_1']
+    Depiction = TDepictionTemplate
+    (
+        Selector = $/GFX/Unit/SoldierDynamicWeaponSubDepictionSelector
+        DepictionAlternatives = <Alternatives>
+        Operators = <Operators>
+    )
+)
+
+template TemplateAllSubBackpackWeaponDepiction
+[
+    Alternatives,
+] is TSubDepiction
+(
+    Anchors = ['arme_2']
+    Depiction = TDepictionTemplate
+    (
+        Selector = $/GFX/Unit/SoldierDynamicBackpackWeaponSubDepictionSelector
+        DepictionAlternatives = <Alternatives>
+    )
+)
+
+template TemplateWeaponAccessorySubDepiction
+[
+    MeshDescriptor,
+    EnabledValue,
+] is TSubDepiction
+(
+    Anchors = ['bip01 spine1']
+    Depiction = TDepictionTemplate
+    (
+        Selector = TInfantryWeaponAccessorySelector
+        (
+            NoneLimitInMeter = LodHighNoneLimit_SoldierWeapon
+            CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+            MeshAlternativeKeys = ['mesh_alternative','mesh_alternative_backpack']
+            PrincipalDepiction = [LOD_High]
+            EnabledValue = <EnabledValue>
+        )
+        DepictionAlternatives = [
+          TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> ),
+        ]
+    )
+)
+
+TacticDepiction_01_Surrogates is [[LOD_High, '01']]
+TacticDepiction_02_Surrogates is TacticDepiction_01_Surrogates + [[LOD_High, '02']]
+TacticDepiction_03_Surrogates is TacticDepiction_02_Surrogates + [[LOD_High, '03']]
+TacticDepiction_04_Surrogates is TacticDepiction_03_Surrogates + [[LOD_High, '04']]
+TacticDepiction_05_Surrogates is TacticDepiction_04_Surrogates + [[LOD_High, '05']]
+TacticDepiction_06_Surrogates is TacticDepiction_05_Surrogates + [[LOD_High, '06']]
+TacticDepiction_07_Surrogates is TacticDepiction_06_Surrogates + [[LOD_High, '07']]
+TacticDepiction_08_Surrogates is TacticDepiction_07_Surrogates + [[LOD_High, '08']]
+TacticDepiction_09_Surrogates is TacticDepiction_08_Surrogates + [[LOD_High, '09']]
+TacticDepiction_10_Surrogates is TacticDepiction_09_Surrogates + [[LOD_High, '10']]
+
+template TemplateInfantrySelectorTactic
+[
+    UniqueCount,
+    Surrogates
+] is TInfantryLodSelector
+(
+    UniqueCount = <UniqueCount>
+    HighSurrogates = <Surrogates>
+    HighLowLimitInMeter = LodHighLowLimit_Infantry
+    LowNoneLimitInMeter = LodLowNoneLimit_Infantry
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+    OptionalLimit = $/GraphicOption/ModelQuality
+)
+
+template TemplateInfantryDepictionFactoryTactic
+[
+    Alternatives,
+    SubDepictions = [],
+    Operators,
+    Selector
+] is TDepictionTemplate
+(
+        Scaler = CommonInfantryScaler
+        Selector = <Selector>
+        DepictionAlternatives = <Alternatives>
+        SubDepictions = <SubDepictions>
+        Operators = [ DepictionOperator_Shader_Selection, DepictionOperator_Shader_Spotted, DepictionOperator_Shader_GhostTactic ] + <Operators>
+)
+
+template TemplateInfantryDepictionFactoryGhost
+[
+    Alternatives,
+    Selector
+] is TDepictionTemplate
+(
+    ResidentMaterialTags = [ MaterialTagGhost ]
+    Scaler = CommonInfantryScaler
+    Selector = <Selector>
+    DepictionAlternatives = <Alternatives>
+    Operators = [ DepictionOperator_FreezeAnimation_Ghost, DepictionOperator_Shader_Ghost ]
+)
+
+template TemplateInfantryDepictionSquad
+[
+    SoundOperator
+] is TTimelyDepictionReceiverFactory
+(
+  DepictionTemplate = TDepictionTemplate
+  (
+    Selector = OnlyHighDepictionSelector
+    DepictionAlternatives = [
+      DepictionDescriptor_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
+    ]
+    Operators = [ <SoundOperator>, DepictionOperator_AlwaysAliveSoundProbe ]
+  )
+)
+
+InfantryDepictionSquadShowroom is TTimelyDepictionReceiverFactory
+(
+  DepictionTemplate = TDepictionTemplate
+  (
+    Selector = OnlyHighDepictionSelector
+    DepictionAlternatives = [
+      DepictionDescriptor_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
+    ]
+  )
+)
+
+template TransportedInfantryDepiction
+[ Index, Alternatives, Counts ]
+ is TDepictionTemplate
+(
+    Selector = TTransportedInfantrySelector
+    (
+        Index = <Index>
+        Counts = <Counts>
+        HighNoneLimitInMeter = LodHighLowLimit_Infantry
+        CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+        OptionalLimit = $/GraphicOption/ModelQuality
+    )
+
+    Operators = [ TCosmeticFreezeSkeletalAnimationOperatorDesc(Animation = $/GFX/DepictionResources/FusilierTransport) ]
+
+    DepictionAlternatives = <Alternatives>
+        + [ DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/FuldaSoldier ) ] //pour avoir un 'high' pour le skeleton
+)
+
+template GhostUnitDepictionTemplate
+[ Selector, Scaler, Alternatives ]
+is TDepictionTemplate
+(
+    ResidentMaterialTags = [ MaterialTagGhost ]
+    Scaler = <Scaler>
+    Selector = <Selector>
+    DepictionAlternatives = <Alternatives>
+    Operators = [ DepictionOperator_Shader_Ghost ]
+)
+
+template GhostVehicleDepictionTemplate
+[ Selector, Alternatives ]
+is GhostUnitDepictionTemplate
+(
+    Selector = <Selector>
+    Alternatives = <Alternatives>
+    Scaler = CommonVehicleScaler
+)
+
+template GhostAerialDepictionTemplate
+[ Selector, Alternatives ]
+is GhostUnitDepictionTemplate
+(
+    Selector = <Selector>
+    Alternatives = <Alternatives>
+    Scaler = SpecificFlyingScaler
+)
+
+template TacticVehicleDepictionTemplate
+[
+    CoatingName,
+    Selector,
+    Alternatives,
+    Operators,
+    Actions,
+    SubDepictions = [],
+    SubDepictionGenerators = []
+]
+is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        ResidentMaterialTags = [ MaterialTagMech ]
+        PossibleCullingSubBBoxes = ['tourelle_01']
+        AdditionalTextures = $/M3D/Shader/VehicleDestTextures
+        CoatingName = <CoatingName>
+        Scaler = CommonVehicleScaler
+        Selector = <Selector>
+        DepictionAlternatives = <Alternatives>
+        Operators = CommonTacticOperators + <Operators>
+        Actions = <Actions>
+        SubDepictions = <SubDepictions>
+        SubDepictionGenerators = <SubDepictionGenerators>
+    )
+)
+
+template TacticAerialDepictionTemplate
+[
+    Deviator = nil,
+    AdditionalTextures,
+    CoatingName,
+    Selector,
+    Alternatives,
+    Operators,
+    Actions,
+    SubDepictions = [],
+    SubDepictionGenerators = [],
+]
+is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Deviator = <Deviator>
+        AdditionalTextures = <AdditionalTextures>
+        ResidentMaterialTags = [ MaterialTagMech ]
+        PossibleCullingSubBBoxes =
+        [
+            'aile_droite',
+            'aile_gauche',
+            'reacteur_droite',
+            'reacteur_gauche',
+            'queue',
+        ]
+        CoatingName = <CoatingName>
+        Scaler = SpecificFlyingScaler
+        Selector = <Selector>
+        DepictionAlternatives = <Alternatives>
+        Operators = CommonTacticOperators + [ DepictionOperator_CadaverCrashing ] + <Operators>
+        Actions = <Actions>
+        SubDepictions = <SubDepictions>
+        SubDepictionGenerators = <SubDepictionGenerators>
+    )
+)
+
+template ShowroomVehicleDepictionTemplate
+[
+    Alternatives,
+    Selector,
+    SubDepictions = [],
+    SubDepictionGenerators = []
+]
+is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Selector = <Selector>
+        Operators = [ DepictionOperator_ShadowPointCloudProvider ]
+        DepictionAlternatives = <Alternatives>
+        SubDepictions = <SubDepictions>
+        SubDepictionGenerators = <SubDepictionGenerators>
+    )
+)
+
+template ShowroomDepictionTemplateInternal
+[
+    MeshDescriptor,
+    Operators = [],
+    SubDepictions = [],
+    SubDepictionGenerators = []
+]
+is TDepictionTemplate
+(
+    Selector = OnlyHighDepictionSelector
+    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <MeshDescriptor> ) ]
+
+    Operators = <Operators>
+    SubDepictions = <SubDepictions>
+    SubDepictionGenerators = <SubDepictionGenerators>
+)
+
+template ShowroomAerialDepictionTemplate
+[
+    MeshDescriptor,
+    Operators = [],
+    SubDepictions = [],
+    SubDepictionGenerators = []
+]
+is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = ShowroomDepictionTemplateInternal
+    (
+        MeshDescriptor = <MeshDescriptor>
+        Operators = <Operators> + [ DepictionOperator_ShadowPointCloudProvider ]
+        SubDepictions = <SubDepictions>
+        SubDepictionGenerators = <SubDepictionGenerators>
+    )
+)
+
+template ShowroomLandingGear
+[
+    MeshDescriptor,
+]
+is TSubDepiction
+(
+    Depiction = TDepictionTemplate
+    (
+        Selector = OnlyHighDepictionSelector
+        DepictionAlternatives = [
+            TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> )
+        ]
+    )
+)
+
+AlternativeTowedNone is TMeshlessDepictionDescriptor
+(
+    SelectorId = ['none']
+    ReferenceMeshForSkeleton = $/GFX/DepictionResources/EmptyBoxesWithMissileHooks
+)
+
+template TacticTowedSubDepictionTemplate
+[
+    Alternatives,
+    InitialPoses,
+    MissileAlternatives,
+    AllowedUnits
+]
+is TSubDepiction
+(
+    Anchors = ["remorque_1"]
+    Depiction = TDepictionTemplate
+    (
+        TowedInitialPoses is TTowedInitialPoses( InitialPoses = <InitialPoses> )
+
+        Deviator = TTowedDeviatorDesc
+        (
+                WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+                InitialPoses = TowedInitialPoses
+        )
+        ResidentMaterialTags = [ MaterialTagMech ]
+        AdditionalTextures = $/M3D/Shader/VehicleDestTextures
+        Selector = ~/TowedUnitSubDepictionSelector
+        DepictionAlternatives = [ AlternativeTowedNone ] + <Alternatives>
+
+        Operators = [
+            TCosmeticTowedPoseOperatorDesc(
+                OperatorId = 'TowedUnit'
+                InitialPoses = TowedInitialPoses
+            ),
+            DepictionOperator_Propulsion_Wheels_TowedCanon,
+        ]
+
+        SubDepictions = [ TSubDepiction
+            (
+                Anchors = ["aa_1_1", "aa_1_2", "aa_1_3", "aa_1_4", "aa_1_5", "aa_1_6", "aa_1_7", "aa_1_8"]
+                Depiction = TDepictionTemplate
+                (
+                    ResidentMaterialTags = [ MaterialTagMech ]
+                    AdditionalTextures = $/M3D/Shader/VehicleDestTextures
+                    ShadowLessInitialValue = False
+                    Selector = TSubDepictionInstancedTowedMissileSelector
+                    (
+                        HighNoneLimitInMeter = LodHighNoneLimit_Missile
+                        CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+                        AllowedUnits = <AllowedUnits>
+                    )
+                    DepictionAlternatives = [ AlternativeNone ] + <MissileAlternatives>
+                )
+            )
+        ]
+    )
+)
+
+template RocketSubDepictionTemplateCommon
+[
+    UnitMeshDescriptor,
+    RocketMeshDescriptor,
+    RocketCount,
+    WeaponIndex,
+    PhysicalProperty,
+    RocketDepiction,
+    AirStartGroupIndex = 0,
+    GroundStartGroupIndex = 0,
+] is TRocketSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = TMissileCarriageConnoisseur
+    (
+        MeshDescriptor = <UnitMeshDescriptor>
+        PylonSet = ~/DepictionPylonSet_ATGM
+        AirStartGroupIndex = <AirStartGroupIndex>
+        GroundStartGroupIndex = <GroundStartGroupIndex>
+        WeaponInfos =
+        [
+            TMissileCarriageWeaponInfo
+            (
+                Count = <RocketCount>
+                MissileType = eAGM
+                WeaponIndex = <WeaponIndex>
+            ),
+        ]
+    )
+
+    Missiles =
+    [
+        TRocketSubDepictionMissileInfo
+        (
+            Depiction = <RocketDepiction>
+            MissileCount = <RocketCount>
+            WeaponIndex = <WeaponIndex>
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_ATGM
+    ReferenceMesh = <UnitMeshDescriptor>
+)
+
+template RocketSubDepictionTemplate
+[
+    UnitMeshDescriptor,
+    RocketMeshDescriptor,
+    RocketCount,
+    WeaponIndex,
+    PhysicalProperty,
+    AirStartGroupIndex = 0,
+    GroundStartGroupIndex = 0,
+] is RocketSubDepictionTemplateCommon
+(
+    UnitMeshDescriptor = <UnitMeshDescriptor>
+    RocketMeshDescriptor = <RocketMeshDescriptor>
+    RocketCount = <RocketCount>
+    WeaponIndex = <WeaponIndex>
+    PhysicalProperty = <PhysicalProperty>
+    AirStartGroupIndex = <AirStartGroupIndex>
+    GroundStartGroupIndex = <GroundStartGroupIndex>
+    RocketDepiction = TemplateDepictionStaticRocketsGroundUnit
+    (
+        PhysicalProperty = <PhysicalProperty>
+        ProjectileModelResource = <RocketMeshDescriptor>
+        VisibleRocketCount = <RocketCount>
+    )
+)
+
+template RocketAirplaneSubDepictionTemplate
+[
+    UnitMeshDescriptor,
+    RocketMeshDescriptor,
+    RocketCount,
+    WeaponIndex,
+    PhysicalProperty,
+    AirStartGroupIndex = 0,
+    GroundStartGroupIndex = 0
+] is RocketSubDepictionTemplateCommon
+(
+    UnitMeshDescriptor = <UnitMeshDescriptor>
+    RocketMeshDescriptor = <RocketMeshDescriptor>
+    RocketCount = <RocketCount>
+    WeaponIndex = <WeaponIndex>
+    PhysicalProperty = <PhysicalProperty>
+    AirStartGroupIndex = <AirStartGroupIndex>
+    GroundStartGroupIndex = <GroundStartGroupIndex>
+    RocketDepiction = TemplateDepictionStaticRocketsAirUnit
+    (
+        PhysicalProperty = <PhysicalProperty>
+        ProjectileModelResource = <RocketMeshDescriptor>
+        VisibleRocketCount = <RocketCount>
+    )
+)
+
+template ShowroomRocketSubDepictionTemplate
+[
+    UnitMeshDescriptor,
+    RocketMeshDescriptor,
+    RocketCount,
+    WeaponIndex = 1,
+    AirStartGroupIndex = 0,
+    GroundStartGroupIndex = 0,
+] is TStaticMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = TMissileCarriageConnoisseur
+    (
+        MeshDescriptor = <UnitMeshDescriptor>
+        PylonSet = ~/DepictionPylonSet_ATGM
+        AirStartGroupIndex = <AirStartGroupIndex>
+        GroundStartGroupIndex = <GroundStartGroupIndex>
+        WeaponInfos =
+        [
+            TMissileCarriageWeaponInfo
+            (
+                Count = <RocketCount>
+                MissileType = eAGM
+                WeaponIndex = <WeaponIndex>
+            ),
+        ]
+    )
+
+    Missiles =
+    [
+        TStaticMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileShowroom
+            (
+                ProjectileModelResource = <RocketMeshDescriptor>
+            )
+            MissileCount = <RocketCount>
+            WeaponIndex = <WeaponIndex>
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_Vehicle_Default_Showroom
+    ReferenceMesh = <UnitMeshDescriptor>
+)

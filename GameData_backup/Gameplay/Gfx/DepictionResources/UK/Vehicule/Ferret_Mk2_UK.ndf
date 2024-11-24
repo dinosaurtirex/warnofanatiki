@@ -1,0 +1,14 @@
+export Modele_Ferret_Mk2_UK is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Vehicule/Ferret_Mk2/Ferret_Mk2.fbx'
+)
+
+export Modele_Ferret_Mk2_UK_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Vehicule/Ferret_Mk2_MID/Ferret_Mk2_MID.fbx'
+)
+
+export Modele_Ferret_Mk2_UK_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Vehicule/LODS/Ferret_Mk2_LOW.fbx'
+)

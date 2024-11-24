@@ -1,0 +1,767 @@
+//-------------------------------------------------------------------------------------
+
+private TutorialDoneColumnWidth is 60
+private TutorialCountryColumnWidth is 70
+private TutorialDurationColumnWidth is 70
+
+private TutorialBriefButtonRadioManager is TBUCKRadioButtonManager()
+
+//-------------------------------------------------------------------------------------
+private TutorialBriefDescriptor is BUCKButtonDescriptor
+(
+    ElementName = "TutorialBriefButton"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0.0, 25.0]
+    )
+
+    IsTogglable = true
+    CannotDeselect = true
+    LeftClickSound = SoundEvent_SelectTutorialOrChallenge
+
+    RadioButtonManager = ~/TutorialBriefButtonRadioManager
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ElementName = "TutorialBriefInfos"
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+            )
+            Axis = ~/ListAxis/Horizontal
+
+            FirstMargin = TRTTILength (Magnifiable = 10.0)
+            InterItemMargin = TRTTILength (Magnifiable = 5.0)
+            LastMargin = TRTTILength (Magnifiable = 10.0)
+
+            Elements =
+            [
+                // status
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+                    (
+                        ElementName = "IsCompletedMultilist"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [TutorialDoneColumnWidth, 0.0]
+                            RelativeWidthHeight = [0.0, 1.0]
+                        )
+
+                        Components =
+                        [
+                            BUCKTextureDescriptor
+                            (
+                                ElementName = "IsCompletedTexture"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    AlignementToAnchor = [0.5, 0.5]
+                                    AlignementToFather = [0.5, 0.5]
+                                )
+
+                                TextureColorToken = 'Noir'
+                                ResizeMode = ~/TextureResizeMode/FitToContent
+
+                                TextureFrame = TUIFramePropertyRTTI
+                                (
+                                    AlignementToAnchor = [0.5, 0.5]
+                                    AlignementToFather = [0.5, 0.5]
+                                )
+                            ),
+                        ]
+                    )
+                ),
+
+                BUCKListElementDescriptor
+                (
+                    ExtendWeight = 1.0
+                    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+                    (
+                        ElementName = "TutorialNameMultilist"
+                        ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
+
+                        Components =
+                        [
+                            BUCKTextDescriptor
+                            (
+                                ElementName = "MissionName"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 1.0]
+                                )
+
+                                ParagraphStyle = TParagraphStyle
+                                (
+                                    Alignment = ~/UIText_Left
+                                    VerticalAlignment = ~/UIText_VerticalCenter
+                                )
+
+                                TextStyle = 'Default'
+                                TypefaceToken = "Eurostyle"
+                                TextSize = '16'
+                                TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                                TextColor = "noir_listeMission"
+
+                                Components =
+                                [
+                                    BUCKTextureDescriptor
+                                    (
+                                        ComponentFrame = TUIFramePropertyRTTI
+                                        (
+                                            RelativeWidthHeight = [1.1, 1.1]
+                                            AlignementToAnchor = [0.5, 0.5]
+                                            AlignementToFather = [0.5, 0.5]
+                                        )
+                                        TextureToken = 'EffetSurvol_listeMission'
+                                    )
+                                ]
+                            )
+                        ]
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+                    (
+                        ElementName = "TutorialDurationMultilist"
+                        ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [0.0, 1.0] )
+                        FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+
+                        Components =
+                        [
+                            BUCKTextDescriptor
+                            (
+                                ElementName = "MissionDuration"
+
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [0.0, 1.0]
+                                    MagnifiableWidthHeight = [TutorialDurationColumnWidth, 0.0]
+                                )
+
+                                ParagraphStyle = TParagraphStyle
+                                (
+                                    Alignment = ~/UIText_Center
+                                    VerticalAlignment = ~/UIText_VerticalCenter
+                                )
+
+                                TextStyle = 'Default'
+                                TypefaceToken = "Eurostyle"
+                                TextSize = '12'
+                                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                                TextColor = "Noir"
+                                TextToken = "CL_DIFF"
+                            )
+                        ]
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+private template TutorialBriefsRack
+[
+    PrefixName : string
+] is BUCKRackDescriptor
+(
+    ElementName = <PrefixName> + "TutorialBriefsRack"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    FirstMargin = TRTTILength(Magnifiable = 10.0)
+    InterItemMargin = TRTTILength(Magnifiable = 0.0)
+    BladeDescriptor = ~/TutorialBriefDescriptor
+)
+
+//-------------------------------------------------------------------------------------
+
+private TutorialDifficultyChoiceRadioManager is TBUCKRadioButtonManager()
+
+private TutorialDifficultyComponent is BUCKButtonDescriptor
+(
+    ElementName = "DifficultyButton"
+    FitStyle = ~/ContainerFitStyle/FitToContent
+    RadioButtonManager = ~/TutorialDifficultyChoiceRadioManager
+    IsTogglable = true
+    CannotDeselect = true
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [150.0, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+            InterItemMargin = TRTTILength(Magnifiable = 5.0)
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ElementName = "DifficultyName"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [0.0, 20.0]
+                            RelativeWidthHeight = [1.0, 0.0]
+                        )
+
+                        ParagraphStyle = ~/paragraphStyleTextCenter
+                        BigLineAction = ~/BigLineAction/ResizeFont
+
+                        TextStyle = 'Default'
+                        TypefaceToken = "Eurostyle"
+                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                        TextColor = "Noir"
+                        TextSize = "20"
+                        TextPadding = TRTTILength4( Magnifiable = [20.0, 0.0, 20.0, 0.0] )
+
+                        Components =
+                        [
+                            BUCKTextureDescriptor
+                            (
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.1, 1.1]
+                                    AlignementToAnchor = [0.5, 0.5]
+                                    AlignementToFather = [0.5, 0.5]
+                                )
+                                TextureToken = 'EffetSurvol_listeMission'
+                            )
+                        ]
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextureDescriptor
+                    (
+                        ElementName = "DifficultyTexture"
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToFather = [0.5, 0.0]
+                            AlignementToAnchor = [0.5, 0.0]
+                        )
+                        TextureFrame = TUIFramePropertyRTTI()
+                        ResizeMode = ~/TextureResizeMode/FitToContent
+                        TextureColorToken = 'Noir'
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+
+//-------------------------------------------------------------------------------------
+
+private TutorialDescriptionContainer is BUCKContainerDescriptor
+(
+    ElementName = "TutorialDescription"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [520.0, 715.0]
+        MagnifiableOffset = [285.0, 25.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Components =
+    [
+        BUCKPerspectiveWarpOffscreenContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            DistortTextureDrawer = $/UserInterface/UIDistortTextureDrawer
+            PointerEventsToAllow = ~/EAllowablePointerEventType/Move
+
+            MagnifiableTopLeftOffset = [0.0, 0.0]
+            MagnifiableTopRightOffset = [5.0, 5.0]
+            MagnifiableBottomLeftOffset = [-9.0, 1.0]
+            MagnifiableBottomRightOffset = [-4.0, 10.0]
+
+            Components =
+            [
+                BUCKListDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [1.0, 0.0]
+                    )
+
+                    Axis = ~/ListAxis/Vertical
+                    LastMargin = TRTTILength( Magnifiable = 10.0 )
+
+                    Elements =
+                    [
+                        // Description
+                        BUCKListElementDescriptor
+                        (
+                            ExtendWeight = 1.0
+                            ComponentDescriptor = BUCKContainerDescriptor
+                            (
+                                ElementName = "TutorialDescriptionContainer"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 1.0]
+                                )
+                            )
+                        ),
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = ConfirmButton
+                            (
+                                ElementName = "SelectButton"
+                                TextToken = "DS_SELECT"
+                                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                                ButtonMagnifiableWidthHeight = [175.0, 35.0]
+                                ButtonAlignementToAnchor = [0.5, 0.0]
+                                ButtonAlignementToFather = [0.5, 0.0]
+
+                                BorderLineColorToken = "tampon_vert"
+                                BorderThicknessToken = "3"
+
+                                TextTypefaceToken = "Liberator"
+                                TextColorToken = "tampon_vert"
+                                TextSizeToken = "32"
+                                TextPadding = TRTTILength4(Magnifiable = [4.0, 0.0, 4.0, 0.0])
+
+                                BigLineAction = ~/BigLineAction/ResizeFont
+                                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                            )
+                        ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)
+
+
+//-------------------------------------------------------------------------------------
+
+TutorialListContainer is BUCKContainerDescriptor
+(
+    ElementName = "TutorialListContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+       MagnifiableWidthHeight = [526.0, 715.0]
+       MagnifiableOffset = [71.0, 31.0]
+    )
+
+    Components =
+    [
+        BUCKPerspectiveWarpOffscreenContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            DistortTextureDrawer = $/UserInterface/UIDistortTextureDrawer
+            PointerEventsToAllow = ~/EAllowablePointerEventType/Move
+
+            MagnifiableTopLeftOffset = [0.0,  0.0]
+            MagnifiableTopRightOffset = [0.0, -5.0]
+            MagnifiableBottomLeftOffset = [6.0, 0.0]
+            MagnifiableBottomRightOffset = [7.0, -5.0]
+
+            Components =
+            [
+                BUCKListDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [1.0, 0.0]
+                    )
+
+                    Axis = ~/ListAxis/Vertical
+                    InterItemMargin = TRTTILength( Magnifiable = 10.0 )
+                    LastMargin = TRTTILength( Magnifiable = 10.0 )
+
+                    Elements =
+                    [
+                        // Description
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = BUCKContainerDescriptor
+                            (
+                                ElementName = "TutorialMultiListContainer"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 0.0]
+                                )
+                                FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                                Components =
+                                [
+                                    BUCKMultiListDescriptor
+                                    (
+                                        ElementName = "TutorialMultiList"
+                                        ComponentFrame = TUIFramePropertyRTTI
+                                        (
+                                            RelativeWidthHeight = [1.0, 0.0]
+                                        )
+                                        FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                                        ColumnNames =
+                                        [
+                                            "IsCompletedMultilist",
+                                            "TutorialNameMultilist",
+                                            "TutorialDurationMultilist"
+                                        ]
+
+                                        SortableColumnNames = []
+
+                                        RackName = "TutorialBriefsRack"
+
+                                        TitleDescriptor = TutorialTitleContainer(TextToken = "tuto_list")
+                                        ContentDescriptor = TutorialBriefsRack(PrefixName = "")
+                                    )
+                                ]
+                            )
+                        ),
+
+
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = BUCKContainerDescriptor
+                            (
+                                ElementName = "StrategicTutorialMultiListContainer"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 0.0]
+                                )
+                                FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                                Components =
+                                [
+                                    BUCKMultiListDescriptor
+                                    (
+                                        ElementName = "StrategicTutorialMultiList"
+                                        ComponentFrame = TUIFramePropertyRTTI
+                                        (
+                                            RelativeWidthHeight = [1.0, 0.0]
+                                        )
+                                        FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                                        ColumnNames =
+                                        [
+                                            "StrategicIsCompletedMultilist",
+                                            "StrategicTutorialNameMultilist",
+                                            "StrategicTutorialDurationMultilist"
+                                        ]
+
+                                        SortableColumnNames = []
+
+                                        RackName = "StrategicTutorialBriefsRack"
+
+                                        ContentDescriptor = TutorialBriefsRack(PrefixName = "Strategic")
+                                    )
+                                ]
+                            )
+                        ),
+
+                        //Margin List to Close button
+                        BUCKListElementDescriptor
+                        (
+                            ExtendWeight = 1
+                            ComponentDescriptor = BUCKContainerDescriptor(ComponentFrame = TUIFramePropertyRTTI())
+                        ),
+
+                        //Close button
+                        BUCKListElementDescriptor
+                        (
+                            ComponentDescriptor = SoloQuitButton
+                            (
+                                ElementName = "CloseButton"
+                                TextToken = "BTN_CLOSE"
+                            )
+                        ),
+                    ]
+                ),
+            ]
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+template TutorialTitleTextComponent
+[
+    TextToken : string,
+    HintBodyToken: string = ''
+]
+is BUCKTextDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+    )
+
+    BigLineAction = ~/BigLineAction/ResizeFont
+
+    TextStyle = 'Default'
+    TypefaceToken = "Eurostyle"
+    TextToken = <TextToken>
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+    TextColor = "Noir"
+    TextSize = "14"
+    TextPadding = TRTTILength4( Magnifiable = [2.0, 0.0, 2.0, 0.0] )
+
+    Hint = BUCKSpecificHintableArea
+    (
+        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+        HintTitleToken = <TextToken>
+        HintBodyToken = <HintBodyToken>
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+template TutorialTitleContainer
+[
+    PrefixName : string = "",
+    TextToken : string
+]
+is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    InterItemMargin = TRTTILength( Magnifiable = 6.0 )
+    LastMargin = TRTTILength( Magnifiable = 0.0 )
+    Axis = ~/ListAxis/Vertical
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 0.0]
+                    MagnifiableWidthHeight = [0.0, 70.0]
+                )
+                ParagraphStyle = paragraphStyleTextCenter
+                TextStyle = "Default"
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                VerticalFitStyle = ~/FitStyle/UserDefined
+                TypefaceToken = "Eurostyle"
+                BigLineAction = ~/BigLineAction/MultiLine
+                TextToken = <TextToken>
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "Noir"
+                TextSize = "20"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKListDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [0.0, 25.0]
+                )
+
+                Axis = ~/ListAxis/Horizontal
+
+                FirstMargin = TRTTILength (Magnifiable = 10.0)
+                InterItemMargin = TRTTILength (Magnifiable = 5.0)
+                LastMargin = TRTTILength (Magnifiable = 10.0)
+
+                Elements =
+                [
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+                        (
+                            ElementName = <PrefixName> + "IsCompletedMultilist"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [0.0, 1.0]
+                                MagnifiableWidthHeight = [TutorialDoneColumnWidth, 0.0]
+                            )
+
+                            SortingType = ~/MultiListSorting/Integer
+                            ShowCheckbox = false
+                            HidePointerEvents = true
+                            Components =
+                            [
+                                TutorialTitleTextComponent
+                                (
+                                    TextToken = 'CL_GAMSTS'
+                                    HintBodyToken = 'CL_statb'
+                                ),
+                            ]
+                        )
+                    ),
+                    BUCKListElementDescriptor
+                    (
+                        ExtendWeight = 1
+                        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+                        (
+                            ElementName = <PrefixName> + "TutorialNameMultilist"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [1.0, 1.0]
+                            )
+
+                            SortingType = ~/MultiListSorting/String
+                            ShowCheckbox = false
+                            HidePointerEvents = true
+                            Components =
+                            [
+                                TutorialTitleTextComponent
+                                (
+                                    TextToken = 'OP_TITLE'
+                                    HintBodyToken = 'CL_nameb'
+                                )
+                            ]
+                        )
+                    ),
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+                        (
+                            ElementName = <PrefixName> + "TutorialDurationMultilist"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                RelativeWidthHeight = [0.0, 1.0]
+                                MagnifiableWidthHeight = [TutorialDurationColumnWidth, 0.0]
+                            )
+
+                            SortingType = ~/MultiListSorting/Integer
+                            ShowCheckbox = false
+                            HidePointerEvents = true
+                            Components =
+                            [
+                                TutorialTitleTextComponent
+                                (
+                                    TextToken = 'LS_Dur'
+                                    HintBodyToken = 'CL_durab'
+                                )
+                            ]
+                        )
+                    )
+                ]
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.95, 0.0]
+                    MagnifiableWidthHeight = [0.0, 2.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+
+                HasBorder = true
+                BorderThicknessToken = '1'
+                BorderLineColorToken = 'Noir'
+                BordersToDraw = ~/TBorderSide/Bottom
+            )
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+BUCKSpecificTutorialMainComponentDescriptor is WindowFrame
+(
+    HasBackground = false
+    TitleToken = "TACT_TUTO"
+    HasTitle =  false
+    ContentExtendWeight = 0.2
+    ContentRelativeWidthHeight = [1.0, 1.0]
+    MargeHorizontale = 0
+    ButtonList = []
+
+    ContentComponents =
+    [
+        BUCKTranslationAnimatedContainerDescriptor
+        (
+            FramePropertyBeforeAnimation = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.8]
+            )
+
+            TriggerWhenSetVisible = true
+            AnimationTotalDuration = 0.3
+            AnimationModificator = ~/AnimModificator/SquareDecelerate
+
+            FramePropertyAfterAnimation = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                AlignementToAnchor = [0.5, 1.0]
+                AlignementToFather = [0.5, 1.0]
+            )
+
+            Components =
+            [
+                BUCKTextureDescriptor
+                (
+                    ElementName = "TutorialFullPanel"
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        MagnifiableWidthHeight = [1214.0, 806.0]
+                        MagnifiableOffset = [0.0, 25.0]
+                        AlignementToFather = [0.5, 1.0]
+                        AlignementToAnchor = [0.5, 1.0]
+                    )
+
+                    TextureToken = "mission_dossierVide"
+                    HidePointerEvents = true
+
+                    Components =
+                    [
+                        // page de gauche
+                        ~/TutorialListContainer,
+
+                        // page de droite
+                        ~/TutorialDescriptionContainer,
+                    ]
+                ),
+            ]
+        )
+    ]
+)
+//-------------------------------------------------------------------------------------
+
+UISpecificTutorialViewDescriptor is TUISpecificTutorialSelectionViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificTutorialMainComponentDescriptor
+    MainComponentContainerUniqueName = "SubMenuPanelViewDescriptor"// Permet d'indiquer l'endroit ou le composant doit s'insérer
+)

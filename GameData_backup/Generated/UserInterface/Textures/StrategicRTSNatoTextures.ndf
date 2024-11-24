@@ -1,0 +1,274 @@
+// Ne pas éditer, ce fichier est généré par RTSNatoTextureFileWriter
+
+Texture_STRATEGIC_corps is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/corps.png'
+)
+
+Texture_STRATEGIC_RTS_H_corps is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/corps.png'
+)
+
+Texture_STRATEGIC_Support_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/Support_air.png'
+)
+
+Texture_STRATEGIC_RTS_H_Support_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/Support_air.png'
+)
+
+Texture_STRATEGIC_AA_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/AA_air.png'
+)
+
+Texture_STRATEGIC_RTS_H_AA_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/AA_air.png'
+)
+
+Texture_STRATEGIC_division is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/division.png'
+)
+
+Texture_STRATEGIC_RTS_H_division is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/division.png'
+)
+
+Texture_STRATEGIC_ATGM_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/ATGM_air.png'
+)
+
+Texture_STRATEGIC_RTS_H_ATGM_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/ATGM_air.png'
+)
+
+Texture_STRATEGIC_SEAD_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/SEAD_air.png'
+)
+
+Texture_STRATEGIC_RTS_H_SEAD_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/SEAD_air.png'
+)
+
+Texture_STRATEGIC_brigade is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/brigade.png'
+)
+
+Texture_STRATEGIC_RTS_H_brigade is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/brigade.png'
+)
+
+Texture_STRATEGIC_apc is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/apc.png'
+)
+
+Texture_STRATEGIC_RTS_H_apc is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/apc.png'
+)
+
+Texture_STRATEGIC_HQ is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/HQ.png'
+)
+
+Texture_STRATEGIC_RTS_H_HQ is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/HQ.png'
+)
+
+Texture_STRATEGIC_howitzer is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/howitzer.png'
+)
+
+Texture_STRATEGIC_RTS_H_howitzer is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/howitzer.png'
+)
+
+Texture_STRATEGIC_reco is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/reco.png'
+)
+
+Texture_STRATEGIC_RTS_H_reco is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/reco.png'
+)
+
+Texture_STRATEGIC_ifv is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/ifv.png'
+)
+
+Texture_STRATEGIC_RTS_H_ifv is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/ifv.png'
+)
+
+Texture_STRATEGIC_Armor is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/Armor.png'
+)
+
+Texture_STRATEGIC_RTS_H_Armor is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/Armor.png'
+)
+
+Texture_STRATEGIC_AA is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/AA.png'
+)
+
+Texture_STRATEGIC_RTS_H_AA is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/AA.png'
+)
+
+Texture_STRATEGIC_assault is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/assault.png'
+)
+
+Texture_STRATEGIC_RTS_H_assault is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/assault.png'
+)
+
+Texture_STRATEGIC_mlrs is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/mlrs.png'
+)
+
+Texture_STRATEGIC_RTS_H_mlrs is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/mlrs.png'
+)
+
+Texture_STRATEGIC_regiment is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/regiment.png'
+)
+
+Texture_STRATEGIC_RTS_H_regiment is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/regiment.png'
+)
+
+Texture_STRATEGIC_Infantry is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/Infantry.png'
+)
+
+Texture_STRATEGIC_RTS_H_Infantry is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/Infantry.png'
+)
+
+Texture_STRATEGIC_AT is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/AT.png'
+)
+
+Texture_STRATEGIC_RTS_H_AT is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/AT.png'
+)
+
+Texture_STRATEGIC_hel is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/hel.png'
+)
+
+Texture_STRATEGIC_RTS_H_hel is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/hel.png'
+)
+
+Texture_STRATEGIC_Armor_heavy is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/Armor_heavy.png'
+)
+
+Texture_STRATEGIC_RTS_H_Armor_heavy is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/Armor_heavy.png'
+)
+
+Texture_STRATEGIC_front is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/NATO/front.png'
+)
+
+Texture_STRATEGIC_RTS_H_front is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseStrategic/LabelIcons/RTS/front.png'
+)
+
+
+STRATEGIC_NATORTSAdditionalTextureBank is TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ("Texture_STRATEGIC_corps", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_corps)]),
+        ("Texture_STRATEGIC_RTS_H_corps", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_corps)]),
+        ("Texture_STRATEGIC_Support_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_Support_air)]),
+        ("Texture_STRATEGIC_RTS_H_Support_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_Support_air)]),
+        ("Texture_STRATEGIC_AA_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_AA_air)]),
+        ("Texture_STRATEGIC_RTS_H_AA_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_AA_air)]),
+        ("Texture_STRATEGIC_division", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_division)]),
+        ("Texture_STRATEGIC_RTS_H_division", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_division)]),
+        ("Texture_STRATEGIC_ATGM_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_ATGM_air)]),
+        ("Texture_STRATEGIC_RTS_H_ATGM_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_ATGM_air)]),
+        ("Texture_STRATEGIC_SEAD_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_SEAD_air)]),
+        ("Texture_STRATEGIC_RTS_H_SEAD_air", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_SEAD_air)]),
+        ("Texture_STRATEGIC_brigade", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_brigade)]),
+        ("Texture_STRATEGIC_RTS_H_brigade", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_brigade)]),
+        ("Texture_STRATEGIC_apc", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_apc)]),
+        ("Texture_STRATEGIC_RTS_H_apc", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_apc)]),
+        ("Texture_STRATEGIC_HQ", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_HQ)]),
+        ("Texture_STRATEGIC_RTS_H_HQ", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_HQ)]),
+        ("Texture_STRATEGIC_howitzer", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_howitzer)]),
+        ("Texture_STRATEGIC_RTS_H_howitzer", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_howitzer)]),
+        ("Texture_STRATEGIC_reco", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_reco)]),
+        ("Texture_STRATEGIC_RTS_H_reco", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_reco)]),
+        ("Texture_STRATEGIC_ifv", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_ifv)]),
+        ("Texture_STRATEGIC_RTS_H_ifv", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_ifv)]),
+        ("Texture_STRATEGIC_Armor", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_Armor)]),
+        ("Texture_STRATEGIC_RTS_H_Armor", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_Armor)]),
+        ("Texture_STRATEGIC_AA", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_AA)]),
+        ("Texture_STRATEGIC_RTS_H_AA", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_AA)]),
+        ("Texture_STRATEGIC_assault", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_assault)]),
+        ("Texture_STRATEGIC_RTS_H_assault", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_assault)]),
+        ("Texture_STRATEGIC_mlrs", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_mlrs)]),
+        ("Texture_STRATEGIC_RTS_H_mlrs", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_mlrs)]),
+        ("Texture_STRATEGIC_regiment", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_regiment)]),
+        ("Texture_STRATEGIC_RTS_H_regiment", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_regiment)]),
+        ("Texture_STRATEGIC_Infantry", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_Infantry)]),
+        ("Texture_STRATEGIC_RTS_H_Infantry", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_Infantry)]),
+        ("Texture_STRATEGIC_AT", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_AT)]),
+        ("Texture_STRATEGIC_RTS_H_AT", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_AT)]),
+        ("Texture_STRATEGIC_hel", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_hel)]),
+        ("Texture_STRATEGIC_RTS_H_hel", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_hel)]),
+        ("Texture_STRATEGIC_Armor_heavy", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_Armor_heavy)]),
+        ("Texture_STRATEGIC_RTS_H_Armor_heavy", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_Armor_heavy)]),
+        ("Texture_STRATEGIC_front", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_front)]),
+        ("Texture_STRATEGIC_RTS_H_front", MAP [(~/ComponentState/Normal, ~/Texture_STRATEGIC_RTS_H_front)]),
+    ]
+)
+

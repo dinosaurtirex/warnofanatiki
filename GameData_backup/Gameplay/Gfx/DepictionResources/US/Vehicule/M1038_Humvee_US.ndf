@@ -1,0 +1,14 @@
+export Modele_M1038_Humvee_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M1038_Humvee/M1038_Humvee.fbx'
+)
+
+export Modele_M1038_Humvee_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M1038_Humvee/M1038_Humvee.fbx'
+)
+
+export Modele_M1038_Humvee_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Vehicule/M1038_Humvee/M1038_Humvee.fbx'
+)

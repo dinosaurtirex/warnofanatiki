@@ -1,0 +1,177 @@
+
+BUCKSpecificStrategicDateMainComponentDescriptor is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI()
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+    Axis = ~/ListAxis/Horizontal
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = PanelDate
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKListDescriptor
+            (
+                Axis = ~/ListAxis/Vertical
+
+                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+                FirstMargin = TRTTILength (Magnifiable = 40)
+
+                Elements =
+                [
+                    BUCKListElementDescriptor
+                    (
+                        ComponentDescriptor = BUCKTextDescriptor
+                        (
+                            ElementName = "NbTurns"
+                            ComponentFrame = TUIFramePropertyRTTI
+                            (
+                                MagnifiableWidthHeight = [224.0, 24.0]
+                            )
+
+                            ParagraphStyle = CenteredParagraphStyle
+                            HorizontalFitStyle = ~/FitStyle/UserDefined
+                            VerticalFitStyle = ~/FitStyle/UserDefined
+
+                            HasBackground = true
+                            BackgroundBlockColorToken = 'SM_RifleGreen_75'
+
+                            TextStyle = 'Default'
+
+                            TextToken = 'CptTour'
+                            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+                            TypefaceToken = "Eurostyle_Italic"
+                            TextColor = "SM_paleSilver"
+                            TextSize = "16"
+                        )
+                    ),
+                ]
+            )
+        )
+    ]
+)
+
+private PanelDate is BUCKContainerDescriptor
+(
+    MagnifierMultiplication = 1.1
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [61.0, 61.0]
+    )
+
+    Components =
+    [
+        FondImageDate,
+        BUCKTextDescriptor
+        (
+            ElementName = "StratDate"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                MagnifiableOffset = [0.0, 5.0]
+            )
+
+            ParagraphStyle = TParagraphStyle
+            (
+                Alignment = UIText_Center
+                VerticalAlignment = UIText_Up
+                LineWidth = 0
+            )
+
+            TextStyle = "Default"
+
+            HorizontalFitStyle = ~/FitStyle/UserDefined
+            VerticalFitStyle = ~/FitStyle/UserDefined
+
+            TextToken = "StrStrDate"
+            TextColor = "Noir"
+            TextSize = "24"
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+            TypefaceToken = "Eurostyle"
+
+            Hint = BUCKSpecificStrategicHintableArea
+            (
+                DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                HintTitleToken = "nextT_dat"
+                HintBodyToken = "nextT_dab"
+                HintExtendedToken = "nextT_dae"
+            )
+        ),
+        BUCKTextDescriptor
+        (
+            ElementName = "StratMorningOrAfternoon"
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                MagnifiableOffset = [0.0, 20.0]
+            )
+            ParagraphStyle = CenteredParagraphStyle
+
+            TextStyle = "Default"
+
+            HorizontalFitStyle = ~/FitStyle/UserDefined
+            VerticalFitStyle = ~/FitStyle/UserDefined
+
+            TextColor = "Noir"
+            TextSize = "10"
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+            TypefaceToken = "Eurostyle_Medium"
+
+            Hint = BUCKSpecificStrategicHintableArea
+            (
+                DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                HintTitleToken = "nextT_apt"
+                HintBodyToken = "nextT_apb"
+                HintExtendedToken = "nextT_ape"
+            )
+        )
+    ]
+)
+//------------------------------------------------------------------
+private FondImageDate is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI (MagnifiableWidthHeight = [60,0])
+    Axis = ~/ListAxis/Vertical
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = PanelRoundedCorner
+            (
+                ComponentFrame = TUIFramePropertyRTTI (RelativeWidthHeight = [1,0] MagnifiableWidthHeight = [0,20])
+                HasBorder = false
+                HasBackground = true
+                BackgroundBlockColorToken = 'Red'
+                RoundedVertexes = [false, true, true, false]
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = PanelRoundedCorner
+            (
+                ComponentFrame = TUIFramePropertyRTTI (RelativeWidthHeight = [1,0] MagnifiableWidthHeight = [0,40])
+                HasBackground = true
+                HasBorder = false
+                BackgroundBlockColorToken = 'SM_paleSilver'
+                RoundedVertexes = [true, false, false, true]
+            )
+        )
+    ]
+)
+//------------------------------------------------------------------
+UISpecificStrategicDateViewDescriptor is TUISpecificStrategicDateViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificStrategicDateMainComponentDescriptor
+    MainComponentContainerUniqueName = "StrategicDateContainer" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    NbTurnWithMaxToken = "CptTourMax"
+    NbTurnWithoutMaxToken = "CptTour"
+)

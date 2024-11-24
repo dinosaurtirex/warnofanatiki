@@ -1,0 +1,14 @@
+export Modele_MFRW_RM70_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/MFRW_RM70/MFRW_RM70.fbx'
+)
+
+export Modele_MFRW_RM70_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/MFRW_RM70_MID/MFRW_RM70_MID.fbx'
+)
+
+export Modele_MFRW_RM70_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/LODS/MFRW_RM70_LOW.fbx'
+)

@@ -1,0 +1,14 @@
+export Modele_Bo_105_CMD_RFA is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Helico/BO_105_M_trans/BO_105_M_trans.fbx'
+)
+
+export Modele_Bo_105_CMD_RFA_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Helico/BO_105_M_trans_MID/BO_105_M_trans_MID.fbx'
+)
+
+export Modele_Bo_105_CMD_RFA_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Helico/LODS/BO_105_M_trans_LOW.fbx'
+)

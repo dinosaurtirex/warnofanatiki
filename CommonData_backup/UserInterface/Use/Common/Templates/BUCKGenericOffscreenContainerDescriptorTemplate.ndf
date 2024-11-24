@@ -1,0 +1,114 @@
+template BUCKPerspectiveWarpOffscreenContainerDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    RelativeTopLeftOffset : float2 = float2[0,0],
+    RelativeTopRightOffset : float2 = float2[0,0],
+    RelativeBottomLeftOffset : float2 = float2[0,0],
+    RelativeBottomRightOffset : float2 = float2[0,0],
+
+    MagnifiableTopLeftOffset : float2 = float2[0,0],
+    MagnifiableTopRightOffset : float2 = float2[0,0],
+    MagnifiableBottomLeftOffset : float2 = float2[0,0],
+    MagnifiableBottomRightOffset : float2 = float2[0,0],
+
+    PixelTopLeftOffset : float2 = float2[0,0],
+    PixelTopRightOffset : float2 = float2[0,0],
+    PixelBottomLeftOffset : float2 = float2[0,0],
+    PixelBottomRightOffset : float2 = float2[0,0],
+
+    DistortTextureDrawer : TUIDistortTextureDrawer = nil,
+]
+is TBUCKPerspectiveWarpOffscreenContainerDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    RelativeTopLeftOffset = <RelativeTopLeftOffset>
+    RelativeTopRightOffset = <RelativeTopRightOffset>
+    RelativeBottomLeftOffset = <RelativeBottomLeftOffset>
+    RelativeBottomRightOffset = <RelativeBottomRightOffset>
+
+    MagnifiableTopLeftOffset = <MagnifiableTopLeftOffset>
+    MagnifiableTopRightOffset = <MagnifiableTopRightOffset>
+    MagnifiableBottomLeftOffset = <MagnifiableBottomLeftOffset>
+    MagnifiableBottomRightOffset = <MagnifiableBottomRightOffset>
+
+    PixelTopLeftOffset = <PixelTopLeftOffset>
+    PixelTopRightOffset = <PixelTopRightOffset>
+    PixelBottomLeftOffset = <PixelBottomLeftOffset>
+    PixelBottomRightOffset = <PixelBottomRightOffset>
+
+    DistortTextureDrawer = <DistortTextureDrawer>
+    UIOffscreenSceneFactory     = $/M3D/Scene/SceneFactory_UIOffscreen
+    TextureDrawer = $/UserInterface/UITextureDrawer_ColorMultiply
+)

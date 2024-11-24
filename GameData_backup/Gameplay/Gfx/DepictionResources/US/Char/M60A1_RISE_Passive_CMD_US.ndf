@@ -1,0 +1,17 @@
+export Modele_M60A1_RISE_Passive_CMD_US is ModelDescriptor
+(
+    FileName = ModelFile_M60A1_RISE_Passive_US
+    TextureDirectory = 'GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive_CMD'
+)
+
+export Modele_M60A1_RISE_Passive_CMD_US_MID is ModelDescriptor
+(
+    FileName = ModelFile_M60A1_RISE_Passive_US_MID
+    TextureDirectory = 'GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive_CMD'
+)
+
+export Modele_M60A1_RISE_Passive_CMD_US_LOW is ModelDescriptor
+(
+    FileName = ModelFile_M60A1_RISE_Passive_US_LOW
+    TextureDirectory = 'GameData:/Assets/3D/Units/US/Char/M60A1_RISE_Passive_CMD'
+)

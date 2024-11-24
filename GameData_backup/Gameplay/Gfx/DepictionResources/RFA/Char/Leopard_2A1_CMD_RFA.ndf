@@ -1,0 +1,14 @@
+export Modele_Leopard_2A1_CMD_RFA is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Char/Leopard_2A1_CMD/Leopard_2A1_CMD.fbx'
+)
+
+export Modele_Leopard_2A1_CMD_RFA_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Char/Leopard_2A1_CMD_MID/Leopard_2A1_CMD_MID.fbx'
+)
+
+export Modele_Leopard_2A1_CMD_RFA_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/Char/LODS/Leopard_2A1_CMD_LOW.fbx'
+)

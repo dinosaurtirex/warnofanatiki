@@ -1,0 +1,202 @@
+template BUCKGaugeValueDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    ValueTextName : string = "",                                        // L'ElementName du texte pour afficher la valeur
+
+    Value : int = 0,                                                    // Valeur de base
+]
+is TBUCKGaugeValueDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    ValueTextName = <ValueTextName>
+
+    Value = <Value>
+)
+
+template BUCKGaugeDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    Axis : int = ~/ListAxis/Horizontal,                                 // Axe de la jauge
+
+    CenterValueTextName : string = "",                                  // ElementName du texte pour la valeur centrale de la jauge
+    AutoCenterValue : bool = false,                                     // True : le texte sera updaté pour afficher le total de la jauge, False : Le texte sera updaté manuellement
+
+    GaugeMax : float = 0.0,                                             // Valeur max de la jauge
+    GaugeValueMinSize : TRTTILength = TRTTILength(),                    // Taille minimale de la jauge
+    SeparatorSize : TRTTILength = TRTTILength(),                        // Taille des séparateurs
+    DurationForGaugeFullChange : float = 0.0,                           // Durée de l'animation lord d'un changement de valeur
+
+    GaugeComponentNames : LIST<string>,                                 // ElementName des GaugeValue contenus dans la jauge
+
+    GraduationStep : float = 0.0,                                       // Afficher une graduation toutes les X unités (0 = sans graduation)
+    GraduationColorToken : string = "",                                 // Couleur des graduations
+    GraduationThicknessToken : string = "",                             // Épaisseur des graduations
+    FullGaugeIfNoMax : bool = false,                                    // La jauge apparait pleine si la valeur max est à 0
+    InvertGraduations : bool = false,                                   // Les graduations vont dans le sens inverse (partent du bas en vertical, ou partent de la droite en horizontal)
+    LocalRenderLayer : int = 0,                                         // Layer local pour le composant
+]
+is TBUCKGaugeDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+    Axis = <Axis>
+
+    CenterValueTextName = <CenterValueTextName>
+    AutoCenterValue = <AutoCenterValue>
+
+    GaugeMax = <GaugeMax>
+    GaugeValueMinSize = <GaugeValueMinSize>
+    SeparatorSize = <SeparatorSize>
+    DurationForGaugeFullChange = <DurationForGaugeFullChange>
+
+    GaugeComponentNames = <GaugeComponentNames>
+
+    GraduationStep = <GraduationStep>
+    GraduationColorToken = <GraduationColorToken>
+    GraduationThicknessToken = <GraduationThicknessToken>
+    FullGaugeIfNoMax = <FullGaugeIfNoMax>
+    InvertGraduations = <InvertGraduations>
+)

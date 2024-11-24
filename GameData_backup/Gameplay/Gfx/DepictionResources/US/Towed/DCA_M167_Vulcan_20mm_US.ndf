@@ -1,0 +1,7 @@
+export Modele_DCA_M167_Vulcan_20mm_US is ModelDescriptor (FileName = DCA_M167_Vulcan_20mm_US)
+export Modele_DCA_M167_Vulcan_20mm_US_MID is ModelDescriptor (FileName = DCA_M167_Vulcan_20mm_US_MID)
+export Modele_DCA_M167_Vulcan_20mm_US_LOW is ModelDescriptor (FileName = DCA_M167_Vulcan_20mm_US_LOW)
+
+DCA_M167_Vulcan_20mm_US is 'GameData:/Assets/3D/Units/US/Canon/DCA_M167_Vulcan_20mm/DCA_M167_Vulcan_20mm.fbx'
+DCA_M167_Vulcan_20mm_US_MID is 'GameData:/Assets/3D/Units/US/Canon/DCA_M167_Vulcan_20mm_MID/DCA_M167_Vulcan_20mm_MID.fbx'
+DCA_M167_Vulcan_20mm_US_LOW is 'GameData:/Assets/3D/Units/US/Canon/DCA_M167_Vulcan_20mm_LOW/DCA_M167_Vulcan_20mm_LOW.fbx'

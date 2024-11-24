@@ -1,0 +1,17 @@
+export Modele_M1025_Humvee_AGL_US is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL/M1025_Humvee_AGL.fbx'
+)
+
+export Modele_M1025_Humvee_AGL_US_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Vehicule/M1025_Humvee_AGL_MID/M1025_Humvee_AGL_MID.fbx'
+)
+
+export Modele_M1025_Humvee_AGL_US_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Vehicule/LODS/M1025_Humvee_AGL_LOW.fbx'
+)
+
+
+

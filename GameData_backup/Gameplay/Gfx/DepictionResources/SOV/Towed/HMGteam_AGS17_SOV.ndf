@@ -1,0 +1,20 @@
+export ModelFile_HMGteam_AGS17_SOV is 'GameData:/Assets/3D/Units/Ammo/Armes/HMG_trepied/AGS17/AGS17.fbx'
+export Modele_HMGteam_AGS17_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_HMGteam_AGS17_SOV
+)
+
+export ModelFile_HMGteam_AGS17_SOV_MID is 'GameData:/Assets/3D/Units/Ammo/Armes/HMG_trepied/AGS17/AGS17.fbx'
+export Modele_HMGteam_AGS17_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_HMGteam_AGS17_SOV_MID
+)
+
+export ModelFile_HMGteam_AGS17_SOV_LOW is 'GameData:/Assets/3D/Units/Ammo/Armes/HMG_trepied/AGS17/AGS17.fbx'
+export Modele_HMGteam_AGS17_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_HMGteam_AGS17_SOV_LOW
+)
+
+
+

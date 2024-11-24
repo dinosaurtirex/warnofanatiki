@@ -1,0 +1,14 @@
+export Modele_2S1_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/2S1_Gvozdika/2S1_Gvozdika.fbx'
+)
+
+export Modele_2S1_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/2S1_Gvozdika_MID/2S1_Gvozdika_MID.fbx'
+)
+
+export Modele_2S1_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Artillerie/LODS/2S1_Gvozdika_LOW.fbx'
+)

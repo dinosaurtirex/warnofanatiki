@@ -1,0 +1,17 @@
+export ModelFile_BTR_60_CMD_SOV is 'GameData:/Assets/3D/Units/URSS/CMD/BTR_60_CMD/BTR_60_CMD.fbx'
+export Modele_BTR_60_CMD_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_60_CMD_SOV
+)
+
+export ModelFile_BTR_60_CMD_MID_SOV is 'GameData:/Assets/3D/Units/URSS/CMD/BTR_60_CMD_MID/BTR_60_CMD_MID.fbx'
+export Modele_BTR_60_CMD_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_60_CMD_MID_SOV
+)
+
+export ModelFile_BTR_60_CMD_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/CMD/BTR_60_CMD_LOW/BTR_60_CMD_LOW.fbx'
+export Modele_BTR_60_CMD_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_60_CMD_SOV_LOW
+)

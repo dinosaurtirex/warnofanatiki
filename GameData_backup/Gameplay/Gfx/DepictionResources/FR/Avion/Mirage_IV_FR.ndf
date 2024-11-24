@@ -1,0 +1,19 @@
+export Modele_Mirage_IV_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Avion/Mirage_IV/Mirage_IV.fbx'
+)
+
+export Modele_Mirage_IV_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Avion/Mirage_IV_MID/Mirage_IV_MID.fbx'
+)
+
+export Modele_Mirage_IV_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Avion/LODS/Mirage_IV_LOW.fbx'
+)
+
+export Modele_Mirage_IV_FR_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Avion/Mirage_IV/Mirage_IV_train.fbx'
+)

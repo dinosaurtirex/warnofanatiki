@@ -1,0 +1,34 @@
+
+private template template_PropulsionActionHappening
+[
+    Action
+]
+is TIntroduceMobileHappening
+(
+    Anchor = 'fx_fumee_missile'
+    Happening = TSequencingActionHappening
+    (
+        ActionDescriptor = TActionCall( Action = <Action> )
+    )
+)
+
+template Template_DescriptorMissileBase
+[
+    ProjectileModelResource,
+    Actions,
+]
+is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        ResidentMaterialTags = [ MaterialTagMech ]
+        AdditionalTextures = $/M3D/Shader/VehicleDestTextures
+        Selector = TConstantAlternativeSelector(Key = [LOD_High])
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High( MeshDescriptor = <ProjectileModelResource> ),
+        ]
+        Actions = <Actions>
+
+        Operators = [ TCosmeticMissilePropulsionFXOperatorDescriptor() ]
+    )
+)

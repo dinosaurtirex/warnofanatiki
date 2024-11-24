@@ -1,0 +1,172 @@
+// Utilisé par les unités de tests et pour les socles des pions de SteelMan (Vous savez, le SteelMan qu'on a PAS porté sur master),
+// Donc autant dire que ses réglages servent à pas grand-chose.
+CommonDepictionSelector is TLodSelector
+(
+    HighMidLimitInMeter = 100
+    MidLowLimitInMeter = 200
+    OptionalLimit = $/GraphicOption/ModelQuality
+    CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+)
+
+Gfx_TestUnit_ModelTank is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = CommonVehicleScaler
+        Selector = CommonDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Tank ),
+            DepictionDescriptor_LOD_Mid ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Tank ),
+            DepictionDescriptor_LOD_Low ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Tank DisabledOperators = ['tourelle3'] ),
+        ]
+
+        Operators = []
+
+        Actions = MAP[]
+    )
+)
+
+Gfx_TestUnit_ModelTank_Strategic is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler =  TConstantScaler( Scale = 5)
+        Selector = CommonDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Tank ),
+            DepictionDescriptor_LOD_Mid ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Tank ),
+            DepictionDescriptor_LOD_Low ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Tank DisabledOperators = ['tourelle3'] ),
+        ]
+
+        Operators = []
+
+        Actions = MAP[]
+    )
+)
+
+Gfx_TestUnit_ModelVehicule is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = CommonVehicleScaler
+        Selector = CommonDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Vehicule ),
+            DepictionDescriptor_LOD_Mid ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Vehicule ),
+            DepictionDescriptor_LOD_Low ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Vehicule DisabledOperators = ['tourelle3'] ),
+        ]
+
+        Operators = []
+
+        Actions = MAP[]
+    )
+)
+
+Gfx_TestUnit_ModelHelico is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = CommonVehicleScaler
+        Selector = CommonDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Helico ),
+            DepictionDescriptor_LOD_Mid ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Helico ),
+            DepictionDescriptor_LOD_Low ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Helico ),
+        ]
+
+        Operators = []
+
+        Actions = MAP[]
+
+        //les missiles partiront du centre de l'helico mais on s'en fiche un peu pour une unite de test...
+        //SubDepictionGenerators = SubGenerators_AH64_Apache
+    )
+)
+
+Gfx_TestUnit_ModelAvion is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = CommonVehicleScaler
+        Selector = CommonDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Avion ),
+            DepictionDescriptor_LOD_Mid ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Avion ),
+            DepictionDescriptor_LOD_Low ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Avion ),
+        ]
+
+         Operators = []
+
+        Actions = MAP[]
+    )
+)
+
+Gfx_TestUnit_ModelAvion_Strategic is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler =TConstantScaler( Scale = 2)
+        Selector = OnlyHighDepictionSelector
+        DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/MeshModele_Socle_US ) ]
+
+        SubDepictions = [ TSubDepiction
+        (
+            Depiction = TDepictionTemplate
+            (
+                Selector = OnlyHighDepictionSelector
+                DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/MeshModele_Tige_longue ) ]
+
+                SubDepictions = [ TSubDepiction
+                (
+                    Anchors = ["sommet"]
+                    Depiction = TDepictionTemplate
+                    (
+                        Selector = CommonDepictionSelector
+                        DepictionAlternatives = [
+                            DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Avion ),
+                            DepictionDescriptor_LOD_Mid ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Avion ),
+                            DepictionDescriptor_LOD_Low ( MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Avion DisabledOperators = ['tourelle3'] ),
+                        ]
+                    )
+                ) ]
+            )
+        ) ]
+    )
+)
+
+TacticDepiction_TestUnit_ModelInfantry_Squad is TDepictionTemplate
+(
+    Scaler = CommonInfantryScaler
+    Selector = TPilotLodSelector
+    (
+        HighLowLimitInMeter = LodHighLowLimit_Infantry
+        LowNoneLimitInMeter = LodLowNoneLimit_Infantry
+        CameraMoverManagerModernWarfare = $/Camera/CameraMoverManager
+        OptionalLimit = $/GraphicOption/ModelQuality
+    )
+    DepictionAlternatives = [
+        DepictionDescriptor_LOD_InfantryHigh(MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Infantry),
+        DepictionDescriptor_LOD_InfantryLow(MeshDescriptor = $/GFX/DepictionResources/Modele_TestUnit_Infantry)
+    ]
+    SubDepictions = []
+    Operators = []
+    Actions = MAP[]
+)
+
+Gfx_TestUnit_ModelInfantry is TTimelyDepictionReceiverFactory
+(
+    DepictionTemplate = TDepictionTemplate
+    (
+        Scaler = CommonIdentityScaler
+        Selector = OnlyHighDepictionSelector
+        DepictionAlternatives = [
+            DepictionDescriptor_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
+        ]
+    )
+)
+
+Gfx_STRATEGIC_PLANE_TEST_IA is Gfx_TestUnit_ModelAvion_Strategic
+Gfx_TestStrategicCampaign is Gfx_TestUnit_ModelTank_Strategic
+Gfx_TestStrategicCampaign_Arty is Gfx_TestUnit_ModelTank_Strategic
+Gfx_TestStrategicCampaign_WeakDeck is Gfx_TestUnit_ModelTank_Strategic
+Gfx_TestStrategicCampaign_GroundAA is Gfx_TestUnit_ModelTank_Strategic

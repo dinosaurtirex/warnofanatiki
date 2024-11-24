@@ -1,0 +1,24 @@
+// Ne pas éditer, ce fichier est auto-généré !
+
+MinMax_None is 0
+MinMax_AutocanonHE is 1
+MinMax_Bombe is 2
+MinMax_CanonAP is 3
+MinMax_FLAME is 4
+MinMax_DCA is 5
+MinMax_MMG_HMG is 6
+MinMax_inf_MMG is 7
+MinMax_Gatling is 8
+MinMax_Grenade is 9
+MinMax_obusier is 10
+MinMax_Mortier is 11
+MinMax_Cluster is 12
+MinMax_MLRS is 13
+MinMax_LAW is 14
+MinMax_Roquette_AS is 15
+MinMax_inf_sniper is 16
+MinMax_AAM is 17
+MinMax_AGM is 18
+MinMax_ATGM is 19
+MinMax_SEAD is 20
+MinMax_SAM is 21

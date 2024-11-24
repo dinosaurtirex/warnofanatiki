@@ -1,0 +1,29 @@
+//utf-huité
+// TerrainType // A maintenir synchro avec EugIA_Common/MaskSparseDBType.h
+ETerrainType is TBaseClass
+(
+    None                  is 0x00000000
+    Default               is 0x00000001
+
+    EauPeuProfonde        is 0x00000002
+    EauProfonde           is 0x00000004
+    Bloqueur              is 0x00000020
+    PetitBatiment         is 0x00000080
+    Batiment              is 0x00000100
+    ForetLegere           is 0x00000200
+    ForetDense            is 0x00000400
+
+    Rocher                is 0x00000800
+    Ruin                  is 0x00001000
+    StrategicForest       is 0x00002000
+    StrategicPlain        is 0x00004000
+    StrategicSemiUrban    is 0x00008000
+    StrategicRiver        is 0x00010000
+    StrategicUrban        is 0x00020000
+
+    LightSmoke            is 0x00080000
+    MediumSmoke           is 0x00100000
+    HeavySmoke            is 0x00200000
+
+    BloqueConstruction    is 0x80000000
+)

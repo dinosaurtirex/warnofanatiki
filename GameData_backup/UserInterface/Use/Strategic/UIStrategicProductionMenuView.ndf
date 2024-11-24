@@ -1,0 +1,489 @@
+
+// -------------------------------------------------------------------------------------------------
+
+// Strategic Production Menu Container
+BUCKSpecificStrategicProductionMenuMainComponentDescriptor is BUCKListDescriptor
+(
+    ElementName = "MainList"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 100.0]
+        MagnifiableOffset = [0,8]
+
+    )
+
+    Axis = ~/ListAxis/Horizontal
+    // HasBackground = true
+    // BackgroundBlockColorToken = 'Orange'
+
+    Elements =
+    [
+        // liste des renforts
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKSpecificScrollingContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [0.0, 1.0]
+                    AlignementToAnchor = [0.0, 0.0]
+                    AlignementToFather = [0.0, 0.0]
+                    // MagnifiableOffset = [0,8]
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+                FitToMaximumSize = TRTTILength2(Magnifiable = [1200.0, 0.0] )
+
+                Components =
+                [
+                    ~/StrategicProductionMenuCategoryList
+                ]
+            )
+        ),
+        // bout de la flèche
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextureDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                        MagnifiableWidthHeight = [180.0, 21.0]
+                        AlignementToAnchor = [0.0, 0.0]
+                        AlignementToFather = [0.0, 0.0]
+                        // MagnifiableOffset = [0,8]
+
+                    )
+                TextureToken = 'renfort_end'
+                TextureColorToken = 'SM_Grullo'
+            )
+        ),
+    ]
+)
+
+
+// -------------------------------------------------------------------------------------------------
+// CategoryList
+// -------------------------------------------------------------------------------------------------
+
+// Categories List
+private StrategicProductionMenuCategoryList is BUCKListDescriptor
+(
+    ElementName = 'CategoryButtonList'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 100.0]
+
+    )
+    // HasBackground = true
+    BackgroundBlockColorToken = 'Orange'
+
+    Axis = ~/ListAxis/Horizontal
+    FirstMargin = TRTTILength (Magnifiable = 8.0)
+    InterItemMargin = TRTTILength (Magnifiable = 0.0)
+    LastMargin = TRTTILength(Magnifiable = 0.0)
+
+    // le bouton availale = AvailableCategoryButtonDescriptor
+    // les autres = CategoryButtonDescriptor => StrategicProductionMenuCategoryButton (ci dessous)
+)
+
+// -------------------------------------------------------------------------------------------------
+// CategoryButton
+// -------------------------------------------------------------------------------------------------
+
+private StrategicProductionMenuCategoryButtonRadioButtonManager is TBUCKRadioButtonManager()
+
+template StrategicProductionMenuCategoryButton
+[
+    TextureToken : string,
+    HintBodyToken : string,
+    TextureColorToken : string,
+    TypefaceToken : string
+]
+ is BUCKButtonDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [176.0, 80.0]
+    )
+
+    IsTogglable = true
+    RadioButtonManager = StrategicProductionMenuCategoryButtonRadioButtonManager
+    LeftClickSound = ~/SoundEvent_SteelmanReinforcementsDayButton
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            Axis = ~/ListAxis/Vertical
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [176.0, 0.0]
+            )
+
+            InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+            LastMargin = TRTTILength( Magnifiable = 0.0 )
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextureDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                                MagnifiableWidthHeight = [176.0, 21.0]
+                                AlignementToAnchor = [0.5, 0.0]
+                                AlignementToFather = [0.5, 0.0]
+                        )
+                        TextureToken = <TextureToken>
+                        TextureColorToken = 'SM_renfort_fleche'
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextureDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                                MagnifiableWidthHeight = [160.0, 48.0]
+                                MagnifiableOffset = [5.0, 0.0]
+                        )
+
+                        TextureToken = 'renfort_date'
+                        TextureColorToken = <TextureColorToken>
+
+                        Components =
+                        [
+                            BUCKTextDescriptor
+                            (
+                                ElementName = "TextElement"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    MagnifiableWidthHeight = [160.0, 40.0]
+                                    MagnifiableOffset = [0.0, 8.0]
+                                )
+
+                                ParagraphStyle = TParagraphStyle
+                                (
+                                    Alignment = UIText_Center
+                                    VerticalAlignment = UIText_VerticalCenter
+                                    InterLine = 0
+                                )
+
+                                TextStyle = "Default"
+                                TextPadding = TRTTILength4( Pixel = [10.0, 10.0, 10.0, 10.0] )
+
+                                TypefaceToken = <TypefaceToken>
+                                BigLineAction = ~/BigLineAction/CutByDots
+
+                                TextSize = "13"
+                                TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                                TextColor = "SM_paleSilver"
+
+                                Hint = BUCKSpecificStrategicHintableArea
+                                (
+                                    ElementName = "ButtonHintableArea"
+                                    DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+                                    HintBodyToken = <HintBodyToken>
+                                )
+                                HasBorder = true
+                                BorderThicknessToken = '1'
+                                BorderLineColorToken = 'SM_Grullo'
+                            )
+                        ]
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+// bouton de production des pions (suivant disponibilité - plusieurs pions à l'intérieur)
+private StrategicProductionUnitContainerListScrollingContainer is BUCKSpecificScrollingContainerDescriptor
+(
+    ElementName = "UnitContainerListScrollingContainer"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [0.9, 0.0]
+        MagnifiableOffset = [22.0, -2.0]
+    )
+
+    FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+    HasHorizontalScrollbar = true
+    ExternalScrollbar = true
+
+    // HasBackground = true
+    BackgroundBlockColorToken = 'Orange'
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ElementName = 'UnitContainerList'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableOffset = [0.0, 0.0]
+            )
+
+            Axis = ~/ListAxis/Horizontal
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+            InterItemMargin = TRTTILength( Magnifiable = 16.0 )
+        )
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+// liste des pions disponibles en renfort
+private StrategicProductionBattalionRackScrollingContainer is BUCKSpecificScrollingContainerDescriptor
+(
+    ElementName = "BattalionRackScrollingContainer"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 195.0]
+        MagnifiableOffset = [12.0, 0.0]
+    )
+
+    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+    HasVerticalScrollbar = true
+
+    VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [7.0, 0.0]
+        MagnifiableOffset = [0.0, 0.0]
+        AlignementToFather = [1.0, 0.0]
+        AlignementToAnchor = [0.0, 0.0]
+    )
+
+    Components =
+    [
+        BUCKRackDescriptor
+        (
+            ElementName = "BattalionRack"
+
+            ComponentFrame = TUIFramePropertyRTTI()
+
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+            Axis = ~/ListAxis/Horizontal
+            InterItemMargin = TRTTILength(Magnifiable = 8.0)
+
+            BladeDescriptor = PawnReinforcementButton
+        )
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+
+PawnReinforcementButton is BUCKButtonDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [80.0, 80.0]
+    )
+
+    IsTogglable = true
+    LeftClickSound = ~/SoundEvent_SteelmanReinforcementsPawnButton
+
+    Components =
+    [
+        BUCKContainerDescriptor
+        (
+            ElementName = "BattalionFrieze"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            HasBackground = true
+        ),
+        PanelRoundedCorner
+        (
+            BorderLineColorToken = 'SM_Grullo'
+            BackgroundBlockColorToken = 'Transparent'
+        ),
+        //-------------------------------------------------------------------------------------
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [60.0, 60.0]
+                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.5, 0.5]
+            )
+            ElementName = 'BattalionTexture'
+            ResizeMode = ~/TextureResizeMode/UserDefined
+
+            TextureDrawer = 'ColorMultiply_NoGrayscale'
+        ),
+        //-------------------------------------------------------------------------------------
+        BUCKTextDescriptor
+        (
+            ElementName = 'BattalionName'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [0.0, 20.0]
+                AlignementToFather = [0.0, 1.0]
+                AlignementToAnchor = [0.0, 1.0]
+            )
+            ParagraphStyle = TParagraphStyle
+            (
+                Alignment = UIText_Center
+                VerticalAlignment = UIText_Bottom
+                InterLine = -0.2
+            )
+
+            TextPadding = TRTTILength4(Magnifiable = [2.0, 2.0, 2.0, 2.0])
+            TextStyle = 'Default'
+            TypefaceToken = "UISecondFont"
+
+            VerticalFitStyle = ~/FitStyle/UserDefined
+            BigLineAction = ~/BigLineAction/CutByDots
+
+
+            TextDico = ~/LocalisationConstantes/dico_units
+            TextSize = '12'
+            TextColor = 'BlancEquipe'
+        ),
+        //-------------------------------------------------------------------------------------
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [0.0, 18.0]
+                MagnifiableOffset = [0.0, 18.0]
+                PixelWidthHeight = [-1.0, 0.0]
+                AlignementToFather = [0.5, 1.0]
+                AlignementToAnchor = [0.5, 1.0]
+            )
+
+            Components =
+            [
+                BUCKListDescriptor
+                (
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [0.0, 1.0]
+                        AlignementToFather = [0.0, 0.5]
+                        AlignementToAnchor = [0.0, 0.5]
+                    )
+                    Axis = ~/ListAxis/Horizontal
+
+                    Elements =
+                    [
+                        BUCKListElementDescriptor
+                        (
+                            ExtendWeight = 1.0
+                            ComponentDescriptor = PanelRoundedCorner
+                            (
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 1.0]
+                                )
+
+                                RoundedVertexes = [true, false, false, false]
+                                BorderLineColorToken = "Transparent"
+                                BackgroundBlockColorToken = "Noir"
+
+                                Components =
+                                [
+                                    PawnStatContainer
+                                    (
+                                        TextColor = "BlancEquipe"
+                                        TextureToken = "UseStrategic_SelectionPanel_Attack"
+                                        TextElementName = "PowerValue"
+                                        TextureSize = 11
+                                    )
+                                ]
+                            )
+                        ),
+                        BUCKListElementDescriptor
+                        (
+                            ExtendWeight = 1.0
+                            ComponentDescriptor = PanelRoundedCorner
+                            (
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 1.0]
+                                )
+                                RoundedVertexes = [false, false, false, true]
+                                BorderLineColorToken = "Transparent"
+                                BackgroundBlockColorToken = "BlancEquipe"
+
+                                Components =
+                                [
+                                    PawnStatContainer
+                                    (
+                                        TextColor = "Noir"
+                                        TextureToken = "UseStrategic_SelectionPanel_Defense"
+                                        TextElementName = "ShieldValue"
+                                        TextureSize = 14
+                                    )
+                                ]
+                            )
+                        ),
+                    ]
+                )
+            ]
+        )
+    ]
+)
+// -------------------------------------------------------------------------------------------------
+// UIStrategicProductionMenuViewDescriptor
+// -------------------------------------------------------------------------------------------------
+
+private StrategicUnitButtonRadioButtonManager is TBUCKRadioButtonManager()
+
+UIStrategicProductionMenuViewDescriptor is TUIStrategicProductionMenuViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificStrategicProductionMenuMainComponentDescriptor
+    MainComponentContainerUniqueName = "StrategicProductionMenuPanelContainer" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    UnitButtonListContainerDescriptor = ~/StrategicProductionUnitContainerListScrollingContainer
+    UnitButtonListContainerContainerUniqueName = "StrategicProductionUnitContainerListScrollingContainer"
+
+    BattalionRackScrollingContainerDescriptor = ~/StrategicProductionBattalionRackScrollingContainer
+    BattalionRackScrollingContainerUniqueName = "StrategicProductionBattalionRackScrollingContainer"
+
+    ShortcutUILayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
+
+    AvailableCategoryButtonDescriptor = StrategicProductionMenuCategoryButton(TypefaceToken = 'Eurostyle' TextureToken = 'renfort_start' HintBodyToken = 'mpro_avab' TextureColorToken = 'SM_Feldgrau')
+    CategoryButtonDescriptor = StrategicProductionMenuCategoryButton(TypefaceToken = 'Eurostyle_Italic' TextureToken = 'renfort_mid' HintBodyToken = 'mpro_nexb' TextureColorToken = 'SM_RifleGreen_75')
+    CategoryRadioButtonManager = ~/StrategicProductionMenuCategoryButtonRadioButtonManager
+
+    UnitContainerDescriptor = UISpecificUnitButtonViewDescriptor
+    (
+        // Temps en secondes avant que le conteneur de l'unité additionnelle apparaisse lorsqu'on survole le bouton de l'unité
+        TimeInSecondBeforeAdditionalUnitSpecificContainerShowUp = 0.2
+
+        // Transparence (en pourcentage entre 0 et 1) ajouté au conteneur d'une unité lorsque cette unité n'est pas disponible
+        OpacityPercentWhenUnitNotAvailable = 1
+
+        // Couleur et drawer pour les textures et les textes quand l'unité n"est pas disponible
+        TextureDrawerWhenUnitNotAvailable = "ColorMultiply_Grayscale"
+        UnitNameColorWhenUnitNotAvailable = "Noir"
+        UnitCostColorWhenUnitNotAvailable = "ProductionMenu/UnitCostWhenNotAvailable"
+        UnitCostGlowColorIndexWhenUnitNotAvailable = "ProductionMenu/UnitCostWhenNotAvailable/Glow"
+        UnitCostColorWhenUnitCannotBeBought = "ProductionMenu/UnitCostWhenCannotBeBought"
+        UnitNameBackgroundColorWhenUnitNotAvailable = "Gris123"
+        MaskColorToken = "Black40"
+
+
+        AceUnitNameColor = "Fulda2_Orange100"
+        AceUnitBorderColorBySide =
+        [
+            (~/TBorderSide/Top | ~/TBorderSide/Left, "Fulda2_Orange100"),
+            (~/TBorderSide/Bottom | ~/TBorderSide/Right, "Fulda2_Orange100"),
+        ]
+        AceUnitBorderThickness = "1"
+
+        CannotDeselect = true
+        ForceEvents = true
+        RadioButtonManager = ~/StrategicUnitButtonRadioButtonManager
+    )
+)

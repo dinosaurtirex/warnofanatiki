@@ -1,0 +1,144 @@
+
+export SpecificCountriesInfos is MAP [
+    ("GER", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_GERW"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "GER"
+            NameToken = "CtrGER"
+        )),
+    ("SOV", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_SOV"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "SOV"
+            NameToken = "CtrSOV"
+        )),
+    ("HON", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_HON"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "HON"
+            NameToken = "CtrHON"
+        )),
+    ("UK", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_UK"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "UK"
+            NameToken = "CtrUK"
+        )),
+    ("US", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_US"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "US"
+            NameToken = "CtrUS"
+        )),
+    ("DDR", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_DDR"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "DDR"
+            NameToken = "CtrDDR"
+        )),
+    ("RFA", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_RFA"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "RFA"
+            NameToken = "CtrRFA"
+        )),
+    //----------------------^ affichées dans la showroom-------------------------- // Voir UIShowRoomResources.ndf, CountriesToShow
+    ("FR", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_FR"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "FR"
+            NameToken = "CtrFR"
+        )),
+    ("CAN", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_CAN"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "CAN"
+            NameToken = "CtrCAN"
+        )),
+    ("POL", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "POL"
+            NameToken = "CtrPOL"
+        )),
+    ("LUX", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_LUX"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "LUX"
+            NameToken = "CtrLUX"
+        )),
+    ("NL", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_NL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "NL"
+            NameToken = "CtrNL"
+        )),
+    ("FIN", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_FIN"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "FIN"
+            NameToken = "CtrFIN"
+        )),
+    ("ROU", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_ROU"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "ROU"
+            NameToken = "CtrROU"
+        )),
+    ("BEL", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_BEL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "BEL"
+            NameToken = "CtrBEL"
+        )),
+    ("LIT", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "LIT"
+            NameToken = "CtrLIT"
+        )),
+    ("EST", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "EST"
+            NameToken = "CtrEST"
+        )),
+    ("TCH", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_TCH"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "TCH"
+            NameToken = "CtrTCH"
+        )),
+    ("ESP", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_ESP"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "ESP"
+            NameToken = "CtrESP"
+        )),
+]
+
+//-----------------------------------------------
+
+SpecificCountriesInfosSingleton is TUISpecificCountriesInfos
+(
+    CountriesInfos = ~/SpecificCountriesInfos
+)

@@ -1,0 +1,19 @@
+export Modele_F15C_Eagle_AA_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F15C_Eagle/F15C_Eagle.fbx'
+)
+
+export Modele_F15C_Eagle_AA_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F15C_Eagle_MID/F15C_Eagle_MID.fbx'
+)
+
+export Modele_F15C_Eagle_AA_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/LODS/F15C_Eagle_LOW.fbx'
+)
+
+export Modele_F15C_Eagle_AA_US_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F15C_Eagle/F15C_Eagle_Train.fbx'
+)

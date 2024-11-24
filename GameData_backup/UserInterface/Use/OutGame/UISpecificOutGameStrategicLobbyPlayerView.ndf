@@ -1,0 +1,180 @@
+StrategicPlayerDownloadGauge is BUCKGaugeDescriptor
+(
+    ElementName = "DownloadGauge"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [100.0, 32.0]
+        AlignementToFather     = [0.0, 0.5]
+        AlignementToAnchor     = [0.0, 0.5]
+    )
+
+    GridAlign = true
+
+    HasBackground = true
+    BackgroundBlockColorToken = "Gray"
+
+    HasBorder = true
+    BorderThicknessToken = "1"
+    BorderLineColorToken = "Ingame/GaugeBorder"
+
+    GaugeValueMinSize = TRTTILength( Pixel = 1.0 )
+
+    GaugeComponentNames = ['DownloadValue']
+    GaugeMax = 100
+
+    Components =
+    [
+        BUCKGaugeValueDescriptor
+        (
+            ElementName = 'DownloadValue'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight    = [0.0, 1.0]
+                AlignementToFather     = [0.0, 0.5]
+                AlignementToAnchor     = [0.0, 0.5]
+            )
+
+            HasBackground = true
+            BackgroundBlockColorToken = "Glacier"
+        ),
+    ]
+)
+
+BUCKSpecificOutGameStrategicLobbyPlayerViewDescriptor is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    InterItemMargin = TRTTILength(Magnifiable = 8.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKSpecificAvatarDescriptor
+            (
+                ElementName = "PlayerAvatar"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [32.0, 32.0]
+                    AlignementToAnchor = [0.0, 0.5]
+                    AlignementToFather = [0.0, 0.5]
+
+                )
+                TextureToken = "OutgameTexture_TrendPlus"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "PlayerName"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 0.0]
+                    AlignementToAnchor = [0.0, 0.5]
+                    AlignementToFather = [0.0, 0.5]
+                )
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    Alignment = ~/UIText_Left
+                    VerticalAlignment = ~/UIText_VerticalCenter
+                )
+
+                TextPadding = TRTTILength4(Magnifiable = [2.0, 2.0, 2.0, 2.0])
+
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                VerticalFitStyle = ~/FitStyle/FitToContent
+
+                TextStyle = 'Default'
+                TypefaceToken = "Eurostyle"
+                TextSize = '18'
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "Noir"
+                BigLineAction = ~/BigLineAction/CutByDots
+
+                TextFormatScript = nil
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = StrategicPlayerDownloadGauge
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKButtonDescriptor
+            (
+                ElementName = "KickButton"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [32.0, 32.0]
+                    AlignementToAnchor = [0.0, 0.5]
+                    AlignementToFather = [0.0, 0.5]
+                )
+
+                Components =
+                [
+                    BUCKTextureDescriptor
+                    (
+                        ComponentFrame =  TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [14.0, 14.0]
+                            AlignementToFather = [0.5, 0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                        )
+
+                        TextureToken = "close_slot"
+                        TextureColorToken = "Noir"
+                        TextureFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                        )
+                    ),
+                    BUCKSpecificHintableArea
+                    (
+                        HintTitleToken = "H_KICKP"
+                        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                    )
+                ]
+            )
+        ),
+    ]
+
+    ForegroundComponents =
+    [
+        BUCKContainerDescriptor
+        (
+            ElementName = "PlayerNeedSwitchSideContainer"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+               RelativeWidthHeight = [1.0, 1.0]
+            )
+
+            HasBackground = True
+            BackgroundBlockColorToken = "Lobby/PlayerNeedSwitchSideColorSlotColor"
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+
+UISpecificOutGameStrategicLobbyPlayerViewDescriptor is TUISpecificOutGameStrategicLobbyPlayerViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificOutGameStrategicLobbyPlayerViewDescriptor
+    MainComponentContainerUniqueName = ""
+
+    DefaultIAName = "AB_AI"
+)

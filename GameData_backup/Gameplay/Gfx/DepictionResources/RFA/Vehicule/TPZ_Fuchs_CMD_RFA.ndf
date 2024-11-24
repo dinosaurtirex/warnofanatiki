@@ -1,0 +1,19 @@
+export Modele_TPZ_Fuchs_CMD_RFA is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/APC/TPZ_Fuchs_CMD/TPZ_Fuchs_CMD.fbx'
+)
+
+export Modele_TPZ_Fuchs_CMD_RFA_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/APC/TPZ_Fuchs_CMD_MID/TPZ_Fuchs_CMD_MID.fbx'
+)
+
+export Modele_TPZ_Fuchs_CMD_RFA_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/RFA/APC/LODS/TPZ_Fuchs_CMD_LOW.fbx'
+)
+
+export Modele_TPZ_Fuchs_CMD_RFA_Tourelle_01 is ModelDescriptor
+(
+    FileName = ModelFile_MG3_t1
+)

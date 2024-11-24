@@ -1,0 +1,312 @@
+
+IngameScriptedLabelResources is TUIScriptedAnimatedLabelResources
+(
+    Layer = $/UserInterface/UILayer_Labels
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+
+    LabelMagnificationMultiplier = 1
+
+    AnimationDurationInSecond = 2.0
+
+    LabelDescriptors = MAP
+    [
+        ("Primary", PrimaryObjectiveLabel),
+        ("Bonus", BonusObjectiveLabel),
+        ("InfoObj", InfoObjectiveLabel),
+        ("CapturePoint", CapturePointObjectiveLabel),
+    ]
+
+    FeedbackThicknessCapture = 700.0
+    FeedbackFadeAltitudeCapture = 36000.0 //56000.0
+    FeedbackFadeDurationCapture = 1.2
+    FeedbackDrawPole = true
+
+    FlagBorderWidth = 1 //La largeur de la bordure autour du drapeau
+    FlagNotchWidth = 0.2 //Par exemple, 0.2 = l'encoche du drapeau fait 20% de la largeur du "FlagContainer"
+)
+
+private IngameLabelTransformation is TLabelTransformPreTranslateFaceCamFakePerspective
+(
+    PreTranslation = [0,0,1000]
+    ScalePerAltitudeConstReso = 1.5
+    Camera = $/M3D/Misc/CameraPrincipale
+    Scene2D = $/M3D/Scene/Scene_2D_Interface
+    ConstnessFactor = 0.6
+)
+
+private IngameFeedbackMagnifiableVerticalOffset is -100
+
+private PrimaryObjectiveLabel is TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 0.0
+    AltitudeMaxSize = 500000.0
+    MinScale = 0.8
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = "OBJ_NEWP"
+    AnimPriority = 100
+
+    LabelTransformation = IngameLabelTransformation
+    FeedbackMagnifiableVerticalOffset = IngameFeedbackMagnifiableVerticalOffset
+
+    ComponentDescriptor = ObjectiveLabel
+    (
+
+        TitleTypeFace = 'Eurostyle_Heavy'
+        TitleColor = "ObjectiveLabel/Primary/Title"
+        TitleSize = "20"
+
+        LabelMaxWidth = 300.0
+
+        TextAlignment = UIText_Center
+        TextAlignementToFather = [0.5, 0.0]
+        TextAlignementToAnchor = [0.5, 0.0]
+    )
+)
+
+private BonusObjectiveLabel is TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 1.0
+    AltitudeMaxSize = 330000.0
+    MinScale = 0.8
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = "OBJ_NEWS"
+    AnimPriority = 50
+
+    LabelTransformation = IngameLabelTransformation
+    FeedbackMagnifiableVerticalOffset = IngameFeedbackMagnifiableVerticalOffset
+
+    ComponentDescriptor = ObjectiveLabel
+    (
+        TitleColor = "ObjectiveLabel/Bonus/Title"
+        TitleSize = "ObjectiveLabel/Bonus/Title"
+
+        TextAlignment = UIText_Center
+        TextAlignementToFather = [0.0, 0.0]
+        TextAlignementToAnchor = [0.0, 0.0]
+    )
+)
+
+private InfoObjectiveLabel is TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 1.0
+    AltitudeMaxSize = 270000.0
+    MinScale = 0.8
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = "OBJ_NEWI"
+    AnimPriority = 25
+
+    LabelTransformation = IngameLabelTransformation
+    FeedbackMagnifiableVerticalOffset = IngameFeedbackMagnifiableVerticalOffset
+
+    ComponentDescriptor = ObjectiveLabel
+    (
+        TitleColor = "ObjectiveLabel/Info/Title"
+        TitleSize =  "10"
+
+        TextAlignment = UIText_Center
+        TextAlignementToFather = [0.0, 0.0]
+        TextAlignementToAnchor = [0.0, 0.0]
+    )
+)
+
+private CapturePointObjectiveLabel is TUIScriptedAnimatedLabelDescriptor
+(
+    ScaleFactor = 0.0
+    AltitudeMaxSize = 500000.0
+    MinScale = 0.0
+    MaxScale = 1.0
+
+    NewAnimatedLabelToken = "OBJ_NEWCP"
+    AnimPriority = 50
+
+    LabelTransformation = IngameLabelTransformation
+    FeedbackMagnifiableVerticalOffset = IngameFeedbackMagnifiableVerticalOffset
+
+    ComponentDescriptor = ObjectiveLabel
+    (
+
+        TitleTypeFace = 'Eurostyle_Heavy'
+        TitleColor = "ObjectiveLabel/Primary/Title"
+        TitleSize = "17"
+
+        LabelMaxWidth = 300.0
+
+        TextAlignment = UIText_Center
+        TextAlignementToFather = [0.5, 0.0]
+        TextAlignementToAnchor = [0.5, 0.0]
+    )
+
+)
+
+private template ObjectiveLabelText
+[
+    ElementName : string,
+    ComponentFrame : TUIFramePropertyRTTI,
+    TypefaceToken : string = "UIMainFont",
+    TextSize : string = "Default",
+    TextColor : string = "ObjectiveEtiquetteManager/Text",
+    Alignment = UIText_Left,
+    VerticalAlignment = UIText_Up,
+    HorizontalFitStyle = ~/FitStyle/FitToContent,
+    BigLineAction = ~/BigLineAction/MultiLine,
+    TextPadding : TRTTILength4 = TRTTILength4( Magnifiable = [5,0,5,0] ),
+    TextStyle : string = "Default",
+]
+is BUCKTextDescriptor
+(
+    ElementName = <ElementName>
+
+    ComponentFrame = <ComponentFrame>
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment         = <Alignment>
+        VerticalAlignment = <VerticalAlignment>
+        BigWordAction     = ~/BigWordAction/BigWordNewLine
+        Balanced          = true
+    )
+
+    TextStyle = <TextStyle>
+
+    TypefaceToken = <TypefaceToken>
+
+    TextDico = ~/LocalisationConstantes/dico_maps
+    TextPadding = <TextPadding>
+    TextSize = <TextSize>
+    TextColor = <TextColor>
+
+    HorizontalFitStyle = <HorizontalFitStyle>
+    VerticalFitStyle = ~/FitStyle/FitToContent
+
+    BigLineAction = <BigLineAction>
+)
+//-------------------------------------------------------------------------------------
+private template ObjectiveLabel
+[
+    TitleColor : string = "",
+    TitleSize : string,
+
+    TextAlignment = UIText_Center,
+    TextAlignementToFather : float2 = [0.5, 0.0],
+    TextAlignementToAnchor : float2 = [0.5, 0.0],
+
+    TitleTypeFace : string = "UIMainFont",
+
+    LabelMaxWidth : float = 300.0,
+    LabelMinWidth : float = 0,
+]
+is BUCKListDescriptor
+(
+    Axis = ~/ListAxis/Vertical
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0, 0]
+        MagnifiableOffset = [0, 0]
+    )
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    PixelWidthHeight = [DistanceBetweenExternalAndInternalBorder * 2.0 + 1.0, DistanceBetweenExternalAndInternalBorder + 1.0]
+                    MagnifiableWidthHeight = [<LabelMinWidth>, 0]
+                )
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [32.0, 8.0]
+                    AlignementToFather = <TextAlignementToFather>
+                    AlignementToAnchor = <TextAlignementToAnchor>
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContent
+
+                Components =
+                [
+                    ObjectiveLabelText
+                    (
+                        ElementName = "Title"
+
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [<LabelMaxWidth>, 0.0]
+                            AlignementToFather = [0.5, 0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                        )
+
+                        TypefaceToken = <TitleTypeFace>
+                        TextSize = <TitleSize>
+                        TextColor = <TitleColor>
+
+                        Alignment = <TextAlignment>
+
+                        HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+                    )
+                ]
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    PixelWidthHeight = [DistanceBetweenExternalAndInternalBorder * 2.0 + 1.0, DistanceBetweenExternalAndInternalBorder + 1.0]
+                    MagnifiableWidthHeight = [<LabelMinWidth>, 0]
+                )
+            )
+        ),
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner
+        (
+            BackgroundBlockColorToken = 'LDHintSolo_fond'
+            BorderLineColorToken = 'LDHintSolo_texte'
+            BorderThicknessToken = '2'
+        )
+    ]
+
+    ForegroundComponents =
+    [
+        BUCKTextDescriptor
+        (
+            ElementName = "HeadingText"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                //RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableOffset = [0.0, -5.0]
+                AlignementToAnchor = [0.5, 1.0]
+                AlignementToFather = [0.5, 0.0]
+                )
+            ParagraphStyle = paragraphStyleTextCenter
+            TextStyle = "Default"
+            HorizontalFitStyle = ~/FitStyle/FitToContent
+            VerticalFitStyle = ~/FitStyle/FitToContent
+            TypefaceToken = "Eurostyle"
+            BigLineAction = ~/BigLineAction/MultiLine
+
+            TextDico = ~/LocalisationConstantes/dico_maps
+            TextColor = "BlancTexte"
+            TextSize = "22"
+
+
+        )
+    ]
+)

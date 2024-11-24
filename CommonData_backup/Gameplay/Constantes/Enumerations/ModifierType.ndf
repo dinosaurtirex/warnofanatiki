@@ -1,0 +1,6 @@
+// A garder synchro avec TModifierType dans ValueModifierSystem.h
+
+ModifierType_Additionnel is 0
+ModifierType_Multiplicatif is 1
+ModifierType_Pourcentage is 2
+ModifierType_Remplacement is 3

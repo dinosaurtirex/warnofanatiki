@@ -1,0 +1,742 @@
+// A incrémenter quand on veut provoquer une recompilation des glads chez tout le monde sans gêner personne
+
+// Version : 00559
+
+//-----------------------------------------------------------------------------
+// differentes constantes utilisees un peu partout.
+
+ContentType_Unknown                                   is 0
+ContentType_MeshBucket_LevelBuild_High                is 1
+ContentType_MeshBucket_LevelBuild_Mid                 is 2
+ContentType_MeshBucket_LevelBuild_Low                 is 3
+ContentType_IndividualMesh_LevelBuild_High            is 5
+ContentType_IndividualMesh_LevelBuild_Mid             is 6
+ContentType_IndividualMesh_LevelBuild_Low             is 7
+ContentType_IndividualMesh_LevelBuild_VeryLow         is 8
+ContentType_MeshBucket_LevelBuild_ImposteurSource     is 9
+ContentType_IndividualMesh_LevelBuild_ImposteurSource is 10
+ContentType_MeshBucket_LevelBuild_ImposteurRender     is 11
+ContentType_MeshBucket_LevelBuild_Vegetation_Tree     is 12
+ContentType_MeshBucket_LevelBuild_Vegetation_Grass    is 13
+ContentType_Sticker                                   is 14
+ContentType_StaticSticker                             is 15
+ContentType_Terrain                                   is 16
+ContentType_Sky                                       is 17
+ContentType_Misc                                      is 18
+ContentType_Editor                                    is 19
+
+ContentType_Texture_Unknown              is 0
+ContentType_Texture_Sticker              is 1
+ContentType_Texture_LevelBuild_High      is 2
+ContentType_Texture_LevelBuild_Mid       is 3
+ContentType_Texture_LevelBuild_Low       is 4
+ContentType_Texture_Units                is 5
+ContentType_Texture_Terrain              is 6
+ContentType_Texture_FX                   is 14
+//ContentType_Texture_Sky                  is 15
+
+ContentType_Texture_Shadow               is 16
+ContentType_Texture_GBuffer              is 17
+ContentType_Texture_Shooting             is 18
+
+ContentType_Texture_SSR                  is 19
+ContentType_Texture_SSAO                 is 20
+ContentType_Texture_Imposteur            is 21
+ContentType_Texture_PostProcess          is 22
+ContentType_Texture_BackBuffer           is 23
+ContentType_Texture_SparseDBRTex         is 24
+ContentType_Texture_FrameBuffer          is 25
+ContentType_Texture_CDLOD                is 26
+ContentType_Texture_Selection            is 27
+ContentType_Texture_Water                is 28
+ContentType_Texture_FogOfWar             is 29
+ContentType_Texture_LightProbe           is 30
+
+//-----------------------------------------------------------------------------
+// Modes scenery descriptor
+// ( doit matcher Crux/Code/Eugen/CPP/LevelBuild/LevelBuildModes.h )
+SDMode_High_Baked           is 0x1
+SDMode_High_NotBaked        is 0x2
+SDMode_High                 is (SDMode_High_Baked | SDMode_High_NotBaked)
+SDMode_Mid                  is 0x4
+SDMode_Low                  is 0x8
+SDMode_Sticker              is 0x10
+SDMode_StickerDynamic       is 0x20
+SDMode_Navigation           is 0x40
+SDMode_Road                 is 0x80
+SDMode_District             is 0x100
+SDMode_RaytraceObject       is 0x200
+SDMode_Water                is 0x400
+SDMode_StateDB              is 0x800
+SDMode_EditorOnly           is 0x1000
+SDMode_StaticGeometry       is 0x2000
+SDMode_FXFeedback           is 0x4000
+SDMode_FXModel              is 0x8000
+SDMode_StaticFX             is 0x10000
+SDMode_FXBank               is 0x20000
+SDMode_Snap                 is 0x40000
+SDMode_OnlyBaked            is 0x80000 // PaulQ(24/01/12): ces objets ne sont visibles que lors du baking
+SDMode_RaytraceBuilding     is 0x100000
+SDMode_RaytraceHighBuilding is 0x200000
+SDMode_All                  is 0x2FFFFF
+
+SDMode_AllLod is SDMode_High + SDMode_Mid + SDMode_Low
+
+// mode dans la DB de level design
+SDMode_LevelDesign          is 0x1
+SDMode_Zone                 is 0x2
+
+// mask scenery descriptor.
+// /!\ Doit matcher avec Eugen::LevelBuild::State::Type dans LevelBuildHierarchyStates.h /!\
+SDMask_Destroy              is 2
+SDMask_Hidden               is 4
+SDMask_HideVeget            is 8
+SDMask_Squash               is 16
+SDMask_SlightSlope          is 32
+
+SDMask_SquashOrDestroy      is SDMask_Squash+SDMask_Destroy
+
+
+//-----------------------------------------------------------------------------
+MapCellSize                 is 655360
+
+//-----------------------------------------------------------------------------
+// primitive type (Synchronisé avec Core3D/Primitives.h)
+
+PrimitiveType_POINTLIST     is 1
+PrimitiveType_LINELIST      is 2
+PrimitiveType_TRIANGLELIST  is 3
+
+//-----------------------------------------------------------------------------
+// valeur des types de rendu des DynamicRenderToolBox ( ne pas toucher, doit matcher le CPP )
+DebugMaterialType_NONE     is -1
+DebugMaterialType_BLENDED  is 0
+DebugMaterialType_ADDITIVE is 1
+DebugMaterialType_BUTTON_STANDARD is 2
+DebugMaterialType_BUTTON_HOVERED is 3
+DebugMaterialType_BUTTON_PRESSED is 4
+DebugMaterialType_BUTTON_DISABLED is 5
+
+//-----------------------------------------------------------------------------
+// Constantes diverses
+MaxCalquesForSticker    is 75
+MaxParticleCount        is 80000
+
+//-----------------------------------------------------------------------------
+// Constantes pour le UITextStyle, doit matcher le cpp
+UIText_Left is 0
+UIText_Center is 1
+UIText_Right is 2
+UIText_LeftJustified is 3
+
+UIText_FirstBaseLine is 0
+UIText_LastBaseLine is 1
+UIText_VerticalCenter is 2
+UIText_Up is 3
+UIText_Bottom is 4
+
+//-----------------------------------------------------------------------------
+// valeur default des options de volume de sons / slider dans panneau d'option.
+DefaultSoundSliderValue is 1.0
+DefaultSoundCompressorValue is 0.5
+
+//-----------------------------------------------------------------------------
+GameOption is TBaseClass
+(
+    GameOption_Preferences     is 'preferences'
+    GameOption_Gameplay        is 'gameplay'
+    GameOption_Sound           is 'sound'
+    GameOption_GUI_HUD         is 'gui_hud'
+    GameOption_Graphic         is 'video'
+    GameOption_AdvancedGraphic is 'advanced_video'
+    GameOption_Keyboard        is 'hotkeys'
+    GameOption_SystemValues    is 'system_values'
+    GameOption_Language        is 'language'
+
+    WidgetType_ComboBox is 0
+    WidgetType_CheckBox is 1
+    WidgetType_Slider   is 2
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/GameApplicationDeviceType.h
+DeviceType is TBaseClass
+(
+    AutoDetect  is 0
+    OpenGL      is 1
+    DirectX11   is 2
+    Vulkan      is 3
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/GameApplicationWindowMode.h
+WindowMode is TBaseClass
+(
+    Windowed            is 0
+    FullscreenWindowed  is 2
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/SamplerState.h
+WrapMode is TBaseClass
+(
+    Clamp  is 0
+    Wrap   is 1
+    Mirror is 2
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/SamplerState.h
+FilterMode is TBaseClass
+(
+    Point       is 0
+    Linear      is 1
+    Anisotropic is 2
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/SamplerState.h
+ComparisonFunc is TBaseClass
+(
+    None       is 0
+    LessEqual  is 1
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/RenderState.h
+ColorWrite is TBaseClass
+(
+    All   is 0
+    Alpha is 1
+    RGB   is 2
+    RG    is 3
+    RB    is 4
+    RA    is 5
+    GB    is 6
+    GA    is 7
+    BA    is 8
+    R     is 9
+    G     is 10
+    B     is 11
+    A     is 12
+    No    is 13
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/RenderState.h
+ColorBlend is TBaseClass
+(
+    No                          is 0
+    SrcAlpha_1                  is 1
+    _1_InvSrcAlpha              is 2
+    _1_1                        is 3
+    _1_0                        is 4
+    SrcAlpha_InvSrcAlpha        is 5
+    Min_SrcAlpha_1              is 6
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/RenderState.h
+AlphaBlend is TBaseClass
+(
+    No                  is 0
+    SameAsColorBlend    is 1
+    _1_Add_InvSrcAlpha  is 2
+    _0_Add_SrcAlpha     is 3
+    _0_Add_InvSrcAlpha  is 4
+    _0_Add_1            is 5
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/RenderState.h
+ZTest is TBaseClass
+(
+    No         is 0
+    Less       is 1
+    LessEqual  is 2
+    Greater    is 3
+    Equal      is 4
+    Always     is 5
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/ShaderStorageTypeEnum.h
+GPUBufferType is TBaseClass
+(
+    Typeless    is 0
+    Structured  is 1
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec Core3D/ShaderStorageTypeEnum.h
+GPUBufferAccess is TBaseClass
+(
+    None        is 0
+    Read        is 1
+    Write       is 2
+    ReadWrite   is Read + Write
+)
+
+//-----------------------------------------------------------------------------
+// doit matcher avec l'enum TShaderVertexFetchMode de Core3D/ShaderVertexFetchMode.h
+ShaderVertexFetchMode is TBaseClass
+(
+    Hardware     is 0
+    Programmable is 1
+)
+
+//-----------------------------------------------------------------------------
+//  RenderType
+//-----------------------------------------------------------------------------
+// doit matcher avec l'enum TShaderVertexFetchMode de Core3D/RenderType.h
+RenderType is TBaseClass
+(
+    Forward                   is 0
+    GBuffer                   is 1
+    DepthShadow               is 2
+    ScreenSpeed               is 3
+    ImposterWorld             is 4
+    ImposterWorld_DepthShadow is 5
+    BakingHeightmap           is 6
+)
+//-----------------------------------------------------------------------------
+// Commande name
+
+InGameKeyCommands is TBaseClass
+(
+    OpenChat_All        is "InterfaceInGameChat::OpenAll"
+    OpenChat_Team       is "InterfaceInGameChat::OpenTeam"
+    CloseChat           is "InterfaceInGameChat::Close"
+    AbortChat           is "InterfaceInGameChat::Abort"
+)
+
+CommandName is TBaseClass
+(
+    GameApplicationResetMode      is "GameApplication::ChangeModeUsingDefaultValue"
+    GameApplicationToggle         is "GameApplicationToggler::Toggle"
+    GameApplicationPerformPendingToggle is 'GameApplicationToggler::PerformPendingToggle'
+    GraphicsModeRefresh             is "GraphicDependentObjectHandler::GraphicsModeRefreshCallback"
+    IncGraphicsDeviceVariability    is "IncGraphicsDeviceVariability"
+    SoundEngineUpdateSoundVolume        is "ClusterSoundEngine::UpdateSoundVolume"
+    SoundEngineUpdateSoundVolumeVoice   is "ClusterSoundEngine::UpdateSoundVolumeVoice"
+    SoundUpdateFocusRole          is "ClusterSoundEngine::UpdateSoundFocus"
+    FlushImposteurAndRenderTarget is "TImposteurManager::FlushImposteurAndRenderTarget"
+
+    ResetCDLODTextureCache      is "TTerrainCDLODTextureProvider::Reset"
+
+    OptionValuesSave           is "OptionValues::Save"
+    OptionValuesLoad           is "OptionValues::Load"
+    OptionValuesSetDefault     is "OptionValues::SetDefault"
+
+    OptionsProfileIASync     is "OptionsProfile::Sync"
+    OptionsProfileSelection  is "OptionsProfile::Selection"
+
+    ResetCameraMoverTactic      is "CameraMoverManager::ResetCameraMoverTactic"
+
+    WindowFormReloadOption   is "WindowForm::ReloadOption"
+
+    UIMarginUpdate is "UIManager::UpdateMargin"
+
+    CommonDepictionOnOptionChange is "CommonDepictionOnOptionChange::OnOptionChange"   // ceci correspond au nom donné dans DepictionDistanceToCameraBasedSelector.cpp
+
+    LightManagerFactoryOnOptionChanged is "LightManagerFactoryOnOptionChanged"
+
+    LevelBuildViewManagerResetOptions is "UnitLevelBuildInstanceManager::ResetOptions"   // ceci correspond au nom donné dans UnitLevelBuildView.cpp
+    ParticleMediumsResetOptions is "ParticleMediums::ResetOptions"   // ceci correspond au nom donné dans ParticleMedium.cpp
+
+    ActivateTestText3D is "Text3DTest::Activate"
+    DectivateTestText3D is "Text3DTest::Deactivate"
+    ActivateTestObjective is "ObjectiveTest::ActivateDeactivate"
+    ActivateDeactivateLabelTest is "LabelTest::ActivateDeactivate"
+
+    PythonLib25PackLoad is "Lib25PythonPack::Load"
+    PythonLib25PackUnload is "Lib25PythonPack::Unload"
+
+    PatchablePythonPackLoad is "PatchableResourcePythonPack::Load"
+    PatchablePythonPackUnload is "PatchableResourcePythonPack::Unload"
+
+    PythonPackLoad is "ResourcePythonPack::Load"
+    PythonPackUnload is "ResourcePythonPack::Unload"
+
+    EugenPythonPackLoad is "EugenResourcePythonPack::Load"
+    EugenPythonPackUnload is "EugenResourcePythonPack::Unload"
+
+    EugenSoloPythonPackLoad is "EugenSoloResourcePythonPack::Load"
+    EugenSoloPythonPackUnload is "EugenSoloResourcePythonPack::Unload"
+
+    EugenTestPythonPackLoad is "EugenTestResourcePythonPack::Load"
+    EugenTestPythonPackUnload is "EugenTestResourcePythonPack::Unload"
+
+    EugenScriptTestAutoPythonPackLoad is "EugenScriptTestAutoResourcePythonPack::Load"
+    EugenScriptTestAutoPythonPackUnload is "EugenScriptTestAutoResourcePythonPack::Unload"
+
+    SituationAwarenessNextEvent is "TInstancePositionEvents::Trigg"
+
+    UpdateStaticFXsQuality is "StaticLevelBuildManager::UpdateFXQuality"                                // ceci correspond au nom donné dans StaticLevelBuildManager.cpp
+
+    UpdateLocalisationLanguage is "Localisation::UpdateLanguage"
+)
+
+
+
+//-----------------------------------------------------------------------------
+// Resource Scenery Pack
+// Trade off memoire/ nombre de batch.  Plus c'est grand moins il y a de batch mais plus ca prend de mémoire.
+// on considere 1.5 * vertex par triangle triangles. Ce qui donne 20 * 1.5 + 3 * 4 = 42 bytes par triangle
+// on considère :
+// - 20bytes par vertex (3floats position + 2words texcoords + 4bytes normal).
+// - 12bytes d'index par triangle (3 index * sizeof(u32))
+RSP_DecompressedBufferResourceThreshold is 5000*42
+
+//-----------------------------------------------------------------------------
+OneMeterInGameUnits is 215 //Francis (21/12/21) A virer ASAP
+
+CaseSplitCount is TBaseClass
+(
+    UltraLowToVeryLow is 2 // Pas utilisé car l'UltraLow n'est que du Debug de l'éditeur.
+    VeryLowToLow is 4 // Habilleur_StateDB
+    LowToMid is 4
+    MidToHigh is 2
+    HighToVeryHigh is 2
+)
+
+CaseQueryExtent is TBaseClass // extent des cases de TDecorsHabilleurCase
+(
+    UltraLow        is VeryLow * CaseSplitCount/UltraLowToVeryLow
+    VeryLow         is Low * CaseSplitCount/VeryLowToLow
+    Low             is int2[ 81920, 81920 ]
+    Mid             is Low div CaseSplitCount/LowToMid
+    High            is Mid div CaseSplitCount/MidToHigh
+    VeryHigh        is High div CaseSplitCount/HighToVeryHigh
+)
+
+LayerSettings_Visible                   is 0x01
+LayerSettings_VisibilityLocked          is 0x04
+
+MaskedEditorFeedbackLayerSettings   is 0
+EditorFeedbackLayerSettings         is LayerSettings_Visible
+EditableEditorFeedbackLayerSettings is LayerSettings_Visible
+RenderLayerSettings                 is LayerSettings_Visible
+
+// /!\ Doit rester synchronisé avec l'enum dans UserInputKeyCode.h
+UserInputKeyboard is TBaseClass // namespace
+(
+    KEY_UNKNOWN            is 0x00
+    UNDEFINED_KEY_0x01     is 0x01
+    UNDEFINED_KEY_0x02     is 0x02
+    UNDEFINED_KEY_0x03     is 0x03
+    UNDEFINED_KEY_0x04     is 0x04
+    UNDEFINED_KEY_0x05     is 0x05
+    UNDEFINED_KEY_0x06     is 0x06
+    UNDEFINED_KEY_0x07     is 0x07
+    KEY_BACK               is 0x08
+    KEY_TAB                is 0x09
+    UNDEFINED_KEY_0x0A     is 0x0A
+    UNDEFINED_KEY_0x0B     is 0x0B
+    UNDEFINED_KEY_0x0C     is 0x0C
+    KEY_ENTER              is 0x0D
+    UNDEFINED_KEY_0x0E     is 0x0E
+    UNDEFINED_KEY_0x0F     is 0x0F
+
+    UNDEFINED_KEY_0x10     is 0x10
+    UNDEFINED_KEY_0x11     is 0x11
+    UNDEFINED_KEY_0x12     is 0x12
+    KEY_PAUSE              is 0x13
+    KEY_CAPITAL            is 0x14
+    UNDEFINED_KEY_0x15     is 0x15
+    UNDEFINED_KEY_0x16     is 0x16
+    UNDEFINED_KEY_0x17     is 0x17
+    UNDEFINED_KEY_0x18     is 0x18
+    UNDEFINED_KEY_0x19     is 0x19
+    UNDEFINED_KEY_0x1A     is 0x1A
+    KEY_ESCAPE             is 0x1B
+    UNDEFINED_KEY_0x1C     is 0x1C
+    UNDEFINED_KEY_0x1D     is 0x1D
+    UNDEFINED_KEY_0x1E     is 0x1E
+    UNDEFINED_KEY_0x1F     is 0x1F
+
+    KEY_SPACE              is 0x20
+    KEY_PAGE_UP            is 0x21
+    KEY_PAGE_DOWN          is 0x22
+    KEY_END                is 0x23
+    KEY_HOME               is 0x24
+    KEY_LEFT_ARROW         is 0x25
+    KEY_UP_ARROW           is 0x26
+    KEY_RIGHT_ARROW        is 0x27
+    KEY_DOWN_ARROW         is 0x28
+    UNDEFINED_KEY_0x29     is 0x29
+    UNDEFINED_KEY_0x2A     is 0x2A
+    UNDEFINED_KEY_0x2B     is 0x2B
+    KEY_PRINT_SCREEN       is 0x2C
+    KEY_INSERT             is 0x2D
+    KEY_DELETE             is 0x2E
+    UNDEFINED_KEY_0x2F     is 0x2F
+
+    KEY_0                  is 0x30
+    KEY_1                  is 0x31
+    KEY_2                  is 0x32
+    KEY_3                  is 0x33
+    KEY_4                  is 0x34
+    KEY_5                  is 0x35
+    KEY_6                  is 0x36
+    KEY_7                  is 0x37
+    KEY_8                  is 0x38
+    KEY_9                  is 0x39
+    UNDEFINED_KEY_0x3A     is 0x3A
+    UNDEFINED_KEY_0x3B     is 0x3B
+    UNDEFINED_KEY_0x3C     is 0x3C
+    UNDEFINED_KEY_0x3D     is 0x3D
+    UNDEFINED_KEY_0x3E     is 0x3E
+    UNDEFINED_KEY_0x3F     is 0x3F
+
+    UNDEFINED_KEY_0x40     is 0x40
+    KEY_FR_A               is 0x41
+    KEY_FR_B               is 0x42
+    KEY_FR_C               is 0x43
+    KEY_FR_D               is 0x44
+    KEY_FR_E               is 0x45
+    KEY_FR_F               is 0x46
+    KEY_FR_G               is 0x47
+    KEY_FR_H               is 0x48
+    KEY_FR_I               is 0x49
+    KEY_FR_J               is 0x4A
+    KEY_FR_K               is 0x4B
+    KEY_FR_L               is 0x4C
+    KEY_FR_M               is 0x4D
+    KEY_FR_N               is 0x4E
+    KEY_FR_O               is 0x4F
+
+    KEY_FR_P               is 0x50
+    KEY_FR_Q               is 0x51
+    KEY_FR_R               is 0x52
+    KEY_FR_S               is 0x53
+    KEY_FR_T               is 0x54
+    KEY_FR_U               is 0x55
+    KEY_FR_V               is 0x56
+    KEY_FR_W               is 0x57
+    KEY_FR_X               is 0x58
+    KEY_FR_Y               is 0x59
+    KEY_FR_Z               is 0x5A
+    UNDEFINED_KEY_0x5B     is 0x5B
+    UNDEFINED_KEY_0x5C     is 0x5C
+    UNDEFINED_KEY_0x5D     is 0x5D
+    UNDEFINED_KEY_0x5E     is 0x5E
+    UNDEFINED_KEY_0x5F     is 0x5F
+
+    KEY_NUMPAD_0           is 0x60
+    KEY_NUMPAD_1           is 0x61
+    KEY_NUMPAD_2           is 0x62
+    KEY_NUMPAD_3           is 0x63
+    KEY_NUMPAD_4           is 0x64
+    KEY_NUMPAD_5           is 0x65
+    KEY_NUMPAD_6           is 0x66
+    KEY_NUMPAD_7           is 0x67
+    KEY_NUMPAD_8           is 0x68
+    KEY_NUMPAD_9           is 0x69
+    KEY_NUMPAD_MUL         is 0x6A
+    KEY_NUMPAD_ADD         is 0x6B
+    KEY_NUMPAD_ENTER       is 0x6C
+    KEY_NUMPAD_SUB         is 0x6D
+    KEY_NUMPAD_DECIMAL     is 0x6E
+    KEY_NUMPAD_DIV         is 0x6F
+
+    KEY_F1                 is 0x70
+    KEY_F2                 is 0x71
+    KEY_F3                 is 0x72
+    KEY_F4                 is 0x73
+    KEY_F5                 is 0x74
+    KEY_F6                 is 0x75
+    KEY_F7                 is 0x76
+    KEY_F8                 is 0x77
+    KEY_F9                 is 0x78
+    KEY_F10                is 0x79
+    KEY_F11                is 0x7A
+    KEY_F12                is 0x7B
+    UNDEFINED_KEY_0x7C     is 0x7C
+    UNDEFINED_KEY_0x7D     is 0x7D
+    UNDEFINED_KEY_0x7E     is 0x7E
+    UNDEFINED_KEY_0x7F     is 0x7F
+
+    UNDEFINED_KEY_0x80     is 0x80
+    UNDEFINED_KEY_0x81     is 0x81
+    UNDEFINED_KEY_0x82     is 0x82
+    UNDEFINED_KEY_0x83     is 0x83
+    UNDEFINED_KEY_0x84     is 0x84
+    UNDEFINED_KEY_0x85     is 0x85
+    UNDEFINED_KEY_0x86     is 0x86
+    UNDEFINED_KEY_0x87     is 0x87
+    UNDEFINED_KEY_0x88     is 0x88
+    UNDEFINED_KEY_0x89     is 0x89
+    UNDEFINED_KEY_0x8A     is 0x8A
+    UNDEFINED_KEY_0x8B     is 0x8B
+    UNDEFINED_KEY_0x8C     is 0x8C
+    UNDEFINED_KEY_0x8D     is 0x8D
+    UNDEFINED_KEY_0x8E     is 0x8E
+    UNDEFINED_KEY_0x8F     is 0x8F
+
+    KEY_NUM_LOCK           is 0x90
+    KEY_SCROLL             is 0x91
+    UNDEFINED_KEY_0x92     is 0x92
+    UNDEFINED_KEY_0x93     is 0x93
+    UNDEFINED_KEY_0x94     is 0x94
+    UNDEFINED_KEY_0x95     is 0x95
+    UNDEFINED_KEY_0x96     is 0x96
+    UNDEFINED_KEY_0x97     is 0x97
+    UNDEFINED_KEY_0x98     is 0x98
+    UNDEFINED_KEY_0x99     is 0x99
+    UNDEFINED_KEY_0x9A     is 0x9A
+    UNDEFINED_KEY_0x9B     is 0x9B
+    UNDEFINED_KEY_0x9C     is 0x9C
+    UNDEFINED_KEY_0x9D     is 0x9D
+    UNDEFINED_KEY_0x9E     is 0x9E
+    UNDEFINED_KEY_0x9F     is 0x9F
+
+    KEY_L_SHIFT            is 0xA0
+    KEY_R_SHIFT            is 0xA1
+    KEY_L_CONTROL          is 0xA2
+    KEY_R_CONTROL          is 0xA3
+    KEY_L_ALT              is 0xA4
+    KEY_R_ALT              is 0xA5
+    UNDEFINED_KEY_0xA6     is 0xA6
+    UNDEFINED_KEY_0xA7     is 0xA7
+    UNDEFINED_KEY_0xA8     is 0xA8
+    UNDEFINED_KEY_0xA9     is 0xA9
+    UNDEFINED_KEY_0xAA     is 0xAA
+    UNDEFINED_KEY_0xAB     is 0xAB
+    UNDEFINED_KEY_0xAC     is 0xAC
+    KEY_VOLUME_MUTE        is 0xAD
+    KEY_VOLUME_DOWN        is 0xAE
+    KEY_VOLUME_UP          is 0xAF
+
+    KEY_MEDIA_NEXT_TRACK   is 0xB0
+    KEY_MEDIA_PREV_TRACK   is 0xB1
+    UNDEFINED_KEY_0xB2     is 0xB2
+    KEY_MEDIA_PLAY_PAUSE   is 0xB3
+    UNDEFINED_KEY_0xB4     is 0xB4
+    UNDEFINED_KEY_0xB5     is 0xB5
+    UNDEFINED_KEY_0xB6     is 0xB6
+    UNDEFINED_KEY_0xB7     is 0xB7
+    UNDEFINED_KEY_0xB8     is 0xB8
+    UNDEFINED_KEY_0xB9     is 0xB9
+    KEY_OEM_FR_DOLLAR      is 0xBA
+    KEY_OEM_FR_EQUAL       is 0xBB
+    KEY_OEM_FR_COMMA       is 0xBC
+    UNDEFINED_KEY_0xBD     is 0xBD
+    KEY_OEM_FR_SEMICOLON   is 0xBE
+    KEY_OEM_FR_COLON       is 0xBF
+
+    KEY_OEM_FR_UGRAVE      is 0xC0
+    UNDEFINED_KEY_0xC1     is 0xC1
+    UNDEFINED_KEY_0xC2     is 0xC2
+    UNDEFINED_KEY_0xC3     is 0xC3
+    UNDEFINED_KEY_0xC4     is 0xC4
+    UNDEFINED_KEY_0xC5     is 0xC5
+    UNDEFINED_KEY_0xC6     is 0xC6
+    UNDEFINED_KEY_0xC7     is 0xC7
+    UNDEFINED_KEY_0xC8     is 0xC8
+    UNDEFINED_KEY_0xC9     is 0xC9
+    UNDEFINED_KEY_0xCA     is 0xCA
+    UNDEFINED_KEY_0xCB     is 0xCB
+    UNDEFINED_KEY_0xCC     is 0xCC
+    UNDEFINED_KEY_0xCD     is 0xCD
+    UNDEFINED_KEY_0xCE     is 0xCE
+    UNDEFINED_KEY_0xCF     is 0xCF
+
+    UNDEFINED_KEY_0xD0     is 0xD0
+    UNDEFINED_KEY_0xD1     is 0xD1
+    UNDEFINED_KEY_0xD2     is 0xD2
+    UNDEFINED_KEY_0xD3     is 0xD3
+    UNDEFINED_KEY_0xD4     is 0xD4
+    UNDEFINED_KEY_0xD5     is 0xD5
+    UNDEFINED_KEY_0xD6     is 0xD6
+    UNDEFINED_KEY_0xD7     is 0xD7
+    UNDEFINED_KEY_0xD8     is 0xD8
+    UNDEFINED_KEY_0xD9     is 0xD9
+    UNDEFINED_KEY_0xDA     is 0xDA
+    KEY_OEM_FR_CLOSING_PARENTHESIS is 0xDB
+    KEY_OEM_FR_STAR        is 0xDC
+    KEY_OEM_FR_CIRCUMFLEX  is 0xDD
+    KEY_OEM_FR_SQUARE      is 0xDE
+    KEY_OEM_FR_EXCLAMATION is 0xDF
+
+    UNDEFINED_KEY_0xE0     is 0xE0
+    UNDEFINED_KEY_0xE1     is 0xE1
+    KEY_OEM_FR_ANGLE_BRACKET is 0xE2
+    UNDEFINED_KEY_0xE3     is 0xE3
+    UNDEFINED_KEY_0xE4     is 0xE4
+    UNDEFINED_KEY_0xE5     is 0xE5
+    UNDEFINED_KEY_0xE6     is 0xE6
+    UNDEFINED_KEY_0xE7     is 0xE7
+    UNDEFINED_KEY_0xE8     is 0xE8
+    UNDEFINED_KEY_0xE9     is 0xE9
+    UNDEFINED_KEY_0xEA     is 0xEA
+    UNDEFINED_KEY_0xEB     is 0xEB
+    UNDEFINED_KEY_0xEC     is 0xEC
+    UNDEFINED_KEY_0xED     is 0xED
+    UNDEFINED_KEY_0xEE     is 0xEE
+    UNDEFINED_KEY_0xEF     is 0xEF
+
+    UNDEFINED_KEY_0xF0     is 0xF0
+    UNDEFINED_KEY_0xF1     is 0xF1
+    UNDEFINED_KEY_0xF2     is 0xF2
+    UNDEFINED_KEY_0xF3     is 0xF3
+    UNDEFINED_KEY_0xF4     is 0xF4
+    UNDEFINED_KEY_0xF5     is 0xF5
+    UNDEFINED_KEY_0xF6     is 0xF6
+    UNDEFINED_KEY_0xF7     is 0xF7
+    UNDEFINED_KEY_0xF8     is 0xF8
+    UNDEFINED_KEY_0xF9     is 0xF9
+    UNDEFINED_KEY_0xFA     is 0xFA
+    UNDEFINED_KEY_0xFB     is 0xFB
+    UNDEFINED_KEY_0xFC     is 0xFC
+    UNDEFINED_KEY_0xFD     is 0xFD
+    UNDEFINED_KEY_0xFE     is 0xFE
+    UNDEFINED_KEY_0xFF     is 0xFF
+)
+
+// /!\ Doit rester synchronisé avec l'enum dans UserInputEvent.h
+UserInputMouse is TBaseClass
+(
+    None is 0
+    Pointer is 1
+    Wheel is 2
+    LButton is 3
+    MButton is 4
+    RButton is 5
+    XButton1 is 6
+    XButton2 is 7
+)
+
+//-----------------------------------------------------------------------------
+// /!\ Doit rester synchronisé avec l'enum CameraProjection::Type dans camera.h
+EProjectionType is TBaseClass
+(
+    Perspective  is 0
+    Orthographic is 1
+)
+
+//-----------------------------------------------------------------------------
+// /!\ Doit rester synchronisé avec l'enum EReloadableType::Type dans ReloadableItem.h
+EReloadableType is TBaseClass
+(
+    UI  is 0
+    Gameplay is 1
+)
+
+//-----------------------------------------------------------------------------
+// /!\ Doit rester synchronisé avec l'enum ELevelLaunch::Type dans LevelLaunch.h
+ELevelLaunch is TBaseClass
+(
+    NoIA is 0
+    LaunchIA is 1
+    Scripted is 2
+    Skirmish is 3
+    Load    is 4
+    TestSuite  is 5
+)
+
+//-----------------------------------------------------------------------------
+// CONSTANTES POUR LE GAME DESIGN
+// /!\ Doit rester synchronisé avec EugIA/Constantes.h
+
+Metre                             is 26.0

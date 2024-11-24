@@ -1,0 +1,1989 @@
+//-------------------------------------------------------------------------
+//------------------------- MISSIONS D'ATTAQUE ----------------------------
+//-------------------------------------------------------------------------
+// Parametres TMacroActionDescriptor_Common
+//-------------------------------------------------------------------------
+// GenerationType :
+// NumberLaunchBasedOnGenerationType :
+// ParametresDeMission : Transport, Airstrike, Support, ArtilleryStrike
+// PoolModelList : liste des unites demandees
+// DisableReinforcement : si on recoit des renforts en cours d'attaque ou pas
+// IgnoreSafePath : Le pathfind de la mission cherche ou non à esquiver la menace
+// TuerLaMissionEnFinDeVieAuLieuDeLaRelancer : (bool)
+// LaunchASAP_RatioMin : permet de lancer l'attaque sans attendre toutes les unites requises à combiner avec ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]
+// MissionOmnisciente : Pas utilise dans Normandie (systeme de connaissance de zone)
+//-------------------------------------------------------------------------
+// Parametres TMacroActionDescriptor_Attack_Specific
+//-------------------------------------------------------------------------
+// RatioMinimumPourAttaquer : (float) le ratio qu'on doit posséder pour pouvoir déclencher l'attaque
+// ForceZoneAttaqueName : (string)
+// InterdireRequisition : (bool) si on utilise le systeme de Defense de base d'AoA
+//-------------------------------------------------------------------------
+// Parametres supplémentaire TMacroActionDescriptor_CorridorAttack_Specific
+//-------------------------------------------------------------------------
+// ForcedCorridor : (format special ex:[1]) permet de forcer l'attaque sur un couloir.
+//
+
+//-------------------------------------------------------------------------
+// Settings
+//-------------------------------------------------------------------------
+Default_Support_Request_Attack_Settings is
+[
+    TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
+    TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
+    TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
+]
+//-------------------------------------------------------------------------
+Blitzkrieg_Attack_Settings is
+[
+    TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 2.0   MinimumCostForSelfPreservation = 100),
+]
+//-------------------------------------------------------------------------
+AvoidFillerCorridors_Attack_Settings is
+[
+    TAvoidCorridorTagsSettingHolder(AvoidedCorridorTags = ["Filler"]),
+]
+//-------------------------------------------------------------------------
+// Attaque d'objectifs
+//-------------------------------------------------------------------------
+private template Template_Objective_Attack
+[
+    MinimumResourceForLaunch = MAP[],
+    AdditionnalParameter = [],
+]
+is TMacroActionDescriptor_ObjectiveAttack_Specific
+(
+    ParametresDeMission =
+    ~/Default_Support_Request_Attack_Settings
+    +
+    ~/Blitzkrieg_Attack_Settings
+    +
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [Pool_Objective_Attack] LaunchASAP_RatioMin = 0.01),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.825),
+        TAttackRatioSettingHolder(DifficultyList = [IADifficulty/TresFacile] RatioMinimumPourAttaquer = 100.0),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+    ]
+    +
+    <AdditionnalParameter>
+)
+//-------------------------------------------------------------------------
+export Attack_Objectives is Template_Objective_Attack
+(
+)
+//-------------------------------------------------------------------------
+export Attack_Objectives_Autogen is Template_Objective_Attack
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+)
+
+//-------------------------------------------------------------------------
+export Attack_Objectives_Allied_Autogen is Template_Objective_Attack
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+    AdditionnalParameter =
+    [
+        TObjectiveRequiresEnnemiesPossessionSettingHolder(),
+        TObjectiveAttackSetting(ZoneSources = [EMapSlicingZoneSource/ScenarioIAStrat, EMapSlicingZoneSource/ScenarioCommand] PriorizeObjectiveNotInMyCorridor = true),
+    ]
+)
+
+//-------------------------------------------------------------------------
+// COULOIR
+//-------------------------------------------------------------------------
+private template Template_Main_Attack
+[
+    MinimumResourceForLaunch = MAP[],
+    AdditionnalParameter = [],
+    SupportingStatus = ESupportingStatus/NeedSupport,
+    PoolModel_Generic = ~/Pool_Main_Attack,
+    PoolModel_Easy = ~/Pool_Main_Attack_Easy,
+    RatioMinimumPourAttaquer = 0.875,
+]
+is TMacroActionDescriptor_CorridorAttack_Specific
+(
+    ParametresDeMission =
+    ~/Default_Support_Request_Attack_Settings
+    +
+    ~/Blitzkrieg_Attack_Settings
+    +
+    ~/AvoidFillerCorridors_Attack_Settings
+    +
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TCoordinationSettingHolder(CoordinationType = <SupportingStatus>),
+
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [<PoolModel_Generic>]
+            TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Generic>]),] PrioritizeCorridorsForTaggedPoolModels = true LaunchASAP_RatioMin = 0.01),
+        TMacroActionProductionSettingHolder(DifficultyList = [IADifficulty/Facile] ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [<PoolModel_Easy>] TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Easy>]),] PrioritizeCorridorsForTaggedPoolModels = true LaunchASAP_RatioMin = 0.01),
+
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.00084), // Perte de 0.1 de ratio toutes les 2 minutes
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+        TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
+    ]
+    +
+    <AdditionnalParameter>
+)
+//-------------------------------------------------------------------------
+export Attack_Main is Template_Main_Attack
+(
+)
+//-------------------------------------------------------------------------
+export Attack_Main_BKT is Template_Main_Attack
+(
+    PoolModel_Generic = ~/Pool_Main_Attack_BKT
+    PoolModel_Easy = ~/Pool_Main_Attack_BKT
+)
+//-------------------------------------------------------------------------
+export Attack_Main_Diversify_BKT is Template_Main_Attack
+(
+    PoolModel_Generic = ~/Pool_Main_Attack_Diversify_BKT
+    PoolModel_Easy = ~/Pool_Main_Attack_Diversify_BKT
+)
+//-------------------------------------------------------------------------
+export Attack_Main_Autogen is Template_Main_Attack
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+)
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+export Attack_Filler is TMacroActionDescriptor_CorridorAttack_Specific
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyAssignedCorridors = true),
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_Attack_Filler] LaunchASAP_RatioMin = 0.01),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 1.75),
+        TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
+    ]
+)
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+private template Template_Attack_Corridor
+[
+    MinimumResourceForLaunch = MAP[],
+    RatioMinimumPourAttaquer:float = 0.875,
+    AdditionnalParameter = [],
+]
+is TMacroActionDescriptor_CorridorAttack_Specific
+(
+    ParametresDeMission =
+    ~/Default_Support_Request_Attack_Settings
+    +
+    ~/Blitzkrieg_Attack_Settings
+    +
+    ~/AvoidFillerCorridors_Attack_Settings
+    +
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]
+        PoolModelList = [
+            Pool_Default_Attack_1,
+            Pool_Default_Attack_2,
+            Pool_Default_Attack_3,
+        ]
+        TaggedPoolModelList =
+        [
+            (["AttackInfantry"], [ Pool_Infantry_Attack_1, Pool_Infantry_Attack_2, Pool_Infantry_Attack_3 ]),
+            (["AttackCombined"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]),
+            (["AttackTank"], [ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]),
+        ]
+        LaunchASAP_RatioMin = 0.01),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.001),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+        TAntiStackingSettingHolder(),
+        TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
+    ]
+    +
+    <AdditionnalParameter>
+)
+//-------------------------------------------------------------------------
+export Attack_Adaptive is Template_Attack_Corridor
+(
+)
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+private template Template_Attack_Helo
+[
+    MinimumResourceForLaunch = MAP[],
+    RatioMinimumPourAttaquer:float = 0.875,
+    AdditionnalParameter = [],
+]
+is TMacroActionDescriptor_CorridorAttack_Specific
+(
+    ParametresDeMission =
+    ~/Blitzkrieg_Attack_Settings
+    +
+    ~/AvoidFillerCorridors_Attack_Settings
+    +
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]
+        PoolModelList = [
+            Pool_Attack_Helo,
+        ]
+        LaunchASAP_RatioMin = 0.01 DisableReinforcement = true),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer>),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+        TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
+    ]
+    +
+    <AdditionnalParameter>
+)
+//-------------------------------------------------------------------------
+export Attack_Helo is Template_Attack_Helo
+(
+)
+
+//-------------------------------------------------------------------------
+export Attack_Helo_Autogen is Template_Attack_Helo
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+)
+
+//-------------------------------------------------------------------------
+export Attack_Adaptive_Autogen is Template_Attack_Corridor
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+    RatioMinimumPourAttaquer = 0.875
+)
+//-------------------------------------------------------------------------
+// Budgets
+//-------------------------------------------------------------------------
+Budget_Objective_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 300) , ($/GFX/Resources/Resource_Tickets, 15)]
+Budget_Main_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 600) , ($/GFX/Resources/Resource_Tickets, 20)]
+Budget_Reinforce_Main_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
+Budget_Default_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
+Budget_Attack_Helo is MAP [($/GFX/Resources/Resource_CommandPoints, 250) , ($/GFX/Resources/Resource_Tickets, 5)]
+Budget_Infantry_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 160) , ($/GFX/Resources/Resource_Tickets, 4)]
+Budget_Tank_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
+Budget_Combined_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
+Budget_Attack_Filler is MAP [($/GFX/Resources/Resource_CommandPoints, 80) , ($/GFX/Resources/Resource_Tickets, 3)]
+//-------------------------------------------------------------------------
+// PoolModelList
+//-------------------------------------------------------------------------
+// Fallback - Quelques infanteries au cas ou c'est la deche de tanks ou vehicules
+//--------------------------------------------------------------------------------
+Infantry_Fallback_Attack is [
+        TPoolElement(
+            DescriptorId = GUID:{80ad5c30-d931-11e8-baba-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8340-d931-11e8-86a9-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8341-d931-11e8-bdb1-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Spec_Defense",
+                "Vehicule_Appui",
+            ]
+        ),
+]
+
+// Fallback - Quelques véhicules ou chars au cas où ce soit la dèche d'infanteries
+//--------------------------------------------------------------------------------
+Vehicule_Fallback_Attack is [
+        TPoolElement(
+            DescriptorId = GUID:{80ad8342-d931-11e8-9432-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8343-d931-11e8-b678-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8344-d931-11e8-8ce6-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+]
+//--------------------------------------------------------------------------------
+Main_Attack_Fallback_Attack is [
+        TPoolElement(
+            DescriptorId = GUID:{701573e4-5fc0-4d25-a804-8d085c76f8c8}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{cd3157f2-61ee-49dc-8f6a-47255aef8093}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Spec_Defense",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{2a75756c-d980-4ef9-87aa-302138915cb4}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{8265b643-58b6-49ff-9395-ff32d4595a82}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{1ff9f706-c332-4d91-a8fd-983879a6309f}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{e3c6b7c2-108d-4ab6-9330-4e50bf961a57}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+]
+//-------------------------------------------------------------------------
+export Pool_Attack_Filler is TPoolModel
+(
+    Budget = ~/Budget_Attack_Filler
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{80ad8347-d931-11e8-891e-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Vehicule_Appui",
+                "Char_Standard"
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8348-d931-11e8-ae84-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Defense",
+                "Infanterie_Standard",
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Objective_Attack is TPoolModel
+(
+    Budget = ~/Budget_Objective_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{80ad8349-d931-11e8-be17-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/MostExpensive
+            TagsPriority = [
+                "Char_Standard",
+                "Char"
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad834a-d931-11e8-8367-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Char_Reco",
+                "Vehicule_Reco",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad834b-d931-11e8-80ff-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad834c-d931-11e8-b641-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+    ]
+    + ~/Infantry_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Main_Attack_Easy is TPoolModel
+(
+    Budget = ~/Budget_Default_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{c51b237f-b62a-42ea-a3b5-e3c92496276b}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{85714d9f-7b4d-44ad-9c78-896d67eece24}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Reco",
+                "Vehicule_Reco",
+                "Infanterie_Reco",
+                "Infanterie_Standard",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{c06e4fd1-70d7-499d-90d2-86e3d559cf80}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Main_Attack is TPoolModel
+(
+    Budget = ~/Budget_Main_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{80ad834f-d931-11e8-a5fe-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/MostExpensive
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{f72874f1-5234-4bd0-ae15-abded838b646}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "ChasseurDeChar_Standard",
+                "ChasseurDeChar",
+                "Infanterie_AT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8350-d931-11e8-a5e4-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/MostExpensive
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad834d-d931-11e8-809f-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Char_Standard",
+                "Char",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{b24fc35a-16de-44e1-8a34-4e319cdc1ac0}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad834e-d931-11e8-8949-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8351-d931-11e8-988c-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_IFV",
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_noAT",
+            ]
+        ),
+    ]
+    + ~/Main_Attack_Fallback_Attack
+)
+
+//-------------------------------------------------------------------------
+export Pool_Main_Attack_BKT is TPoolModel
+(
+    Budget = ~/Budget_Main_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{eafcb26b-1def-4fb8-b869-227bbf0a53ef}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/MostExpensive
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{b580b9d8-fa93-4700-8a41-ddc1c081ad10}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "ChasseurDeChar_Standard",
+                "ChasseurDeChar",
+                "Infanterie_AT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{13323a1b-ccdb-403b-884a-cfa567435da2}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/MostExpensive
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{da7964d1-aa49-4356-87da-2985a137d33c}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "ChasseurDeChar_Standard",
+                "ChasseurDeChar",
+                "Infanterie_AT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{8f7c6736-86ba-4912-9713-2633fea9d2d8}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{f2d7f4c4-bfb5-472f-b6ce-db995370ef4f}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{36d791a8-fbf9-4b2c-bd09-8f2b5778a177}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{ccefcc9e-7491-4771-8a2d-a9a68778a82a}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+            ForbiddenTags = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{18ad3fb6-9e21-48e1-8e6d-530b41414f13}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{ff79a930-c7f8-442d-a26f-11e0cbb2289d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{509a672c-d243-450f-9b2d-23b05cbb21f1}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_AT",
+                "ChasseurDeChar_Standard",
+                "ChasseurDeChar",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{7c929528-49bb-4666-a9f0-42eedfb12676}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_AT",
+                "Helo_Gunship",
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{b5089c88-ed3e-4795-bc4a-55e2f994ec90}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_IFV",
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_noAT",
+            ]
+        ),
+    ]
+    + ~/Main_Attack_Fallback_Attack
+)
+
+//-------------------------------------------------------------------------
+export Pool_Main_Attack_Diversify_BKT is TPoolModel
+(
+    Budget = ~/Budget_Main_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{c8d7a847-2c7d-4c87-98d7-0d17f5fe92ac}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/MostExpensive
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d83ea866-e596-41d1-bbe3-51faedfdfd30}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_IFV",
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_noAT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{06d99d8b-4e27-4455-94d9-54f7efd647ae}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "ChasseurDeChar_Standard",
+                "ChasseurDeChar",
+                "Infanterie_AT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{9e477835-c5c4-4394-aead-c8bde67ca59c}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_IFV",
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_noAT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{ece44530-1aaa-4471-bf22-2e84854f47b7}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{54994d9e-d13a-482d-9102-1ef9ee088946}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+                "Infanterie_AA",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{13e0535a-ea03-4b47-94ff-bb7e93a197dc}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{7f98385b-fc89-4bb4-8e75-961a1fb394e5}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_IFV",
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+                "Infanterie_noAT",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{0b4fcf6c-7548-402b-a797-35761b7835cb}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{922344cd-b2eb-46eb-bd87-580ad33fef34}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_AT",
+                "ChasseurDeChar_Standard",
+                "ChasseurDeChar",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{f54e6e0c-16b9-45ca-bc40-11ee9570d665}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_AT",
+                "Helo_Gunship",
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{a9792eee-325a-449d-857b-be5a47fffc52}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+    ]
+    + ~/Main_Attack_Fallback_Attack
+)
+
+//-------------------------------------------------------------------------
+export Pool_Default_Attack_1 is TPoolModel
+(
+    Budget = ~/Budget_Default_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{80ad8352-d931-11e8-9bfa-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui"
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80ad8353-d931-11e8-a966-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa4f-d931-11e8-b416-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Reco",
+                "Vehicule_Reco",
+                "Infanterie_Reco",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa50-d931-11e8-a01b-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa51-d931-11e8-93f1-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa52-d931-11e8-b667-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+    ]
+    + ~/Infantry_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Default_Attack_2 is TPoolModel
+(
+    Budget = ~/Budget_Default_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{80adaa53-d931-11e8-82b7-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa54-d931-11e8-afc7-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa55-d931-11e8-9b7d-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Reco",
+                "Vehicule_Reco",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa56-d931-11e8-b2e8-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Canon_AA_Porte",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa57-d931-11e8-9960-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa58-d931-11e8-a47f-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+    ]
+    + ~/Infantry_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Default_Attack_3 is TPoolModel
+(
+    Budget = ~/Budget_Default_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{80adaa59-d931-11e8-b397-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa5a-d931-11e8-87bc-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa5b-d931-11e8-a934-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa5c-d931-11e8-a5d0-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa5d-d931-11e8-b280-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{80adaa5e-d931-11e8-b280-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Helo_Transport_Arme",
+            ]
+        ),
+    ]
+    + ~/Infantry_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Tank_Attack_1 is TPoolModel
+(
+    Budget = ~/Budget_Tank_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d998f391-e1b5-11e8-9b3e-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d998f392-e1b5-11e8-b7c8-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+                "Char_Standard",
+                "Char_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d998f393-e1b5-11e8-aad3-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Vehicule_Reco",
+                "Infanterie_Reco",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d998f394-e1b5-11e8-9ab0-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d998f395-e1b5-11e8-8ec4-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d998f396-e1b5-11e8-b0b6-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Tank_Attack_2 is TPoolModel
+(
+    Budget = ~/Budget_Tank_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d998f397-e1b5-11e8-aab8-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa1-e1b5-11e8-8256-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Reco",
+                "Vehicule_Reco",
+                "Infanterie_Reco",
+                "Infanterie_Standard",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa2-e1b5-11e8-b46e-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa3-e1b5-11e8-848f-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa4-e1b5-11e8-93c4-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa5-e1b5-11e8-8a94-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+                "Canon_AA_Porte",
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Tank_Attack_3 is TPoolModel
+(
+    Budget = ~/Budget_Tank_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa6-e1b5-11e8-ab2c-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa7-e1b5-11e8-85c9-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char_Reco",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa8-e1b5-11e8-a391-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aa9-e1b5-11e8-95e6-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Reco",
+                "Vehicule_Reco",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aaa-e1b5-11e8-a57e-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aab-e1b5-11e8-9a7a-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Char",
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Infantry_Attack_1 is TPoolModel
+(
+    Budget = ~/Budget_Infantry_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d9991aac-e1b5-11e8-a105-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aad-e1b5-11e8-8999-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aae-e1b5-11e8-bdce-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Reco",
+                "Vehicule_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991aaf-e1b5-11e8-b5b9-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Char_Standard",
+                "ChasseurDeChar_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab0-e1b5-11e8-9d6c-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab1-e1b5-11e8-a5f3-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+    ]
+    + ~/Vehicule_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Infantry_Attack_2 is TPoolModel
+(
+    Budget = ~/Budget_Infantry_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab2-e1b5-11e8-9556-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Reco",
+                "Vehicule_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab3-e1b5-11e8-8f16-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab4-e1b5-11e8-ba0e-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Standard",
+                "Infanterie_Spec_Attaque",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab5-e1b5-11e8-9b81-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d9991ab6-e1b5-11e8-9f3d-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Char_Standard",
+                "ChasseurDeChar_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b0-e1b5-11e8-a6e1-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b1-e1b5-11e8-a41e-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+    ]
+    + ~/Vehicule_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Infantry_Attack_3 is TPoolModel
+(
+    Budget = ~/Budget_Infantry_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d99941b2-e1b5-11e8-92c0-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b3-e1b5-11e8-97c2-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+
+        TPoolElement(
+            DescriptorId = GUID:{d99941b4-e1b5-11e8-a3b4-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Appui",
+                "Char_Standard",
+                "ChasseurDeChar_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b5-e1b5-11e8-b083-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b6-e1b5-11e8-afb6-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Reco",
+                "Vehicule_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b7-e1b5-11e8-9c55-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+    ]
+    + ~/Vehicule_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Combined_Attack_1 is TPoolModel
+(
+    Budget = ~/Budget_Combined_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d99941b8-e1b5-11e8-b9bc-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941b9-e1b5-11e8-a485-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941ba-e1b5-11e8-a5a6-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941bb-e1b5-11e8-b737-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Infanterie_Reco",
+                "Vehicule_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941bc-e1b5-11e8-8b22-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+                "Char_Standard",
+                "Vehicule_Appui",
+                "ChasseurDeChar_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941bd-e1b5-11e8-891d-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941be-e1b5-11e8-9c40-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{9c8cb79e-41e7-11ea-ae61-704d7b2c87d4}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Helo_Transport_Arme",
+            ]
+        ),
+
+    ]
+    + ~/Vehicule_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Combined_Attack_2 is TPoolModel
+(
+    Budget = ~/Budget_Combined_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d99941bf-e1b5-11e8-aaec-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Cheapest
+            TagsPriority = [
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c0-e1b5-11e8-82fc-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c1-e1b5-11e8-9990-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c2-e1b5-11e8-af52-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Vehicule_Reco",
+                "Infanterie_Reco",
+                "Char_Reco",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c3-e1b5-11e8-b7e8-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c4-e1b5-11e8-a6aa-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+                "Char_Standard",
+                "Char",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{9c95df61-41e7-11ea-9d84-704d7b2c87d4}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Helo_Transport_Arme",
+            ]
+        ),
+    ]
+    + ~/Vehicule_Fallback_Attack
+)
+//-------------------------------------------------------------------------
+export Pool_Combined_Attack_3 is TPoolModel
+(
+    Budget = ~/Budget_Combined_Attack
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{d99941c5-e1b5-11e8-b018-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c6-e1b5-11e8-8bb1-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Canon_AA_Porte",
+                "Char_Standard",
+                "Vehicule_Appui",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c7-e1b5-11e8-903f-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Reco",
+                "Vehicule_Reco",
+                "Infanterie_Reco",
+                "Helo_Reco",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99941c8-e1b5-11e8-bb0f-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+
+        TPoolElement(
+            DescriptorId = GUID:{d99968c0-e1b5-11e8-93f8-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Char_Standard",
+                "Canon_AA_Porte",
+                "Vehicule_Appui",
+                "Char",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99968c1-e1b5-11e8-8f55-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{d99968c2-e1b5-11e8-a465-2c56dc4c150d}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Infanterie_Spec_Attaque",
+                "Infanterie_Standard",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{a6355580-41e9-11ea-a400-704d7b2c87d4}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Helo_Transport_Arme",
+            ]
+        ),
+    ]
+    + ~/Vehicule_Fallback_Attack
+)
+
+
+//-------------------------------------------------------------------------
+export Pool_Attack_Helo is TPoolModel
+(
+    Budget = ~/Budget_Attack_Helo
+    ModelList = [
+        TPoolElement(
+            DescriptorId = GUID:{28210a0b-5cfa-4d5e-a95e-8c92ceb462ab}
+            Required = false
+            IndexPriorityOverPrice = true
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Helo_Transport_Arme",
+            ]
+        ),
+        TPoolElement(
+            DescriptorId = GUID:{1a1142b1-2873-4a2b-9929-74c65b749d89}
+            Required = false
+            IndexPriorityOverPrice = false
+            Nb = 1
+            PriceComparisonMethod = EPriceComparatorType/Random
+            TagsPriority = [
+                "Helo_Gunship",
+                "Helo_AT",
+                "Helo_Transport_Arme",
+            ]
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------

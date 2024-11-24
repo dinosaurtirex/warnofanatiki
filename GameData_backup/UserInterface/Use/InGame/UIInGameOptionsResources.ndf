@@ -1,0 +1,15 @@
+optionsResources is TUISpecificInGameOptionsResources
+(
+    ShowUnitName                        = $/GUIOption/ShowUnitName
+    IconsToShow                         = $/GUIOption/IconType
+    LabelSize                           = $/GUIOption/LabelsSize
+    StrategicLabelSize                  = $/GUIOption/StrategicLabelsSize
+    MinimalistTargetCursorDisplay       = $/GUIOption/MinimalistTargetCursorDisplay
+    MinimapDisplay                      = $/GUIOption/MinimapDisplay
+    AutoCreateSmartGroup                = $/GUIOption/AutoCreateSmartGroup
+    HudSize                             = $/GUIOption/HUDSize
+    ProdMenuBehavior                    = $/GUIOption/ProdMenuBehavior
+    LabelTacticAggregationType          = $/GUIOption/TacticLabelAggregation
+    DisplayAutoDeploy                   = $/GUIOption/ShowAutoDeploy
+    CurrentComparator                   = $/GUIOption/UnitComparisonDisplayMode
+)

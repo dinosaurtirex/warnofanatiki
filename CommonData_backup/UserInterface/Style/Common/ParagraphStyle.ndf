@@ -1,0 +1,41 @@
+paragraphStyleTextCenter is TParagraphStyle
+(
+    Alignment = UIText_Center
+    VerticalAlignment = UIText_VerticalCenter
+    InterLine = -0.3
+)
+
+paragraphStyleTextLeftAlign is TParagraphStyle
+(
+    Alignment = UIText_Left
+    VerticalAlignment = UIText_VerticalCenter
+    InterLine = 0
+)
+
+paragraphStyleTextRightAlign is TParagraphStyle
+(
+    Alignment = UIText_Right
+    VerticalAlignment = UIText_VerticalCenter
+    InterLine = 0
+)
+
+paragraphStyleTextBottomRightAlign is TParagraphStyle
+(
+    Alignment = UIText_Right
+    VerticalAlignment = UIText_Bottom
+    InterLine = 0
+)
+
+paragraphStyleTextBottomLeftAlign is TParagraphStyle
+(
+    Alignment = UIText_Left
+    VerticalAlignment = UIText_Bottom
+    InterLine = 0
+)
+
+CenteredParagraphStyle is TParagraphStyle
+(
+    Alignment = UIText_Center
+    VerticalAlignment = UIText_VerticalCenter
+    InterLine = 0
+)

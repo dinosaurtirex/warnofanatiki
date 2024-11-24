@@ -1,0 +1,232 @@
+UpperBodyBoneList is ['bip01 pelvis',
+        'bip01 spine',
+        'bip01 spine1',
+
+        // haut du corps
+        'bip01 neck',
+        'bip01 head',
+        'bip01 l clavicle',
+        'bip01 r clavicle',
+        'bip01 l upperarm',
+        'bip01 r upperarm',
+        'bip01 l forearm',
+        'bip01 r forearm',
+        'bip01 l hand',
+        'bip01 r hand',
+        'bip01 l finger0',
+        'bip01 l finger1',
+        'bip01 l finger2',
+        'bip01 l finger3',
+        'bip01 l finger4',
+        'bip01 r finger0',
+        'bip01 r finger1',
+        'bip01 r finger2',
+        'bip01 r finger3',
+        'bip01 r finger4',
+        'arme_1',
+        'arme_2',
+        'bip01 l finger01',
+        'bip01 l finger02',
+        'bip01 l finger11',
+        'bip01 l finger12',
+        'bip01 l finger21',
+        'bip01 l finger22',
+        'bip01 l finger31',
+        'bip01 l finger32',
+        'bip01 l finger41',
+        'bip01 l finger42',
+        'bip01 r finger01',
+        'bip01 r finger02',
+        'bip01 r finger11',
+        'bip01 r finger12',
+        'bip01 r finger21',
+        'bip01 r finger22',
+        'bip01 r finger31',
+        'bip01 r finger32',
+        'bip01 r finger41',
+        'bip01 r finger42',
+        'fx_tir_01',
+        'fx_tir_02',
+        ]
+
+template RunAnimation [Tags] is TAnimationWithTags(
+    Animation = TCompositeBipedAnimation(
+        SubAnimations = [
+            TBlendSpace2DBipedAnimation(
+            IsLegCycle = true
+            Front = $/GFX/DepictionResources/FusilierRun
+            Back = $/GFX/DepictionResources/FusilierArriere
+            Left = $/GFX/DepictionResources/FusilierGauche
+            Right = $/GFX/DepictionResources/FusilierDroite
+            InTransition = 1.0 OutTransition = 1.0
+            ),
+            TBlendSpace2DBipedAnimation(
+                IsLegCycle = true
+                Front = $/GFX/DepictionResources/FusilierRun2
+                Back = $/GFX/DepictionResources/FusilierArriere
+                Left = $/GFX/DepictionResources/FusilierGauche
+                Right = $/GFX/DepictionResources/FusilierDroite
+            InTransition = 1.0 OutTransition = 1.0
+            ),
+            TBlendSpace2DBipedAnimation(
+                IsLegCycle = true
+                Front = $/GFX/DepictionResources/FusilierRun3
+                Back = $/GFX/DepictionResources/FusilierArriere
+                Left = $/GFX/DepictionResources/FusilierGauche
+                Right = $/GFX/DepictionResources/FusilierDroite
+            InTransition = 1.0 OutTransition = 1.0
+            ),
+        ]
+    )
+    Tags = <Tags>
+)
+
+template DepictionOperator_SkeletalAnimation2_Default [ConditionalTags = [] ] is TCosmeticSkeletalAnimation2OperatorDesc
+(
+    // réglage de l'animation de transition :
+    // SwappingDuration donne la durée de la présente du tag de swap, sachant que les infos gameplay auront toujours la prio
+    // On ne dispose que du temps de visée pour swapper l'arme, donc si le temps de visée est + court que le temps de swap, l'animation va glitch
+    SwappingDuration = 1.0
+
+    ConditionalTags = <ConditionalTags>
+    Animations = [
+        RunAnimation( Tags = ['run'] ),
+        RunAnimation( Tags = ['mmg','run'] ),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierRunSMG IsLegCycle = true InTransition = 1.0 OutTransition = 0.3 ) Tags = ['smg', 'run']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierMarche IsLegCycle = true InTransition = 1.0 OutTransition = 0.3 ) Tags = ['walk']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierMarche IsLegCycle = true InTransition = 1.0 OutTransition = 0.3 ) Tags = ['mmg','walk']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierMarcheSMG IsLegCycle = true InTransition = 1.0 OutTransition = 0.3 ) Tags = ['smg','walk']),
+        TAnimationWithTags( Animation = TAlternativeBipedAnimation( Resources = [$/GFX/DepictionResources/FusilierCrouch, $/GFX/DepictionResources/FusilierCrouch2, $/GFX/DepictionResources/FusilierIdle, $/GFX/DepictionResources/FusilierIdle2] IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) Tags = ['stand']),
+        TAnimationWithTags( Animation = TAlternativeBipedAnimation( Resources = [$/GFX/DepictionResources/FusilierIdleMMG, $/GFX/DepictionResources/FusilierIdleMMG2] IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) Tags = ['mmg', 'stand']),
+        TAnimationWithTags( Animation = TAlternativeBipedAnimation( Resources = [$/GFX/DepictionResources/FusilierIdleSMG, $/GFX/DepictionResources/FusilierIdleSMG2] IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) Tags = ['smg', 'stand']),
+        TAnimationWithTags( Animation = TAlternativeBipedAnimation( Resources = [$/GFX/DepictionResources/FusilierIdleGrenade] IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) Tags = ['grenade', 'stand']),
+        TAnimationWithTags( Animation = TAlternativeBipedAnimation( Resources = [$/GFX/DepictionResources/FusilierMortBalle, $/GFX/DepictionResources/FusilierMortBalle2, $/GFX/DepictionResources/FusilierMortBalle3, $/GFX/DepictionResources/FusilierMortBalle4, $/GFX/DepictionResources/FusilierMortBalle5] IsLegCycle = false InTransition = 2.0 OutTransition = 1.0) Tags = ['dead', 'stand']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierAiming IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) TorsoOnly = true Tags = ['aiming']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierBazookaTransition1 IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) TorsoOnly = true Tags = ['swapping']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierFire IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) TorsoOnly = true PlayTillEnd = true Tags = ['aiming', 'shoot']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierAimingMMG IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) TorsoOnly = true Tags = ['aiming', 'mmg']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierAimingSMG IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) TorsoOnly = true Tags = ['aiming', 'smg']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierFireMMG IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) PlayTillEnd = true TorsoOnly = true Tags = ['aiming', 'shoot', 'mmg']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierFireSMG IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) PlayTillEnd = true TorsoOnly = true Tags = ['aiming', 'shoot', 'smg']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierBazookaVise IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) TorsoOnly = true Tags = ['aiming', 'bazooka']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierBazookaTir IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) PlayTillEnd = true TorsoOnly = true Tags = ['aiming', 'shoot', 'bazooka']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierAimingGrenade IsLegCycle = false InTransition = 0.5 OutTransition = 0.5) TorsoOnly = true Tags = ['aiming', 'grenade']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierFireGrenade IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) PlayTillEnd = true TorsoOnly = true Tags = ['aiming', 'shoot', 'grenade']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierHit IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) TorsoOnly = true PlayTillEnd = true Tags = ['aiming', 'hit']),
+        TAnimationWithTags( Animation = TSimpleBipedAnimation( Resource = $/GFX/DepictionResources/FusilierHitExplosion IsLegCycle = false InTransition = 0.0 OutTransition = 0.5) TorsoOnly = true PlayTillEnd = true Tags = ['aiming', 'explosion', 'hit']),
+    ]
+
+    UpperBodyBones = UpperBodyBoneList
+
+    DebugAnimations = [$/GFX/DepictionResources/FusilierAiming, $/GFX/DepictionResources/FusilierAimingMMG, $/GFX/DepictionResources/FusilierAimingSMG,
+     $/GFX/DepictionResources/FusilierBazookaTir, $/GFX/DepictionResources/FusilierBazookaTransition1, $/GFX/DepictionResources/FusilierBazookaVise,
+     $/GFX/DepictionResources/FusilierArriere, $/GFX/DepictionResources/FusilierDroite, $/GFX/DepictionResources/FusilierGauche, $/GFX/DepictionResources/FusilierCrouch, $/GFX/DepictionResources/FusilierCrouch2,
+     $/GFX/DepictionResources/FusilierFire,
+     $/GFX/DepictionResources/FusilierFireMMG, $/GFX/DepictionResources/FusilierFireSMG,
+     $/GFX/DepictionResources/FusilierHit, $/GFX/DepictionResources/FusilierHitExplosion, $/GFX/DepictionResources/FusilierIdle,
+     $/GFX/DepictionResources/FusilierIdleMMG, $/GFX/DepictionResources/FusilierIdleMMG2, $/GFX/DepictionResources/FusilierIdleSMG, $/GFX/DepictionResources/FusilierIdleSMG2, $/GFX/DepictionResources/FusilierIdle2,
+     $/GFX/DepictionResources/FusilierMarche, $/GFX/DepictionResources/FusilierMortBalle, $/GFX/DepictionResources/FusilierMortBalle2, $/GFX/DepictionResources/FusilierMortBalle3, $/GFX/DepictionResources/FusilierMortBalle4, $/GFX/DepictionResources/FusilierMortBalle5,
+     $/GFX/DepictionResources/FusilierRun, $/GFX/DepictionResources/FusilierRunSMG, $/GFX/DepictionResources/FusilierRun2, $/GFX/DepictionResources/FusilierRun3,
+     ]
+)
+
+DepictionOperator_FreezeAnimation_Ghost is TCosmeticFreezeSkeletalAnimationOperatorDesc(Animation = $/GFX/DepictionResources/FusilierIdle)
+
+// ****************************************************************************************************************************************
+// ***** Animation des servants des unités tractables *************************************************************************************
+// ****************************************************************************************************************************************
+
+template DepictionOperator_AnimationServant
+[
+    AimAnimation,
+    DeadAnimation,
+    DeployAnimation,
+    FireAnimation,
+    FoldAnimation,
+    IdleAnimation,
+    MoveBackAnimation,
+    MoveFrontAnimation,
+    MoveLeftAnimation,
+    MoveRightAnimation,
+    ReloadAnimation,
+]
+is TCosmeticSkeletalAnimationServantOperatorDesc
+(
+    OperatorId = 'AnimationServant'
+    TransitionDuration = 0.2
+    AimAnimation = <AimAnimation>
+    DeadAnimation = <DeadAnimation>
+    DeployAnimation = <DeployAnimation>
+    FireAnimation = <FireAnimation>
+    FoldAnimation = <FoldAnimation>
+    IdleAnimation = <IdleAnimation>
+    MoveBackAnimation = <MoveBackAnimation>
+    MoveFrontAnimation = <MoveFrontAnimation>
+    MoveLeftAnimation = <MoveLeftAnimation>
+    MoveRightAnimation = <MoveRightAnimation>
+    ReloadAnimation = <ReloadAnimation>
+)
+
+DepictionOperator_AnimationServant_Cannon_Left is DepictionOperator_AnimationServant
+(
+    AimAnimation = $/GFX/DepictionResources/ServantLeftAim
+    DeadAnimation = $/GFX/DepictionResources/ServantLeftDead
+    DeployAnimation = $/GFX/DepictionResources/ServantLeftDeploy
+    FireAnimation = $/GFX/DepictionResources/ServantLeftFire
+    FoldAnimation = $/GFX/DepictionResources/ServantLeftFold
+    IdleAnimation = $/GFX/DepictionResources/ServantLeftIdle
+    MoveBackAnimation = $/GFX/DepictionResources/ServantLeftMoveBack
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantLeftMoveFront
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantLeftMoveLeft
+    MoveRightAnimation = $/GFX/DepictionResources/ServantLeftMoveRight
+    ReloadAnimation = $/GFX/DepictionResources/ServantLeftReload
+)
+
+DepictionOperator_AnimationServant_Cannon_Right is DepictionOperator_AnimationServant
+(
+    AimAnimation = $/GFX/DepictionResources/ServantRightAim
+    DeadAnimation = $/GFX/DepictionResources/ServantRightDead
+    DeployAnimation = $/GFX/DepictionResources/ServantRightDeploy
+    FireAnimation = $/GFX/DepictionResources/ServantRightFire
+    FoldAnimation = $/GFX/DepictionResources/ServantRightFold
+    IdleAnimation = $/GFX/DepictionResources/ServantRightIdle
+    MoveBackAnimation = $/GFX/DepictionResources/ServantRightMoveBack
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantRightMoveFront
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantRightMoveLeft
+    MoveRightAnimation = $/GFX/DepictionResources/ServantRightMoveRight
+    ReloadAnimation = $/GFX/DepictionResources/ServantRightReload
+)
+
+// ****************************************************************************************************************************************
+// ***** Animation des servants des unités ATGM *******************************************************************************************
+// ****************************************************************************************************************************************
+
+DepictionOperator_AnimationServant_ATGM_Left is DepictionOperator_AnimationServant
+(
+    AimAnimation = $/GFX/DepictionResources/ServantATGMLeftAim
+    DeadAnimation = $/GFX/DepictionResources/ServantATGMLeftDead
+    DeployAnimation = $/GFX/DepictionResources/ServantATGMLeftDeploy
+    FireAnimation = $/GFX/DepictionResources/ServantATGMLeftFire
+    FoldAnimation = $/GFX/DepictionResources/ServantATGMLeftFold
+    IdleAnimation = $/GFX/DepictionResources/ServantATGMLeftIdle
+    MoveBackAnimation = $/GFX/DepictionResources/ServantATGMLeftMoveBack
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantATGMLeftMoveFront
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantATGMLeftMoveLeft
+    MoveRightAnimation = $/GFX/DepictionResources/ServantATGMLeftMoveRight
+    ReloadAnimation = $/GFX/DepictionResources/ServantATGMLeftReload
+)
+
+DepictionOperator_AnimationServant_ATGM_Right is DepictionOperator_AnimationServant
+(
+    AimAnimation = $/GFX/DepictionResources/ServantATGMRightAim
+    DeadAnimation = $/GFX/DepictionResources/ServantATGMRightDead
+    DeployAnimation = $/GFX/DepictionResources/ServantATGMRightDeploy
+    FireAnimation = $/GFX/DepictionResources/ServantATGMRightFire
+    FoldAnimation = $/GFX/DepictionResources/ServantATGMRightFold
+    IdleAnimation = $/GFX/DepictionResources/ServantATGMRightIdle
+    MoveBackAnimation = $/GFX/DepictionResources/ServantATGMRightMoveBack
+    MoveFrontAnimation = $/GFX/DepictionResources/ServantATGMRightMoveFront
+    MoveLeftAnimation = $/GFX/DepictionResources/ServantATGMRightMoveLeft
+    MoveRightAnimation = $/GFX/DepictionResources/ServantATGMRightMoveRight
+    ReloadAnimation = $/GFX/DepictionResources/ServantATGMRightReload
+)

@@ -1,0 +1,17 @@
+export Modele_FV438_Swingfire_UK is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Antichar/FV438_Swingfire/FV438_Swingfire.fbx'
+)
+
+export Modele_FV438_Swingfire_UK_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Antichar/FV438_Swingfire_MID/FV438_Swingfire_MID.fbx'
+)
+
+export Modele_FV438_Swingfire_UK_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/Antichar/LODS/FV438_Swingfire_LOW.fbx'
+)
+
+
+

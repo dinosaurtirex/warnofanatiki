@@ -1,0 +1,126 @@
+template BUCKButtonDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = true,                                 // Par défaut il est a true pour ne pas s'updater dans le cas ou il se trouverai dans un composant qui peut changer les états (Ex : BUCKMovable)
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKSensibleAreaDescriptor
+    MaskEvents : bool = true,                                           // Par défaut on masque les évenements
+    IgnoreMask : bool = false,
+    AreaShape : int = ~/AreaShape/Rect,
+    // -- BUCKSensibleAreaDescriptor
+
+    // ++ BUCKButtonDescriptor
+    IsTogglable : bool = false,                                         // Détermine si le bouton est togglable
+    DefaultToggleValue : bool = false,                                  // [Togglable seulement] État par défaut du bouton toggle
+    CannotDeselect : bool = false,                                      // [Togglable seulement] Empêche de déselectionner le bouton par click (utile pour le comportement Radio)
+    ForceEvents : bool = false,                                         // [Togglable && CannotDeselect seulement] Permet de renvoyer un évennement sur un bouton déjà enfoncé et non déselectionnable au click
+    RadioButtonManager : TBUCKRadioButtonManager = nil,                 // Si renseigné fera quele bouton togglable ne pourra pas s'enfoncer en même temps qu'un autre bouton togglable ayant le même RadioButtonManager
+    Mapping : TEugBMutablePBaseClass = nil,                             // Permet d'attribuer une action (eg. une touche enfoncée) à l'action du bouton
+                                                                        // ex: TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    HoverSound : TSoundDescriptor = nil,                                // Permet d'associer un son au survol du bouton
+    LeftClickSound : TSoundDescriptor = nil,                            // Permet d'associer un son au clic gauche du bouton
+    RightClickSound : TSoundDescriptor = nil,                           // Permet d'associer un son au clic droit du bouton
+    DoubleClickSound : TSoundDescriptor = nil,                          // Permet d'associer un son au double-clic gauche du bouton
+    AllowMultipleInputsPerFrame : bool = false,                         // Autorise le bouton à envoyer plusieurs fois son event en une frame, sinon limité à une fois par frame
+    Grayed : bool = false,                                              // Détermine si le bouton est non activable par défaut
+
+    IsFocusable : bool = false,                                         // Détermine si un bouton est focusable
+    FocusMapping : TEugBMutablePBaseClass = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_SPACE ) ), // Indique un event utilisateur qui déclenchera une pression bouton SI le bouton est focusé (NOTA : FocusMapping != nil implique IsFocusable == true)
+    // -- BUCKButtonDescriptor
+]
+is TBUCKButtonDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKSensibleAreaDescriptor
+    MaskEvents = <MaskEvents>
+    IgnoreMask = <IgnoreMask>
+    AreaShape = <AreaShape>
+    // -- BUCKSensibleAreaDescriptor
+
+    // ++ BUCKButtonDescriptor
+    IsTogglable = <IsTogglable>
+    DefaultToggleValue = <DefaultToggleValue>
+    CannotDeselect = <CannotDeselect>
+    ForceEvents = <ForceEvents>
+    RadioButtonManager = <RadioButtonManager>
+    Mapping  = <Mapping>
+    HoverSound = <HoverSound>
+    LeftClickSound = <LeftClickSound>
+    RightClickSound = <RightClickSound>
+    DoubleClickSound = <DoubleClickSound>
+    AllowMultipleInputsPerFrame = <AllowMultipleInputsPerFrame>
+    Grayed = <Grayed>
+    IsFocusable = <IsFocusable>
+    FocusMapping = <FocusMapping>
+    // -- BUCKButtonDescriptor
+)

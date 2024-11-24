@@ -1,0 +1,171 @@
+DebugModuleDescriptor is TDebugModuleDescriptor()
+EmptyTagsModuleDescriptor is TTagsModuleDescriptor()
+LinkTeamModuleDescriptor is TLinkTeamModuleDescriptor()
+PackSignauxModuleDescriptor  is TPackSignauxModuleDescriptor()
+SimpleTypeUnitModuleDescriptor is TTypeUnitModuleDescriptor()
+TargetDataModuleDescriptor is TTargetDataModuleDescriptor()
+
+template TModuleSelectorFilterIfCadavre
+[ Descriptor ]
+is TModuleSelectorFilter
+(
+    Condition  = TModuleSelectorCondition_ParamEquals_Integer(ParamId=~/Parameter_ModuleCreationSelectionFilter  ParamValue=~/ModuleCreationFilter_Cadavre)
+    Descriptor = <Descriptor>
+)
+
+NilDescriptorIfCadavre is TModuleSelectorFilterIfCadavre
+(
+    Descriptor = nil
+)
+
+ShowroomPositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InGeoDb                    = False
+    ClampInWorld               = False
+    ClampOutMap                = False
+)
+
+FirePositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InGeoDb                    = False
+    ClampInWorld               = True
+    ClampOutMap                = False
+)
+
+MissilePositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InGeoDb                    = True
+    ClampInWorld               = False
+    ClampOutMap                = True
+)
+
+SmokePositionModuleDescriptor is TPositionModuleDescriptor
+(
+    InGeoDb                    = False
+    ClampInWorld               = True
+    ClampOutMap                = False
+)
+
+template Descriptor_Unit_MimeticUnit[ DescriptorId, MimeticName ] is TEntityDescriptor
+(
+    DescriptorId      = <DescriptorId>
+    ClassNameForDebug = 'Unit_MimeticUnit'
+    World = WorldIndices_Mimetic_Units
+    ModulesDescriptors = [
+        // Position
+            TMimeticTransformModuleDescriptor(),
+            TMimeticSteeringModuleDescriptor(),
+            TLinkTeamModuleDescriptor(),
+            TLinkToOwnerModuleDescriptor(),
+            TApparenceModelModuleDescriptor
+            (
+                PickableObject = True
+                Depiction      = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+            ),
+            TSoldierAnimationModuleDescriptor
+            (
+                SoldierAnimationDataDescriptor = ~/SoldierAnimationDataDescriptor
+            ),
+            TSoldierStatusModuleDescriptor(),
+            TMimeticFXManagerModuleDescriptor(),
+    ]
+)
+
+MissileFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_ProjectileFlying,
+    ]
+)
+
+BuildingFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Batiment,
+        Flag_Detectable,
+        Flag_LdDetectable,
+    ]
+)
+
+CadavreFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+    ]
+)
+
+DistrictFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_Batiment,
+    ]
+)
+
+TankFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+        Flag_Tank,
+    ]
+)
+
+CanonFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+    ]
+)
+
+HelicoFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+        Flag_NearGroundFlying,
+        Flag_DetectableLowAltitude,
+        Flag_DEPRECATED_NePasUtiliser_OnlyForBriquePython_Helico,
+    ]
+)
+
+AirplaneFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+        Flag_Avion,
+        Flag_HighAltitudeFlying,
+        Flag_DetectableLowAltitude,
+    ]
+)
+
+InfantryFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+        Flag_Infanterie,
+    ]
+)
+
+DefaultFlagsModuleDescriptor is TFlagsModuleDescriptor
+(
+    InitialFlagSet =
+    [
+        Flag_Detectable,
+        Flag_LdDetectable,
+    ]
+)

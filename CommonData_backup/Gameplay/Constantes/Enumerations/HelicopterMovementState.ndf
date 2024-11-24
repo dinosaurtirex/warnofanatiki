@@ -1,0 +1,16 @@
+// enum THelicopterMovementState // a maintenir synchro avec EugIA_Common/HelicopterMovementState.h
+NotInWorld                      is 0
+FirstTurnInWorldOnGround        is 1
+StoppedOnGround                 is 2
+StoppedFlying                   is 3
+StunnedOnGround                 is 4
+StunnedFlying                   is 5
+StoppingBeforeLanding           is 6
+Landing                         is 7
+TakingOff                       is 8
+Stopping                        is 9
+MoveTowardTarget                is 10
+Crashing                        is 11
+Sinking                         is 12
+Crashed                         is 13
+Count                           is 14

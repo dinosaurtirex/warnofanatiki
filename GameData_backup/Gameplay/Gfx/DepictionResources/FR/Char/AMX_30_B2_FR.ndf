@@ -1,0 +1,17 @@
+export ModelFile_AMX_30_B2_FR is 'GameData:/Assets/3D/Units/FR/Char/AMX_30B2/AMX_30B2.fbx'
+export Modele_AMX_30_B2_FR is ModelDescriptor
+(
+    FileName = ModelFile_AMX_30_B2_FR
+)
+
+export ModelFile_AMX_30_B2_FR_MID is 'GameData:/Assets/3D/Units/FR/Char/AMX_30B2_MID/AMX_30B2_MID.fbx'
+export Modele_AMX_30_B2_FR_MID is ModelDescriptor
+(
+    FileName = ModelFile_AMX_30_B2_FR_MID
+)
+
+export ModelFile_AMX_30_B2_FR_LOW is 'GameData:/Assets/3D/Units/FR/Char/AMX_30B2_LOW/AMX_30B2_LOW.fbx'
+export Modele_AMX_30_B2_FR_LOW is ModelDescriptor
+(
+    FileName = ModelFile_AMX_30_B2_FR_LOW
+)

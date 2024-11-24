@@ -1,0 +1,70 @@
+
+//-------------------------------------------------------------------------------------
+
+// Conteneur pour les flares
+UIInGameFlarePanelViewMainComponent is BUCKListDescriptor
+(
+    Axis = ~/ListAxis/Vertical
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+
+    FirstMargin = TRTTILength(Magnifiable = 5.0)
+    InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+    LastMargin = TRTTILength(Magnifiable = 5.0)
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AllVisibleFlares
+        )
+    ]
+
+    ForegroundComponents =
+    [
+        FlareCustomEditableText()
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner()
+    ]
+)
+
+AllVisibleFlares is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        MagnifiableWidthHeight = [0.0, 24.0]
+    )
+
+    InterItemMargin = TRTTILength(Magnifiable = 8.0)
+    Axis = ~/ListAxis/Horizontal
+
+    HidePointerEvents = true
+
+    Elements =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = FlareButtonNeedHelp()),
+        BUCKListElementDescriptor(ComponentDescriptor = FlareButtonStrategyAttack()),
+        BUCKListElementDescriptor(ComponentDescriptor = FlareButtonStrategyDefend()),
+        BUCKListElementDescriptor(ComponentDescriptor = FlareButtonSupport()),
+        BUCKListElementDescriptor(ComponentDescriptor = FlareButtonEnemySpotted()),
+        BUCKListElementDescriptor(ComponentDescriptor = FlareButtonCustom()),
+    ]
+)
+//-------------------------------------------------------------------------------------
+
+UIInGameFlarePanelViewDescriptor is TUIInGameFlarePanelViewDescriptor
+(
+    MainComponentDescriptor = ~/UIInGameFlarePanelViewMainComponent
+    MainComponentContainerUniqueName = "UICommonFlarePanelViewMainContainer"
+)
+

@@ -1,0 +1,16 @@
+//--------------------------------------------------------------------------
+// BUCKListElementSpacer
+// -------------------------------------------------------------------------------------------------
+
+template BUCKListElementSpacer
+[
+    Magnifiable : float = 0.0,
+    Pixel : float = 0.0
+] is BUCKListElementDescriptor
+(
+    MinSize = TRTTILength
+    (
+        Pixel = <Pixel>
+        Magnifiable = <Magnifiable>
+    )
+)

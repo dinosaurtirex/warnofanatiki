@@ -1,0 +1,468 @@
+
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//   TOUT CE QUI EST SOUS CETTE LIGNE EST POUR LES DEV UNIQUEMENT
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+//----------------------------------------------------------------------
+// Templates standard
+//----------------------------------------------------------------------
+
+template LDHintStandardComponent
+[
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [700.0, 0.0]
+        MagnifiableOffset = [0.0, 300.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    ),
+    TextureToken : string = "",
+    HasButtons : bool = false,
+    BorderLineColorToken : string = 'H2_bleu_2',
+    BackgroundBlockColorToken : string = 'H2_bleu_2',
+    TextColor : string = "BoutonTemps_Text",
+    TextSize : string = "30",
+    DimensionPourTexte : int = 750,
+    TextureMagnifiableWidthHeight : float2 = [150,150],
+]
+is BUCKListDescriptor
+(
+    ComponentFrame = <ComponentFrame>
+
+    Axis = ~/ListAxis/Vertical
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+
+    Elements =
+    [
+        //Separateur du haut
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = LDHintTopBottomBorder()
+        ),
+
+        //Contenu
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = LDHintStandardContentHorizontalList
+            (
+                TextureToken = <TextureToken>
+                TextColor = <TextColor>
+                TextSize = <TextSize>
+                DimensionPourTexte = <DimensionPourTexte>
+                TextureMagnifiableWidthHeight = <TextureMagnifiableWidthHeight>
+            )
+        ),
+    ]
+    +
+    (<HasButtons> ?
+    [
+        //Separateur entre contenu et boutons
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = LDHintSeparatorBetweenContentAndButtons()
+        ),
+
+        //Boutons
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/LDHintDefaultButtonContainer
+        ),
+    ]
+    :
+    [])
+    +
+    [
+       //Separateur du bas
+       BUCKListElementDescriptor
+       (
+           ComponentDescriptor = LDHintTopBottomBorder()
+       ),
+    ]
+
+    BackgroundComponents =
+    [
+        PanelRoundedCorner
+        (
+            BackgroundBlockColorToken = <BackgroundBlockColorToken>
+            BorderLineColorToken = <BorderLineColorToken>
+        )
+    ]
+)
+
+template LDHintStandardComponentWithPause
+[
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [700.0, 0.0]
+        MagnifiableOffset = [0.0, 300.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    ),
+    TextureToken : string = ""
+]
+is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 0.0]
+        RelativeWidthHeight = [1.0, 1.0]
+        MagnifiableOffset = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.0]
+        AlignementToAnchor = [0.0, 0.0]
+    )
+
+    HidePointerEvents = true
+
+    Components =
+    [
+        LDHintStandardComponent
+        (
+            ComponentFrame = <ComponentFrame>
+            TextureToken = <TextureToken>
+            HasButtons = true
+        )
+    ]
+)
+
+template LDHintStandardContentHorizontalList
+[
+    TextureToken : string = "",
+    TextColor : string = "SD2_Blanc184",
+    TextSize : string = "30",
+    DimensionPourTexte : int,
+    TextureMagnifiableWidthHeight : float2 = [150.0, 150.0],
+]
+is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 0.0]
+        RelativeWidthHeight = [0.0, 0.0]
+        MagnifiableOffset = [0.0, 0.0]
+        AlignementToFather = [0.0, 0.0]
+        AlignementToAnchor = [0.0, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+    InterItemMargin = TRTTILength( Magnifiable = 0.0 )
+
+    Elements =
+    (<TextureToken> != "" ?
+    [
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = LDHintRightLeftBorder()
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = LDHintDefaultTexture
+            (
+                TextureToken = <TextureToken>
+                TextureMagnifiableWidthHeight = <TextureMagnifiableWidthHeight>
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = LDHintSeparatorBetweenTextureAndText()
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = 'Text1'
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [500, 0.0]
+                    AlignementToFather = [0.0, 0.5]
+                    AlignementToAnchor = [0.0, 0.5]
+                )
+
+                ParagraphStyle = ~/LDHintParagraphStyleLeftAligned
+                TextStyle = "Default"
+
+                HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+                VerticalFitStyle = ~/FitStyle/FitToContent
+
+                TypefaceToken = "UIMainFont"
+                BigLineAction = ~/BigLineAction/MultiLine
+
+                TextColor = "Orange"
+                TextSize = "20"
+
+                TextDico = ~/LocalisationConstantes/dico_interface_ingame
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = LDHintRightLeftBorder()
+        ),
+    ]
+    :
+    [
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = LDHintRightLeftBorder()
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = LDHintDefaultTextCentered( TextColor = <TextColor> TextSize = <TextSize> DimensionPourTexte = <DimensionPourTexte>)
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = LDHintRightLeftBorder()
+        ),
+    ])
+)
+
+template LDHintDefaultTexture
+[
+    TextureToken : string = "",
+    TextureMagnifiableWidthHeight : float2 = [106.0, 150.0]
+]
+is BUCKTextureDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = <TextureMagnifiableWidthHeight>
+        AlignementToFather = [0.0, 0.5]
+        AlignementToAnchor = [0.0, 0.5]
+    )
+
+    TextureToken = <TextureToken>
+    TextureFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+)
+
+//----------------------------------------------------------------------
+// Sous composants
+//----------------------------------------------------------------------
+
+private LDHintMagnifiableBorderSize is 15.0
+private LDHintMagnifiableLengthBetweenTextureAndText is 15.0
+private LDHintMagnifiableLengthBetweenTextAndRightBorder is 15.0
+private LDHintMagnifiableInterItemBetweenTextAndPauseButton is 15.0
+
+template LDHintTopBottomBorder
+[]
+is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [1.0, LDHintMagnifiableBorderSize]
+    )
+)
+
+template LDHintRightLeftBorder
+[]
+is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [LDHintMagnifiableBorderSize, 1.0]
+    )
+)
+
+template LDHintSeparatorBetweenTextureAndText
+[]
+is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [LDHintMagnifiableLengthBetweenTextureAndText, 1.0]
+    )
+)
+
+template LDHintSeparatorBetweenContentAndButtons
+[] is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [1.0, LDHintMagnifiableInterItemBetweenTextAndPauseButton]
+    )
+)
+
+template LDHintDefaultTextCentered
+[
+    TextColor : string = "Orange",
+    TextSize : string = "30",
+    DimensionPourTexte : int = 900,
+]
+is BUCKTextDescriptor
+(
+    ElementName = 'Text1'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [<DimensionPourTexte>, 0.0]
+    )
+
+    ParagraphStyle = ~/LDHintParagraphStyleCentered
+    TextStyle = "Default"
+
+    HorizontalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle = ~/FitStyle/FitToContent
+
+    TypefaceToken = "UIMainFont"
+    BigLineAction = ~/BigLineAction/MultiLine
+
+    TextColor = <TextColor>
+    TextSize = <TextSize>
+
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+)
+
+private template LDHintBaseButton
+[
+    ElementName : string,
+    HasBackground : bool,
+    BackgroundBlockColorToken : string,
+    HasBorder : bool,
+    BorderThicknessToken : string,
+    BorderLineColorToken : string,
+    TextSize : string,
+    TextColor : string,
+    TextPadding : TRTTILength4 = TRTTILength4( Magnifiable = [5,0,5,0]),
+
+
+] is BUCKButtonDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0,32]
+    )
+    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+
+    LeftClickSound = ~/SoundEvent_LDHintButton
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+    BordersToDraw = ~/TBorderSide/All
+
+    Components =
+    [
+        BUCKTextDescriptor
+        (
+            ElementName = "LDHintDefaultButtonTextElement" // This element name shouldn't change as it's used in the cpp
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                AlignementToFather = [0.0, 0.5]
+                AlignementToAnchor = [0.0, 0.5]
+            )
+            ParagraphStyle = paragraphStyleTextCenter
+            TextPadding = <TextPadding>
+            TextStyle = 'TextStyleEcranMoniteur_solo'
+            HorizontalFitStyle = ~/FitStyle/FitToContent
+            VerticalFitStyle = ~/FitStyle/UserDefined
+            TypefaceToken = "Eurostyle"
+            BigLineAction = ~/BigLineAction/MultiLine
+            TextToken = 'PIU_weap'
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+            TextColor = <TextColor>
+
+            TextSize = <TextSize>
+        )
+    ]
+)
+
+template LDHintBlueButton
+[]
+is LDHintBaseButton
+(
+    ElementName = ""
+    HasBackground = true
+    BackgroundBlockColorToken = "LDHintSolo_fond"
+    HasBorder = true
+    BorderThicknessToken = "2"
+    BorderLineColorToken = "LDHintSolo_texte"
+    TextSize = "18"
+    TextColor = "LDHintSolo_texte"
+)
+
+private template LDHintDefaultButtonList
+[
+    InterItemMarginAsFloat : float,
+    BladeDescriptor : TBUCKButtonDescriptor,
+] is BUCKRackDescriptor
+(
+    ElementName = "LDHintButtonList"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+    InterItemMargin = TRTTILength( Magnifiable = <InterItemMarginAsFloat> )
+
+    BladeDescriptor = <BladeDescriptor>
+)
+
+private LDHintParagraphStyleCentered is TParagraphStyle
+(
+    Alignment = UIText_Center
+    VerticalAlignment = UIText_VerticalCenter
+    BigWordAction = ~/BigWordAction/BigWordNewLine
+    InterLine = 0.3
+)
+
+private LDHintParagraphStyleLeftAlignedExact is TParagraphStyle
+(
+    Alignment = UIText_Left
+    VerticalAlignment = UIText_VerticalCenter
+    BigWordAction = ~/BigWordAction/BigWordNewLine
+    InterLine = 0
+)
+
+private LDHintParagraphStyleLeftAligned is TParagraphStyle
+(
+    Alignment = UIText_Left
+    VerticalAlignment = UIText_VerticalCenter
+    InterLine = 0.5
+)
+
+private LDHintMagnifiableInterButtonMargin is 5
+
+private LDHintDefaultButtonContainer is BUCKListDescriptor
+(
+    ElementName = "LDHintButtonList"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+    InterItemMargin = TRTTILength( Magnifiable = ~/LDHintMagnifiableInterButtonMargin )
+
+    Elements =
+    [
+    ]
+)

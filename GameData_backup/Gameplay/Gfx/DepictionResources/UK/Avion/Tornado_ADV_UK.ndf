@@ -1,0 +1,19 @@
+export Modele_Tornado_ADV_UK is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Avion/Tornado_ADV/Tornado_ADV.fbx'
+)
+
+export Modele_Tornado_ADV_UK_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Avion/Tornado_ADV/Tornado_ADV.fbx'
+)
+
+export Modele_Tornado_ADV_UK_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Avion/Tornado_ADV/Tornado_ADV.fbx'
+)
+
+export Modele_Tornado_ADV_UK_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Avion/Tornado_ADV/Tornado_ADV_train.fbx'
+)

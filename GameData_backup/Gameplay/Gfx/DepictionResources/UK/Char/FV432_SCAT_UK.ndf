@@ -1,0 +1,17 @@
+export Modele_FV432_SCAT_UK is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/APC/FV432_SCAT/FV432_SCAT.fbx'
+)
+
+export Modele_FV432_SCAT_UK_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/APC/FV432_SCAT/FV432_SCAT.fbx'
+)
+
+export Modele_FV432_SCAT_UK_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/APC/FV432_SCAT/FV432_SCAT.fbx'
+)
+
+
+

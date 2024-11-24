@@ -1,0 +1,16 @@
+//-------------------------------------------------------------------------
+//----------------------------- STRATEGY ----------------------------------
+//-------------------------------------------------------------------------
+export ChallengeGotterdammerungStrategy_West is TIAGeneralStrategy
+(
+    StrategyName = "ChalGotWAI"
+    FirstGenerator = ChalGotterdammerung_Choose_Strategy
+    AuthorizedCorridorList = [0]
+    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
+    TransitionList =
+    [
+        ChalGotterdammerung_Transition_StartToPhaseCommand,
+        ChalGotterdammerung_Transition_StartToGeneric,
+        ChalGotterdammerung_Transition_DeployToCommandPhase,
+    ]
+)

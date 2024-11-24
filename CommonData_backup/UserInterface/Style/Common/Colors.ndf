@@ -1,0 +1,5 @@
+Common_GrisMoyen                is [144,144,144,255]
+Common_GrisSombre               is [40,40,40,220]
+Common_GrisTresSombre           is [23,23,23,255]
+Common_White                    is [255,255,255,255]
+Common_Black                    is [255,255,255,255]

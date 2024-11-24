@@ -1,0 +1,16 @@
+
+// A maintenir synchro avec Crux/Code/Eugen/CPP/EugSound/SoundMode.h
+TSoundAndMusicMode_None                     is 0
+TSoundAndMusicMode_DefaultSettings          is 1
+TSoundAndMusicMode_NoFocus                  is 2
+TSoundAndMusicMode_VideoFullScreen          is 3
+TSoundAndMusicMode_VideoInGame              is 4
+TSoundAndMusicMode_Dialog                   is 5
+TSoundAndMusicMode_Acknow2Ds                is 6
+TSoundAndMusicMode_Acknow3Ds                is 7
+TSoundAndMusicMode_MusicOutgame             is 8
+TSoundAndMusicMode_MusicAuto                is 9
+TSoundAndMusicMode_Ambience                 is 10
+TSoundAndMusicMode_EscapeMenu               is 11
+TSoundAndMusicMode_BlackBoards              is 12
+TSoundAndMusicMode_PauseMode                is 13

@@ -1,0 +1,155 @@
+
+template SkeletalAnimationTemplate
+[
+    FileName   : string,
+    Path       : string = 'GameData:/Assets/3D/Units/Common/Animations/Anims_Soldats/',
+    PlayInLoop : bool,
+] is TResourceMatrixArrayAnimation
+(
+    FileName   = <Path> + <FileName>
+    PlayInLoop     = <PlayInLoop>
+)
+//--Emplacement anims servants canons tractés
+template SkeletalServantAnimationTemplate
+[
+    FileName   : string,
+    PlayInLoop : bool,
+] is SkeletalAnimationTemplate
+(
+    FileName = <FileName>
+    Path = 'GameData:/Assets/3D/Units/Common/sources/Anims_Gunner_FULDA/'
+    PlayInLoop = <PlayInLoop>
+)
+//--Emplacement anims servants ATGM
+template SkeletalServantATGMAnimationTemplate
+[
+    FileName   : string,
+    PlayInLoop : bool,
+] is SkeletalAnimationTemplate
+(
+    FileName = <FileName>
+    Path = 'GameData:/Assets/3D/Units/Common/Animations/Anims_Gunner_ATGM/'
+    PlayInLoop = <PlayInLoop>
+)
+
+// ****************************************************************************************************************************************
+// ***** Animation des unités tractables **************************************************************************************************
+// ****************************************************************************************************************************************
+
+template DepictionOperator_AnimationDeployable
+[
+    DeployAnimation = nil,
+    FoldAnimation = nil,
+    MoveFrontAnimation = nil,
+    MoveBackAnimation = nil,
+    IdleAnimation = nil,
+
+    DeployFromMoveTime : float,
+    DeployFromTurnTime : float,
+    FoldForMoveTime    : float,
+    FoldForTurnTime    : float,
+]
+is TCosmeticSkeletalAnimationDeployableOperatorDesc
+(
+    OperatorId = 'AnimationDeployable'
+    DeployAnimation = <DeployAnimation>
+    FoldAnimation = <FoldAnimation>
+    MoveFrontAnimation = <MoveFrontAnimation>
+    MoveBackAnimation = <MoveBackAnimation>
+    IdleAnimation = <IdleAnimation>
+
+    DeployFromMoveTime = <DeployFromMoveTime>
+    DeployFromTurnTime = <DeployFromTurnTime>
+    FoldForMoveTime = <FoldForMoveTime>
+    FoldForTurnTime = <FoldForTurnTime>
+)
+
+//Anims pour nouveau squelette Fulda
+export FusilierAiming is SkeletalAnimationTemplate( FileName = 'Rifleman_Aim.fbx' PlayInLoop = false)
+export FusilierAimingMMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Aim_MMG.fbx' PlayInLoop = false)
+export FusilierAimingSMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Aim_SMG.fbx' PlayInLoop = false)
+export FusilierAimingGrenade is SkeletalAnimationTemplate( FileName = 'Rifleman_Aim.fbx' PlayInLoop = false)
+export FusilierBazookaTir is SkeletalAnimationTemplate( FileName = 'Rifleman_Bazooka_Fire.fbx' PlayInLoop = false)
+export FusilierBazookaTransition1 is SkeletalAnimationTemplate( FileName = 'Rifleman_Bazooka_Transition1.fbx' PlayInLoop = false)
+export FusilierBazookaVise is SkeletalAnimationTemplate( FileName = 'Rifleman_Bazooka_Aim.fbx' PlayInLoop = false)
+export FusilierArriere is SkeletalAnimationTemplate( FileName = 'Rifleman_Run_Back.fbx' PlayInLoop = true)
+export FusilierDroite is SkeletalAnimationTemplate( FileName = 'Rifleman_Run_Right.fbx' PlayInLoop = true)
+export FusilierGauche is SkeletalAnimationTemplate( FileName = 'Rifleman_Run_Left.fbx' PlayInLoop = true)
+export FusilierCrouch is SkeletalAnimationTemplate( FileName = 'Rifleman_Crouch.fbx' PlayInLoop = true)
+export FusilierCrouch2 is SkeletalAnimationTemplate( FileName = 'Rifleman_Crouch2.fbx' PlayInLoop = true)
+export FusilierFire is SkeletalAnimationTemplate( FileName = 'Rifleman_Fire.fbx' PlayInLoop = false)
+export FusilierFireGrenade is SkeletalAnimationTemplate( FileName = 'Rifleman_Fire_SMG.fbx' PlayInLoop = false)
+export FusilierFireMMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Fire_MMG.fbx' PlayInLoop = false)
+export FusilierFireSMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Fire_SMG.fbx' PlayInLoop = false)
+export FusilierHit is SkeletalAnimationTemplate( FileName = 'Rifleman_Hit.fbx' PlayInLoop = false)
+export FusilierHitExplosion is SkeletalAnimationTemplate( FileName = 'Rifleman_Hit_Explosion.fbx' PlayInLoop = false)
+export FusilierIdle is SkeletalAnimationTemplate( FileName = 'Rifleman_Idle.fbx' PlayInLoop = true)
+export FusilierIdleGrenade is SkeletalAnimationTemplate( FileName = 'Rifleman_Look_Around.fbx' PlayInLoop = true)
+export FusilierIdleMMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Idle_MMG.fbx' PlayInLoop = true)
+export FusilierIdleMMG2 is SkeletalAnimationTemplate( FileName = 'Rifleman_Idle_MMG2.fbx' PlayInLoop = true)
+export FusilierIdleSMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Idle_SMG.fbx' PlayInLoop = true)
+export FusilierIdleSMG2 is SkeletalAnimationTemplate( FileName = 'Rifleman_Idle_SMG2.fbx' PlayInLoop = true)
+export FusilierIdle2 is SkeletalAnimationTemplate( FileName = 'Rifleman_Idle2.fbx' PlayInLoop = true)
+export FusilierMarche is SkeletalAnimationTemplate( FileName = 'Rifleman_Walk.fbx' PlayInLoop = true)
+export FusilierMarcheSMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Walk.fbx' PlayInLoop = true)
+export FusilierMortBalle is SkeletalAnimationTemplate( FileName = 'Rifleman_Death_Bullet.fbx' PlayInLoop = false)
+export FusilierMortBalle2 is SkeletalAnimationTemplate( FileName = 'Rifleman_Death_Bullet_Back.fbx' PlayInLoop = false)
+export FusilierMortBalle3 is SkeletalAnimationTemplate( FileName = 'Rifleman_Death_Bullet_Violent.fbx' PlayInLoop = false)
+export FusilierMortBalle4 is SkeletalAnimationTemplate( FileName = 'Rifleman_Death_Explosion.fbx' PlayInLoop = false)
+export FusilierMortBalle5 is SkeletalAnimationTemplate( FileName = 'Rifleman_Death_Explosion_Back.fbx' PlayInLoop = false)
+export FusilierRun is SkeletalAnimationTemplate( FileName = 'Rifleman_Run.fbx' PlayInLoop = true)
+export FusilierRunSMG is SkeletalAnimationTemplate( FileName = 'Rifleman_Run_SMG.fbx' PlayInLoop = true)
+export FusilierRun2 is SkeletalAnimationTemplate( FileName = 'Rifleman_Run2.fbx' PlayInLoop = true)
+export FusilierRun3 is SkeletalAnimationTemplate( FileName = 'Rifleman_Run3.fbx' PlayInLoop = true)
+export FusilierTransport is SkeletalAnimationTemplate( FileName = 'Rifleman_Transport.fbx' PlayInLoop = true)
+
+export ServantLeftDeploy     is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Deploy.fbx' PlayInLoop = false)
+export ServantLeftFold       is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Fold.fbx' PlayInLoop = false)
+export ServantLeftMoveFront  is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Move.fbx' PlayInLoop = true)
+export ServantLeftIdle       is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Idle.fbx' PlayInLoop = true)
+export ServantLeftFire       is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Fire.fbx' PlayInLoop = false)
+export ServantLeftAim        is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Ready_To_Fire.fbx' PlayInLoop = false)
+export ServantLeftReload     is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Reload.fbx' PlayInLoop = false)
+export ServantLeftDead       is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Dead.fbx' PlayInLoop = false)
+export ServantLeftMoveBack   is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Move_Back.fbx' PlayInLoop = true)
+export ServantLeftMoveLeft   is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Turn_Left.fbx' PlayInLoop = true)
+export ServantLeftMoveRight  is SkeletalServantAnimationTemplate(FileName = 'Gunner_L_Turn_Right.fbx' PlayInLoop = true)
+
+export ServantRightDeploy    is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Deploy.fbx' PlayInLoop = false)
+export ServantRightFold      is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Fold.fbx' PlayInLoop = false)
+export ServantRightIdle      is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Idle.fbx' PlayInLoop = true)
+export ServantRightMoveFront is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Move.fbx' PlayInLoop = true)
+export ServantRightAim       is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Ready_To_Fire.fbx' PlayInLoop = false)
+export ServantRightReload    is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Reload.fbx' PlayInLoop = false)
+export ServantRightFire      is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Fire.fbx' PlayInLoop = false)
+export ServantRightDead      is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Dead.fbx' PlayInLoop = false)
+export ServantRightMoveBack  is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Move_Back.fbx' PlayInLoop = true)
+export ServantRightMoveLeft  is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Turn_Left.fbx' PlayInLoop = true)
+export ServantRightMoveRight is SkeletalServantAnimationTemplate(FileName = 'Gunner_R_Turn_Right.fbx' PlayInLoop = true)
+
+export ServantATGMLeftDeploy     is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Deploy.fbx' PlayInLoop = false)
+export ServantATGMLeftFold       is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Fold.fbx' PlayInLoop = false)
+export ServantATGMLeftIdle       is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Idle.fbx' PlayInLoop = true)
+export ServantATGMLeftMoveFront  is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Move.fbx' PlayInLoop = true)
+export ServantATGMLeftFire       is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Fire.fbx' PlayInLoop = false)
+export ServantATGMLeftAim        is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Fire.fbx' PlayInLoop = false)
+export ServantATGMLeftReload     is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Idle.fbx' PlayInLoop = false)
+export ServantATGMLeftMoveBack   is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_L_Move_Back.fbx' PlayInLoop = true)
+//----
+export ServantATGMLeftDead       is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_L_Dead.fbx' PlayInLoop = false)
+export ServantATGMLeftMoveLeft   is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_L_Turn_Left.fbx' PlayInLoop = true)
+export ServantATGMLeftMoveRight  is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_L_Turn_Right.fbx' PlayInLoop = true)
+
+export ServantATGMRightDeploy    is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Deploy.fbx' PlayInLoop = false)
+export ServantATGMRightFold      is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Fold.fbx' PlayInLoop = false)
+export ServantATGMRightIdle      is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Idle.fbx' PlayInLoop = true)
+export ServantATGMRightMoveFront is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Move.fbx' PlayInLoop = true)
+export ServantATGMRightAim       is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Aim.fbx' PlayInLoop = false)
+export ServantATGMRightReload    is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Idle.fbx' PlayInLoop = false)
+export ServantATGMRightFire      is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Aim.fbx' PlayInLoop = false)
+export ServantATGMRightMoveBack  is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_ATGM_R_Move_Back.fbx' PlayInLoop = true)
+//----
+export ServantATGMRightDead      is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_R_Dead.fbx' PlayInLoop = false)
+export ServantATGMRightMoveLeft  is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_R_Turn_Left.fbx' PlayInLoop = true)
+export ServantATGMRightMoveRight is SkeletalServantATGMAnimationTemplate(FileName = 'Gunner_R_Turn_Right.fbx' PlayInLoop = true)
+

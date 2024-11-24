@@ -1,0 +1,269 @@
+//-------------------------------------------------------------------------
+//----------------------------- ARTILLERY ---------------------------------
+//-------------------------------------------------------------------------
+
+//-------------------------------------------------------------------------
+// Missions
+//-------------------------------------------------------------------------
+private template Template_Artillery_TriggerHappy
+[
+    MinimumResourceForLaunch = MAP[],
+    ParametresDeMission = [],
+    GenerationSettingHolder = TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+    PoolModelList = [~/Pool_Artillery_TriggerHappy]
+]
+is TMacroActionDescriptor_Artillery_Specific
+(
+    ParametresDeMission =
+    [
+        <GenerationSettingHolder>,
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 4417 ArtilleryUpdateOffsetGRU = 1325),
+        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 30 MinimumThreatPerSplashForSupport = 20 ),
+        TArtilleryThreatPerSplashSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 20 MinimumThreatPerSplashForSupport = 10),
+        TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.1),
+        TArtilleryMoveOutThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] ThreatThresholdValue = 10 MoveOutThreatProbability = 1),
+        TMacroActionProductionSettingHolder(PoolModelList = <PoolModelList> DistanceToOptimumStartDuringDeploymentGRU = 1060),
+        TArtilleryStrikeSettingHolder(
+            SupportStrikeRatio = 0.5
+            ArtilleryStrikeThreatBonusPerTags =
+            [
+                (["Canon_AT"], 2.0),
+                (["Canon_AA"], 1.5),
+                (["Infanterie_Standard"], 1.5),
+                (["Infanterie_Spec_Defense"], 2.0),
+                (["Artillerie"], 2.0),
+                (["Vehicule_Logistique"], 2.0),
+                (["Vehicule_SuperCMD"], 2.0),
+                (["Infanterie"], 1.5),
+                (["Vehicule"], 0.5),
+                (["Char"], 0.3),
+                (["Char_SuperCMD"], 0.5),
+                (["Helo"], 0.5),
+            ]),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+    ]
+    +
+    <ParametresDeMission>
+)
+//-------------------------------------------------------------------------
+export Artillery_TriggerHappy_1for4Corridors is Template_Artillery_TriggerHappy
+(
+    GenerationSettingHolder = TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 4 AlsoConsiderTheseDescriptorsForMaintain = [])
+)
+//-------------------------------------------------------------------------
+export Artillery_TriggerHappy_1for2Corridors is Template_Artillery_TriggerHappy
+(
+    GenerationSettingHolder = TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 2 AlsoConsiderTheseDescriptorsForMaintain = [])
+)
+
+//-------------------------------------------------------------------------
+export Artillery_Sniper is TMacroActionDescriptor_Artillery_Specific
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 2120 ArtilleryUpdateOffsetGRU = 0),
+        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 50 MinimumThreatPerSplashForSupport = 75),
+        TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.03 ), // 50% à 17s
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_Artillery_Sniper] DistanceToOptimumStartDuringDeploymentGRU = 1060),
+        TArtilleryStrikeSettingHolder(
+            ArtilleryStrikeThreatBonusPerTags =
+            [
+                (["Canon_AT"], 2),
+                (["Canon_AA"], 1.5),
+                (["Infanterie_Standard"], 1.5),
+                (["Infanterie_Spec_Defense"], 2.0),
+                (["Artillerie"], 3),
+                (["Vehicule_Logistique"], 2.0),
+                (["Vehicule_SuperCMD"], 2.0),
+                (["Infanterie"], 1.5),
+                (["Vehicule"], 0.3),
+                (["Char"], 0.5),
+                (["Char_SuperCMD"], 1.0),
+                (["Helo"], 0.5),
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Artillery_TriggerHappy is Template_Artillery_TriggerHappy
+(
+)
+//-------------------------------------------------------------------------
+export Artillery_TriggerHappy_Autogen is Template_Artillery_TriggerHappy
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+)
+//-------------------------------------------------------------------------
+export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TCoordinationSettingHolder(CoordinationType = ESupportingStatus/IsSupport),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 3534 ArtilleryUpdateOffsetGRU = 1325),
+        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 20  MinimumThreatPerSplashForSupport = 15 ),
+                TArtilleryThreatPerSplashSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 15 MinimumThreatPerSplashForSupport = 10),
+        TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.1),
+        TArtilleryMoveOutThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] ThreatThresholdValue = 10 MoveOutThreatProbability = 1),
+        TArtilleryStrikeSettingHolder(SupportStrikeRatio = 0.5
+            ArtilleryStrikeThreatBonusPerTags =
+            [
+                (["Canon_AT"], 2.0),
+                (["Canon_AA"], 1.5),
+                (["Infanterie_Standard"], 2.5),
+                (["Infanterie_Spec_Defense"], 2.5),
+                (["Infanterie"], 2.0),
+                (["Artillerie"], 1.5),
+                (["Vehicule_Logistique"], 0.5),
+                (["Vehicule"], 1.0),
+                (["Char"], 0.5),
+                (["Helo"], 0.5),
+            ]
+        ),
+
+        TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Artillery_Support] DistanceToOptimumStartDuringDeploymentGRU = 1060),
+    ]
+)
+//-------------------------------------------------------------------------
+private template Template_Artillery_Expensive
+[
+    MinimumResourceForLaunch = MAP[],
+]
+is TMacroActionDescriptor_Artillery_Specific
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 2120 ArtilleryUpdateOffsetGRU = 0),
+        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 55 MinimumThreatPerSplashForSupport = 999),
+        TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.1),
+        TArtilleryMoveOutThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] ThreatThresholdValue = 10 MoveOutThreatProbability = 1),
+
+        TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Artillery_Expensive] ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]DistanceToOptimumStartDuringDeploymentGRU = 1060),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+
+        TArtilleryStrikeSettingHolder(
+            ArtilleryStrikeThreatBonusPerTags =
+            [
+                (["Canon_AT"], 1.0),
+                (["Canon_AA"], 1.0),
+                (["Infanterie_Standard"], 2.5),
+                (["Infanterie_Spec_Defense"], 2.5),
+                (["Infanterie"], 2.0),
+                (["Artillerie"], 3.0),
+                (["Vehicule_Logistique"], 0.5),
+                (["Vehicule"], 0.5),
+                (["Char"], 0.5),
+                (["Helo"], 0.5),
+            ]
+        ),
+
+        TArtilleryStrikeSettingHolder(
+            DifficultyList = [IADifficulty/TresDifficile]
+            ArtilleryStrikeThreatBonusPerTags =
+            [
+                (["Canon_AT"], 1.0),
+                (["Canon_AA"], 1.0),
+                (["Infanterie_Standard"], 2.5),
+                (["Infanterie_Spec_Defense"], 2.5),
+                (["Infanterie"], 2.0),
+                (["Artillerie"], 1.5),
+                (["Vehicule_Logistique"], 0.5),
+                (["Vehicule"], 0.5),
+                (["Char"], 0.5),
+                (["Helo"], 0.5),
+            ]
+        ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Artillery_Expensive is Template_Artillery_Expensive
+(
+)
+//-------------------------------------------------------------------------
+export Artillery_Expensive_Autogen is Template_Artillery_Expensive
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+)
+
+// Pool Models
+//-------------------------------------------------------------------------
+export Pool_Artillery_TriggerHappy is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{80abfc9e-d931-11e8-975b-2c56dc4c150d}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = true
+        PriceComparisonMethod = EPriceComparatorType/Random
+        TagsPriority = [
+            "Artillerie_Longue_Portee",
+            "Artillerie_Courte_Portee",
+        ]
+    ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Artillery_Support is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{80abfc9f-d931-11e8-a532-2c56dc4c150d}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = true
+        PriceComparisonMethod = EPriceComparatorType/Cheapest
+        TagsPriority = [
+            "Artillerie_Courte_Portee",
+            "Artillerie_Longue_Portee",
+            "Artillerie_Observateur",
+        ]
+    ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Artillery_Expensive is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{80abfca0-d931-11e8-a4d2-2c56dc4c150d}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = false
+        PriceComparisonMethod = EPriceComparatorType/Random
+        TagsPriority = [
+            "Artillerie_MLRS",
+            "Artillerie_Observateur",
+        ]
+    ),
+    TPoolElement(
+        DescriptorId = GUID:{74be5bbc-e474-4f56-acdd-87dc448b5971}
+        Required = false
+        Nb = 1
+        IndexPriorityOverPrice = false
+        PriceComparisonMethod = EPriceComparatorType/Random
+        TagsPriority = [
+            "Artillerie_CMD",
+        ]
+    ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Artillery_Sniper is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{9b64f06e-d796-11e8-a573-704d7b2c87d4}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = true
+        TagsPriority = [
+            "Artillerie_Longue_Portee",
+            "Artillerie",
+        ]
+    ),
+    ]
+)
+

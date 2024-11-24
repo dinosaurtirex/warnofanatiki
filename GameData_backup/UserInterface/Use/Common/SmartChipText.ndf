@@ -1,0 +1,22 @@
+SmartChipDescription is TSmartChipListDescription
+(
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_VerticalCenter
+        InterLine = 0
+    )
+
+    TextStyle = "Default"
+    TypefaceToken = "UIMainFont"
+    TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+    TextSize = "10"
+    TextFormatScript = ~/DefaultTextFormatScript
+
+    SmartOrderTextColor = "SD2_BlancPur"
+    SmartGroupTextColor = "SD2_NoirPur"
+    SmartOrderBackgroundColorToken = "VividRed"
+    SmartGroupBackgroundColorToken = "Cyan"
+    MagnifiableChipSize = 10
+)

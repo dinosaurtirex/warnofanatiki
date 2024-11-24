@@ -1,0 +1,14 @@
+export Modele_OT_65_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Vehicule/OT_65/OT_65.fbx'
+)
+
+export Modele_OT_65_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Vehicule/OT_65_MID/OT_65_MID.fbx'
+)
+
+export Modele_OT_65_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Vehicule/LODS/OT_65_LOW.fbx'
+)

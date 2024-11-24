@@ -1,0 +1,45 @@
+
+MinimapMagnifiableSize is 310.0
+
+BUCKSpecificMiniMapInfoMainComponentDescriptor is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [MinimapMagnifiableSize, MinimapMagnifiableSize] //Doit être carré
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    HidePointerEvents = true
+    Components =
+    [
+        PanelRoundedCorner
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                MagnifiableWidthHeight = [IngameHUDRightFramesWidth, 0.0]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+        ),
+        ~/MinimapPanelDescriptor, // MUST BE A SQUARE!!!,
+        BUCKContainerDescriptor
+        (
+            UniqueName = "UISpecificHUDAlertPanelMainContainer"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.0, 0.0]
+                AlignementToAnchor = [1.0, 0.0]
+            )
+
+            FitStyle = ~/ContainerFitStyle/FitToContent
+        )
+    ]
+)
+
+UISpecificMiniMapInfoViewDescriptor is TUISpecificMiniMapInfoViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificMiniMapInfoMainComponentDescriptor
+    MainComponentContainerUniqueName = "UISpecificMiniMapInfoViewMainContainer"
+)

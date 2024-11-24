@@ -1,0 +1,17 @@
+export Modele_ATteam_RCL_SPG9_VDV_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_ATteam_RCL_SPG9_SOV
+)
+
+export Modele_ATteam_RCL_SPG9_VDV_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_ATteam_RCL_SPG9_SOV_MID
+)
+
+export Modele_ATteam_RCL_SPG9_VDV_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_ATteam_RCL_SPG9_SOV_LOW
+)
+
+
+

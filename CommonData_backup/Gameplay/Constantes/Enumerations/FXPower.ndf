@@ -1,0 +1,10 @@
+// FxPower: Valeurs acceptees dans l'ODS d'arme (champ 'FX_Power')
+EFXPower is TBaseClass
+(
+    Leger              is 1
+    Moyen              is 2
+    Lourd              is 3
+    ExtraLourd         is 4
+    UltraLourd         is 5
+    UltraLourd_Red     is 6
+)

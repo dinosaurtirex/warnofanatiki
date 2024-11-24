@@ -1,0 +1,14 @@
+export Modele_MAN_Z311_Mi50_BEL is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/BEL/Vehicule/MAN_Z311_Mi50/MAN_Z311_Mi50.fbx'
+)
+
+export Modele_MAN_Z311_Mi50_BEL_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/BEL/Vehicule/MAN_Z311_Mi50/MAN_Z311_Mi50.fbx'
+)
+
+export Modele_MAN_Z311_Mi50_BEL_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/BEL/Vehicule/MAN_Z311_Mi50/MAN_Z311_Mi50.fbx'
+)

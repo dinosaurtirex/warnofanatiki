@@ -1,0 +1,17 @@
+// Keep this list synchronized with EugIA/EnumCursors.h
+Cursor_None                is 0
+Cursor_Default             is 1
+
+Cursor_SelectPlayer        is 2
+Cursor_SelectAlly          is 3
+Cursor_SelectEnemy         is 4
+Cursor_SelectNeutralLand   is 5
+Cursor_SelectInvalid       is 6
+
+Cursor_OrderPlayer         is 7
+Cursor_OrderAlly           is 8
+Cursor_OrderEnemy          is 9
+Cursor_OrderNeutralLand    is 10
+Cursor_OrderInvalid        is 11
+
+Cursor_Ghost               is 12

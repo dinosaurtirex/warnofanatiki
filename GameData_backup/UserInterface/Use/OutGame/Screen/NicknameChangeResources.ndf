@@ -1,0 +1,47 @@
+
+private NicknameChangePanel is SpecificModalWindow
+(
+    UniqueName = "NicknameChangePanel"
+    TitleToken = 'T_CHGPSUDO'
+    ContentMagnifiableWidthHeight = [0.0, 150.0]
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalConfirmButton),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AnimatedWaitingComponent
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [45.0, 45.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "pseudo"
+                HasText = true
+                EditableTextElementName = "NicknameEditableText"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalErrorText
+        )
+    ]
+)
+
+NicknameChangeResource is TUISpecificOutGameNicknameChangeResource
+(
+    NicknameChangePanel = ~/NicknameChangePanel
+)

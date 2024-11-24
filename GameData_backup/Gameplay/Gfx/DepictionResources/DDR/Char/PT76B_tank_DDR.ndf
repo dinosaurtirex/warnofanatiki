@@ -1,0 +1,17 @@
+export Modele_PT76B_tank_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/Char/PT_76B/PT_76B.fbx'
+)
+
+export Modele_PT76B_tank_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/Char/PT_76B/PT_76B.fbx'
+)
+
+export Modele_PT76B_tank_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/URSS/Char/PT_76B/PT_76B.fbx'
+)
+
+
+

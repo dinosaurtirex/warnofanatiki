@@ -1,0 +1,623 @@
+// Index :
+// • SpecificModalButton (template)
+// • SpecificModalText (template)
+// • SpecificModalWindow (template)
+// • TemporalModal
+// • ConfirmModal
+// • CancelModal
+// • BackModal
+// • ConfirmCancelModal
+// • ModalBlurEffect
+// • ModalManager
+
+//---------------------------------------------------------------------------------
+
+ModalsButtonsWidthHeight is DefaultButtonDims
+
+wargame2MessageManager is TUISpecificDeskPseudoModalMessageManager
+(
+    Resources = ~/OutGameResourceSpecific
+)
+
+//-------------------------------------------------------------------------------------
+// SpecificModalButton
+//-------------------------------------------------------------------------------------
+
+template SpecificModalButton
+[
+    ElementName : string = '',
+    TextToken : string = '',
+    Mapping : TEugBMutablePBaseClass = nil,
+    ButtonAlignementToAnchor : float2 = [0,0],
+    ButtonAlignementToFather : float2 = [0,0],
+    TextSizeToken : string = "24",
+    IsFilled : bool,
+    HintableAreaElementName : string = "",
+    RadioButtonManager : TBUCKRadioButtonManager = nil,
+    IsTogglable : bool = false,
+] is ConfirmButton
+(
+    ElementName = <ElementName>
+    TextToken = <TextToken>
+    Mapping = <Mapping>
+    ButtonAlignementToAnchor = <ButtonAlignementToAnchor>
+    ButtonAlignementToFather = <ButtonAlignementToFather>
+
+    ButtonMagnifiableWidthHeight = [175.0, 35.0]
+    TextTypefaceToken = "UISecondFont"
+    TextStyle = 'TextStyleEcranMoniteur_cyan'
+    TextColorToken = 'loginBlanc'
+    BorderLineColorToken = <IsFilled> ? 'Cyan' : 'VertLogin'
+    HasBackground = true
+    BackgroundBlockColorToken = <IsFilled> ? 'loginBoutonBackground_cyan' : 'loginBoutonBackground_vert'
+    TextSizeToken = <TextSizeToken>
+    BorderThicknessToken = "3"
+    HintableAreaComponent = BUCKSpecificHintableArea(ElementName = <HintableAreaElementName>)
+    RadioButtonManager = <RadioButtonManager>
+    IsTogglable = <IsTogglable>
+)
+
+//-------------------------------------------------------------------------------------
+
+SpecificModalCancelButton is SpecificModalButton
+(
+    ElementName = "CancelButton"
+    TextToken = "BTN_CANCEL"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+    IsFilled = false
+)
+
+//-------------------------------------------------------------------------------------
+
+SpecificModalConfirmButton is SpecificModalButton
+(
+    ElementName = "ConfirmButton"
+    TextToken = "BTN_CONFIR"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    IsFilled = true
+)
+
+//-------------------------------------------------------------------------------------
+// Specific widgets for modals
+//-------------------------------------------------------------------------------------
+
+template SpecificModalText
+[
+    ElementName : string = "",
+    TextToken : string = "",
+] is BUCKTextDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [~/MagnifiableModaleContentWidth - 20.0, 20.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    ParagraphStyle = paragraphStyleTextCenter
+    TextStyle = "TextStyleEcranMoniteur"
+
+    VerticalFitStyle = ~/FitStyle/UserDefined
+    TypefaceToken = "IBM"
+    BigLineAction = ~/BigLineAction/MultiLine
+    TextToken = <TextToken>
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+    TextColor = "Blanc"
+    TextSize = "24"
+)
+
+//-------------------------------------------------------------------------------------
+
+SpecificModalErrorText is BUCKTextDescriptor
+(
+    ElementName = "ErrorText"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+
+    TextStyle = "Default"
+    TypefaceToken = "UIMainFont"
+    TextColor = "Rouge"
+    TextSize = "RightTextInModal"
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+    BigLineAction = ~/BigLineAction/MultiLine
+    HorizontalFitStyle = ~/FitStyle/FitToContent
+    VerticalFitStyle = ~/FitStyle/FitToContent
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = ~/UIText_Left
+        VerticalAlignment = ~/UIText_VerticalCenter
+        Balanced = true
+        BigWordAction = ~/BigWordAction/BigWordNewLine
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+SpecificModalDottedLine is BUCKTextDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 20.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    ParagraphStyle = paragraphStyleTextCenter
+    TextStyle = "TextStyleEcranMoniteur"
+
+    VerticalFitStyle = ~/FitStyle/UserDefined
+    TypefaceToken = "IBM"
+    BigLineAction = ~/BigLineAction/MultiLine
+    TextToken = "HINT_EX_SP"
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+    TextColor = "Blanc"
+    TextSize = "24"
+)
+
+//-------------------------------------------------------------------------------------
+
+template SpecificModalEditableText
+[
+    ElementName : string = "",
+    HasText : bool = false,
+    TextToken : string = "",
+    EditableTextElementName : string = "",
+    Flags : int = EditableTextFlag/ONE_LINE,
+    MaxChars : int = 500,
+] is BUCKListDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    Elements = (<HasText> ?
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [320.0, 20.0]
+                    AlignementToAnchor = [0.0, 0.5]
+                    AlignementToFather = [0.0, 0.5]
+                )
+
+                TextStyle = "TextStyleEcranMoniteur"
+                TypefaceToken = "IBM"
+                TextColor = "Blanc"
+                TextSize = "24"
+
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextToken = <TextToken>
+                TextPadding = TRTTILength4(Magnifiable = [0.0, 0.0, 5.0, 0.0])
+
+                BigLineAction = ~/BigLineAction/ResizeFont
+                VerticalFitStyle = ~/FitStyle/UserDefined
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    Alignment = ~/UIText_Left
+                    VerticalAlignment = ~/UIText_VerticalCenter
+                    Balanced = true
+                    BigWordAction = ~/BigWordAction/BigWordNewLine
+                )
+            )
+        )] : []) + [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKEditableTextInputFieldDescriptor
+            (
+                ElementName = <EditableTextElementName>
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [300.0, 35.0]
+                )
+
+                TextStyle = "TextStyleEcranMoniteur"
+                MaxChars = <MaxChars>
+                Flags = <Flags>
+                TextSizeToken = "20"
+            )
+        ),
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+template SpecificModalDropdown
+[
+    ElementName : string = "",
+    TextToken : string = "",
+    TextMagnifiableWidth : float = 320.0,
+    DropdownElementName : string = "",
+    DropdownMagnifiableWidth : float = 300.0,
+]
+is
+BUCKListDescriptor
+(
+    ElementName = <ElementName>
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+
+    Axis = ~/ListAxis/Horizontal
+
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKSpecificTextWithHint
+            (
+                ElementName = <ElementName> + "Text"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [<TextMagnifiableWidth>, 20.0]
+                    AlignementToFather = [0.0, 0.5]
+                    AlignementToAnchor = [0.0, 0.5]
+                )
+
+                BigLineAction = ~/BigLineAction/ResizeFont
+                VerticalFitStyle = ~/FitStyle/UserDefined
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    Alignment = ~/UIText_Left
+                    VerticalAlignment = ~/UIText_VerticalCenter
+                    Balanced = true
+                )
+
+                TextStyle = "TextStyleEcranMoniteur"
+                TypefaceToken = "IBM"
+                TextColor = 'Blanc'
+                TextSize = '24' //'StandardTextInModal'
+
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextToken = <TextToken>
+                TextPadding = TRTTILength4(Magnifiable = [0.0, 0.0, 5.0, 0.0])
+
+                HasAutoHint = true
+                AutoHintElementName = <ElementName> + "TextAutoHint"
+            )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKContainerDescriptor
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [<DropdownMagnifiableWidth>, 0.0]
+                    AlignementToFather = [0.0, 0.5]
+                    AlignementToAnchor = [0.0, 0.5]
+                )
+
+                FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+                Components =
+                [
+                    BUCKSpecificDropdownDescriptor
+                    (
+                        ElementName = <DropdownElementName>
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 0.0]
+                            MagnifiableWidthHeight = [0.0, 30.0]
+                            AlignementToFather = [0.5, 0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                        )
+                        BackgroundBlockColorToken = 'VertLogin'
+                        IsForModale = true
+                        ItemFocusable = false
+                        HasBorder = false
+                        MainTextSizeToken = "18"
+                        MainTextColorToken  = "Noir"
+                        MainTextTypefaceToken  = "UISecondFont"
+                        ArrowTextureColorToken = 'Noir'
+
+                        //-------------------------------------------------------------------------------------
+
+                        ItemComponentBackgroundColor = "Noir"
+                        ItemsTextTypefaceToken = "UISecondFont"
+                        ItemsTextSizeToken = "18"
+                        ItemsTextColorToken = "HostGame"
+                        BorderLineColorToken = 'VertLogin'
+                        FloatingListMagnifiableWidth = 0.0
+                        FloatingListRelativeWidth  = 1
+                    )
+                ]
+            )
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// SpecificModalWindow
+//-------------------------------------------------------------------------------------
+
+template SpecificModalWindow
+[
+    UniqueName : string = "",
+    ButtonList : List<TBUCKListElementDescriptor> = [],
+    TitleToken : string = "",
+    ElementsList : List<TBUCKListElementDescriptor> = [],
+    ContentMagnifiableWidthHeight : float2 = [0.0, 280.0],
+] is SpecificModaleWindowFrame
+(
+    UniqueName = <UniqueName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [850.0, 0.0]
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+
+    TitleToken = <TitleToken>
+    ButtonList = <ButtonList>
+
+    ContentRelativeWidthHeight = [1.0, 0.0]
+    ContentMagnifiableWidthHeight = <ContentMagnifiableWidthHeight>
+
+    ContentComponents =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [~/MagnifiableModaleContentWidth, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+            InterItemMargin = TRTTILength( Magnifiable = 10.0 )
+
+            Elements = <ElementsList>
+        ),
+
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [904.0, 732.0]
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
+            )
+            TextureToken = 'Outgame_modale_foreground'
+            TextureDrawer = 'ColorMultiply_Additive'
+        )
+    ]
+
+    AdditionalComponents =
+    [
+        BUCKTextureDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [904.0, 732.0]
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
+            )
+            TextureToken = 'Outgame_modale_fond'
+            TextureDrawer = 'MonochromeMonitorEffect'
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// TemporalModal
+//---------------------------------------------------------------------------------
+
+TemporalModal is SpecificModalWindow
+(
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AnimatedWaitingComponent
+            (
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [45.0, 45.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                    AlignementToFather = [0.5, 0.0]
+                )
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// ConfirmModal
+//---------------------------------------------------------------------------------
+
+ConfirmModal is SpecificModalWindow
+(
+    ButtonList =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalConfirmButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// CancelModal
+//---------------------------------------------------------------------------------
+
+CancelModal is SpecificModalWindow
+(
+    ButtonList =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// BackModal
+//---------------------------------------------------------------------------------
+
+BackModal is SpecificModalWindow
+(
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "BackButton"
+                TextToken = "BTN_BACK"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+                IsFilled = false
+            )
+        )
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// ConfirmCancelModal
+//---------------------------------------------------------------------------------
+
+ConfirmCancelModal is SpecificModalWindow
+(
+    ButtonList =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalConfirmButton),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+        )
+    ]
+)
+
+//---------------------------------------------------------------------------------
+// ModalBlurEffect
+//---------------------------------------------------------------------------------
+
+private ModalBlurEffect is TModalLayerEffect
+(
+    LayerStatus = $/M3D/Scene/ActiveBlurForModalWindow
+    LayerFactor = $/M3D/Scene/BlurForModalWindowFactor
+    Anim = TUIAnimFactorRTTI
+    (
+        AnimDuration = 0.2
+    )
+)
+
+//---------------------------------------------------------------------------------
+// LDHintBlurEffect
+//---------------------------------------------------------------------------------
+
+private LDHintBlurEffect is TModalLayerEffect
+(
+    LayerStatus = $/M3D/Scene/ActiveBlurEventForModalWindow
+    LayerFactor = $/M3D/Scene/BlurForModalWindowFactor
+    Anim = TUIAnimFactorRTTI
+    (
+        AnimDuration = 0.2
+    )
+)
+
+//---------------------------------------------------------------------------------
+// ModalManager
+//---------------------------------------------------------------------------------
+
+ModalManager is TModalManager
+(
+    Layers = MAP [
+        (~/ModalPriority/LDHint,    TModalLayerProperties
+                                    (
+                                        ForegroundLayer = $/UserInterface/UILayer_2DInterfaceLDHint
+                                        BackgroundLayer = $/UserInterface/UILayer_2DInterfaceBlur_InGame
+                                        LayerEffects =
+                                        [
+                                            ~/LDHintBlurEffect,
+                                        ]
+                                    )
+        ),
+        (~/ModalPriority/Low,       TModalLayerProperties
+                                    (
+                                        ForegroundLayer = $/UserInterface/UILayer_2DInterfaceAboveBlur_OutGame
+                                        BackgroundLayer = $/UserInterface/UILayer_2DInterfaceBlur_OutGame
+                                        LayerEffects =
+                                        [
+                                            ~/ModalBlurEffect,
+                                        ]
+                                    )
+        ),
+        (~/ModalPriority/Normal,    TModalLayerProperties
+                                    (
+                                        ForegroundLayer = $/UserInterface/UILayer_InterfaceModal_EventBlocker
+                                        BackgroundLayer = $/UserInterface/UILayer_InterfaceModal_Background
+                                        LayerEffects =
+                                        [
+                                            ~/ModalBlurEffect,
+                                            TModalLayerEffect
+                                            (
+                                                LayerStatus = $/M3D/Scene/ActiveDarknessBetweenActionAndModal
+                                                LayerFactor = $/M3D/Scene/DarknessBetweenActionAndModalFactor
+                                                Anim = TUIAnimFactorRTTI
+                                                (
+                                                    ParamsAnim = [ 0.4 ]
+                                                    AnimDuration = 0.2
+                                                    Modificator = ~/AnimModificator/InvMaxed
+                                                )
+                                            )
+                                        ]
+                                    )
+        ),
+    ]
+
+    TemporalModal = ~/TemporalModal
+    ConfirmModal = ~/ConfirmModal
+    CancelModal = ~/CancelModal
+    BackModal = ~/BackModal
+    ConfirmCancelModal = ~/ConfirmCancelModal
+)

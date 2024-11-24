@@ -1,0 +1,17 @@
+export ModelFile_OH58C_CMD_US is 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout/OH_58C_CMD.fbx'
+export Modele_OH58C_CMD_US is ModelDescriptor
+(
+    FileName = ModelFile_OH58C_CMD_US
+)
+
+export ModelFile_OH58C_CMD_US_MID is 'GameData:/Assets/3D/Units/US/Helico/OH_58D_Combat_Scout_MID/OH_58C_CMD_MID.fbx'
+export Modele_OH58C_CMD_US_MID is ModelDescriptor
+(
+    FileName = ModelFile_OH58C_CMD_US_MID
+)
+
+export ModelFile_OH58C_CMD_US_LOW is 'GameData:/Assets/3D/Units/US/Helico/LODS/OH_58C_CMD_LOW.fbx'
+export Modele_OH58C_CMD_US_LOW is ModelDescriptor
+(
+    FileName = ModelFile_OH58C_CMD_US_LOW
+)

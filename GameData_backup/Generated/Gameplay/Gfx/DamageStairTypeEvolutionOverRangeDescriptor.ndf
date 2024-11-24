@@ -1,0 +1,27 @@
+// Ne pas éditer, ce fichier est généré par DamageStairTypeEvolutionOverRangeFileWriter
+
+
+export DamageTypeEvolutionOverRangeDescriptor_AP1_1Km is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 175.0
+   AP = 1.0
+)
+
+export DamageTypeEvolutionOverRangeDescriptor_AP1_AC_Helo is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 350.0
+   AP = 1.0
+)
+
+export DamageTypeEvolutionOverRangeDescriptor_Balle_500 is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 500.0
+   AP = 1.0
+)
+
+export DamageTypeEvolutionOverRangeDescriptor_DCA is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 700.0
+   AP = 1.0
+)
+

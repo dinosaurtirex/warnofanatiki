@@ -1,0 +1,16 @@
+export ScannerModuleDescriptor is TReverseScannerWithIdentificationDescriptor
+(
+    VisibilityRollRule = TModernWarfareVisibilityRollRule
+    (
+        VisibilityRuleDescriptor    = ~/StandardWargameVisibilityRollRule
+    )
+)
+
+export ScannerConfigurationDescriptor is TScannerConfigurationDescriptor
+(
+    PorteeVisionTBAGRU      = 0
+    DetectionTBAGRU         = 0
+    PorteeVisionGRU         = 0
+    PorteeIdentification    = 0
+    OpticalStrength         = 0
+)

@@ -1,0 +1,108 @@
+template BUCKHintableAreaDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKSensibleAreaDescriptor
+    MaskEvents : bool = false,
+    IgnoreMask : bool = false,
+    AreaShape : int = ~/AreaShape/Rect,
+    // -- BUCKSensibleAreaDescriptor
+
+    HintStandardBUCKComponent : TBUCKHintDescriptor = nil,              // Le descriptor du composant standard de hint.
+    HintSpecificBUCKComponent : TBUCKHintDescriptor = nil,              // Le descriptor du composant spécific de hint. Si renseigné, écrase le composant standard
+
+    DicoToken : string = "",                                            // Le token de dico de localisation dans lequel on trouve les HintTitle / HintBody / HintExtended
+
+    HintTitleToken : string = "",                                       // Titre de l'astuce
+    HintBodyToken : string = "",                                        // Corps de l'astuce
+    HintExtendedToken : string = "",                                    // Partie qui apparaîtra après une seconde d'affichage de l'astuce
+]
+is TBUCKHintableAreaDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    // ++ BUCKSensibleAreaDescriptor
+    MaskEvents = <MaskEvents>
+    IgnoreMask = <IgnoreMask>
+    AreaShape = <AreaShape>
+    // -- BUCKSensibleAreaDescriptor
+
+    HintStandardBUCKComponent = <HintStandardBUCKComponent>
+    HintSpecificBUCKComponent = <HintSpecificBUCKComponent>
+
+    DicoToken = <DicoToken>
+
+    HintTitleToken = <HintTitleToken>
+    HintBodyToken = <HintBodyToken>
+    HintExtendedToken = <HintExtendedToken>
+)

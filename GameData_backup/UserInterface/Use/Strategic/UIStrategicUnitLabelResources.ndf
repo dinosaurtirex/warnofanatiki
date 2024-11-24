@@ -1,0 +1,17 @@
+SpecificStrategicUnitLabelResources is TUISpecificUnitLabelResources
+(
+    UILayer                         = $/UserInterface/UILayer_Labels
+    UI3DLayer                       = $/UserInterface/UI3DLayer_General
+    Camera                          = $/M3D/Misc/CameraPrincipale
+
+    CameraMoverHelperProxy          = $/M3D/Scene/IngameCameraMoverHelperProxy
+    FadeFactorForShaderParameter    = $/M3D/Scene/MaskAlphaFade
+    OpacityControlByFloat           = $/M3D/Shader/StrategicUnitLabelOpacity
+
+    UI3DTransformation = TModernWarfareLabelTransformation
+    (
+        Camera = $/M3D/Misc/CameraPrincipale
+        Scene2D = $/M3D/Scene/Scene_2D_Interface
+        RefResolution = [ 1920, 1080 ]
+    )
+)

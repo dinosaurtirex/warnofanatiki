@@ -1,0 +1,95 @@
+OneLineHeight is 62.0 + 2.0 // margin of 1 on each side
+
+HUDMultiSelectionHorizontalListDescriptor is BUCKListDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, OneLineHeight]
+        MagnifiableOffset = [0.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
+    )
+
+    AssumeChildrenAreFixedSize = true
+    Axis = ~/ListAxis/Horizontal
+    FirstMargin = TRTTILength(Magnifiable = 1)
+    InterItemMargin = TRTTILength(Magnifiable = 2)
+    LastMargin = TRTTILength(Magnifiable = 1)
+    HidePointerEvents = true
+    HasBackground = true
+    BackgroundBlockColorToken = "H2_bleu_2"
+)
+
+BUCKSpecificHUDMultiSelectionPanelMainComponentDescriptor is BUCKContainerDescriptor
+(
+    ElementName = 'Background'
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [940.0, 0.0]
+    )
+
+    FitStyle = ~/ContainerFitStyle/FitToContentVertically
+    HasBackground = false
+    BackgroundBlockColorToken = "Vert"
+    Components =
+    [
+
+        BUCKSpecificScrollingContainerDescriptor
+        (
+            ElementName = 'ScrollingContainer'
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+            )
+
+            FitToMaximumSize = TRTTILength2
+            (
+                Magnifiable = [0.0, OneLineHeight * 3]
+            )
+
+            FitStyle = ~/ContainerFitStyle/FitToContentVertically
+
+            ExternalScrollbar = false
+            HasVerticalScrollbar = true
+            ScrollStepSize = [0.0, OneLineHeight]
+
+            VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [7.0, 0.0]
+                MagnifiableOffset =  [10.0, 0.0]
+                AlignementToFather = [1.0, 0.0]
+                AlignementToAnchor = [1.0, 0.0]
+            )
+            ScrollBarBackgroundToken = "H2_bleu_2"
+            ScrollBarElevatorBackgroundToken = "BoutonTemps_Background"
+
+            Components =
+            [
+                BUCKListDescriptor
+                (
+                    ElementName = 'VerticalList'
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [1.0, 0.0]
+                        AlignementToFather = [0.5, 0.0]
+                        AlignementToAnchor = [0.5, 0.0]
+                    )
+                    Axis = ~/ListAxis/Vertical
+                )
+            ]
+        )
+    ]
+)
+
+UISpecificHUDMultiSelectionPanelViewDescriptor is TUISpecificHUDMultiSelectionPanelViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificHUDMultiSelectionPanelMainComponentDescriptor
+    MainComponentContainerUniqueName = "UISpecificHUDMultiSelectionPanelView" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+
+    MultiSelectionHorizontalListDescriptor = ~/HUDMultiSelectionHorizontalListDescriptor
+    UnitLabelResources = ~/SpecificInGameUnitLabelResources
+
+    NbUnitsByLine = 9
+    LabelMagnifier = 1
+)

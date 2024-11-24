@@ -1,0 +1,45 @@
+Tactic_Descriptor_Unit_FakeTarget is TEntityDescriptor
+(
+    DescriptorId         = GUID:{00000000-0000-0000-0000-000006000000}
+    ClassNameForDebug    = 'FakeTarget'
+    ModulesDescriptors =
+    [
+        TFlagsModuleDescriptor
+        (
+            InitialFlagSet =
+            [
+                Flag_FakeTarget,
+                Flag_Detectable,
+            ]
+        ),
+        TPositionModuleDescriptor
+        (
+            InGeoDb        = True
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+        ),
+        $/GFX/VisionRules/ScannerConfigurationDescriptor,
+        $/GFX/VisionRules/ScannerModuleDescriptor,
+        TLinkTeamModuleDescriptor
+        (
+        ),
+        TPackSignauxModuleDescriptor
+        (
+        ),
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+            ]
+        ),
+        TTargetDataModuleDescriptor
+        (
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)

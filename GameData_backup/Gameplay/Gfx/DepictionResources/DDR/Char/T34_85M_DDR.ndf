@@ -1,0 +1,14 @@
+export Modele_T34_85M_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Char/T34_85_obr_44/T34_85_obr_44.fbx'
+)
+
+export Modele_T34_85M_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Char/T34_85_obr_44_MID/T34_85_obr_44_MID.fbx'
+)
+
+export Modele_T34_85M_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Char/LODS/T34_85_obr_44_LOW.fbx'
+)

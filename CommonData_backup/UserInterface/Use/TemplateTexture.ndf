@@ -1,0 +1,15 @@
+template TUIResourceTexture_Common
+[
+    FileName : string,
+] is TUIResourceTexture
+(
+    FileName = <FileName>
+)
+
+template TUIResourceTexture_MapPack
+[
+    FileName : string,
+] is TUIAutoRegisteredResourceTexture
+(
+    FileName = <FileName>
+)

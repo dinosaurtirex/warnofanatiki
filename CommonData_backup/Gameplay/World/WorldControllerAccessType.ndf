@@ -1,0 +1,5 @@
+
+
+WorldControllerAccess_InWorld       is 0x04
+WorldControllerAccess_OutWorld      is 0x08
+WorldControllerAccess_InOutWorld    is WorldControllerAccess_InWorld | WorldControllerAccess_OutWorld

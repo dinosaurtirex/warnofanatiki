@@ -1,0 +1,39 @@
+// Fader Global : passe de 1 à 0 lors de la perte de focus et inversement
+export GlobalNoFocusFader is TSoundSettingsFader(Volume = 1.0)
+
+// ----------------------------------------------------------------
+// Voix / Video
+// ----------------------------------------------------------------
+
+// fader option joueur
+export VoiceVolumeOptionFader   is TSoundSettingsFader(Volume = 1.0)
+
+export VideoFullScreenFader     is TSoundSettingsFader(Father = ~/VoiceVolumeOptionFader Volume = 1.0)
+export DialogGfxFader           is TSoundSettingsFader(Father = ~/VoiceVolumeOptionFader Volume = 1.0)
+// fader pour video 33 ou video in game.
+export VideoInGameFader         is TSoundSettingsFader(Father = ~/VoiceVolumeOptionFader Volume = 1.0)
+
+// fader option joueur
+export AcknowsVolumeOptionFader   is TSoundSettingsFader(Volume = 1.0)
+export AcknowUnitFader          is TSoundSettingsFader(Father = ~/AcknowsVolumeOptionFader Volume = 1.0)
+
+// fader option joueur
+export FXVolumeOptionFader      is TSoundSettingsFader(Father = ~/GlobalNoFocusFader Volume = 1.0)
+
+// fader gendarme de son.
+export FXVolumeControlFader     is TSoundSettingsFader(Father = ~/FXVolumeOptionFader Volume = 1.0)
+
+// fader option joueur
+export HudVolumeOptionFader    is TSoundSettingsFader(Father = ~/GlobalNoFocusFader Volume = 1.0)
+
+export HudVolumeControlFader    is TSoundSettingsFader(Father = ~/HudVolumeOptionFader Volume = 1.0)
+
+export GlobalMusicFader         is TSoundSettingsFader(Father = ~/GlobalNoFocusFader Volume = 1.0)
+
+// fader option joueur
+export GlobalAmbienceOptionFader      is TSoundSettingsFader(Father = ~/GlobalNoFocusFader Volume = 1.0)
+
+export GlobalAmbienceFader is TSoundSettingsFader(Father = ~/GlobalAmbienceOptionFader Volume = 1.0)
+
+export Ambience2DFader is TSoundSettingsFader(Father = ~/GlobalAmbienceFader Volume = 2.0)
+

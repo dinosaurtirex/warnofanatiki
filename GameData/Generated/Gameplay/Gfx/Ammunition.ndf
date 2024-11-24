@@ -8138,7 +8138,7 @@ Ammo_Canon_AP_105mm_CN_105_F1_late_ESP is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=27)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=37)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -28209,7 +28209,7 @@ Ammo_HMG_12_7_mm_M2HB_CTRL is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 3
-    PhysicalDamages                   = 0.3
+    PhysicalDamages                   = 1
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 4
     SuppressDamages                   = 28.0
@@ -28598,7 +28598,7 @@ Ammo_HMG_team_12_7_mm_M2HB is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 3
-    PhysicalDamages                   = 0.3
+    PhysicalDamages                   = 1.3
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 4
     SuppressDamages                   = 28.0
@@ -29278,11 +29278,11 @@ Ammo_Howz_Canon_2A36_towed_152mm is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_obusier
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz Index=1)
     ProjectileType                    = EProjectileType/Artillerie
-    ImpactHappening                   = [ 'ArtillerieM185155Mm' ]
+    ImpactHappening                   = [ 'ArtillerieM185155MmNUKE' ]
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 5.0
     TempsEntreDeuxFx                  = 4.0
-    PorteeMaximaleGRU                 = 28250
+    PorteeMaximaleGRU                 = 48250
     PorteeMinimaleGRU                 = 1800
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 318
@@ -29290,11 +29290,11 @@ Ammo_Howz_Canon_2A36_towed_152mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotDispersionMultiplier = 0.7
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 82
-    PhysicalDamages                   = 3.41
+    RadiusSplashPhysicalDamagesGRU    = 3282
+    PhysicalDamages                   = 300.41
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 126
-    SuppressDamages                   = 213.0
+    RadiusSplashSuppressDamagesGRU    = 1262
+    SuppressDamages                   = 2513.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -29323,7 +29323,7 @@ Ammo_Howz_Canon_2A36_towed_152mm is TAmmunitionDescriptor
     TempsEntreDeuxSalves              = 60.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
-    NbTirParSalves                    = 4
+    NbTirParSalves                    = 1
     SupplyCost                        = 120.0
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
@@ -30366,11 +30366,11 @@ Ammo_Howz_Canon_2A65_towed_152mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotDispersionMultiplier = 0.7
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 81
-    PhysicalDamages                   = 3.344
+    RadiusSplashPhysicalDamagesGRU    = 181
+    PhysicalDamages                   = 12.344
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 124
-    SuppressDamages                   = 209.0
+    RadiusSplashSuppressDamagesGRU    = 224
+    SuppressDamages                   = 509.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -34275,7 +34275,7 @@ Ammo_Howz_Canon_M185_L39_Howitzer_155mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 5.0
     TempsEntreDeuxFx                  = 5.0
-    PorteeMaximaleGRU                 = 21175
+    PorteeMaximaleGRU                 = 42175
     PorteeMinimaleGRU                 = 1800
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = 318
@@ -34283,11 +34283,11 @@ Ammo_Howz_Canon_M185_L39_Howitzer_155mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotDispersionMultiplier = 0.7
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 82
-    PhysicalDamages                   = 3.41
+    RadiusSplashPhysicalDamagesGRU    = 182
+    PhysicalDamages                   = 13.41
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 126
-    SuppressDamages                   = 213.0
+    RadiusSplashSuppressDamagesGRU    = 226
+    SuppressDamages                   = 413.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -34745,11 +34745,11 @@ Ammo_Howz_Canon_M201A1_Howitzer_203mm_late is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotDispersionMultiplier = 0.7
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 108
-    PhysicalDamages                   = 4.912599999999999
+    RadiusSplashPhysicalDamagesGRU    = 208
+    PhysicalDamages                   = 19.912599999999999
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU    = 165
-    SuppressDamages                   = 264.0
+    RadiusSplashSuppressDamagesGRU    = 365
+    SuppressDamages                   = 464.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -37755,7 +37755,7 @@ Ammo_MMG_M60_7_62mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 4
-    PhysicalDamages                   = 0.147
+    PhysicalDamages                   = 0.5
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 11
     SuppressDamages                   = 15.0
@@ -40919,11 +40919,11 @@ Ammo_Mortier_2S12_120mm is TAmmunitionDescriptor
     DispersionAtMinRangeGRU              = 71
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU    = 84
-    PhysicalDamages                   = 1.342
+    RadiusSplashPhysicalDamagesGRU    = 144
+    PhysicalDamages                   = 4.342
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 127
-    SuppressDamages                   = 135.0
+    SuppressDamages                   = 335.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -44419,10 +44419,10 @@ Ammo_Mortier_Vasilek_82mm is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 49
-    PhysicalDamages                   = 0.82
+    PhysicalDamages                   = 3.82
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 58
-    SuppressDamages                   = 82.0
+    SuppressDamages                   = 382.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -44494,10 +44494,10 @@ Ammo_Mortier_Vasilek_82mm_towed is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 49
-    PhysicalDamages                   = 0.82
+    PhysicalDamages                   = 3.82
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 58
-    SuppressDamages                   = 82.0
+    SuppressDamages                   = 482.0
     AllowSuppressDamageWhenNoImpact                = False
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
@@ -58182,8 +58182,8 @@ Ammo_Sniper_M24 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 5.0
     TempsEntreDeuxFx                  = 5.0
-    PorteeMaximaleGRU                 = 1250
-    PorteeMaximaleTBAGRU              = 1050
+    PorteeMaximaleGRU                 = 3250
+    PorteeMaximaleTBAGRU              = 3050
     PorteeMinimaleGRU                 = 177
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
@@ -58192,7 +58192,7 @@ Ammo_Sniper_M24 is TAmmunitionDescriptor
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 0
-    PhysicalDamages                   = 0.15
+    PhysicalDamages                   = 1
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = 13
     SuppressDamages                   = 150.0

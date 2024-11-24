@@ -1,0 +1,19 @@
+export Modele_T55AM2B_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Char/T55AM2B/T55AM2B.fbx'
+)
+
+export Modele_T55AM2B_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Char/T55AM2B_MID/T55AM2B_MID.fbx'
+)
+
+export Modele_T55AM2B_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Char/LODS/T55AM2B_LOW.fbx'
+)
+
+export Modele_T55AM2B_DDR_Tourelle_02 is ModelDescriptor
+(
+    FileName = ModelFile_DShK_127mm_t2
+)

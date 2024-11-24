@@ -1,0 +1,296 @@
+ZocRadiusGRU is 1.9 * ~/ActionPointConsumptionRefs/CaseSizeGRU
+
+StrategicConstantes is TStrategicTunableConstante
+(
+    BattleRoleAbleToSaveOutOfCombatPawn = [ EStrategicBattleRole/Fighter, EStrategicBattleRole/AuxiliarySupport ]
+
+    PawnSpeedModifier = 5.0
+    MovementSmoothingMaxAngle = 45. // entre 10° (si vraiment besoin de moins, venir en discuter avec un dev) et 180° (équivaut à "pas d'angle max")
+    MaxSubMovementLengthGRU = 1 * ~/ActionPointConsumptionRefs/CaseSizeGRU
+
+    FatigueLossOnNextTurn = ~/StrategicFatigueLossOnNextTurn
+    EmptyActionPointsOnMaxFatigueRout = ~/StrategicEmptyActionPointsOnMaxFatigueRout
+    AttackerFatigueGainAfterCombat = ~/StrategicBattleAttackerFatigueGainAfterBattle
+    DefenderFatigueGainAfterCombat = ~/StrategicBattleDefenderFatigueGainAfterBattle
+
+
+    PawnDissolutionFactor = 0.3 //Un pion est dissout après le combat si sa dernière compagnie est en dessous de X% de son effectif initial
+    NbActionPointsNeededToFight = 4 //Nombre de PA nécessaire pour participer à une bataille une fois sur place
+    NbActionPointsNeededToFightForAirplane = 4 //Nombre de PA nécessaire pour participer à une bataille une fois sur place
+
+    // Nombre d'AP à garder après un déplacement pour les briques de Move&Attack/defend et pour l'IA
+    NbApToKeepAfterMoveWithTargetForBattleRoleGRU = MAP
+    [
+        (EStrategicBattleRole/GroundSupport,
+            [
+                (3, 707),
+            ]
+        ),
+        (EStrategicBattleRole/Fighter,
+            [
+                (4, 530),
+            ]
+        ),
+        (EStrategicBattleRole/AuxiliarySupport,
+            [
+                (4, 707),
+            ]
+        )
+    ]
+
+    // Zocs et fuite
+    ConflictingUnitRadiusGRU = ZocRadiusGRU   //Taille de la ZOC des unités.
+    EnemiesDisableSpawnRadiusGRU = 1 * ~/ActionPointConsumptionRefs/CaseSizeGRU    //Taille du rayon qui desactive les point de renfort
+    EnemiesCaptureAirportRadiusGRU = 0 //Taille du rayon qui capture les aéroports
+    DisableGroundZocsWhenNoAP = false
+    DisableMoveOrderOnDisabledZocs = false
+    FleeToAlliesIfPossible = true
+
+    AirDenyUnitTags = [ 'Canon_AA', 'Avion_Chasseur', 'Canon_AA_Standard' ]
+    IsFortifiedAntiAirTag = 'IsFortifiedAntiAir'
+
+    //----------
+    // Airports
+    AirportSlotsRadiusGRU = 71 // Le rayon de base autour de l'aéroport sur lequel se placent les avions
+    NumberOfAerialUnitsPerRadius = 4 // Le nombre d'avions par rayon
+    AlignAirplaneInAirportOnGrid = true
+
+
+    //----------
+
+    NbTurnToRepairDisabledUnit = 1
+
+    //cosmetique des ordres
+    BattleArrowStartFillColor = [168, 102, 32, 255]
+    BattleArrowStartThickness = 0.0
+
+    BattleArrowEndFillColor = [208, 122, 42, 255]
+    BattleArrowEndThickness = 0.0
+
+    BattleArrowLength = 0.0
+    BattleArrowWidth = 2001.0
+    BattleLineStartWidth = 3000.0
+    BattleLineEndWidth = 2000.0
+
+    BattleArrowGrowDuration = 0.5 // seconds
+    BattleArrowTotalDuration = 4.5 // seconds
+    TextFeedbackDurationMin = 4
+    TextFeedbackDurationMax = 4
+
+    UnitsToKilometersMultiplierGRU = 0.000001413
+
+    ShowDeathTextFeedback = false
+
+    // Règles de multisélection
+    MultiSelectionLimit = 10
+
+    // Ecoulement du temps
+    // ATTENTION cet enum est utilisé en Python pour la brique DescriptorSetInitialDate.
+    // Toute modifications du nombre d'éléments dans le tableau doit être fait conjointement avec un dev afin de modifier la brique
+    TurnTimeOfDay = ["Str0400", "Str0800","Str1200", "Str1600","Str2000"] // un tour de jeu a 4h du matin, le suivant a 8h puis 12h etc...
+    TimeOfDayEnvironmentName = ["night", "morning", "noon", "afternoon", "evening"]
+
+    SteelmanCombatFX = $/GFX/GameFx/FX_Steelman_Combat_Binder
+    SteelmanFxDuration = 1
+    SteelmanCombatSound = $/SoundDescriptors/Sound_Steelman_NATO_Combat
+    SteelmanAirCombatFX = $/GFX/GameFx/FX_Steelman_Combat_Interception_Binder
+    SteelmanAirCombatFxDuration = 2.5 // seconds
+    SteelmanAirCombatSound = $/VFX_Bank/SFX_Steelman_Combat_Air_Air_Sound
+
+    // Possibilite de conserver un ordre sur plusieurs tours
+    MultipleTurnOrdersActivated = false
+
+    PowerValuesBattleFactorForDisplayOnly = 0.0006 //valeur du point de force dans l'affichage des pions et de la barre
+    DigitToDisplayForAutoresolveUnitPower = 1
+    DigitToDisplayForAutoresolveArmyRatio = 1
+    DigitToDisplayForAutoresolveCombatAdvantage = 1
+    DigitToDisplayForAutoresolveBattleResult = 1
+
+    // Nombre maximal de pions par type de pion (cf. StrategicBattleRole.ndf) qui peuvent rejoindre le combat pour une équipe
+    // la position dans le tableau correspond au role défini dans StrategicBattleRole.ndf (NbFighter en position 0 par exemple)
+    BattleNbMaxPawnByRole  = [ 2, 1, 1, 1 ]
+
+    BattleDeploymentMode = EDeploymentMode/Breakthrough
+
+    SteelmanMaxUnitSelection = MAP[
+        (ENationalite/Allied, 1),
+        (ENationalite/Axis, 1)
+    ]
+
+    // Le tableau de valeur contient le nombre de ticketPoint disponible en fonction du nombre de pions dans le battle plan, le nombre de cases dans le tableau
+    // doit correspondre au nombre de pion (cf. BattleNbMaxPawnByRole) plus 1 (pour le cas où on n'a pas de pions)
+    DefaultStartingTicketsPointsByPawnNumber =
+    [
+        [ 0, 40, 50, 55, 60, 65],  //Attaque
+        [ 0, 40, 50, 55, 60, 65],  //Defense
+
+    ]
+
+    // Le tableau de valeur contient l'income disponible en fonction du nombre de pions dans le battle plan, le nombre de cases dans le tableau
+    // doit correspondre au nombre de pion (cf. BattleNbMaxPawnByRole) plus 1 (pour le cas où on n'a pas de pions)
+    DefaultTicketsPointsIncomeByPawnNumber = // points par minute
+    [
+        [ 0, 6, 7, 8, 9, 10], //Attaque
+        [ 0, 6, 7, 8, 9, 10], //Defense
+    ]
+
+    AerialBattleTicketsPoint =
+    [
+        2000,   //Attaque
+        2000,     //Defense
+    ]
+
+    SolAirBattleTicketsPoint =
+    [
+        2000,   //Attaque
+        2000,     //Defense
+    ]
+
+    StrategicMapVictoryTypeFromScoreRatio = [
+        (0.4   ,        EVictoryType/TotalDefeat),
+        (0.5    ,         EVictoryType/MajorDefeat),
+        (0.667    ,         EVictoryType/MinorDefeat),
+        (1.0    ,         EVictoryType/Draw),
+        (1.5    ,         EVictoryType/MinorVictory),
+        (2.0   ,         EVictoryType/MajorVictory),
+        (2.5      ,         EVictoryType/TotalVictory),
+    ]
+
+    MaxTicketFactorByPawnNumber = [ 2, 1.6, 1.5, 1.4, 1.3 ]
+    UpkeepPercentByPawnNumber   = [ 5, 5, 5, 5, 5 ]
+
+    //les tokens doivent être dans : INTERFACE_INGAME.csv
+    NumberLimitAndTokenLimitByTag = MAP
+    [
+        ("HQ", (3, "MAXPAWNTAG")),
+    ]
+
+    // Production des renforts
+    ReinforcementSnapCursorRadiusGRU = 424
+    ReinforcementSpawnNoAlliesRadiusGRU = 0.5 * ~/ActionPointConsumptionRefs/CaseSizeGRU //Impossible de spawn dans la case d'un allié
+    ReinforcementSpawnNoEnemiesRadiusGRU = ZocRadiusGRU + 177 //Impossible de spawn dans la ZoC d'un ennemi + 1 case
+    ReinforcementSpawnStandardForbiddenTerrainMask = ~/ETerrainType/EauPeuProfonde
+    ReinforcementSpawnAirborneForbiddenTerrainMask = ~/ETerrainType/EauPeuProfonde // Modifier PLACE_AIRB dans INTERFACE_INGAME.csv si la règle change
+
+    ValidGhostColors = TGhostColors(
+        GhostColor = [0, 255, 0, 128]
+        GhostAlphas = [0.6, 0.8]
+        GhostBlends = [0.5, 0.5]
+    )
+    InvalidGhostColors = TGhostColors(
+        GhostColor = [255, 0, 0, 128]
+        GhostAlphas = [0.6, 0.8]
+        GhostBlends = [0.5, 0.5]
+    )
+
+    // Ordres
+    ActionPointCostPerOrder = MAP [
+        ("Fortify",                 3.0), // Fortify - action de défense
+        ("FortifyAntiAir",          4.0), // FortifyAntiAir - action de defense Anti aerienne des unites au sol
+        ("Move",                    0.0), // Le cout du move est calculé en fonction de la distance parcourue
+    ]
+
+    //IA steelman
+    AvailableAIList =
+    [
+        IADifficulty/Facile,
+        IADifficulty/Normal,
+        IADifficulty/Difficile,
+    ]
+
+     //Bonus en pourcentage donnée à l'IA à l'income, selon la difficulté
+    RelativeIABonusFluxByIADifficulty = MAP
+    [
+        (IADifficulty/TresFacile,            0.0),
+        (IADifficulty/Facile,                0.0),
+        (IADifficulty/Normal,                0.0),
+        (IADifficulty/Difficile,             0.8),
+        (IADifficulty/TresDifficile,         0.8),
+        (IADifficulty/PlusDifficile,         0.8),
+    ]
+
+
+    // Niveau des IA en partie tactique selon le niveau de la mission steelman
+    // le 1er élément du tableau est la difficulté globale choisie par le joueur
+    // le 2nd élement du tableau est le niveau d'IA pour les IA adverses
+    TacticalIALevelPerGameDifficulty = MAP
+    [
+        (EGameDifficulty/Easy,              [IADifficulty/Difficile,     IADifficulty/Facile]),
+        (EGameDifficulty/Medium,            [IADifficulty/Normal,        IADifficulty/Normal]),
+        (EGameDifficulty/Hard,              [IADifficulty/Normal,        IADifficulty/TresDifficile]),
+    ]
+
+    // IA TActiques dans steelman, les niveaux ici correspondent à ceux paramétrés dans les tableaux de TacticalIALevelPerGameDifficulty
+
+    // Le niveau d'un joueur IA dans le mode AG selon le niveau de la mission
+    StrategicIALevelPerGameDifficulty = MAP
+    [
+        (EGameDifficulty/Easy,              IADifficulty/Facile),
+        (EGameDifficulty/Medium,            IADifficulty/Normal),
+        (EGameDifficulty/Hard,              IADifficulty/Difficile),
+    ]
+
+    // Bonus en pourcentage donné à l'IA à l'income, par phase. Exemple : 0.0 = +0%, 0.10 = +10%
+    // Remplace le RelativeBonusFluxByIADifficultyAndPhase de GDConstantes.ndf
+    TacticalRelativeBonusFluxByIADifficulty = MAP
+    [
+        (IADifficulty/TresFacile,    0.0),
+        (IADifficulty/Facile,        0.0),
+        (IADifficulty/Normal,        0.0),
+        (IADifficulty/Difficile,     0.8),
+        (IADifficulty/TresDifficile, 0.8),
+        (IADifficulty/PlusDifficile, 0.8),
+    ]
+
+     //Bonus point d'xp pour les pions de l'IA, selon la difficulté
+    FlatIAPawnXPBonusByIADifficulty = MAP
+    [
+        (IADifficulty/TresFacile,             0),
+
+        (IADifficulty/Facile,                 0),
+        (IADifficulty/Normal,                 1),
+        (IADifficulty/Difficile,              2),
+
+        (IADifficulty/TresDifficile,          1),
+        (IADifficulty/PlusDifficile,          1),
+    ]
+
+
+    FXTokensForMoveSequence = ["Move"]
+    FXTokensForDieSequence = ["Die"]
+    FXTokensForArtiFireSequence = ["ArtiFire"]
+    FXTokensForArtiBombSequence = ["ArtiBomb"]
+    FXTokensForAerialBombSequence = ["AerBomb"]
+
+    ActionPointConsumptionGridConstantsDescriptor = ~/ActionPointConsumptionGridConstants
+
+    HideManual = true
+
+    //-------------------------------------------------------------------------------------
+    // REGLES DU TACTIQUE
+    //-------------------------------------------------------------------------------------
+
+    BataillonMoralValue = 60
+
+    TacticalTimeLimit = 50
+    TacticalScoreLimit = 2500
+    TacticalScoreLimitReachedVictoryLevelConstantes = ~/TacticFromStrategicScoreLimitReachedVictoryLevelConstantes
+    TacticalScoreDefeatMoralVictoryLevelConstantes = ~/TacticFromStrategicDefeatMoralVictoryLevelConstantes
+
+    AttackerFatigueAdditionalGainAfterSurrender = 2
+    DefenderFatigueAdditionalGainAfterSurrender = 0
+)
+
+TacticFromStrategicScoreLimitReachedVictoryLevelConstantes is TVictoryLevelConstantes
+(
+    PalierVictoireMineure = 0.1   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireMajeure = 0.5  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireTotale = 0.9   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+)
+
+TacticFromStrategicDefeatMoralVictoryLevelConstantes is TVictoryLevelConstantes
+(
+    PalierVictoireMineure = 0.10   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireMajeure = 0.50  // Ratio entre le score du vainqueur et le deuxieme meilleur score
+    PalierVictoireTotale = 0.80   // Ratio entre le score du vainqueur et le deuxieme meilleur score
+)

@@ -1,0 +1,41 @@
+TIAPawnsBehaviorExhausted is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterExhausted()
+    Placement = TIAPawnsBehaviorExhaustedPlacement()
+)
+
+TIAPawnsBehaviorNotSupplied is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterNotSupplied()
+    Placement = TIAPawnsBehaviorNotSuppliedPlacement()
+)
+
+TIAPawnsBehaviorArtillery is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterArtillery()
+    EndTurn = TIAPawnsBehaviorArtilleryEndTurn()
+)
+
+TIAPawnsBehaviorAntiAir is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterAntiAir()
+    Placement = TIAPawnsBehaviorAntiAirPlacement()
+    PreBattle = TIAPawnsBehaviorAntiAirPreBattle()
+    EndTurn = TIAPawnsBehaviorAntiAirEndTurn()
+)
+
+TIAPawnsBehaviorAttackTarget is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterPawnsWithTargetToAttack()
+    Placement = TIAPawnsBehaviorAttackTargetPlacement()
+)
+
+TIAPawnsBehaviorAttack is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterAcceptEveryPawns()
+    EndTurn = TIAPawnsBehaviorAttackPlacement()
+)
+
+TIAPawnsBehaviorDefense is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterAcceptEveryPawns()
+    EndTurn = TIAPawnsBehaviorDefensePlacement()
+)
+
+TIAPawnsBehaviorMoveWithoutInfluence is TIAPawnsBehavior(
+    Filter = TIAPawnsBehaviorFilterPawnsWithoutInfluence()
+    EndTurn = TIAPawnsBehaviorMoveWithoutInfluenceEndTurn()
+)

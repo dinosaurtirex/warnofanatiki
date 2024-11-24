@@ -1,0 +1,178 @@
+//-------------------------------------------------------------------------
+//----------------------------- STRATEGY ----------------------------------
+//-------------------------------------------------------------------------
+export GenericBreakthroughAttackStrategy is TIAGeneralStrategy
+(
+    StrategyName = "GenBTAtkAI"
+    FirstGenerator = GenBTAtk_Choose_Strategy
+    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
+    TransitionList =
+    [
+        GenBTAtk_Transition_StartToPhaseCommand,
+        GenBTAtk_Transition_StartToGeneric,
+        GenBTAtk_Transition_DeployToPhaseCommand,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//---------------------------- CONDITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export GenBTAtk_Condition_GotoGeneric is TSequenceCondition_True
+(
+)
+//-------------------------------------------------------------------------
+export GenBTAtk_Condition_CommandPhase is TSequenceCondition_Phase
+(
+    PhaseType = CommandPhase
+)
+//-------------------------------------------------------------------------
+//--------------------------- TRANSITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export GenBTAtk_Transition_StartToPhaseCommand is TIAGeneralStrategyTransition
+(
+    Origine = GenBTAtk_Choose_Strategy
+    Condition = GenBTAtk_Condition_CommandPhase
+    Destination = GenBTAtk_Phase_Command
+)
+export GenBTAtk_Transition_StartToGeneric is TIAGeneralStrategyTransition
+(
+    Origine = GenBTAtk_Choose_Strategy
+    Condition = GenBTAtk_Condition_GotoGeneric
+    Destination = GenBTAtk_PhaseDeploiement
+)
+//-------------------------------------------------------------------------
+export GenBTAtk_Transition_DeployToPhaseCommand is TIAGeneralStrategyTransition
+(
+    Origine = GenBTAtk_PhaseDeploiement
+    Condition = GenBTAtk_Condition_CommandPhase
+    Destination = GenBTAtk_Phase_Command
+)
+
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export GenBTAtk_Choose_Strategy is TSequenceGeneratorDescriptor
+(
+    // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+        ~/Support_Transports,
+        ~/Supply_Skirmish_WithAllied_OnePerCorridor,
+    ]
+)
+//-------------------------------------------------------------------------
+export GenBTAtk_PhaseDeploiement is TSequenceGeneratorDescriptor
+(
+    NbMacroActionAllowedToProduceSimultaneous = 4
+    GeneratorList =
+    [
+        // Capture de zones
+        ~/CaptureAllZoneObjectif,
+
+        //------------------------------
+        // Support & Supply
+        //------------------------------
+        ~/Support_Transports,
+
+        ~/FOB_Skirmish,
+
+        ~/Supply_Skirmish_WithAllied_OnePerCorridor,
+
+        ~/Reco,
+
+        //------------------------------
+        // Attaques principales
+        //------------------------------
+        // Grosse attaque
+        ~/Attack_Main_BKT,
+        ~/Attack_Main_Diversify_BKT,
+
+        ~/Artillery_Support,
+        ~/Artillery_TriggerHappy_1for4Corridors,
+
+    ] + ~/GenBTAtk_Defenses_Airstrike_Arti_Shuffle_Deploy
+
+    //------------------------------
+    // Scaling
+    //------------------------------
+    // Dans les difficultés supérieures il faudra surement maintenir
+    // ça avec des maintain à la phase d'après pour être sur qu'on
+    // produise de nouvelles unités
+    ScalingGeneratorList = ~/GenBTAtk_Scaling
+)
+//-------------------------------------------------------------------------
+export GenBTAtk_Phase_Command is TSequenceGeneratorDescriptor
+(
+    NbMacroActionAllowedToProduceSimultaneous = 3
+    GeneratorList =
+    [
+        // Capture de zones
+        ~/CaptureAllZoneObjectif,
+
+        //------------------------------
+        // Support & Supply
+        //------------------------------
+        ~/Support_Transports,
+
+        ~/Supply_Skirmish_WithAllied_OnePerCorridor,
+        ~/Reco,
+
+        ~/Artillery_TriggerHappy_1for4Corridors,
+
+        //------------------------------
+        // Attaques principales
+        //------------------------------
+        ~/Attack_Main_BKT,
+        ~/Attack_Main_Diversify_BKT,
+
+        ~/Artillery_Support,
+        ~/Artillery_Expensive,
+
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
+
+        ~/Attack_Objectives,
+
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
+
+    //------------------------------
+    // Scaling
+    //------------------------------
+    // Dans les difficultés supérieures il faudra surement maintenir
+    // ça avec des maintain à la phase d'après pour être sur qu'on
+    // produise de nouvelles unités
+    ScalingGeneratorList = ~/GenBTAtk_Scaling
+)
+
+// Le concept de ces blocs de missions
+// est d'à la fois défendre ses arrières
+// mais aussi de faire usage d'unités diverses
+// (artillerie et avions) pour débloquer
+// les situations et appuyer le reste des missions
+GenBTAtk_Defenses_Airstrike_Arti_Shuffle_Deploy is
+[
+    ~/Airstrike_Assault,
+    ~/Artillery_Expensive,
+    ~/Defense_Static_AA,
+    ~/Airstrike_Offense,
+    ~/Airstrike_AA,
+    ~/Artillery_TriggerHappy_1for4Corridors,
+]
+
+GenBTAtk_Scaling is
+[
+    ~/Attack_Helo_Autogen,
+    ~/Attack_Adaptive_Autogen,
+    ~/Attack_Objectives_Autogen,
+    ~/Artillery_Expensive_Autogen,
+    ~/Airstrike_AA_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Static_AA_Autogen,
+    ~/Attack_Adaptive_Autogen,
+    ~/Artillery_TriggerHappy_Autogen,
+    ~/Airstrike_Offense_Autogen,
+    ~/Airstrike_Assault_Autogen,
+]
+

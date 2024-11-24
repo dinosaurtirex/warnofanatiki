@@ -1,0 +1,152 @@
+
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+private LoginModalRecoverButtonDescriptor is LoginScreenMainButton
+(
+    ElementName = "RecoverButton"
+    ButtonMagnifiableWidthHeight = [80.0, 25.0]
+    TextToken = 'RL_Recov'
+)
+
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+private ChangePasswordModalWindowFrame is SpecificModalWindow
+(
+    ContentMagnifiableWidthHeight = [0.0, 230.0]
+    TitleToken = "CP_CHGPASS"
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "login"
+                HasText = true
+                EditableTextElementName = "LoginEditableText"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "password"
+                HasText = true
+                EditableTextElementName = "PasswordEditableText"
+                Flags = ~/EditableTextFlag/PASSWORD
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "newpass"
+                HasText = true
+                EditableTextElementName = "NewPasswordEditableText"
+                Flags = ~/EditableTextFlag/PASSWORD
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "cnewpass"
+                HasText = true
+                EditableTextElementName = "ConfirmNewPasswordEditableText"
+                Flags = ~/EditableTextFlag/PASSWORD
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = AnimatedWaitingComponent()
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalErrorText
+        ),
+    ]
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "ChangeButton"
+                TextToken = "BTN_CHANGE"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
+            )
+        ),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+private ErrorConnectionModalDescriptor is SpecificModalWindow
+(
+    ContentMagnifiableWidthHeight = [0.0, 110.0]
+    TitleToken = "CONERROR"
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+        )
+    ]
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "RetryButton"
+                TextToken = "BTN_RETRY"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
+            )
+        ),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+)
+
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+private LoginErrorText is BUCKTextDescriptor
+(
+    TextStyle = "Default"
+    TypefaceToken = "UIMainFont"
+    TextColor = 'Rouge'
+    TextSize = 'RightTextInModal'
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+    BigLineAction = ~/BigLineAction/MultiLine
+    VerticalFitStyle = ~/FitStyle/FitToParent
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = ~/UIText_Left
+        VerticalAlignment = ~/UIText_VerticalCenter
+        Balanced = true
+        BigWordAction = ~/BigWordAction/BigWordNewLine
+    )
+)
+
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+LoginResource is TUISpecificOutGameLoginResource
+(
+    Login = $/GameplayOption/ConnectLogin
+    Password = $/GameplayOption/ConnectPassword
+    SavePassword = $/GameplayOption/SavePassword
+
+    ErrorText = ~/LoginErrorText
+    ErrorConnectionModalDescriptor = ~/ErrorConnectionModalDescriptor
+    ChangePasswordModalDescriptor = ~/ChangePasswordModalWindowFrame
+)

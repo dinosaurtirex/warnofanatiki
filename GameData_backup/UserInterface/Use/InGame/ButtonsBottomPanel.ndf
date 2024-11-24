@@ -1,0 +1,137 @@
+template ButtonsBottomPanel
+[
+    Buttons = [],
+    ElementName : string = ""
+]
+is
+BUCKContainerDescriptor
+(
+    ElementName = <ElementName>
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [0,80]
+    )
+
+    HasBorder = true
+    BorderLineColorToken = 'SM_Grullo'
+    BorderThicknessToken = '1'
+    BordersToDraw =  ~/TBorderSide/Top
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+            )
+
+            InterItemMargin = TRTTILength( Magnifiable = 6.0 )
+            Axis = ~/ListAxis/Horizontal
+
+            Elements = <Buttons>
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+template BottomPanelButton
+[
+    UniqueName : string = '',
+    ElementName : string = '',
+    TextToken : string = '',
+    HintBodyToken : string= '',
+    MagnifiableWidthHeight : float2 = [160,40],
+    Mapping : TEugBMutablePBaseClass = nil,
+
+] is BUCKButtonDescriptor
+(
+    UniqueName = <UniqueName>
+    ElementName = <ElementName>
+    Mapping  = <Mapping>
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = <MagnifiableWidthHeight>
+        AlignementToAnchor = [0.0, 0.5]
+        AlignementToFather = [0.0, 0.5]
+    )
+
+    HidePointerEvents = true
+    LeftClickSound = ~/SoundEvent_SteelmanPanelButton
+
+    Components =
+    [
+        BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                MagnifiableWidthHeight = [-4.0, -4.0]
+                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.5, 0.5]
+            )
+
+            Components =
+            [
+                PanelRoundedCorner
+                (
+                    Radius = 3
+                    BackgroundBlockColorToken = "SM_Feldgrau"
+                    BorderLineColorToken = "SM_Grullo"
+                )
+            ]
+        ),
+        BUCKTextDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.5, 0.5]
+            )
+
+            BigLineAction = ~/BigLineAction/MultiLine
+            ParagraphStyle = ~/CenteredParagraphStyle
+            TextStyle = "Default"
+            TypefaceToken = "Liberator"
+
+
+            TextToken = <TextToken>
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
+            TextColor = "SM_Grullo"
+            TextSize = '16'
+        ),
+        BUCKSpecificHintableArea
+        (
+            DicoToken = ~/LocalisationConstantes/dico_interface_ingame
+            HintBodyToken = <HintBodyToken>
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
+
+template BottomPanelButtonElement
+[
+    ElementName : string = "",
+    TextToken : string = "",
+    Mapping : TEugBMutablePBaseClass = nil,
+]
+is
+BUCKListElementDescriptor
+(
+    ComponentDescriptor = BottomPanelButton
+    (
+        MagnifiableWidthHeight = [160,40]
+        ElementName = <ElementName>
+        TextToken = <TextToken>
+        Mapping = <Mapping>
+    )
+)

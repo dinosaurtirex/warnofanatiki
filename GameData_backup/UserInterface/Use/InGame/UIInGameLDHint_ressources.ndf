@@ -1,0 +1,62 @@
+
+unnamed TUICommonLDHintResource
+(
+    ComponentByName = MAP[
+        ( "ScoreMessageEconomyOrDestruction", ~/LDHintDefaultComponentWithoutPause ),
+
+        ( "RemainingTimeAlertComponent", LDHintInfoIngameScore(FeedbackType = 'alert') ),
+        ( "SuddenDeathAlertComponent", LDHintInfoIngameScore(FeedbackType = 'alert')),
+        ( "SuddenDeathWarningComponent", LDHintInfoIngameScore(FeedbackType = 'negative')),
+        ( "SuddenDeathVictoryComponent", LDHintInfoIngameScore(FeedbackType = 'positive')),
+
+        // affichage du moral dans Steelman
+        // attention, on affiche les seuils de perte de morale
+        ( "LocalPlayerAllianceMoralComponent", LDHintInfoIngameScore(FeedbackType = 'negative') ),
+        ( "EnemyAllianceMoralComponent", LDHintInfoIngameScore(FeedbackType = 'positive') ),
+        // affichage des seuil de conquête dans Steelman
+        // les seuils sont 20%, 50%
+        ( "ConquestLocalPlayerHasAdvantageComponent", LDHintInfoIngameScore(FeedbackType = 'positive') ),
+        ( "ConquestOpponentHasAdvantageComponent", LDHintInfoIngameScore(FeedbackType = 'negative') ),
+
+        //-------------------------------------------------------------------------------------
+        // hints
+        //-------------------------------------------------------------------------------------
+        ( "SuperHint", SuperHint() ),
+        ( "shint", SuperHint() ),
+        ( "shint_op", SuperHint( alignementGauche = false challenge = true) ),
+
+        //-------------------------------------------------------------------------------------
+        // dialogues
+        //-------------------------------------------------------------------------------------
+        // WARNING : Vous ne devez pas mettre ici de données spécifiques à un seul scénario. Tout ce qui est ici sera livré au joueurs à la prochaine livraison avec le risque
+        // de leak si c'est dans un scenario qui ne doit pas sortir
+
+        ( "cutscene_10", LDHint_cutscene_10() ),
+        ( "panoramique", CutscenePanoramique()),
+
+        ( "Component_1Video_1Text",         Component_1Video_1Text()),
+        ( "Component_1Texture_1Text",       Component_1Texture_1Text()),
+        ( "Component_1Texture_1Text_Portrait", Component_1Texture_1Text_Portrait()),
+        ( "Component_1Texture_1Text_TextureLeft", Component_1Texture_1Text_TextureLeft()),
+        ( "Component_Operation_1Texture_1Text", Component_Operation_1Texture_1Text()),
+        ( "Component_1Text_hint",           Component_1Text_hint()),
+        ( "Component_1Text",                Component_1Text()),
+        ( "Component_1Text_Titre",          Component_1Text_FullScreen()),
+        ( "Component_1_Texture_1Text_FullScreen", Component_1_Texture_1Text_FullScreen()),
+        ( "TitreChallenge",                 TitreChallenge()),
+   ]
+)
+
+//-------------------------------------------------------------------------------------
+// Liste des Textures
+//-------------------------------------------------------------------------------------
+
+unnamed TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ("LDHint_cercle_contour",      MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/cercle_contour.png' )), ] ),
+        ("LDHint_cercle_fond",      MAP [ (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/cercle_fond.png' )), ] ),
+    ]
+)
+

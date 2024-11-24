@@ -1,0 +1,190 @@
+//--------------------------------------------------------------------------
+// BUCKListElementDescriptor
+//--------------------------------------------------------------------------
+
+template BUCKListElementDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    IsClippable :bool = true,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+    // Ne pas utiliser l'attribut Components !!! Utiliser ComponentDescriptor !!!
+    // On interdit beaucoup d'utilisations de BUCKContainer car cet élément ne doit pas les utiliser. On préfèrera les définir dans le composant fils
+
+    MinSize : TRTTILength = nil,          // Taille minimale de l'ElementList
+
+    ExtendWeight : float = 0.0,                     // Une fois setté cette valeur forcera la liste a prendre la taille maximale dans l'axe primaire dans son parent.
+                                                    // Elle placera ensuite les éléments sans ExtendWeight puis calculera les box des éléments avec ExtendWeight en faisant SizeRemaining * ExtendWeight/SUM(ExtendWeights)
+                                                    // Les éléments qui ont un ExtendWeight défini peuvent avoir un ComponentDescriptor avec une taille défini relativement dans l'axe primaire
+
+    ComponentDescriptor : TBUCKContainerDescriptor = nil, // Un ListElement ne contient qu'un seul composant, celui ci ne doit pas définir sa taille relativement dans l'axe de la liste qui le contient.
+                                                    // Exception faite quand on donne un ExtendWeight a son ListElement
+]
+is TBUCKListElementDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = ""
+    UniqueName = ""
+    RequiredTags = []
+    ForbiddenTags = []
+
+    MagnifierMultiplication = 0.0
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = false
+
+    FitStyle = ~/ContainerFitStyle/None
+    ChildFitToContent = false
+
+    ClipContent = false
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = 0
+    BorderLocalRenderLayer = 0
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = []
+    // -- BUCKContainerDescriptor
+    // Ne pas utiliser l'attribut Components !!! Utiliser ComponentDescriptor !!!
+
+    MinSize = <MinSize>
+    ExtendWeight = <ExtendWeight>
+    ComponentDescriptor = <ComponentDescriptor>
+)
+
+//--------------------------------------------------------------------------
+// BUCKListDescriptor
+//--------------------------------------------------------------------------
+
+template BUCKListDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+    // -- BUCKContainerDescriptor
+    // Ne pas utiliser l'attribut Components !!! Utiliser Elements !!!
+
+    Axis : int,                                                                              // Axe (primaire) de la liste (Vertical/Horizontal)
+    BreadthComputationMode : int = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty, // Type de calcul de la taille de l'axe secondaire (FromFrameProperty/FromLargestChild/FromLargestBetweenFatherAndChildren)
+
+    BackgroundComponents : LIST<TBUCKContainerDescriptor> = [],                              // Elements en Background (Taille relative dans l'axe primaire autorisé)
+    ForegroundComponents : LIST<TBUCKContainerDescriptor> = [],                              // Elements en Foreground (Taille relative dans l'axe primaire autorisé)
+
+    FirstMargin : TRTTILength = TRTTILength(),                                               // Taille de la marge avant le premier élément de la liste
+    InterItemMargin : TRTTILength = TRTTILength(),                                           // Taille de la marge entre les éléments de la liste
+    LastMargin : TRTTILength = TRTTILength(),                                                // Taille de la marge après le dernier élément de la liste
+
+    AssumeChildrenAreFixedSize : bool = false,                                               // Optimisation : on assure que les enfants ne changent pas de taille
+    AssumeChildrenAreClippable : bool = false,                                               // Optimisation : on assure que les enfants sont tous clippable
+
+    Elements : LIST<TBUCKListElementDescriptor> = []                                         // Les éléments de la liste (qui définissent sa taille) sont encapsulés dans des TBUCKElementListDescriptor (voir template)
+]
+is TBUCKListDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = []
+    // -- BUCKContainerDescriptor
+
+    Axis = <Axis>
+    BreadthComputationMode = <BreadthComputationMode>
+
+    BackgroundComponents = <BackgroundComponents>
+    ForegroundComponents = <ForegroundComponents>
+
+    FirstMargin = <FirstMargin>
+    InterItemMargin = <InterItemMargin>
+    LastMargin = <LastMargin>
+
+    AssumeChildrenAreFixedSize = <AssumeChildrenAreFixedSize>
+    AssumeChildrenAreClippable = <AssumeChildrenAreClippable>
+
+    Elements = <Elements>
+)

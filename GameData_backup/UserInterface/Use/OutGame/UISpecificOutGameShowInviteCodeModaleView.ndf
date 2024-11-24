@@ -1,0 +1,77 @@
+
+BUCKSpecificOutGameShowInviteCodeModaleMainComponentDescriptor is SpecificModalWindow
+(
+    TitleToken = "CB_INVCOD"
+    ContentMagnifiableWidthHeight = [0.0, 310.0]
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "CopyButton"
+                TextToken = "BTN_CPYCOD"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "CloseButton"
+                TextToken = "BTN_CLOSE"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+                IsFilled = false
+            )
+        )
+    ]
+
+    ElementsList =
+    [
+        // ligne ****
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDottedLine
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText
+            (
+                ElementName = "InviteCodeTexte"
+                TextToken = "T_INVITCM"
+            )
+        ),
+        BUCKListElementSpacer(Magnifiable = 20.0),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalEditableText
+            (
+                TextToken = "T_INVITCOD"
+                HasText = true
+                EditableTextElementName = "InviteCodeEditableText"
+                Flags = EditableTextFlag/ONE_LINE | EditableTextFlag/INPUT_DISABLED
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalText
+            (
+                ElementName = "MessageText"
+                TextToken = ""
+            )
+        ),
+        // ligne ****
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalDottedLine
+        )
+    ]
+)
+
+UISpecificOutGameShowInviteCodeModaleViewDescriptor is TUISpecificOutGameShowInviteCodeModaleViewDescriptor
+(
+    MainComponentDescriptor = ~/BUCKSpecificOutGameShowInviteCodeModaleMainComponentDescriptor
+    MainComponentContainerUniqueName = "" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+)

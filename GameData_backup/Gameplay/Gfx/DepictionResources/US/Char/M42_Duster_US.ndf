@@ -1,0 +1,17 @@
+export Modele_M42_Duster_US is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/DCA/M42_Duster/M42_Duster.fbx'
+)
+
+export Modele_M42_Duster_US_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/DCA/M42_Duster_MID/M42_Duster_MID.fbx'
+)
+
+export Modele_M42_Duster_US_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/DCA/M42_Duster_LOW/M42_Duster_LOW.fbx'
+)
+
+
+

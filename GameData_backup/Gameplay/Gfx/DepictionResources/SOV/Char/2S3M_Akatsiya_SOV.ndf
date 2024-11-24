@@ -1,0 +1,14 @@
+export Modele_2S3M_Akatsiya_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Artillerie/2S3M_Akatsiya/2S3M_Akatsiya.fbx'
+)
+
+export Modele_2S3M_Akatsiya_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Artillerie/2S3M_Akatsiya_MID/2S3M_Akatsiya_MID.fbx'
+)
+
+export Modele_2S3M_Akatsiya_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Artillerie/LODS/2S3M_Akatsiya_LOW.fbx'
+)

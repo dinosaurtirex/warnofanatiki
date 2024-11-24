@@ -1,0 +1,20 @@
+export Modele_BTR_70_MP_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_70_SOV
+    TextureDirectory = 'GameData:/Assets/3D/Units/URSS/APC/BTR70_MP_Komendatura/'
+)
+
+export Modele_BTR_70_MP_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_70_SOV_MID
+    TextureDirectory = 'GameData:/Assets/3D/Units/URSS/APC/BTR70_MP_Komendatura_MID/'
+)
+
+export Modele_BTR_70_MP_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_70_SOV_LOW
+    TextureDirectory = 'GameData:/Assets/3D/Units/URSS/APC/BTR70_MP_Komendatura_LOW/'
+)
+
+
+

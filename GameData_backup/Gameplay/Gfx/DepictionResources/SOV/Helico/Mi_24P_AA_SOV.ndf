@@ -1,0 +1,14 @@
+export Modele_Mi_24P_AA_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_24P/Mi_24P_R60.fbx'
+)
+
+export Modele_Mi_24P_AA_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_24P_MID/Mi_24P_R60_MID.fbx'
+)
+
+export Modele_Mi_24P_AA_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Helico/Mi_24P_LOW/Mi_24P_R60_LOW.fbx'
+)

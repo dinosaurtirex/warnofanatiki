@@ -1,0 +1,1875 @@
+// Ne pas éditer, ce fichier est généré par DepictionAerialAlternativesFileWriter
+
+
+Alternatives_A109BA_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A109BA_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A109BA_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A109BA_BEL_LOW ),
+]
+Alternatives_A10_Thunderbolt_II_ATGM_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US_LOW ),
+]
+Alternatives_A10_Thunderbolt_II_Rkt_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_Rkt_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_Rkt_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_Rkt_US_LOW ),
+]
+Alternatives_A10_Thunderbolt_II_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_US_LOW ),
+]
+Alternatives_A37B_Dragonfly_HE_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_HE_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_HE_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_HE_US_LOW ),
+]
+Alternatives_A37B_Dragonfly_NPLM_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_NPLM_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_NPLM_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_NPLM_US_LOW ),
+]
+Alternatives_A37B_Dragonfly_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_A37B_Dragonfly_US_LOW ),
+]
+Alternatives_AH1E_Cobra_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_US_LOW ),
+]
+Alternatives_AH1F_ATAS_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_ATAS_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_ATAS_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_ATAS_US_LOW ),
+]
+Alternatives_AH1F_CNITE_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_CNITE_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_CNITE_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_CNITE_US_LOW ),
+]
+Alternatives_AH1F_Cobra_NG_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_NG_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_NG_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_NG_US_LOW ),
+]
+Alternatives_AH1F_Cobra_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Cobra_US_LOW ),
+]
+Alternatives_AH1F_HeavyHog_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_HeavyHog_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_HeavyHog_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_HeavyHog_US_LOW ),
+]
+Alternatives_AH1S_Cobra_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1S_Cobra_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1S_Cobra_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH1S_Cobra_US_LOW ),
+]
+Alternatives_AH64_Apache_ATAS_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_ATAS_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_ATAS_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_ATAS_US_LOW ),
+]
+Alternatives_AH64_Apache_NG_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_NG_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_NG_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_NG_US_LOW ),
+]
+Alternatives_AH64_Apache_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_US_LOW ),
+]
+Alternatives_AH64_Apache_emp1_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp1_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp1_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp1_US_LOW ),
+]
+Alternatives_AH64_Apache_emp2_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp2_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp2_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH64_Apache_emp2_US_LOW ),
+]
+Alternatives_AH6C_Little_Bird_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH6C_Little_Bird_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH6C_Little_Bird_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH6C_Little_Bird_US_LOW ),
+]
+Alternatives_AH6G_Little_Bird_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_AH6G_Little_Bird_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_AH6G_Little_Bird_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_AH6G_Little_Bird_US_LOW ),
+]
+Alternatives_Alouette_III_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_FR_LOW ),
+]
+Alternatives_Alouette_III_SS11_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_SS11_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_SS11_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_SS11_FR_LOW ),
+]
+Alternatives_Alouette_III_reco_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_reco_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_reco_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_III_reco_FR_LOW ),
+]
+Alternatives_Alouette_II_CMD_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_FR_LOW ),
+]
+Alternatives_Alouette_II_CMD_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_CMD_RFA_LOW ),
+]
+Alternatives_Alouette_II_reco_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_BEL_LOW ),
+]
+Alternatives_Alouette_II_reco_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_reco_RFA_LOW ),
+]
+Alternatives_Alouette_II_trans_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_trans_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_trans_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_trans_FR_LOW ),
+]
+Alternatives_Alpha_Jet_A_clu_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_clu_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_clu_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_clu_RFA_LOW ),
+]
+Alternatives_Alpha_Jet_A_he_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_he_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_he_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_he_RFA_LOW ),
+]
+Alternatives_Alpha_Jet_A_nplm_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_nplm_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_nplm_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_nplm_RFA_LOW ),
+]
+Alternatives_Alpha_Jet_A_rkt_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_rkt_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_rkt_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_A_rkt_RFA_LOW ),
+]
+Alternatives_Alpha_Jet_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL_LOW ),
+]
+Alternatives_Alpha_Jet_E_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_FR_LOW ),
+]
+Alternatives_Alpha_Jet_E_NPLM_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_NPLM_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_NPLM_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_E_NPLM_FR_LOW ),
+]
+Alternatives_Alpha_Jet_HE2_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_HE2_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_HE2_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Alpha_Jet_HE2_BEL_LOW ),
+]
+Alternatives_Bo_105_CMD_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_CMD_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_CMD_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_CMD_RFA_LOW ),
+]
+Alternatives_Bo_105_PAH_1A1_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1A1_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1A1_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1A1_RFA_LOW ),
+]
+Alternatives_Bo_105_PAH_1_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1_RFA_LOW ),
+]
+Alternatives_Bo_105_reco_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_reco_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_reco_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_reco_RFA_LOW ),
+]
+Alternatives_Bo_105_trans_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_trans_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_trans_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_trans_RFA_LOW ),
+]
+Alternatives_Buccaneer_S2B_ATGM_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_ATGM_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_ATGM_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_ATGM_UK_LOW ),
+]
+Alternatives_Buccaneer_S2B_GBU_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_GBU_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_GBU_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_GBU_UK_LOW ),
+]
+Alternatives_Buccaneer_S2B_HE_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_HE_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_HE_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_HE_UK_LOW ),
+]
+Alternatives_Buccaneer_S2B_SEAD_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_SEAD_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_SEAD_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Buccaneer_S2B_SEAD_UK_LOW ),
+]
+Alternatives_CH47D_Chinook_supply_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47D_Chinook_supply_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47D_Chinook_supply_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47D_Chinook_supply_UK_LOW ),
+]
+Alternatives_CH47_Chinook_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_UK_LOW ),
+]
+Alternatives_CH47_Chinook_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Chinook_US_LOW ),
+]
+Alternatives_CH47_Super_Chinook_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Super_Chinook_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Super_Chinook_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CH47_Super_Chinook_US_LOW ),
+]
+Alternatives_CH53G_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_RFA_LOW ),
+]
+Alternatives_CH53G_trans_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_trans_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_trans_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CH53G_trans_RFA_LOW ),
+]
+Alternatives_CM170_Magister_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_FR_LOW ),
+]
+Alternatives_CM170_Magister_SS11_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR_LOW ),
+]
+Alternatives_EF111_Raven_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_EF111_Raven_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_EF111_Raven_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_EF111_Raven_US_LOW ),
+]
+Alternatives_EH60A_EW_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_EH60A_EW_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_EH60A_EW_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_EH60A_EW_US_LOW ),
+]
+Alternatives_Ecureuil_20mm_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_20mm_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_20mm_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_20mm_FR_LOW ),
+]
+Alternatives_Ecureuil_reco_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_reco_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_reco_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Ecureuil_reco_FR_LOW ),
+]
+Alternatives_F104G_Starfighter_AT_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_AT_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_AT_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_AT_RFA_LOW ),
+]
+Alternatives_F104G_Starfighter_HE_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_HE_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_HE_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_HE_RFA_LOW ),
+]
+Alternatives_F104G_Starfighter_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F104G_Starfighter_RFA_LOW ),
+]
+Alternatives_F111E_Aardvark_CBU_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_CBU_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_CBU_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_CBU_US_LOW ),
+]
+Alternatives_F111E_Aardvark_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_US_LOW ),
+]
+Alternatives_F111E_Aardvark_napalm_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_napalm_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_napalm_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111E_Aardvark_napalm_US_LOW ),
+]
+Alternatives_F111F_Aardvark_CBU_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_CBU_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_CBU_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_CBU_US_LOW ),
+]
+Alternatives_F111F_Aardvark_LGB2_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB2_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB2_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB2_US_LOW ),
+]
+Alternatives_F111F_Aardvark_LGB_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_LGB_US_LOW ),
+]
+Alternatives_F111F_Aardvark_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_US_LOW ),
+]
+Alternatives_F111F_Aardvark_napalm_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_napalm_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_napalm_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F111F_Aardvark_napalm_US_LOW ),
+]
+Alternatives_F117_Nighthawk_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F117_Nighthawk_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F117_Nighthawk_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F117_Nighthawk_US_LOW ),
+]
+Alternatives_F15C_Eagle_AA2_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA2_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA2_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA2_US_LOW ),
+]
+Alternatives_F15C_Eagle_AA_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US_LOW ),
+]
+Alternatives_F15E_StrikeEagle_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F15E_StrikeEagle_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F15E_StrikeEagle_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F15E_StrikeEagle_US_LOW ),
+]
+Alternatives_F16A_AA_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_AA_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_AA_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_AA_BEL_LOW ),
+]
+Alternatives_F16A_CBU_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_CBU_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_CBU_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16A_CBU_BEL_LOW ),
+]
+Alternatives_F16C_LGB_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16C_LGB_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16C_LGB_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16C_LGB_US_LOW ),
+]
+Alternatives_F16E_AA2_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA2_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA2_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA2_US_LOW ),
+]
+Alternatives_F16E_AA_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AA_US_LOW ),
+]
+Alternatives_F16E_AGM_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AGM_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AGM_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_AGM_US_LOW ),
+]
+Alternatives_F16E_CBU_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_CBU_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_CBU_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_CBU_US_LOW ),
+]
+Alternatives_F16E_HE_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_HE_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_HE_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_HE_US_LOW ),
+]
+Alternatives_F16E_SEAD_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_SEAD_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_SEAD_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_SEAD_US_LOW ),
+]
+Alternatives_F16E_TER_HE_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_TER_HE_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_TER_HE_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_TER_HE_US_LOW ),
+]
+Alternatives_F16E_napalm_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_napalm_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_napalm_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F16E_napalm_US_LOW ),
+]
+Alternatives_F4E_Phantom_II_AA_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AA_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AA_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AA_US_LOW ),
+]
+Alternatives_F4E_Phantom_II_AT_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AT_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AT_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_AT_US_LOW ),
+]
+Alternatives_F4E_Phantom_II_CBU_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_CBU_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_CBU_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_CBU_US_LOW ),
+]
+Alternatives_F4E_Phantom_II_HE_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_HE_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_HE_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_HE_US_LOW ),
+]
+Alternatives_F4E_Phantom_II_napalm_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_napalm_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_napalm_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4E_Phantom_II_napalm_US_LOW ),
+]
+Alternatives_F4F_Phantom_II_AA_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA_LOW ),
+]
+Alternatives_F4F_Phantom_II_AT_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AT_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AT_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AT_RFA_LOW ),
+]
+Alternatives_F4F_Phantom_II_HE1_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA_LOW ),
+]
+Alternatives_F4F_Phantom_II_HE2_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE2_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE2_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE2_RFA_LOW ),
+]
+Alternatives_F4F_Phantom_II_RKT2_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_RKT2_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_RKT2_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4F_Phantom_II_RKT2_RFA_LOW ),
+]
+Alternatives_F4_Phantom_AA_F3_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Phantom_AA_F3_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Phantom_AA_F3_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Phantom_AA_F3_UK_LOW ),
+]
+Alternatives_F4_Wild_Weasel_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US_LOW ),
+]
+Alternatives_F8P_Crusader_AA2_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_AA2_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_AA2_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_AA2_FR_LOW ),
+]
+Alternatives_F8P_Crusader_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_F8P_Crusader_FR_LOW ),
+]
+Alternatives_G91_R3_Gina_HE_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_HE_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_HE_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_HE_RFA_LOW ),
+]
+Alternatives_G91_R3_Gina_NPL_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_NPL_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_NPL_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_NPL_RFA_LOW ),
+]
+Alternatives_G91_R3_Gina_RKT_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_RKT_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_RKT_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_G91_R3_Gina_RKT_RFA_LOW ),
+]
+Alternatives_Gazelle_20mm_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_FR_LOW ),
+]
+Alternatives_Gazelle_20mm_reco_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_reco_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_reco_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_20mm_reco_FR_LOW ),
+]
+Alternatives_Gazelle_CMD_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_CMD_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_CMD_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_CMD_UK_LOW ),
+]
+Alternatives_Gazelle_HOT_2_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_2_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_2_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_2_FR_LOW ),
+]
+Alternatives_Gazelle_HOT_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_HOT_FR_LOW ),
+]
+Alternatives_Gazelle_Mistral_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_Mistral_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_Mistral_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_Mistral_FR_LOW ),
+]
+Alternatives_Gazelle_SNEB_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_UK_LOW ),
+]
+Alternatives_Gazelle_SNEB_reco_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_reco_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_reco_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_SNEB_reco_UK_LOW ),
+]
+Alternatives_Gazelle_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_UK_LOW ),
+]
+Alternatives_Gazelle_reco_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_reco_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_reco_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_reco_FR_LOW ),
+]
+Alternatives_Gazelle_trans_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_trans_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_trans_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Gazelle_trans_UK_LOW ),
+]
+Alternatives_Harrier_CLU_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_CLU_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_CLU_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_CLU_UK_LOW ),
+]
+Alternatives_Harrier_GR5_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_GR5_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_GR5_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_GR5_UK_LOW ),
+]
+Alternatives_Harrier_HE1_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE1_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE1_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE1_UK_LOW ),
+]
+Alternatives_Harrier_HE2_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE2_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE2_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_HE2_UK_LOW ),
+]
+Alternatives_Harrier_RKT1_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT1_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT1_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT1_UK_LOW ),
+]
+Alternatives_Harrier_RKT2_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK_LOW ),
+]
+Alternatives_Harrier_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_UK_LOW ),
+]
+Alternatives_Jaguar_ATGM_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_ATGM_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_ATGM_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_ATGM_FR_LOW ),
+]
+Alternatives_Jaguar_CLU_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_CLU_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_CLU_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_CLU_UK_LOW ),
+]
+Alternatives_Jaguar_HE1_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE1_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE1_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE1_UK_LOW ),
+]
+Alternatives_Jaguar_HE2_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE2_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE2_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE2_UK_LOW ),
+]
+Alternatives_Jaguar_HE_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_HE_FR_LOW ),
+]
+Alternatives_Jaguar_RKT_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_FR_LOW ),
+]
+Alternatives_Jaguar_RKT_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_UK_LOW ),
+]
+Alternatives_Jaguar_SEAD2_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD2_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD2_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD2_FR_LOW ),
+]
+Alternatives_Jaguar_SEAD_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_SEAD_FR_LOW ),
+]
+Alternatives_Jaguar_clu_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_clu_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_clu_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_clu_FR_LOW ),
+]
+Alternatives_Jaguar_nplm_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_nplm_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_nplm_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_nplm_FR_LOW ),
+]
+Alternatives_Ka_50_AA_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_AA_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_AA_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_AA_SOV_LOW ),
+]
+Alternatives_Ka_50_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Ka_50_SOV_LOW ),
+]
+Alternatives_L39ZO_CLU_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_CLU_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_CLU_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_CLU_DDR_LOW ),
+]
+Alternatives_L39ZO_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_DDR_LOW ),
+]
+Alternatives_L39ZO_HE1_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_DDR_LOW ),
+]
+Alternatives_L39ZO_HE1_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_HE1_SOV_LOW ),
+]
+Alternatives_L39ZO_NPLM_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_NPLM_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_NPLM_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_L39ZO_NPLM_SOV_LOW ),
+]
+Alternatives_Lynx_AH_Mk1_LBH_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_LBH_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_LBH_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_LBH_UK_LOW ),
+]
+Alternatives_Lynx_AH_Mk1_TOW_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_TOW_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_TOW_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_TOW_UK_LOW ),
+]
+Alternatives_Lynx_AH_Mk1_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk1_UK_LOW ),
+]
+Alternatives_Lynx_AH_Mk7_I_TOW2_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW2_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW2_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW2_UK_LOW ),
+]
+Alternatives_Lynx_AH_Mk7_I_TOW_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_I_TOW_UK_LOW ),
+]
+Alternatives_Lynx_AH_Mk7_SNEB_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_SNEB_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_SNEB_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Lynx_AH_Mk7_SNEB_UK_LOW ),
+]
+Alternatives_MH47D_Super_Chinook_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MH47D_Super_Chinook_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MH47D_Super_Chinook_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MH47D_Super_Chinook_US_LOW ),
+]
+Alternatives_MH_60A_DAP_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MH_60A_DAP_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MH_60A_DAP_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MH_60A_DAP_US_LOW ),
+]
+Alternatives_MiG_17PF_POL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_17PF_POL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_17PF_POL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_17PF_POL_LOW ),
+]
+Alternatives_MiG_21PFM_AA_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_AA_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_AA_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_AA_DDR_LOW ),
+]
+Alternatives_MiG_21PFM_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21PFM_DDR_LOW ),
+]
+Alternatives_MiG_21bis_AA2_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR_LOW ),
+]
+Alternatives_MiG_21bis_AA3_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA3_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA3_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_AA3_DDR_LOW ),
+]
+Alternatives_MiG_21bis_CLU_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_CLU_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_CLU_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_CLU_DDR_LOW ),
+]
+Alternatives_MiG_21bis_HE_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_HE_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_HE_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_HE_DDR_LOW ),
+]
+Alternatives_MiG_21bis_NPLM_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_NPLM_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_NPLM_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_NPLM_DDR_LOW ),
+]
+Alternatives_MiG_21bis_RKT2_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR_LOW ),
+]
+Alternatives_MiG_23BN_AT2_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT2_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT2_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT2_DDR_LOW ),
+]
+Alternatives_MiG_23BN_AT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_AT_DDR_LOW ),
+]
+Alternatives_MiG_23BN_CLU_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_CLU_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_CLU_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_CLU_DDR_LOW ),
+]
+Alternatives_MiG_23BN_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_DDR_LOW ),
+]
+Alternatives_MiG_23BN_KMGU_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_KMGU_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_KMGU_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_KMGU_DDR_LOW ),
+]
+Alternatives_MiG_23BN_RKT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_RKT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_RKT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_RKT_DDR_LOW ),
+]
+Alternatives_MiG_23BN_nplm_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_nplm_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_nplm_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23BN_nplm_DDR_LOW ),
+]
+Alternatives_MiG_23MF_AA_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_AA_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_AA_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_AA_DDR_LOW ),
+]
+Alternatives_MiG_23MF_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MF_DDR_LOW ),
+]
+Alternatives_MiG_23MLD_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MLD_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MLD_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MLD_SOV_LOW ),
+]
+Alternatives_MiG_23ML_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_DDR_LOW ),
+]
+Alternatives_MiG_23ML_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23ML_SOV_LOW ),
+]
+Alternatives_MiG_23P_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23P_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23P_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23P_SOV_LOW ),
+]
+Alternatives_MiG_25BM_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25BM_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25BM_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25BM_SOV_LOW ),
+]
+Alternatives_MiG_25RBF_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25RBF_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25RBF_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_25RBF_SOV_LOW ),
+]
+Alternatives_MiG_27K_AT1_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT1_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT1_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT1_SOV_LOW ),
+]
+Alternatives_MiG_27K_AT2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_AT2_SOV_LOW ),
+]
+Alternatives_MiG_27K_LGB_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_LGB_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_LGB_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27K_LGB_SOV_LOW ),
+]
+Alternatives_MiG_27M_CLU_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_CLU_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_CLU_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_CLU_SOV_LOW ),
+]
+Alternatives_MiG_27M_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_SOV_LOW ),
+]
+Alternatives_MiG_27M_bombe_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_bombe_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_bombe_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_bombe_SOV_LOW ),
+]
+Alternatives_MiG_27M_napalm_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_napalm_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_napalm_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_napalm_SOV_LOW ),
+]
+Alternatives_MiG_27M_rkt_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_rkt_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_rkt_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_rkt_SOV_LOW ),
+]
+Alternatives_MiG_27M_sead_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV_LOW ),
+]
+Alternatives_MiG_29_AA2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA2_SOV_LOW ),
+]
+Alternatives_MiG_29_AA3_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA3_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA3_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA3_SOV_LOW ),
+]
+Alternatives_MiG_29_AA_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_DDR_LOW ),
+]
+Alternatives_MiG_29_AA_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV_LOW ),
+]
+Alternatives_MiG_31M_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31M_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31M_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31M_SOV_LOW ),
+]
+Alternatives_MiG_31_AA1_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA1_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA1_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA1_SOV_LOW ),
+]
+Alternatives_MiG_31_AA2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_31_AA2_SOV_LOW ),
+]
+Alternatives_Mi_14PL_AT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_AT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_AT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_AT_DDR_LOW ),
+]
+Alternatives_Mi_14PL_recon_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_recon_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_recon_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_14PL_recon_DDR_LOW ),
+]
+Alternatives_Mi_24D_AA_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_AA_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_AA_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_AA_DDR_LOW ),
+]
+Alternatives_Mi_24D_Desant_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_Desant_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_Desant_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_Desant_SOV_LOW ),
+]
+Alternatives_Mi_24D_s5_AT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s5_AT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s5_AT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s5_AT_DDR_LOW ),
+]
+Alternatives_Mi_24D_s8_AT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s8_AT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s8_AT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24D_s8_AT_DDR_LOW ),
+]
+Alternatives_Mi_24K_reco_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24K_reco_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24K_reco_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24K_reco_SOV_LOW ),
+]
+Alternatives_Mi_24P_AA_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_AA_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_AA_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_AA_SOV_LOW ),
+]
+Alternatives_Mi_24P_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_SOV_LOW ),
+]
+Alternatives_Mi_24P_s8_AT2_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT2_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT2_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT2_DDR_LOW ),
+]
+Alternatives_Mi_24P_s8_AT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24P_s8_AT_DDR_LOW ),
+]
+Alternatives_Mi_24VP_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24VP_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24VP_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24VP_SOV_LOW ),
+]
+Alternatives_Mi_24V_AA_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AA_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AA_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AA_SOV_LOW ),
+]
+Alternatives_Mi_24V_AT_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AT_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AT_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_AT_SOV_LOW ),
+]
+Alternatives_Mi_24V_RKT_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_RKT_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_RKT_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_RKT_SOV_LOW ),
+]
+Alternatives_Mi_24V_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24V_SOV_LOW ),
+]
+Alternatives_Mi_26_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_26_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_26_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_26_SOV_LOW ),
+]
+Alternatives_Mi_2_CMD_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_CMD_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_CMD_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_CMD_DDR_LOW ),
+]
+Alternatives_Mi_2_gunship_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_gunship_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_gunship_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_gunship_DDR_LOW ),
+]
+Alternatives_Mi_2_reco_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_DDR_LOW ),
+]
+Alternatives_Mi_2_reco_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_reco_SOV_LOW ),
+]
+Alternatives_Mi_2_rocket_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_rocket_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_rocket_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_rocket_DDR_LOW ),
+]
+Alternatives_Mi_2_trans_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_DDR_LOW ),
+]
+Alternatives_Mi_2_trans_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_trans_SOV_LOW ),
+]
+Alternatives_Mi_6_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_6_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_6_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_6_SOV_LOW ),
+]
+Alternatives_Mi_8K_CMD_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8K_CMD_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8K_CMD_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8K_CMD_SOV_LOW ),
+]
+Alternatives_Mi_8MTPI_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTPI_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTPI_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTPI_SOV_LOW ),
+]
+Alternatives_Mi_8MTV_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTV_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTV_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8MTV_SOV_LOW ),
+]
+Alternatives_Mi_8PPA_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8PPA_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8PPA_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8PPA_SOV_LOW ),
+]
+Alternatives_Mi_8R_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8R_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8R_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8R_SOV_LOW ),
+]
+Alternatives_Mi_8TB_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_DDR_LOW ),
+]
+Alternatives_Mi_8TB_reco_Marine_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_reco_Marine_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_reco_Marine_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_reco_Marine_DDR_LOW ),
+]
+Alternatives_Mi_8TV_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_DDR_LOW ),
+]
+Alternatives_Mi_8TV_Gunship_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_Gunship_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_Gunship_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_Gunship_SOV_LOW ),
+]
+Alternatives_Mi_8TV_PodGatling_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_DDR_LOW ),
+]
+Alternatives_Mi_8TV_PodGatling_PodAGL_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_PodGatling_PodAGL_SOV_LOW ),
+]
+Alternatives_Mi_8TV_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_SOV_LOW ),
+]
+Alternatives_Mi_8TV_UPK_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_UPK_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_UPK_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_UPK_DDR_LOW ),
+]
+Alternatives_Mi_8TV_non_arme_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_non_arme_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_non_arme_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_non_arme_SOV_LOW ),
+]
+Alternatives_Mi_8TV_s57_16_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_16_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_16_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_16_SOV_LOW ),
+]
+Alternatives_Mi_8TV_s57_32_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_DDR_LOW ),
+]
+Alternatives_Mi_8TV_s57_32_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s57_32_SOV_LOW ),
+]
+Alternatives_Mi_8TV_s80_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s80_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s80_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TV_s80_SOV_LOW ),
+]
+Alternatives_Mi_8TZ_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TZ_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TZ_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TZ_SOV_LOW ),
+]
+Alternatives_Mi_8T_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_DDR_LOW ),
+]
+Alternatives_Mi_8T_non_arme_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_non_arme_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_non_arme_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8T_non_arme_DDR_LOW ),
+]
+Alternatives_Mi_8_supply_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8_supply_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8_supply_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8_supply_DDR_LOW ),
+]
+Alternatives_Mi_9_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_9_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_9_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_9_DDR_LOW ),
+]
+Alternatives_Mirage_2000_C_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_2000_C_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_2000_C_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_2000_C_FR_LOW ),
+]
+Alternatives_Mirage_5_BA_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_BEL_LOW ),
+]
+Alternatives_Mirage_5_BA_CLU_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_CLU_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_CLU_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_CLU_BEL_LOW ),
+]
+Alternatives_Mirage_5_BA_MIRSIP_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_MIRSIP_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_MIRSIP_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_MIRSIP_BEL_LOW ),
+]
+Alternatives_Mirage_5_BA_NPLM_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_NPLM_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_NPLM_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_NPLM_BEL_LOW ),
+]
+Alternatives_Mirage_5_BA_RKT_BEL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_RKT_BEL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_RKT_BEL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_BA_RKT_BEL_LOW ),
+]
+Alternatives_Mirage_5_F_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_FR_LOW ),
+]
+Alternatives_Mirage_5_F_clu_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_clu_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_clu_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_clu_FR_LOW ),
+]
+Alternatives_Mirage_5_F_nplm_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_nplm_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_nplm_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_5_F_nplm_FR_LOW ),
+]
+Alternatives_Mirage_F1_CT_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_CT_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_CT_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_CT_FR_LOW ),
+]
+Alternatives_Mirage_F1_C_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_FR_LOW ),
+]
+Alternatives_Mirage_III_E_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_III_E_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_III_E_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_III_E_FR_LOW ),
+]
+Alternatives_Mirage_IV_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_FR_LOW ),
+]
+Alternatives_Mirage_IV_SEAD_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_SEAD_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_SEAD_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_IV_SEAD_FR_LOW ),
+]
+Alternatives_OH58A_reco_NG_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58A_reco_NG_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58A_reco_NG_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58A_reco_NG_US_LOW ),
+]
+Alternatives_OH58C_CMD_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_CMD_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_CMD_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_CMD_US_LOW ),
+]
+Alternatives_OH58C_Scout_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_Scout_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_Scout_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58C_Scout_US_LOW ),
+]
+Alternatives_OH58D_Combat_Scout_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Combat_Scout_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Combat_Scout_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Combat_Scout_US_LOW ),
+]
+Alternatives_OH58D_Kiowa_Warrior_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Kiowa_Warrior_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Kiowa_Warrior_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58D_Kiowa_Warrior_US_LOW ),
+]
+Alternatives_OH58_CS_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58_CS_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58_CS_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_OH58_CS_US_LOW ),
+]
+Alternatives_Pchela_1T_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Pchela_1T_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Pchela_1T_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Pchela_1T_SOV_LOW ),
+]
+Alternatives_Puma_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_FR_LOW ),
+]
+Alternatives_Puma_HET_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_HET_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_HET_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_HET_FR_LOW ),
+]
+Alternatives_Puma_PC_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_PC_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_PC_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_PC_FR_LOW ),
+]
+Alternatives_Puma_Pirate_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_Pirate_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_Pirate_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_Pirate_FR_LOW ),
+]
+Alternatives_Puma_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Puma_UK_LOW ),
+]
+Alternatives_Su_17M4_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17M4_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17M4_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17M4_SOV_LOW ),
+]
+Alternatives_Su_17_cluster_POL is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17_cluster_POL ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17_cluster_POL_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_17_cluster_POL_LOW ),
+]
+Alternatives_Su_22_AT2_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT2_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT2_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT2_DDR_LOW ),
+]
+Alternatives_Su_22_AT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_DDR_LOW ),
+]
+Alternatives_Su_22_AT_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_AT_SOV_LOW ),
+]
+Alternatives_Su_22_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_DDR_LOW ),
+]
+Alternatives_Su_22_HE2_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_HE2_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_HE2_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_HE2_DDR_LOW ),
+]
+Alternatives_Su_22_RKT_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_RKT_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_RKT_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_RKT_DDR_LOW ),
+]
+Alternatives_Su_22_SEAD_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_SEAD_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_SEAD_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_SEAD_DDR_LOW ),
+]
+Alternatives_Su_22_UPK_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_UPK_DDR_LOW ),
+]
+Alternatives_Su_22_clu_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_clu_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_clu_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_clu_DDR_LOW ),
+]
+Alternatives_Su_22_nplm_DDR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_nplm_DDR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_nplm_DDR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_22_nplm_DDR_LOW ),
+]
+Alternatives_Su_24MP_EW_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_EW_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_EW_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_EW_SOV_LOW ),
+]
+Alternatives_Su_24MP_SEAD2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SEAD2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SEAD2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SEAD2_SOV_LOW ),
+]
+Alternatives_Su_24MP_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24MP_SOV_LOW ),
+]
+Alternatives_Su_24M_AT1_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT1_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT1_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT1_SOV_LOW ),
+]
+Alternatives_Su_24M_AT2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_AT2_SOV_LOW ),
+]
+Alternatives_Su_24M_LGB2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB2_SOV_LOW ),
+]
+Alternatives_Su_24M_LGB_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_LGB_SOV_LOW ),
+]
+Alternatives_Su_24M_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_SOV_LOW ),
+]
+Alternatives_Su_24M_clu2_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu2_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu2_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu2_SOV_LOW ),
+]
+Alternatives_Su_24M_clu_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_clu_SOV_LOW ),
+]
+Alternatives_Su_24M_nplm_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_nplm_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_nplm_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_nplm_SOV_LOW ),
+]
+Alternatives_Su_24M_thermo_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_thermo_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_thermo_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_24M_thermo_SOV_LOW ),
+]
+Alternatives_Su_25T_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25T_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25T_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25T_SOV_LOW ),
+]
+Alternatives_Su_25_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_SOV_LOW ),
+]
+Alternatives_Su_25_clu_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_clu_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_clu_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_clu_SOV_LOW ),
+]
+Alternatives_Su_25_he_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_he_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_he_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_he_SOV_LOW ),
+]
+Alternatives_Su_25_nplm_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_nplm_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_nplm_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_nplm_SOV_LOW ),
+]
+Alternatives_Su_25_rkt_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_rkt_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_rkt_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_rkt_SOV_LOW ),
+]
+Alternatives_Su_27S_SOV is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_27S_SOV ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_27S_SOV_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Su_27S_SOV_LOW ),
+]
+Alternatives_Super_Etendard_AT_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_AT_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_AT_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_AT_FR_LOW ),
+]
+Alternatives_Super_Etendard_CLU_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_CLU_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_CLU_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_CLU_FR_LOW ),
+]
+Alternatives_Super_Etendard_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_FR_LOW ),
+]
+Alternatives_Super_Etendard_HE_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_HE_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_HE_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Etendard_HE_FR_LOW ),
+]
+Alternatives_Super_Puma_FR is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Puma_FR ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Puma_FR_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Super_Puma_FR_LOW ),
+]
+Alternatives_Tornado_ADV_HE_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK_LOW ),
+]
+Alternatives_Tornado_ADV_SEAD_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_SEAD_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_SEAD_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_SEAD_UK_LOW ),
+]
+Alternatives_Tornado_ADV_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_UK_LOW ),
+]
+Alternatives_Tornado_ADV_clu_UK is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_clu_UK ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_clu_UK_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_ADV_clu_UK_LOW ),
+]
+Alternatives_Tornado_IDS_AT1_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA_LOW ),
+]
+Alternatives_Tornado_IDS_CLUS_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_CLUS_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_CLUS_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_CLUS_RFA_LOW ),
+]
+Alternatives_Tornado_IDS_HE1_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_HE1_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_HE1_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_HE1_RFA_LOW ),
+]
+Alternatives_Tornado_IDS_MW1_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_MW1_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_MW1_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_Tornado_IDS_MW1_RFA_LOW ),
+]
+Alternatives_UH1A_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1A_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1A_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1A_US_LOW ),
+]
+Alternatives_UH1D_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_RFA_LOW ),
+]
+Alternatives_UH1D_Supply_RFA is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_Supply_RFA ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_Supply_RFA_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1D_Supply_RFA_LOW ),
+]
+Alternatives_UH1H_Huey_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_Huey_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_Huey_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_Huey_US_LOW ),
+]
+Alternatives_UH1H_supply_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_supply_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_supply_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1H_supply_US_LOW ),
+]
+Alternatives_UH1M_gunship_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1M_gunship_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1M_gunship_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH1M_gunship_US_LOW ),
+]
+Alternatives_UH60A_Black_Hawk_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Black_Hawk_US_LOW ),
+]
+Alternatives_UH60A_CO_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_CO_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_CO_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_CO_US_LOW ),
+]
+Alternatives_UH60A_Supply_US is 
+[
+    DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Supply_US ),
+    DepictionDescriptor_LOD_Mid( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Supply_US_MID ),
+    DepictionDescriptor_LOD_Low( MeshDescriptor = $/GFX/DepictionResources/Modele_UH60A_Supply_US_LOW ),
+]

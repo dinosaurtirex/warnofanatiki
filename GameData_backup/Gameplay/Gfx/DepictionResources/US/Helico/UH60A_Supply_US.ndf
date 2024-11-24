@@ -1,0 +1,14 @@
+export Modele_UH60A_Supply_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/UH_60A_Black_Hawk/UH_60A_Supply.fbx'
+)
+
+export Modele_UH60A_Supply_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/UH_60A_Black_Hawk/UH_60A_Supply.fbx'
+)
+
+export Modele_UH60A_Supply_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Helico/UH_60A_Black_Hawk/UH_60A_Supply.fbx'
+)

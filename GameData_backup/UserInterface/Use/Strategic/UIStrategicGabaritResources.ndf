@@ -1,0 +1,143 @@
+
+//-------------------------------------------------------------------------------------
+
+template TStrategicFeedbackUICommonGabaritDefinition
+[
+    CircleThickness : float = 1.0,
+    CircleColor : color,
+    TextStyle : TTextStyle,
+]
+is TUICommonGabaritDefinition
+(
+    CircleThickness = <CircleThickness>
+    CircleColor = <CircleColor>
+    TextStyle = <TextStyle>
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicFeedbackAreaOfEffectRangeGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
+(
+    CircleColor = [216,80,73,255]
+    CircleThickness = 800.0 * 4
+    TextStyle       = TTextStyle
+    (
+        FontSize    = 16
+        ColorBottom = [255,128, 0,255]
+        ColorUp     = [255,128, 0,255]
+        ColorStroke = [ 0, 0, 0, 255]
+        Stroke = false
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicFeedbackAreaOfEffectRadiusGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
+(
+    CircleColor = [40.0, 62.0, 62.0, 128.0]
+    CircleThickness = 1.0
+    TextStyle       = TTextStyle
+    (
+        FontSize    = 16
+        ColorBottom = [255,128, 0,255]
+        ColorUp     = [255,128, 0,255]
+        ColorStroke = [ 0, 0, 0, 255]
+        Stroke = false
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicFeedbackSplashGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
+(
+    CircleColor = [255,128, 0,96]
+    CircleThickness = 1.0
+    TextStyle       = TTextStyle
+    (
+        FontSize    = 16
+        ColorBottom = [255,128, 0,255]
+        ColorUp     = [255,128, 0,255]
+        ColorStroke = [ 0, 0, 0, 255]
+        Stroke = false
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicFeedbackCapacityGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
+(
+    CircleColor = [128,128, 0,96]
+    CircleThickness = 1.0
+    TextStyle       = TTextStyle
+    (
+        FontSize    = 16
+        ColorBottom = [0,255, 0,255]
+        ColorUp     = [0,255, 0,255]
+        ColorStroke = [ 0, 0, 0, 255]
+        Stroke = false
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicFeedbackDispersionGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
+(
+    CircleColor = [255,0, 0,96]
+    CircleThickness = 1.0
+    TextStyle       = TTextStyle
+    (
+        FontSize    = 16
+        ColorBottom = [255,0, 0,255]
+        ColorUp     = [255,0, 0,255]
+        ColorStroke = [0,0, 0,255]
+        Stroke = false
+    )
+)
+
+//-------------------------------------------------------------------------------------
+
+FeedbackDisabledNoGoZoneResource is TUICommonZoCDefinition
+(
+    ColorToken = 'DisabledNoGoZone'
+    Thickness = 2000
+)
+
+//-------------------------------------------------------------------------------------
+
+FeedbackAirNoGoZoneResource is TUICommonZoCDefinition
+(
+    ColorToken = 'AirNoGoZone'
+    Thickness = 2000
+)
+
+//-------------------------------------------------------------------------------------
+
+FeedbackGroundSupportResource is TUICommonZoCDefinition
+(
+    ColorToken = 'GroundSupportZone'
+    Thickness = 1800
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicGabaritResources is TUICommonGabaritResources
+(
+    World3D = $/M3D/Scene/DefaultWorld
+    Scene3D = $/M3D/Scene/Scene_2D_Interface
+    Camera = $/M3D/Misc/CameraPrincipale
+    AreaOfEffectRangeGabarit     = ~/StrategicFeedbackAreaOfEffectRangeGabaritResource
+    AreaOfEffectRadiusGabarit    = ~/StrategicFeedbackAreaOfEffectRadiusGabaritResource
+    SplashGabarit                = ~/StrategicFeedbackSplashGabaritResource
+    CapacityGabarit              = ~/StrategicFeedbackCapacityGabaritResource
+    DispersionGabarit            = ~/StrategicFeedbackDispersionGabaritResource
+)
+
+//-------------------------------------------------------------------------------------
+
+StrategicZoCResources is TUICommonZoCResources
+(
+    DisabledNoGoZone = ~/FeedbackDisabledNoGoZoneResource
+    AirNoGoZone = ~/FeedbackAirNoGoZoneResource
+    GroundSupportZone = ~/FeedbackGroundSupportResource
+    WorldFloorProxy = $/M3D/Scene/WorldFloorOutMapProxy
+)

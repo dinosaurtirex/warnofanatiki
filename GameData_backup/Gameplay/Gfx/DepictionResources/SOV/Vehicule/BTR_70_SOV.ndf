@@ -1,0 +1,20 @@
+export ModelFile_BTR_70_SOV is 'GameData:/Assets/3D/Units/URSS/APC/BTR70/BTR70.fbx'
+export Modele_BTR_70_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_70_SOV
+)
+
+export ModelFile_BTR_70_SOV_MID is 'GameData:/Assets/3D/Units/URSS/APC/BTR70_MID/BTR70_MID.fbx'
+export Modele_BTR_70_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_70_SOV_MID
+)
+
+export ModelFile_BTR_70_SOV_LOW is 'GameData:/Assets/3D/Units/URSS/APC/BTR70_LOW/BTR70_LOW.fbx'
+export Modele_BTR_70_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_BTR_70_SOV_LOW
+)
+
+
+

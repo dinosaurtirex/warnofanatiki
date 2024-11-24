@@ -1,0 +1,126 @@
+
+// pour que l'unit idle soit configurable depuis l'ods,
+// prefixer avec TurretIdle_
+
+template TurretIdleBehaviour
+[
+    MinTimeBetweenIdleSequences : float = 0.0,
+    MaxTimeBetweenIdleSequences : float = 0.0,
+
+    MinIdleTargetWaitDuration : float = 0.0,
+    MaxIdleTargetWaitDuration : float = 0.0,
+
+    IdleSequenceProbability : float = 0.0,
+    RotationSpeedMultiplier : float = 0.0,
+
+    MaxYawSpreadInDegree : float = 0,
+    MaxPitchSpreadInDegree : float = 0,
+
+    PitchMaxInDegree : float = 90,
+    PitchMinInDegree : float = -90,
+    YawMaxInDegree : float = 180,
+    YawMinInDegree : float = -180
+] is TTurretIdleBehaviourDescriptor
+(
+    MinTimeBetweenIdleSequences = <MinTimeBetweenIdleSequences>
+    MaxTimeBetweenIdleSequences = <MaxTimeBetweenIdleSequences>
+
+    MinIdleTargetWaitDuration = <MinIdleTargetWaitDuration>
+    MaxIdleTargetWaitDuration = <MaxIdleTargetWaitDuration>
+
+    IdleSequenceProbability = <IdleSequenceProbability>
+    RotationSpeedMultiplier = <RotationSpeedMultiplier>
+
+    MaxYawSpreadInDegree = <MaxYawSpreadInDegree>
+    MaxPitchSpreadInDegree = <MaxPitchSpreadInDegree>
+
+    PitchMaxInDegree = <PitchMaxInDegree>
+    PitchMinInDegree = <PitchMinInDegree>
+    YawMaxInDegree = <YawMaxInDegree>
+    YawMinInDegree = <YawMinInDegree>
+)
+
+TurretIdle_WatchForwardNormal is TurretIdleBehaviour
+(
+    MinTimeBetweenIdleSequences = 10.0    //8.0
+    MaxTimeBetweenIdleSequences = 20.0    //10.0
+
+    MinIdleTargetWaitDuration = 10.0      //3.0
+    MaxIdleTargetWaitDuration = 20.0      //4.0
+
+    IdleSequenceProbability = 0.5         //0.6
+    RotationSpeedMultiplier = 0.2         //0.25
+
+    MaxYawSpreadInDegree = 120            //60
+    MaxPitchSpreadInDegree = 0            //5
+)
+
+TurretIdle_WatchForwardMG is TurretIdleBehaviour
+(
+    MinTimeBetweenIdleSequences = 20.0    //8.0
+    MaxTimeBetweenIdleSequences = 30.0    //10.0
+
+    MinIdleTargetWaitDuration = 30.0      //3.0
+    MaxIdleTargetWaitDuration = 40.0      //4.0
+
+    IdleSequenceProbability = 0.6         //0.6
+    RotationSpeedMultiplier = 0.1         //0.25
+
+    MaxYawSpreadInDegree = 50          //189
+    MaxPitchSpreadInDegree = 45         //10
+    PitchMaxInDegree = 10
+    PitchMinInDegree = 0
+)
+
+TurretIdle_ArtilleryAutoMoteur is TurretIdleBehaviour
+(
+    MinTimeBetweenIdleSequences = 20.0     //8.0
+    MaxTimeBetweenIdleSequences = 30.0     //10.0
+
+    MinIdleTargetWaitDuration = 40.0       //3.0
+    MaxIdleTargetWaitDuration = 60.0       //4.0
+
+    IdleSequenceProbability = 0.5          //0.6
+    RotationSpeedMultiplier = 0.05          //0.25
+
+    MaxYawSpreadInDegree = 0               //60
+    MaxPitchSpreadInDegree = 25            //5
+
+    PitchMaxInDegree = 25
+    PitchMinInDegree = 0
+)
+
+TurretIdle_DCAAutoMoteur is TurretIdleBehaviour
+(
+    MinTimeBetweenIdleSequences = 10.0  //8.0
+    MaxTimeBetweenIdleSequences = 20.0  //10.0
+
+    MinIdleTargetWaitDuration =  10.0   //3.0
+    MaxIdleTargetWaitDuration =  20.0   //4.0
+
+    IdleSequenceProbability =  0.5     //0.6
+    RotationSpeedMultiplier =  0.25     //0.5
+
+    MaxYawSpreadInDegree = 360     // 180
+    MaxPitchSpreadInDegree = 75    // 20
+
+    PitchMaxInDegree = 75
+    PitchMinInDegree = 15
+
+)
+
+TurretIdle_VehicleReco is TurretIdleBehaviour
+(
+    MinTimeBetweenIdleSequences = 10.0    //8.0
+    MaxTimeBetweenIdleSequences = 20.0    //10.0
+
+    MinIdleTargetWaitDuration = 10.0      //3.0
+    MaxIdleTargetWaitDuration = 20.0      //4.0
+
+    IdleSequenceProbability = 0.8         //0.6
+    RotationSpeedMultiplier = 0.1         //0.25
+
+    MaxYawSpreadInDegree = 140          //189
+    MaxPitchSpreadInDegree = 0         //10
+
+)

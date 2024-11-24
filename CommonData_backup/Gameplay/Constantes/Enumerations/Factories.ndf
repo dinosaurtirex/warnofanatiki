@@ -1,0 +1,21 @@
+// Enum TDefaultFactories // A maintenir synchro avec EugIA_Common/DefaultFactoryType.h
+ EDefaultFactories is TBaseClass
+(
+    Nothing              is 0
+    UnitFactory          is 1
+    Logistic             is 2
+    Infantry             is 3
+    Planes               is 4
+    Vehicles             is 5
+    Tanks                is 6
+    Recons               is 7
+    Helis                is 8
+    Support              is 9
+    FOB                  is 10
+    Building             is 11
+    DCA                  is 12
+    Art                  is 13
+    AT                   is 14
+    Defense              is 15
+    UniversalFactory     is 16
+)

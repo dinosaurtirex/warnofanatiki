@@ -1,0 +1,100 @@
+template BUCKTextureDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    TextureDrawer : string = 'ColorMultiply',                                                     // Drawer utilisé pour le dessin de la texture
+    TextureFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0]), // Utilisé si le ResizeMode est en UserDefined
+    TextureToken : string = '',                                                                   // Le token de texture référencé dans la banque
+    TextureColorToken : string = '',                                                              // BlockColor qui remplace la TextureColor si set
+    ResizeMode : int = ~/TextureResizeMode/UserDefined,                                           // Défini le comportement de redimensionnement par rapport au container
+    AdaptContainerToTextureSize : bool = true,                                                    // Force le composant à adopter la taille de la texture, ne sert que en ResizeMode/FitToContent
+    Rotation : int = 0,                                                                           // Permet de faire une rotation de la texture en degré (uniquement angle droit et angle plat)
+    TileTextureInComponent : bool = false,                                                        // Permet de répéter la texture pour qu'elle prenne tout la place du composant
+    ClipTextureToComponent : bool = false,                                                        // Permet de clipper la texture pour ne pas qu'elle déborde du composant
+    LocalRenderLayer : int = 0,                                                                    // Layer local pour le composant
+]
+is TBUCKTextureDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    TextureDrawer = <TextureDrawer>
+    TextureFrame = <TextureFrame>
+    TextureToken = <TextureToken>
+    TextureColorToken = <TextureColorToken>
+    ResizeMode = <ResizeMode>
+    AdaptContainerToTextureSize = <AdaptContainerToTextureSize>
+    Rotation = <Rotation>
+    TileTextureInComponent = <TileTextureInComponent>
+    ClipTextureToComponent = <ClipTextureToComponent>
+)

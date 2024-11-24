@@ -1,0 +1,144 @@
+//WarGame
+export Modele_Missile_Shillelagh is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Shillelagh.fbx' )
+export Modele_Missile_M47dragon is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/M47_Dragon.fbx' )
+export Modele_Missile_Konkurs is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Konkurs.fbx' )
+export Modele_Missile_Strela is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Strela.fbx' )
+export Modele_Missile_Tunguska is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Tunguska.fbx' )
+export Modele_Missile_Drakon is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Drakon.fbx' )
+export Modele_Missile_Bastion is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Bastion.fbx' )
+export Modele_Missile_Blowpipe is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Blowpipe.fbx' )
+export Modele_Missile_Buk is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/Buk.fbx' )
+
+//WarGame 3
+export Modele_Missile_AJ_168 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AIM_9_Sidewinder.fbx' )
+export Modele_Missile_ZB_500 is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/ZB_500.fbx' )
+
+
+// Bombes et missiles FULDA
+//new
+//--emports SOV---------------------------------------------------------------------------------------------------
+export Modele_Missile_FAB_100 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/FAB_100/FAB_100.fbx' )
+export Modele_Missile_FAB_250 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/FAB_250/FAB_250.fbx' )
+export Modele_Missile_FAB_500 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/FAB_500/FAB_500.fbx' )
+export Modele_Missile_RBK_500 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/RBK_500.fbx' )
+export Modele_Missile_Vympel_R23R is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R23R/Vympel_R23R.fbx' )
+export Modele_Missile_Vympel_R24R is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R23R/Vympel_R24R.fbx' )
+export Modele_Missile_Vympel_R27 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R27/Vympel_R27.fbx' )
+export Modele_Missile_Vympel_R27T is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R27/Vympel_R27T.fbx' )
+export Modele_Missile_Vympel_R3R is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/R_3R/R_3R.fbx' )
+export Modele_Missile_Vympel_R13M is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/R_13M/R_13M.fbx' )
+export Modele_Missile_Vympel_R33 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R33/Vympel_R33.fbx' )
+export Modele_Missile_Vympel_R40 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R40/Vympel_R40.fbx' )
+export Modele_Missile_Vympel_R60 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R60/Vympel_R60.fbx' )
+export Modele_Missile_Vympel_R73 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R73/Vympel_R73.fbx' )
+export Modele_Missile_Vympel_R77 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R77/Vympel_R77.fbx' )
+export Modele_Missile_Kh_23 is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_23/Kh_23.fbx' )
+export Modele_Missile_Kh_25 is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_25/Kh_25.fbx' )
+export Modele_Missile_Kh_25MP is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_25MP/Kh_25MP.fbx' )
+export Modele_Missile_Kh_29 is     ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_29/Kh_29.fbx' )
+export Modele_Missile_Kh_29L is     ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_29L/Kh_29L.fbx' )
+export Modele_Missile_Kh_31 is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_31/Kh_31.fbx' )
+export Modele_Missile_Kh_58 is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_58/Kh_58.fbx' )
+export Modele_Missile_3M11_Fleyta is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/3M11_Fleyta/3M11_Fleyta.fbx' )
+export Modele_Missile_Shturm is     ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/9k114_Shturm/9k114_Shturm.fbx' )
+export Modele_Missile_Malyutka is   ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/9M14_Malyutka/9M14_Malyutka.fbx' )
+export Modele_Missile_Igla is       ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/9K38_Igla/9K38_Igla.fbx' )
+export Modele_Missile_Kub is       ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/3M9M4_Kub/Kub.fbx' )
+export Modele_Missile_Metis is       ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Metis/Metis.fbx' )
+export Modele_Missile_S_24_240mm is       ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/S24_240mm/S24_240mm.fbx' )
+export Modele_Missile_9M330_Tor is       ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/9M330/9M330.fbx' )
+export Modele_Missile_KAB_500Kr is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/KAB_500Kr/KAB_500Kr.fbx' )
+export Modele_Missile_KAB_1500Kr is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/KAB_1500Kr/KAB_1500Kr.fbx' )
+export Modele_Missile_KAB_500L is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/KAB_500L/KAB_500L.fbx' )
+export Modele_Missile_KAB_1500L is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/KAB_1500L/KAB_1500L.fbx' )
+export Modele_Missile_ODAB_500PM is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/SOV/ODAB_500PM/ODAB_500PM.fbx' )
+export Modele_Missile_Vympel_R27ER is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Vympel_R27ER/Vympel_R27ER.fbx' )
+export Modele_Missile_MD_24F is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/MD_24F/MD_24F.fbx' )
+export Modele_Missile_Falanga is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/9M17PV_FALANGA/9M17PV_FALANGA.fbx' )
+export Modele_Missile_3M8M is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/3M8M/3M8M.fbx' )
+
+//old
+export Modele_Missile_MK20_RockeyeII is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mk_20_Rockeye_II.fbx' )
+export Modele_Missile_M117 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/M117.fbx' )
+export Modele_Missile_AGM_45_Shrike is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AGM_45_Shrike.fbx' )
+export Modele_Missile_Kh_28 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/SOV/Kh_28/Kh_28.fbx' )
+
+//--emports FR---------------------------------------------------------------------------------------------------
+export Modele_Missile_Nord_AS_11 is          ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Nord_AS_11.fbx' )
+export Modele_Missile_Matra_R530 is          ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Matra_R530.fbx' )
+export Modele_Missile_Matra_Super_530D is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Matra_Super_530D.fbx' )
+export Modele_Missile_Matra_R550_Magic is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Matra_R550_Magic.fbx' )
+export Modele_Missile_Matra_R550_Magic_II is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Matra_R550_Magic_II.fbx' )
+export Modele_Missile_AS_30L is              ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/AS_30L.fbx' )
+export Modele_Missile_AS_30 is              ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/AS_30.fbx' )
+export Modele_Missile_GBU_49_Paveway is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/GBU_49_Paveway_II.fbx' )
+export Modele_Missile_GBU_58_Paveway is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/GBU_58_Paveway.fbx' )
+export Modele_Missile_Milan is               ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Milan.fbx' )
+export Modele_Missile_HOT is                 ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Hot_2.fbx' )
+export Modele_Missile_ROLAND is              ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/Roland.fbx' )
+export Modele_Missile_BLG_66_Belouga is      ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/BLG_66_Belouga.fbx' )
+export Modele_Missile_Bomb_Matra_250Kg is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/Bomb_Matra_250Kg.fbx' )
+export Modele_Missile_Bomb_Matra_400Kg is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/FR/Bomb_Matra_400Kg.fbx' )
+export Modele_Missile_SS_11 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/SS_11/SS_11.fbx' )
+export Modele_Missile_PW_LWD is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Roquettes/SOV/PW_LWD/PW_LWD_cable.fbx')
+export Modele_Missile_R440 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/R440/R440.fbx' )
+
+//--emports UK-----------------------------------------------------------------------------------------------
+
+export Modele_Missile_AIM132_ASRAAM is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/UK/AIM_132_ASRAAM/AIM-132_ASRAAM.fbx' )
+export Modele_Missile_Skyflash is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/UK/Skyflash/Skyflash.fbx' )
+export Modele_Missile_AS37_Martel is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/FR/AS37_Martel/AS37_Martel.fbx' )
+export Modele_Missile_BLU_110_Mk83 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/UK/BLU_110_Mk83/BLU_110_Mk83.fbx' )
+export Modele_Missile_Rapier is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/UK/DCA/Tracked_Rapier/Rapier.fbx' )
+export Modele_Missile_Mk_18_RET is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/UK/Mk_18_RET/Mk_18_RET.fbx' )
+export Modele_Missile_CPU123 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/UK/CPU_123/CPU123.fbx' )
+export Modele_Missile_CLU_BL755 is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/UK/CLU_BL755/Bomb_CLU_BL755.fbx' )
+export Modele_Missile_M117_340Kg is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/Bomb_M117_340Kg.fbx' )
+export Modele_Missile_Swingfire is    ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/UK/Swingfire/Swingfire.fbx' )
+export Modele_Missile_AJ168_TV_Martel is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/UK/AJ168_TV_Martel/AJ168_TV_Martel.fbx' )
+
+//--emports ITA-----------------------------------------------------------------------------------------------------
+export Modele_Missile_Aspide_1A is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/ITA/Aspide_1A/Aspide_1A.fbx' )
+
+//--emports US---------------------------------------------------------------------------------------------------
+export Modele_Missile_Hellfire is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AGM_114_Hellfire.fbx' )
+export Modele_Missile_AGM_122_Sidearm is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AGM_122_Sidearm.fbx' )
+export Modele_Missile_MK22_Mod_2_Rocket is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Roquettes/US/MK22_Mod_2_ROCKET/MK22_Mod_2_ROCKET.fbx' )
+
+//---------------MAVERICK---------------------------------------------------------------------------------------------------
+export ModelFile_Missile_Maverick is 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AGM_65_Maverick/AGM_65_Maverick.fbx'
+export Modele_Missile_Maverick is ModelDescriptor
+(
+    FileName     = ModelFile_Missile_Maverick
+)
+export Modele_Missile_Maverick_AGM65D is ModelDescriptor
+(
+    FileName     = ModelFile_Missile_Maverick
+    TextureDirectory = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AGM_65D'
+)
+//--------------------------------------------------------------------------------------------------------------------------
+export Modele_Missile_Tow is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/BGM_71_TOW.fbx' )
+export Modele_Missile_AGM88_Harm is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AGM_88_Harm.fbx' )
+export Modele_Missile_AIM7 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AIM7_Sparrow.fbx' )
+export Modele_Missile_SideWinder is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AIM_9_Sidewinder.fbx' )
+export Modele_Missile_Stinger is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AIM_92_Stinger.fbx' )
+export Modele_Missile_AIM_120_Amraam is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/AIM_120_Amraam.fbx' )
+export Modele_Missile_MIM_72F is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/MIM_72F.fbx' )
+export Modele_Missile_GBU_10_Paveway_II is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_10_Paveway_II.fbx' )
+export Modele_Missile_GBU_12_Paveway_II is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_12_Paveway_II.fbx' )
+export Modele_Missile_GBU_24_Paveway_III is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_24_Paveway_III.fbx' )
+export Modele_Missile_MIM23_I_Hawk is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/MIM23_I_Hawk.fbx' )
+export Modele_Missile_BL755_Cluster is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/BL755_Cluster.fbx' )
+export Modele_Missile_AIM_9J_SideWinder is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/US/AIM_9J_SideWinder/AIM_9J_SideWinder.fbx' )
+export Modele_Missile_AGM_Alarm is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Missiles/UK/AGM_Alarm/AGM_Alarm.fbx' )
+
+//--emports OTAN---------------------------------------------------------------------------------------------------
+export Modele_Missile_Mk_81 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_81.fbx' )
+export Modele_Missile_Mk_82 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_82.fbx' )
+export Modele_Missile_Mk_83 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_83.fbx' )
+export Modele_Missile_Mk_84 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/OTAN/MK_84.fbx' )
+export Modele_Missile_Mk_77 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/Mk_77.fbx' )
+export Modele_Missile_GBU10 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_10_Paveway_II.fbx' )
+export Modele_Missile_GBU12 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_12_Paveway_II.fbx' )
+export Modele_Missile_GBU24 is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/Ammo/Bombes/US/GBU_24_Paveway_III.fbx' )
+

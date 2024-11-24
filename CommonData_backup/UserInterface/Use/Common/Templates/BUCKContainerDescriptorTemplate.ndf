@@ -1,0 +1,93 @@
+template BUCKContainerDescriptor
+[
+    ElementName : string = "",                                          // Le nom local du composant. Permet de le récupérer dans le cpp au moment de l'instanciation pour le modifier (doit être unique parmi les fils du composant racine instancié)
+    UniqueName : string = "",                                           // Le nom global du composant. Permet de le récupérer dans le cpp grâce à la BUCKBank pour le modifier (doit être unique)
+
+    RequiredTags : LIST<string> = [],                                   // Permet de conditionner l'instanciation du composant à la présence de tags. Si un de ces tags n'est pas actif, le composant n'est pas instancié.
+                                                                        // Voir TBUCKToolbox::FUITags
+
+    ForbiddenTags : LIST<string> = [],                                  // Permet de conditionner l'instanciation du composant à la présence de tags. Si un de ces tags est actif, le composant n'est pas instancié.
+                                                                        // Voir TBUCKToolbox::FUITags
+
+    ComponentFrame : TUIFramePropertyRTTI,                              // Permet de définir la taille et le positionnement du composant.
+                                                                        // • Taille (WidthHeight)
+                                                                        //    - Relative (taille par rapport au parent)
+                                                                        //    - Magnifiable (taille multiplié par la résolution)
+                                                                        //    - Pixel (taille en pixel brut)
+                                                                        // • Placement (Offset)
+                                                                        //    - Relative (placement par rapport au parent)
+                                                                        //    - Magnifiable (placement multiplié par la résolution)
+                                                                        //    - Pixel (placement en pixel brut)
+                                                                        // • Point Fixe (Alignement)
+                                                                        //    - Anchor (position relative du point fixe du composant a la taille de celui-ci a aligner avec le point fixe du parent)
+                                                                        //    - Parent (position relative du point fixe du parent a la taille de celui-ci a aligner avec le point fixe du composant)
+
+    MagnifierMultiplication : float = 0.0,                              // Permet de multiplier la taille du composant et de ses enfants (> 0)
+
+    HidePointerEvents : bool = false,                                   // Fais que la surface du composant bloque les évenements souris
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,     // Permet de laisser passer certains types d'évenements souris
+
+    GridAlign : bool = false,                                           // Clampe la box du composant au pixel le plus proche (enlève les décimales à la placement box)
+
+    FitStyle : int = ~/ContainerFitStyle/None,                          // Permet d'adapter la taille du composant a son fils (s'il est seul) ou à celui désigné par ChildFitToContent
+    ChildFitToContent : bool = false,                                   // Permet de désigner le fils auquel s'adapter pour le FitStyle
+
+    ClipContent : bool = false,                                         // Permet de ne pas afficher les parties des fils qui débordent de la box du composant
+
+    IsClippable : bool = true,                                          // Permet d'optimiser les calculs de pour le clipping afin de ne pas tenter de rendre ses enfants si la box du composant est totalement clippé
+
+    HasBackground : bool = false,                                       // Affiche le background
+    BackgroundBlockColorToken : string = "",                            // Token de couleur du background
+
+    HasBorder : bool = false,                                           // Affiche la bordure
+    BordersToDraw : int = ~/TBorderSide/Default,                        // Règle les côtés (Gauche/Haut/Droit/Bas) à afficher
+    BorderThicknessToken : string = "",                                 // Token de taille de la bordure
+    BorderLineColorToken : string = "",                                 // Token de couleur de la bordure
+
+    BackgroundLocalRenderLayer : int = 0,                               // Layer local pour le background
+    BorderLocalRenderLayer : int = 0,                                   // Layer local pour la bordure
+
+    ComponentStateLocked : bool = false,                                // Vérouille l'état du composant (il devient insensible aux changement dynamiques d'états)
+
+    Components : LIST<TBUCKContainerDescriptor> = [],                   // Les composants contenus
+]
+is TBUCKContainerDescriptor
+(
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+
+    FitToMaximumSize = nil
+)

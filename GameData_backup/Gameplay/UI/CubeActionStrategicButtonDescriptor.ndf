@@ -1,0 +1,41 @@
+export CubeAction_Strategic_Fortify is Template_CubeActionOrderButtonInformationsDescriptor_WithSound
+(
+    CubeActionName          = "CubeAction_Strategic_Fortify"
+    DebugName               = "InGameCubeAction_Strategic_Fortify"
+
+    OrderToken = 'Fortify'
+    ValidationTargetToken = 'HNT_WARN'
+
+    LeftClickSound = InterfaceSound( FileName = "GameData:/Assets/Sounds/Hud/digin.wav")
+
+    ButtonTextToken         = 'ORD_FORTI'
+    HintTitleToken          = 'HNT_FORTI'
+    HintBodyToken           = 'HNB_FORTI'
+    HintExtendedToken       = ''
+    HintDico                = ~/LocalisationConstantes/dico_interface_ingame
+    ActionType              = OrderInstant
+    CubeActionFunctionType  = StrategicCubeActionFunctionType/Orders
+    Mapping                 = $/KeyboardOption/Mapping_QuickMove
+)
+
+export CubeAction_Strategic_FortifyAntiAir is Template_CubeActionOrderButtonInformationsDescriptor_WithSound
+(
+    CubeActionName          = "CubeAction_Strategic_FortifyAntiAir"
+    DebugName               = "InGameCubeAction_Strategic_FortifyAntiAir"
+    SpotlightUniqueName = "SpotLight_Deploy_AA"
+
+    OrderToken = 'FortifyAntiAir'
+    ValidationTargetToken = 'HNT_WARN'
+
+    LeftClickSound = InterfaceSound( FileName = "GameData:/Assets/Sounds/SFX/Steelman/Steelman_SAM_Radar_1.wav")
+
+    ButtonTextToken         = 'ORD_FORAA'
+    HintTitleToken          = 'HNT_FORAA'
+    HintBodyToken           = 'HNB_FORAA'
+    HintExtendedToken       = ''
+    HintDico                = ~/LocalisationConstantes/dico_interface_ingame
+    ActionType              = OrderInstant
+    CubeActionFunctionType  = StrategicCubeActionFunctionType/Orders
+    Mapping                 = $/KeyboardOption/Mapping_CallArtillery
+
+)

@@ -1,0 +1,105 @@
+//*****************************************************************************
+// Mechant copier-coller de visualdebuginfohandler.ndf, mais je ne sais pas vraiment comment ça marche, alors je fais ce que je peux.
+template Template_RenderParameterBlended
+[
+    MeshMaterialFill2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend2D,
+    CalqueFill2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Fill,
+]
+is TRenderTypeParameters
+(
+    Name = "blend"
+    MeshMaterialFill2D = <MeshMaterialFill2D>
+    MeshMaterialBorder2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend2D
+    MeshMaterialFill3D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend
+    MeshMaterialBorder3D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend
+    CalqueLine2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Line
+    CalqueFill2D = <CalqueFill2D>
+    CalqueLine3D = $/M3D/Scene/Scene3D_AfterPostProcess/Calque_DebugInfo_Line
+    CalqueFill3D = $/M3D/Scene/Scene3D_AfterPostProcess/Calque_DebugInfo_Fill
+    SortTriangles3D = true
+)
+
+RenderParameterAdditive is TRenderTypeParameters
+(
+    Name = "additive"
+    MeshMaterialFill2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Additive2D
+    MeshMaterialBorder2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Additive2D
+    MeshMaterialFill3D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Additive
+    MeshMaterialBorder3D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Additive
+    CalqueLine2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Line
+    CalqueFill2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Fill
+    CalqueLine3D = $/M3D/Scene/Scene3D_AfterPostProcess/Calque_DebugInfo_Line
+    CalqueFill3D = $/M3D/Scene/Scene3D_AfterPostProcess/Calque_DebugInfo_Fill
+    SortTriangles3D = false
+)
+
+template Template_TextRenderParameter // standard
+[
+    Name = "std",
+    MeshMaterial = $/M3D/Shader/MaterialText_Std,
+    Calque = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Line, // pas bien, mais on n'est pas sensé l'utiliser...
+    FreeTypeGenerator = $/M3D/Fonts/DebugFont
+]
+is TTextRenderTypeParameters
+(
+    Name = <Name>
+    MeshMaterial = <MeshMaterial>
+    Calque = <Calque>
+    FreeTypeGenerator = <FreeTypeGenerator>
+)
+//*****************************************************************************
+export SelectionRenderToolBox is TDynamicRenderToolBox
+(
+    MainCamera = $/M3D/Misc/CameraPrincipale
+    Scene2D   = $/M3D/Scene/Scene_2D_Interface
+    WorldFloorProxy = $/M3D/Scene/WorldFloorForIAProxy
+    CalqueText   = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Line
+    FreeTypeGenerator = $/M3D/Fonts/HandPenFont
+    MeshMaterialText   = $/M3D/Shader/MaterialText_Std
+
+    RenderParameters =
+    [
+        Template_RenderParameterBlended(), // 0
+        RenderParameterAdditive, // 1
+        Template_RenderParameterBlended // Button Standard 2
+        (
+            MeshMaterialFill2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend2D_ButtonStandard
+            CalqueFill2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Fill
+        ),
+        Template_RenderParameterBlended // Button Hovered 3
+        (
+            MeshMaterialFill2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend2D_ButtonHovered
+            CalqueFill2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Fill
+        ),
+        Template_RenderParameterBlended // Button Pressed 4
+        (
+            MeshMaterialFill2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend2D_ButtonPressed
+            CalqueFill2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Fill
+        ),
+        Template_RenderParameterBlended // Button Disabled 5
+        (
+            MeshMaterialFill2D = $/M3D/Shader/MeshMaterialVisualDebugInfoHandler_Blend2D_ButtonDisabled
+            CalqueFill2D = $/M3D/Scene/Scene_2D_Interface/Calque_Selection_Fill
+        )
+    ]
+
+    TextRenderParameters = // Doit rester dans cet ordre
+    [
+        Template_TextRenderParameter // Default
+        (
+            Name = "default"
+            MeshMaterial = $/M3D/Shader/MaterialText_Stroke
+        ),
+        Template_TextRenderParameter(), // Std
+        Template_TextRenderParameter // Stroke
+        (
+            Name = "stroke"
+            MeshMaterial = $/M3D/Shader/MaterialText_Stroke
+        ),
+        Template_TextRenderParameter // Shadow
+        (
+            Name = "shadow"
+            MeshMaterial = $/M3D/Shader/MaterialText_Shadow
+        ),
+    ]
+)

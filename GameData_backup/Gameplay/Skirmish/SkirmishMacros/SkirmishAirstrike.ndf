@@ -1,0 +1,191 @@
+//-------------------------------------------------------------------------
+//----------------------------- AIRSTRIKE ---------------------------------
+//-------------------------------------------------------------------------
+
+// Maintains
+//-------------------------------------------------------------------------
+export Maintain_AirStrike is TMacroActionDescriptor_AirStrike_Common
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_Maintain),
+    ]
+)
+//-------------------------------------------------------------------------
+// Template
+//-------------------------------------------------------------------------
+private template Template_Airstrike
+[
+    MinimumResourceForLaunch = MAP[],
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/All,
+    PoolModel = ~/Pool_Airstrike_AA,
+    AnnulerSupportSiAttaqueEchoue = false,
+    AdditionnalParameter = []
+]
+is TMacroActionDescriptor_AirStrike_Common
+(
+    ParametresDeMission =
+    [
+        TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [<PoolModel>]),
+        TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+        TAirStrikeSettingHolder(AnnulerSupportSiAttaqueEchoue = <AnnulerSupportSiAttaqueEchoue> TypesDeRequetesAcceptees = <TypesDeRequetesAcceptees>),
+    ]
+    +
+    <AdditionnalParameter>
+)
+//-------------------------------------------------------------------------
+// Missions
+//-------------------------------------------------------------------------
+export Airstrike_AA is Template_Airstrike
+(
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/Defense | ~/EAirStrikeRequestType/OpportunisticSingleTarget
+    PoolModel = ~/Pool_Airstrike_AA
+    AdditionnalParameter =
+    [
+        TAirStrikeAcceptableThreatSettingHolder(PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.5),
+        TAirStrikeAcceptableThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile, IADifficulty/PlusDifficile] PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.65),
+    ]
+)
+
+//-------------------------------------------------------------------------
+export Airstrike_Offense is Template_Airstrike
+(
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/Attack | ~/EAirStrikeRequestType/OpportunisticTargetInGroup
+    PoolModel = ~/Pool_Airstrike_Offense
+    AnnulerSupportSiAttaqueEchoue = true
+    AdditionnalParameter =
+    [
+        TAirStrikeAcceptableThreatSettingHolder(PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.5),
+        TAirStrikeAcceptableThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile, IADifficulty/PlusDifficile] PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.65),
+    ]
+)
+//-------------------------------------------------------------------------
+export Airstrike_Assault is Template_Airstrike
+(
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/OpportunisticSingleTarget
+    PoolModel = ~/Pool_Airstrike_Assault
+    AdditionnalParameter =
+    [
+        TAirStrikeAcceptableThreatSettingHolder(PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.5),
+        TAirStrikeAcceptableThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile, IADifficulty/PlusDifficile] PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.65),
+    ]
+)
+//-------------------------------------------------------------------------
+export Airstrike_SEAD is Template_Airstrike
+(
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/OpportunisticSingleTarget
+    PoolModel = ~/Pool_Airstrike_SEAD
+    AnnulerSupportSiAttaqueEchoue = true
+)
+//-------------------------------------------------------------------------
+// Autogens
+//-------------------------------------------------------------------------
+export Airstrike_AA_Autogen is Template_Airstrike
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/Defense | ~/EAirStrikeRequestType/OpportunisticSingleTarget
+    PoolModel = ~/Pool_Airstrike_AA
+    AdditionnalParameter =
+    [
+        TAirStrikeAcceptableThreatSettingHolder(PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.5),
+        TAirStrikeAcceptableThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile, IADifficulty/PlusDifficile] PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.65),
+    ]
+)
+
+//-------------------------------------------------------------------------
+export Airstrike_Offense_Autogen is Template_Airstrike
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/Attack | ~/EAirStrikeRequestType/OpportunisticTargetInGroup
+    PoolModel = ~/Pool_Airstrike_Offense
+    AnnulerSupportSiAttaqueEchoue = true
+    AdditionnalParameter =
+    [
+        TAirStrikeAcceptableThreatSettingHolder(PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.5),
+        TAirStrikeAcceptableThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile, IADifficulty/PlusDifficile] PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.65),
+    ]
+)
+//-------------------------------------------------------------------------
+export Airstrike_Assault_Autogen is Template_Airstrike
+(
+    MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
+    TypesDeRequetesAcceptees = ~/EAirStrikeRequestType/OpportunisticSingleTarget
+    PoolModel = ~/Pool_Airstrike_Assault
+    AdditionnalParameter =
+    [
+        TAirStrikeAcceptableThreatSettingHolder(PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.5),
+        TAirStrikeAcceptableThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile, IADifficulty/PlusDifficile] PercentAcceptableDangerousIndicesForAirplaneValidTarget = 0.65),
+    ]
+)
+
+// Pool Models
+//-------------------------------------------------------------------------
+export Pool_Airstrike_AA is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{80a63040-d931-11e8-bf7b-2c56dc4c150d}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = true
+        PriceComparisonMethod = EPriceComparatorType/Cheapest
+        TagsPriority = [
+            "Avion_Chasseur",
+            "Avion_Chasseur_Bombardier",
+        ]
+    ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Airstrike_Offense is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{80aa9d0f-d931-11e8-89ef-2c56dc4c150d}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = false
+        PriceComparisonMethod = EPriceComparatorType/Cheapest
+        TagsPriority = [
+            "Avion_Bombardier",
+            "Avion_Chasseur_Bombardier",
+            "Avion_Napalm",
+        ]
+    ),
+    ]
+)
+//-------------------------------------------------------------------------
+export Pool_Airstrike_Assault is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{80aa9d10-d931-11e8-9a73-2c56dc4c150d}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = false
+        PriceComparisonMethod = EPriceComparatorType/Random
+        TagsPriority = [
+            "Avion_AT",
+        ]
+    ),
+    ]
+)
+
+//-------------------------------------------------------------------------
+export Pool_Airstrike_SEAD is TPoolModel
+(
+    ModelList = [
+    TPoolElement(
+        DescriptorId = GUID:{8d3598d6-de00-4fbe-88e1-617b67d4748e}
+        Required = true
+        Nb = 1
+        IndexPriorityOverPrice = true
+        PriceComparisonMethod = EPriceComparatorType/Cheapest
+        TagsPriority = [
+            "Avion_SEAD",
+        ]
+    ),
+    ]
+)
+

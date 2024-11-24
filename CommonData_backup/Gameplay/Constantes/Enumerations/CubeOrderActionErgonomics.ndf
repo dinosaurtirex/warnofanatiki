@@ -1,0 +1,3 @@
+// Enum TCubeOrderActionErgonomics // A maintenir synchro avec EugIA_Common/CubeOrderLocalPlayerState.h
+OrderInstant             is 0
+OrderWithClickValidation is 1

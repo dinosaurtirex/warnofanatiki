@@ -1,0 +1,22 @@
+TestUI_Stub is TUIResourceTexture_Common( FileName = "CommonData:/Assets/2D/Misc/CarreBlanc.png" )
+
+TextureGameplay_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
+(
+    Textures = MAP
+    [
+        ("TestUI_StubTexture",                              MAP [(~/ComponentState/Normal, ~/TestUI_Stub)]),
+        ("Texture_Division_Emblem_TestUI_StubTexture",      MAP [(~/ComponentState/Normal, ~/TestUI_Stub)]),
+        ("Texture_Division_Portrait_TestUI_StubTexture",    MAP [(~/ComponentState/Normal, ~/TestUI_Stub)]),
+        ("Texture_Division_Type_TestUI_StubTexture",        MAP [(~/ComponentState/Normal, ~/TestUI_Stub)]),
+        ("Texture_Minimap_Unit_SmallBuilding",              MAP [(~/ComponentState/Normal, ~/TestUI_Stub)]),
+
+        ("Texture_RTS_H_NATO_Unidentified",                 MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_NATO_Unidentified)] ),
+        ("Texture_Test_RTS_H_NATO_Unidentified",            MAP [(~/ComponentState/Normal, ~/Texture_Test_RTS_H_NATO_Unidentified)] ),
+        ("Texture_NATO_Unidentified",                       MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_NATO_Unidentified)] ),
+        ("Texture_Test_NATO_Unidentified",                  MAP [(~/ComponentState/Normal, ~/Texture_Test_NATO_Unidentified)] ),
+        ("Texture_Test_STRATEGIC_RTS_H_Armor",              MAP [(~/ComponentState/Normal, ~/Texture_Test_NATO_Unidentified)] ),
+        ("Texture_Test_STRATEGIC_Armor",                    MAP [(~/ComponentState/Normal, ~/Texture_Test_NATO_Unidentified)] ),
+        ("Texture_Test_STRATEGIC_RTS_H_Plane_Fighter",      MAP [(~/ComponentState/Normal, ~/Texture_Test_NATO_Unidentified)] ),
+        ("Texture_Test_STRATEGIC_Plane_Fighter",            MAP [(~/ComponentState/Normal, ~/Texture_Test_NATO_Unidentified)] ),
+    ]
+)

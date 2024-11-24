@@ -1,0 +1,20 @@
+// synchro avec: Engine/Code/Eugen/CPP/EugIA_Common/FlagList.h
+Flag_Avion is 0
+Flag_Batiment is 1
+Flag_Detectable is 2
+Flag_EnCombat is 3
+Flag_Infanterie is 4
+Flag_LdDetectable is 5
+Flag_Tank is 6
+Flag_IsAttacked is 7
+Flag_CannotAttackEnReflex is 8
+Flag_AlreadyModifiePorteeDuTirUnitGroup is 9
+Flag_AlreadyUnitGroupIncontrolable is 10
+Flag_LowAltitudeFlying is 11
+Flag_NearGroundFlying is 12
+Flag_DetectableLowAltitude is 13
+Flag_HighAltitudeFlying is 14
+Flag_FakeTarget is 15
+Flag_ProjectileFlying is 16
+Flag_SousTirArtillerie is 17
+Flag_DEPRECATED_NePasUtiliser_OnlyForBriquePython_Helico is 18

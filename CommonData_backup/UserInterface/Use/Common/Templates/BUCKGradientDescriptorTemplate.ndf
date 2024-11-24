@@ -1,0 +1,103 @@
+template BUCKGradientDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    Transition0 : float = 0.0,                                          // Début de la transition color0->color1. Cette valeur est relative (reseigner IsRelative) ou magnifiable (par défaut)
+    Transition1 : float = 0.0,                                          // Fin de la transition color0->color1. Cette valeur est relative (reseigner IsRelative) ou magnifiable (par défaut)
+    Transition2 : float = 0.0,                                          // Début de la transition color1->color0. Cette valeur est relative (reseigner IsRelative) ou magnifiable (par défaut)
+    Transition3 : float = 0.0,                                          // Fin de la transition color1->color0. Cette valeur est relative (reseigner IsRelative) ou magnifiable (par défaut)
+
+    TransitionColor0 : string = "",                                     // Couleur de transition 0
+    TransitionColor1 : string = "",                                     // Couleur de transition 1
+
+    IsRelative : bool = false,                                          // Faux = la valeur des TransitionX est considérée comme magnifiable, Vrai = la valeur des TransitionX est considérée comme relative
+    IsVertical : bool = false,                                          // Faux = gradient horizontal, Vrai = gradient vertical
+
+    LocalRenderLayer : int = 0,                                         // Layer local pour le composant
+]
+is TBUCKGradientDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    HasBackground = <HasBackground>
+    BackgroundBlockColorToken = <BackgroundBlockColorToken>
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    LocalRenderLayer = <LocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    Transition0 = <Transition0>
+    Transition1 = <Transition1>
+    Transition2 = <Transition2>
+    Transition3 = <Transition3>
+
+    TransitionColor0 = <TransitionColor0>
+    TransitionColor1 = <TransitionColor1>
+
+    IsRelative = <IsRelative>
+    IsVertical = <IsVertical>
+)

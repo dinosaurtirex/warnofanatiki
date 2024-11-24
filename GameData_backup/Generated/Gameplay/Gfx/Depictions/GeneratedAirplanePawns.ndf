@@ -1,0 +1,553 @@
+// Ne pas éditer, ce fichier est généré par DepictionAirplanePawnsFileWriter
+
+
+Depiction_pion_BEL_11Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_1Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_23Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_2Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_31Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_349Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_350Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16A_AA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_42Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Mirage_5_BA_MIRSIP_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_7Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Alpha_Jet_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_BEL_8Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Mirage_5_BA_BEL
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_BEL
+)
+Depiction_pion_RDA_JBG37 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23BN_DDR
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_DDR
+)
+Depiction_pion_RDA_JG1 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_DDR
+)
+Depiction_pion_RDA_JG3 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_DDR
+)
+Depiction_pion_RDA_JG7 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_DDR
+)
+Depiction_pion_RDA_JG8 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_21bis_AA2_DDR
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_DDR
+)
+Depiction_pion_RFA_JBG33 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_RFA
+)
+Depiction_pion_RFA_JBG33_2 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Tornado_IDS_AT1_RFA
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_RFA
+)
+Depiction_pion_RFA_JBG35 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_RFA
+)
+Depiction_pion_RFA_JBG35_2 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4F_Phantom_II_HE1_RFA
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_RFA
+)
+Depiction_pion_RFA_JG74 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_RFA
+)
+Depiction_pion_RFA_JG74_2 is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4F_Phantom_II_AA_RFA
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_RFA
+)
+Depiction_pion_SOV_11ORAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Su_24MP_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_19GAPIB is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_27M_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_20GAPIB is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Su_17M4_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_294ORAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Su_17M4_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_296APIB is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_27M_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_31IGAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_33IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_357OCHAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Su_25_he_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_35IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_29_AA_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_368OCHAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Su_25_he_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_559APIB is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_730APIB is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Su_17M4_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_73IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23ML_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_773IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23ML_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_787IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23ML_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_833IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23P_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_85IGAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23ML_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_911APIB is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_27M_sead_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_931ORAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_25BM_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_SOV_968IAP is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_MiG_23ML_SOV
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_SOV
+)
+Depiction_pion_UK_12Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Buccaneer_S2B_HE_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_UK_16_20Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_UK_17_31Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_UK_19_92Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4_Phantom_AA_F3_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_UK_2_15Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_UK_3_4Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_UK_9_14Sq is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_Tornado_ADV_HE_UK
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_UK
+)
+Depiction_pion_US_10TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_22TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_23TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_313TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_32TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_4450TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F117_Nighthawk_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_480TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_492TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111F_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_493TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111F_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_494TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111F_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_495TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111F_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_496TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_509TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_510TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_511TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_512TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_525TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_526TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_527Aggress is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_53TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F15C_Eagle_AA_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_55TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111E_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_77TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111E_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_78TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_79TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F111E_Aardvark_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_81TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_81TFW is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_91TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_pion_US_92TFS is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_A10_Thunderbolt_II_ATGM_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_test_avion_alex is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_HE_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Depiction_test_avion_cas is StrategicAirplanePawnDepictionTemplate
+(
+    MeshDescriptorPawn = $/GFX/DepictionResources/Modele_F16E_HE_US
+    MeshSocle = $/GFX/DepictionResources/MeshModele_Socle_US
+)
+Gfx_pion_BEL_11Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_11Sq)
+Gfx_pion_BEL_1Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_1Sq)
+Gfx_pion_BEL_23Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_23Sq)
+Gfx_pion_BEL_2Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_2Sq)
+Gfx_pion_BEL_31Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_31Sq)
+Gfx_pion_BEL_349Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_349Sq)
+Gfx_pion_BEL_350Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_350Sq)
+Gfx_pion_BEL_42Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_42Sq)
+Gfx_pion_BEL_7Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_7Sq)
+Gfx_pion_BEL_8Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_BEL_8Sq)
+Gfx_pion_RDA_JBG37 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RDA_JBG37)
+Gfx_pion_RDA_JG1 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RDA_JG1)
+Gfx_pion_RDA_JG3 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RDA_JG3)
+Gfx_pion_RDA_JG7 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RDA_JG7)
+Gfx_pion_RDA_JG8 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RDA_JG8)
+Gfx_pion_RFA_JBG33 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RFA_JBG33)
+Gfx_pion_RFA_JBG33_2 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RFA_JBG33_2)
+Gfx_pion_RFA_JBG35 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RFA_JBG35)
+Gfx_pion_RFA_JBG35_2 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RFA_JBG35_2)
+Gfx_pion_RFA_JG74 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RFA_JG74)
+Gfx_pion_RFA_JG74_2 is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_RFA_JG74_2)
+Gfx_pion_SOV_11ORAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_11ORAP)
+Gfx_pion_SOV_19GAPIB is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_19GAPIB)
+Gfx_pion_SOV_20GAPIB is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_20GAPIB)
+Gfx_pion_SOV_294ORAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_294ORAP)
+Gfx_pion_SOV_296APIB is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_296APIB)
+Gfx_pion_SOV_31IGAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_31IGAP)
+Gfx_pion_SOV_33IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_33IAP)
+Gfx_pion_SOV_357OCHAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_357OCHAP)
+Gfx_pion_SOV_35IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_35IAP)
+Gfx_pion_SOV_368OCHAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_368OCHAP)
+Gfx_pion_SOV_559APIB is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_559APIB)
+Gfx_pion_SOV_730APIB is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_730APIB)
+Gfx_pion_SOV_73IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_73IAP)
+Gfx_pion_SOV_773IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_773IAP)
+Gfx_pion_SOV_787IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_787IAP)
+Gfx_pion_SOV_833IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_833IAP)
+Gfx_pion_SOV_85IGAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_85IGAP)
+Gfx_pion_SOV_911APIB is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_911APIB)
+Gfx_pion_SOV_931ORAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_931ORAP)
+Gfx_pion_SOV_968IAP is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_SOV_968IAP)
+Gfx_pion_UK_12Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_12Sq)
+Gfx_pion_UK_16_20Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_16_20Sq)
+Gfx_pion_UK_17_31Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_17_31Sq)
+Gfx_pion_UK_19_92Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_19_92Sq)
+Gfx_pion_UK_2_15Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_2_15Sq)
+Gfx_pion_UK_3_4Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_3_4Sq)
+Gfx_pion_UK_9_14Sq is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_UK_9_14Sq)
+Gfx_pion_US_10TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_10TFS)
+Gfx_pion_US_22TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_22TFS)
+Gfx_pion_US_23TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_23TFS)
+Gfx_pion_US_313TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_313TFS)
+Gfx_pion_US_32TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_32TFS)
+Gfx_pion_US_4450TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_4450TFS)
+Gfx_pion_US_480TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_480TFS)
+Gfx_pion_US_492TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_492TFS)
+Gfx_pion_US_493TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_493TFS)
+Gfx_pion_US_494TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_494TFS)
+Gfx_pion_US_495TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_495TFS)
+Gfx_pion_US_496TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_496TFS)
+Gfx_pion_US_509TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_509TFS)
+Gfx_pion_US_510TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_510TFS)
+Gfx_pion_US_511TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_511TFS)
+Gfx_pion_US_512TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_512TFS)
+Gfx_pion_US_525TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_525TFS)
+Gfx_pion_US_526TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_526TFS)
+Gfx_pion_US_527Aggress is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_527Aggress)
+Gfx_pion_US_53TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_53TFS)
+Gfx_pion_US_55TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_55TFS)
+Gfx_pion_US_77TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_77TFS)
+Gfx_pion_US_78TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_78TFS)
+Gfx_pion_US_79TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_79TFS)
+Gfx_pion_US_81TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_81TFS)
+Gfx_pion_US_81TFW is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_81TFW)
+Gfx_pion_US_91TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_91TFS)
+Gfx_pion_US_92TFS is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_pion_US_92TFS)
+Gfx_test_avion_alex is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_test_avion_alex)
+Gfx_test_avion_cas is TTimelyDepictionReceiverFactory( DepictionTemplate = Depiction_test_avion_cas)
+
+AerialPawnGhost is MAP[
+  ( 'pion_BEL_11Sq', Depiction_pion_BEL_11Sq ),
+  ( 'pion_BEL_1Sq', Depiction_pion_BEL_1Sq ),
+  ( 'pion_BEL_23Sq', Depiction_pion_BEL_23Sq ),
+  ( 'pion_BEL_2Sq', Depiction_pion_BEL_2Sq ),
+  ( 'pion_BEL_31Sq', Depiction_pion_BEL_31Sq ),
+  ( 'pion_BEL_349Sq', Depiction_pion_BEL_349Sq ),
+  ( 'pion_BEL_350Sq', Depiction_pion_BEL_350Sq ),
+  ( 'pion_BEL_42Sq', Depiction_pion_BEL_42Sq ),
+  ( 'pion_BEL_7Sq', Depiction_pion_BEL_7Sq ),
+  ( 'pion_BEL_8Sq', Depiction_pion_BEL_8Sq ),
+  ( 'pion_RDA_JBG37', Depiction_pion_RDA_JBG37 ),
+  ( 'pion_RDA_JG1', Depiction_pion_RDA_JG1 ),
+  ( 'pion_RDA_JG3', Depiction_pion_RDA_JG3 ),
+  ( 'pion_RDA_JG7', Depiction_pion_RDA_JG7 ),
+  ( 'pion_RDA_JG8', Depiction_pion_RDA_JG8 ),
+  ( 'pion_RFA_JBG33', Depiction_pion_RFA_JBG33 ),
+  ( 'pion_RFA_JBG33_2', Depiction_pion_RFA_JBG33_2 ),
+  ( 'pion_RFA_JBG35', Depiction_pion_RFA_JBG35 ),
+  ( 'pion_RFA_JBG35_2', Depiction_pion_RFA_JBG35_2 ),
+  ( 'pion_RFA_JG74', Depiction_pion_RFA_JG74 ),
+  ( 'pion_RFA_JG74_2', Depiction_pion_RFA_JG74_2 ),
+  ( 'pion_SOV_11ORAP', Depiction_pion_SOV_11ORAP ),
+  ( 'pion_SOV_19GAPIB', Depiction_pion_SOV_19GAPIB ),
+  ( 'pion_SOV_20GAPIB', Depiction_pion_SOV_20GAPIB ),
+  ( 'pion_SOV_294ORAP', Depiction_pion_SOV_294ORAP ),
+  ( 'pion_SOV_296APIB', Depiction_pion_SOV_296APIB ),
+  ( 'pion_SOV_31IGAP', Depiction_pion_SOV_31IGAP ),
+  ( 'pion_SOV_33IAP', Depiction_pion_SOV_33IAP ),
+  ( 'pion_SOV_357OCHAP', Depiction_pion_SOV_357OCHAP ),
+  ( 'pion_SOV_35IAP', Depiction_pion_SOV_35IAP ),
+  ( 'pion_SOV_368OCHAP', Depiction_pion_SOV_368OCHAP ),
+  ( 'pion_SOV_559APIB', Depiction_pion_SOV_559APIB ),
+  ( 'pion_SOV_730APIB', Depiction_pion_SOV_730APIB ),
+  ( 'pion_SOV_73IAP', Depiction_pion_SOV_73IAP ),
+  ( 'pion_SOV_773IAP', Depiction_pion_SOV_773IAP ),
+  ( 'pion_SOV_787IAP', Depiction_pion_SOV_787IAP ),
+  ( 'pion_SOV_833IAP', Depiction_pion_SOV_833IAP ),
+  ( 'pion_SOV_85IGAP', Depiction_pion_SOV_85IGAP ),
+  ( 'pion_SOV_911APIB', Depiction_pion_SOV_911APIB ),
+  ( 'pion_SOV_931ORAP', Depiction_pion_SOV_931ORAP ),
+  ( 'pion_SOV_968IAP', Depiction_pion_SOV_968IAP ),
+  ( 'pion_UK_12Sq', Depiction_pion_UK_12Sq ),
+  ( 'pion_UK_16_20Sq', Depiction_pion_UK_16_20Sq ),
+  ( 'pion_UK_17_31Sq', Depiction_pion_UK_17_31Sq ),
+  ( 'pion_UK_19_92Sq', Depiction_pion_UK_19_92Sq ),
+  ( 'pion_UK_2_15Sq', Depiction_pion_UK_2_15Sq ),
+  ( 'pion_UK_3_4Sq', Depiction_pion_UK_3_4Sq ),
+  ( 'pion_UK_9_14Sq', Depiction_pion_UK_9_14Sq ),
+  ( 'pion_US_10TFS', Depiction_pion_US_10TFS ),
+  ( 'pion_US_22TFS', Depiction_pion_US_22TFS ),
+  ( 'pion_US_23TFS', Depiction_pion_US_23TFS ),
+  ( 'pion_US_313TFS', Depiction_pion_US_313TFS ),
+  ( 'pion_US_32TFS', Depiction_pion_US_32TFS ),
+  ( 'pion_US_4450TFS', Depiction_pion_US_4450TFS ),
+  ( 'pion_US_480TFS', Depiction_pion_US_480TFS ),
+  ( 'pion_US_492TFS', Depiction_pion_US_492TFS ),
+  ( 'pion_US_493TFS', Depiction_pion_US_493TFS ),
+  ( 'pion_US_494TFS', Depiction_pion_US_494TFS ),
+  ( 'pion_US_495TFS', Depiction_pion_US_495TFS ),
+  ( 'pion_US_496TFS', Depiction_pion_US_496TFS ),
+  ( 'pion_US_509TFS', Depiction_pion_US_509TFS ),
+  ( 'pion_US_510TFS', Depiction_pion_US_510TFS ),
+  ( 'pion_US_511TFS', Depiction_pion_US_511TFS ),
+  ( 'pion_US_512TFS', Depiction_pion_US_512TFS ),
+  ( 'pion_US_525TFS', Depiction_pion_US_525TFS ),
+  ( 'pion_US_526TFS', Depiction_pion_US_526TFS ),
+  ( 'pion_US_527Aggress', Depiction_pion_US_527Aggress ),
+  ( 'pion_US_53TFS', Depiction_pion_US_53TFS ),
+  ( 'pion_US_55TFS', Depiction_pion_US_55TFS ),
+  ( 'pion_US_77TFS', Depiction_pion_US_77TFS ),
+  ( 'pion_US_78TFS', Depiction_pion_US_78TFS ),
+  ( 'pion_US_79TFS', Depiction_pion_US_79TFS ),
+  ( 'pion_US_81TFS', Depiction_pion_US_81TFS ),
+  ( 'pion_US_81TFW', Depiction_pion_US_81TFW ),
+  ( 'pion_US_91TFS', Depiction_pion_US_91TFS ),
+  ( 'pion_US_92TFS', Depiction_pion_US_92TFS ),
+  ( 'test_avion_alex', Depiction_test_avion_alex ),
+  ( 'test_avion_cas', Depiction_test_avion_cas ),
+]
+

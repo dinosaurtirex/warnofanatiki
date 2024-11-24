@@ -1,0 +1,28 @@
+export Modele_Mi_8TV_PodGatling_DDR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TV/Mi_8TV.fbx'
+)
+
+export Modele_Mi_8TV_PodGatling_DDR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/Mi_8TV_MID/Mi_8TV_MID.fbx'
+)
+
+export Modele_Mi_8TV_PodGatling_DDR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/DDR/Helico/LODS/Mi_8TV_LOW.fbx'
+)
+
+export ModelFile_Pod_GUV_Gatling_t1 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/GUV/GUV_Gatling_t1.fbx'
+
+export Modele_Mi_8TV_PodGatling_DDR_Tourelle_01 is ModelDescriptor
+(
+    FileName = ModelFile_Pod_GUV_Gatling_t1
+)
+
+export ModelFile_Pod_GUV_Gatling_t2 is 'GameData:/Assets/3D/Units/Ammo/Tourelles/SOV/GUV/GUV_Gatling_t2.fbx'
+
+export Modele_Mi_8TV_PodGatling_DDR_Tourelle_02 is ModelDescriptor
+(
+    FileName = ModelFile_Pod_GUV_Gatling_t2
+)

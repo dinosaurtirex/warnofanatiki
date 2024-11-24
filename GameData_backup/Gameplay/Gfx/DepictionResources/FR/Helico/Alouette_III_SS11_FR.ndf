@@ -1,0 +1,14 @@
+export Modele_Alouette_III_SS11_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Helico/Alouette_III_SS11/Alouette_III_SS11.fbx'
+)
+
+export Modele_Alouette_III_SS11_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Helico/Alouette_III_SS11/Alouette_III_SS11.fbx'
+)
+
+export Modele_Alouette_III_SS11_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Helico/Alouette_III_SS11/Alouette_III_SS11.fbx'
+)

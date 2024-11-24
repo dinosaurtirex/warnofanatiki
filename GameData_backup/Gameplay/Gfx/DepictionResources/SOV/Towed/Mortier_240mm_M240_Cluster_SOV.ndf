@@ -1,0 +1,17 @@
+export Modele_Mortier_240mm_M240_Cluster_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_240mm_M240_SOV
+)
+
+export Modele_Mortier_240mm_M240_Cluster_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_240mm_M240_SOV_MID
+)
+
+export Modele_Mortier_240mm_M240_Cluster_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_240mm_M240_SOV_LOW
+)
+
+
+

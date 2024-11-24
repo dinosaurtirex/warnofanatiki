@@ -1,0 +1,14 @@
+export Modele_VLTT_P4_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/VLTT_P4/VLTT_P4.fbx'
+)
+
+export Modele_VLTT_P4_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/VLTT_P4_MID/VLTT_P4_MID.fbx'
+)
+
+export Modele_VLTT_P4_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/LODS/VLTT_P4_LOW.fbx'
+)

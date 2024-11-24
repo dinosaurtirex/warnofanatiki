@@ -1,0 +1,81 @@
+// A maintenir synchro avec Enumerations/IADifficulty.ndf
+// A maintenir synchro avec Data/Python/Eugen/leveldesign_specific/enum_ia_difficulty.py
+
+IADifficultyNdfEnum is EIADifficulty
+(
+    Values = [
+        "HumanDifficulty",
+        "VeryEasy",
+        "Easy",
+        "Medium",
+        "Hard",
+        "VeryHard",
+        "Hardest",
+        "Scripted",
+    ]
+)
+
+IAListConfig is TIADifficultyListConfiguration
+(
+    HumanIADifficulty = IADifficulty/HumanDifficulty
+    IAAnyDifficulty = IADifficulty/AnyDifficulty
+    DefaultIADifficulty = IADifficulty/Normal
+    ScriptedDifficulty = IADifficulty/Scripted
+    IADifficultyList = MAP
+    [
+        (
+            IADifficulty/TresFacile,
+            TIADifficultyConfiguration
+            (
+                IAName = "AI_VEASY"
+                IADifficultyName = "AB_AI_0"
+                IADifficultyHint = "AB_AIH0"
+            )
+        ),
+        (
+            IADifficulty/Facile,
+            TIADifficultyConfiguration
+            (
+                IAName = "AI_EASY"
+                IADifficultyName = "AB_AI_1"
+                IADifficultyHint = "AB_AIH1"
+            )
+        ),
+        (
+            IADifficulty/Normal,
+            TIADifficultyConfiguration
+            (
+                IAName = "AI_MEDIUM"
+                IADifficultyName = "AB_AI_2"
+                IADifficultyHint = "AB_AIH2"
+            )
+        ),
+        (
+            IADifficulty/Difficile,
+            TIADifficultyConfiguration
+            (
+                IAName = "AI_HARD"
+                IADifficultyName = "AB_AI_3"
+                IADifficultyHint = "AB_AIH3"
+            )
+        ),
+        (
+            IADifficulty/TresDifficile,
+            TIADifficultyConfiguration
+            (
+                IAName = "AI_VHARD"
+                IADifficultyName = "AB_AI_4"
+                IADifficultyHint = "AB_AIH4"
+            )
+        ),
+        (
+            IADifficulty/PlusDifficile,
+            TIADifficultyConfiguration
+            (
+                IAName = "AI_HARDEST"
+                IADifficultyName = "AB_AI_5"
+                IADifficultyHint = "AB_AIH5"
+            )
+        ),
+    ]
+)

@@ -1,0 +1,14 @@
+export Modele_DCA_I_Hawk_RFA is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/DCA/DCA_I_Hawk/DCA_I_Hawk.fbx'
+)
+
+export Modele_DCA_I_Hawk_RFA_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/DCA/DCA_I_Hawk/DCA_I_Hawk.fbx'
+)
+
+export Modele_DCA_I_Hawk_RFA_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/DCA/DCA_I_Hawk/DCA_I_Hawk.fbx'
+)

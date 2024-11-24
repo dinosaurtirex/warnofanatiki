@@ -1,0 +1,39 @@
+// -------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------
+
+BUCKSpecificStrategicHint is HintInGameBUCKComponent
+(
+    BackgroundBlockColorToken = "Noir_multi"
+    BorderLineColorToken = "Blanc_multi"
+)
+
+// Surface déclenchant un hint
+template BUCKSpecificStrategicHintableArea
+[
+    ElementName : string = "",
+
+    ForbiddenTags : list<string> = [],
+
+    // hint standard : un titre, un corps et un corps étendu avec des tokens fixes
+    DicoToken : string = "",
+    HintTitleToken : string = "",
+    HintBodyToken : string = "",
+    HintExtendedToken : string = "",
+
+    // hint avec un composant spécifique : les tokens et le composant standards ne seront pas utilisés
+    HintSpecificBUCKComponent : TBUCKContainerDescriptor = nil,
+]
+is HintableAreaBUCKComponent
+(
+    ElementName = <ElementName>
+
+    ForbiddenTags = <ForbiddenTags>
+
+    DicoToken = <DicoToken>
+    HintTitleToken = <HintTitleToken>
+    HintBodyToken = <HintBodyToken>
+    HintExtendedToken = <HintExtendedToken>
+
+    HintStandardBUCKComponent = BUCKSpecificStrategicHint
+    HintSpecificBUCKComponent = <HintSpecificBUCKComponent>
+)

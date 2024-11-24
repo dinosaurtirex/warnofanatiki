@@ -1,0 +1,143 @@
+//----------------------------------------------------------------------
+private UnitLabelSmartGroupViewDescriptor is BUCKLocalLayerContainerDescriptor
+(
+    ElementName = "LocalLayerContainer"
+
+    NbLayersToLock = 7
+
+    Components = [
+        ~/UpperLabelForSmartGroup,
+        ~/UnitLabelBottomComponent,
+    ]
+)
+//----------------------------------------------------------------------
+private UpperLabelForSmartGroup is BUCKListDescriptor
+(
+    ElementName = "UpperLabel"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableOffset = [0.0, -20.0]
+        MagnifiableWidthHeight = [2000.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 1.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    ClipContent = false
+
+    // Penser a modifier la taille en Pixel du LabelUnitBUCKComponent si on aggrandit ce composant !
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = CurrentUnitLabelUpperList()
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/CurrentUnitIconAndRightLabel
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = CarriedUnitNameList()
+        ),
+    ]
+)
+//----------------------------------------------------------------------
+private UpperLabelForSmartGroupNameOnly is BUCKListDescriptor
+(
+    ElementName = "UpperLabel"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableOffset = [0.0, -20.0]
+        MagnifiableWidthHeight = [2000.0, 0.0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 1.0]
+    )
+
+    Axis = ~/ListAxis/Vertical
+    ClipContent = false
+
+    // Penser a modifier la taille en Pixel du LabelUnitBUCKComponent si on aggrandit ce composant !
+    Elements =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = CurrentUnitLabelUpperList()
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = CarriedUnitNameList()
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = TSmartChipListDescriptor
+            (
+                UniformDrawer = $/UserInterface/UIUniformDrawer
+                ElementName = "SmartChipList"
+
+                Description = ~/SmartChipDescription
+
+                AlignementToFather = [0.5, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+                LocalRenderLayer = 2
+            )
+        )
+    ]
+)
+//----------------------------------------------------------------------
+private UnitLabelSmartGroupViewNameOnlyDescriptor is BUCKLocalLayerContainerDescriptor
+(
+    ElementName = "LocalLayerContainer"
+
+    NbLayersToLock = 7
+
+    Components =
+    [
+        ~/UpperLabelForSmartGroupNameOnly,
+        ~/UnitLabelBottomComponent,
+    ]
+)
+//-------------------------------------------------------------------------------------
+// L'etiquette smartgroup
+private template UISpecificInGameUnitLabelViewForSmartGroupDescriptor
+[
+    MainComponentDescriptor : TBUCKContainerDescriptor,
+]
+is TUISpecificInGameUnitLabelViewForSmartGroupDescriptor
+(
+    MainComponentDescriptor = <MainComponentDescriptor>
+
+    ExperienceTexturesResources     = ~/ExperienceTexturesResources
+
+    // Animation Concealed
+    // Temps de durée d'un blink
+    AnimConcealedBlinkDuration = 2.0
+    // Animation Panicked
+    // Temps de durée d'un blink
+    AnimPanickedBlinkDuration = 1.5
+    // Animation Shaken
+    // Temps de pause entre les séries de blink (0 => pas de pause)
+    AnimShakenPauseTime = 3.0
+    // Temps de durée d'un blink
+    AnimShakenBlinkDuration = 1.5
+    // Nombre de blinks par série (-1 => infini)
+    AnimShakenNbBlinks = 3
+    // Alpha Minimum atteint pour les animation de "suppress"
+    SuppressAnimAlphaMinimum = 20
+    // Alpha Minimum atteint pour l'animation "cachée"
+    ConcealedAnimAlphaMinimum = 20
+
+    // Textures
+    NormalBackgroundTexture = "CommonTexture_Label_Background"
+    CarriedUnitIconUnknown  = "UseInGame_Transport_UNKNOW"
+)
+//----------------------------------------------------------------------
+UISpecificUnitLabelSmartGroupViewDescriptor is UISpecificInGameUnitLabelViewForSmartGroupDescriptor
+(
+    MainComponentDescriptor = ~/UnitLabelSmartGroupViewDescriptor
+)
+//----------------------------------------------------------------------
+UISpecificUnitLabelSmartGroupViewNameOnlyDescriptor is UISpecificInGameUnitLabelViewForSmartGroupDescriptor
+(
+    MainComponentDescriptor = ~/UnitLabelSmartGroupViewNameOnlyDescriptor
+)

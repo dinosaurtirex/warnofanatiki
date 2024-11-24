@@ -1,0 +1,170 @@
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadNDF
+[
+    Files     = [] ,
+    Directories = [],
+    UsingNamespaces = [],
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+    Optional  : bool = false,
+    Moddable  : bool = false,
+    FillResourceList : bool    = false,
+    GenerateCRC  : bool = false,
+] is TClusterNdfTransactions
+(
+    Transactions = [TNDFTransaction
+    (
+        Files = <Files>
+        Directories = <Directories>
+        FillResourceList = <FillResourceList>
+        BaseName = <BaseName>
+        NameSpace =<NameSpace>
+        Optional = <Optional>
+        Moddable = <Moddable>
+        UsingNamespaces = <UsingNamespaces>
+        GenerateCRC = <GenerateCRC>
+    )]
+)
+//-----------------------------------------------------------------------------
+template TemplateClusterWithNDFLoadedSubCluster
+[
+    SubClusterName : string,
+    Files     = [] ,
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+    FillResourceList : bool    = false,
+] is TClusterWithNDFLoadedSubCluster
+(
+    SubClusterName = <SubClusterName>
+    Transactions = [TNDFTransaction
+    (
+        BaseName        = <BaseName>
+        NameSpace       = <NameSpace>
+        FillResourceList = <FillResourceList>
+        FileList         = [TNDFTransactionFileList(Files = <Files>)]
+    )]
+)
+//-----------------------------------------------------------------------------
+template TemplateClusterWithNDFLoadedSubCluster_ReloadableForGameplay
+[
+    SubClusterName : string,
+    Files     = [] ,
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+    Moddable  : bool         = false,
+    FillResourceList : bool    = false,
+] is TClusterWithNDFLoadedSubCluster_Reloadable
+(
+    SubClusterName = <SubClusterName>
+    Transactions = [TNDFTransaction
+    (
+        BaseName        = <BaseName>
+        NameSpace       = <NameSpace>
+        Moddable        = <Moddable>
+        FillResourceList = <FillResourceList>
+        FileList        = [TNDFTransactionFileList(Files = <Files>)]
+    )]
+    ReloadType = EReloadableType/Gameplay
+)
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadDirectoryNDF
+[
+    Directory   : string       = '' ,
+    BaseName  : string         = '',
+    NameSpace : string         = '',
+    Recursive : bool           = true,
+    FillResourceList : bool    = false,
+] is TClusterNdfTransactions
+(
+    Transactions = [TNDFTransaction
+    (
+        FileList =
+        [
+        TNDFTransactionDirectory
+        (
+            Directory = <Directory>
+            Recursive = <Recursive>
+        )
+        ]
+        BaseName = <BaseName>
+        NameSpace =<NameSpace>
+        FillResourceList = <FillResourceList>
+    )]
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+
+template TemplateClusterLoadNDFForNoFinal
+[
+    FileList     = [] ,
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+    FillResourceList : bool    = false,
+] is TClusterNdfTransactionCompilationDependent
+(
+    Transactions = [TNDFTransaction
+    (
+        FileList = <FileList>
+        BaseName = "NotFinal/" + <BaseName>
+        NameSpace =<NameSpace>
+        FillResourceList = <FillResourceList>
+    )]
+)
+//-----------------------------------------------------------------------------
+//*****************************************************************************
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadNDFForEditor
+[
+    Files     = [] ,
+    BaseName  : string,
+    NameSpace : string,
+    FillResourceList : bool    = false,
+] is TClusterInitialisation_EditorDependent
+(
+    SubClusterModeEditor = TClusterNdfTransactions
+    (
+        Transactions = [TNDFTransaction
+        (
+            FileList =
+            [
+            TNDFTransactionFileList
+            (
+                Files = <Files>
+            )
+            ]
+            BaseName = "Editor/" + <BaseName>
+            NameSpace =<NameSpace>
+            FillResourceList = <FillResourceList>
+        )]
+    )
+)
+//-----------------------------------------------------------------------------
+template TemplateClusterLoadForNoEditor
+[
+    Files     = [] ,
+    BaseName  : string       = '',
+    NameSpace : string       = '',
+    FillResourceList : bool    = false,
+] is TClusterInitialisation_EditorDependent
+(
+    SubClusterModeNoEditor = TClusterNdfTransactions
+    (
+        Transactions = [TNDFTransaction
+        (
+            FileList =
+            [
+            TNDFTransactionFileList
+            (
+                Files = <Files>
+            )
+            ]
+            FillResourceList = <FillResourceList>
+            BaseName = <BaseName>
+            NameSpace =<NameSpace>
+        )]
+    )
+)
+//-----------------------------------------------------------------------------

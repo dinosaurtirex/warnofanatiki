@@ -1,0 +1,18 @@
+//A maintenir synchro avec EnumAllianceStyle.h
+template EAllianceStyleCommon
+[
+]
+is TBaseClass
+(
+    NotInitialized  is 0
+    Neutral         is 1
+    AlliedWithAll   is 2
+    EnemyWithAll    is 3
+    StartSpecificValue is 4
+)
+
+template EAllianceStyleModernWarfare [] is EAllianceStyleCommon
+(
+    BLUFOR    is StartSpecificValue
+    REDFOR    is StartSpecificValue + 1
+)

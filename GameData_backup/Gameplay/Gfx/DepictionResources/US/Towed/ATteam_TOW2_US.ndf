@@ -1,0 +1,17 @@
+export Modele_ATteam_TOW2_US is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Antichar/BGM71E_TOW_2A/BGM71E_TOW_2A.fbx'
+)
+
+export Modele_ATteam_TOW2_US_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Antichar/BGM71E_TOW_2A/BGM71E_TOW_2A.fbx'
+)
+
+export Modele_ATteam_TOW2_US_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/US/Antichar/BGM71E_TOW_2A/BGM71E_TOW_2A.fbx'
+)
+
+
+

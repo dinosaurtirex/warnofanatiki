@@ -1,0 +1,126 @@
+template BUCKPolygonDescriptor
+[
+    // ++ BUCKContainerDescriptor
+    ElementName : string = "",
+    UniqueName : string = "",
+    RequiredTags : LIST<string> = [],
+    ForbiddenTags : LIST<string> = [],
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(),
+
+    MagnifierMultiplication : float = 0.0,
+
+    PointerEventsToAllow : int = ~/EAllowablePointerEventType/None,
+    HidePointerEvents : bool = false,
+
+    GridAlign : bool = false,
+
+    FitStyle : int = ~/ContainerFitStyle/None,
+    ChildFitToContent : bool = false,
+
+    ClipContent : bool = false,
+    IsClippable :bool = true,
+
+    HasBackground : bool = false,
+    BackgroundBlockColorToken : string = "",
+
+    HasBorder : bool = false,
+    BordersToDraw : int = ~/TBorderSide/Default,
+    BorderThicknessToken : string = "",
+    BorderLineColorToken : string = "",
+
+    BackgroundLocalRenderLayer : int = 0,
+    BorderLocalRenderLayer : int = 0,
+
+    ComponentStateLocked : bool = false,
+
+    Components : LIST<TBUCKContainerDescriptor> = [],
+    // -- BUCKContainerDescriptor
+
+    UniformAntiAliasedDrawer : TUIUniformAntiAliasedDrawer = $/UserInterface/UIUniformAntiAliasedDrawer, // Défini le drawer pour les bordures et background du polygone
+    PolygonShape : IBUCKPolygonShape = nil,
+
+    Color0 : string = "",                                                                                     // Première couleur pour le dégradé
+    Color1 : string = "",                                                                                     // Deuxième couleur pour le dégradé
+
+    IsVertical : bool = false,                                                                           // Indique si le dégradé est vertical ou horizontal
+]
+is TBUCKPolygonDescriptor
+(
+    // ++ BUCKContainerDescriptor
+    ElementName = <ElementName>
+    UniqueName = <UniqueName>
+    RequiredTags = <RequiredTags>
+    ForbiddenTags = <ForbiddenTags>
+    ComponentFrame = <ComponentFrame>
+
+    MagnifierMultiplication = <MagnifierMultiplication>
+
+    PointerEventsToAllow = <PointerEventsToAllow>
+    HidePointerEvents = <HidePointerEvents>
+
+    GridAlign = <GridAlign>
+
+    FitStyle = <FitStyle>
+    ChildFitToContent = <ChildFitToContent>
+
+    ClipContent = <ClipContent>
+    IsClippable = <IsClippable>
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    // On utilise plutot les propriétés Color0 et Color1 du Polygon (Background remplit un carre plutot que notre forme voulue)
+    HasBackground = false
+    BackgroundBlockColorToken = ""
+
+    HasBorder = <HasBorder>
+    BordersToDraw = <BordersToDraw>
+    BorderThicknessToken = <BorderThicknessToken>
+    BorderLineColorToken = <BorderLineColorToken>
+
+    BackgroundLocalRenderLayer = <BackgroundLocalRenderLayer>
+    BorderLocalRenderLayer = <BorderLocalRenderLayer>
+
+    ComponentStateLocked = <ComponentStateLocked>
+
+    Components = <Components>
+    // -- BUCKContainerDescriptor
+
+    UniformAntiAliasedDrawer = <UniformAntiAliasedDrawer>
+    PolygonShape = <PolygonShape>
+
+    baseColor is (<HasBackground> ? <BackgroundBlockColorToken> : <Color0>)
+    Color0 = (<Color0> != "" ? <Color0> : baseColor)
+    Color1 = (<Color1> != "" ? <Color1> : baseColor)
+
+    IsVertical = <IsVertical>
+)
+
+//------------------------------------------------------------------------------
+
+template PolygonShapeManual
+[
+    Corners : LIST<float2>, // La liste des sommets (valeurs relatives comprises entre 0.0 et 1.0)
+] is TBUCKPolygonShapeManual
+(
+    Corners = <Corners>
+)
+
+//------------------------------------------------------------------------------
+
+template PolygonShapeRoundedContainer
+[
+    //  0 dans les deux valeurs est interdit car dessine un carré, utilisez plutot un BUCKContainer pour ça
+    Radius : TRTTILength = TRTTILength
+    (
+        Relative = 0.0 // Rayon de l'arrondit en relatif - doit donc être compris entre 0 et 0.5(exclus)
+        Magnifiable = 10.0 // Rayon de l'arrondit en magnifiable - s'ajoute par dessus le Relatif
+    ), // Rayon en Pixel pas encore géré, surement encore un peu plus complexe, à éviter si on peu
+    NbOfPoints : int = 5, // Nombre de points utilisés pour dessiner l'arrondit. Plus Radius est grand, plus il devrait y'avoir besoin de les augmenter pour avoir un résultat joli. A 0, on se retrouve avec des bords coupés plutôt qu'arrondis
+    RoundedVertexes : LIST< bool > = [true, true, true, true], //Angles a arrondir, le tableau commence par le coin en haut a gauche, puis dans le sens inverse des aiguilles d'une montre.
+    // [TopLeft, BottomLeft, BottomRight, TopRight]
+] is TBUCKPolygonShapeRoundedContainer
+(
+    Radius = <Radius>
+    NbOfPoints = <NbOfPoints>
+    RoundedVertexes = <RoundedVertexes>
+)

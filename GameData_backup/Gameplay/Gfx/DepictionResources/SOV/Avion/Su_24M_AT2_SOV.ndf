@@ -1,0 +1,19 @@
+export Modele_Su_24M_AT2_SOV is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/Su_24M_SOV/Su_24M_SOV.fbx'
+)
+
+export Modele_Su_24M_AT2_SOV_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/Su_24M_SOV_MID/Su_24M_SOV_MID.fbx'
+)
+
+export Modele_Su_24M_AT2_SOV_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/LODS/Su_24M_SOV_LOW.fbx'
+)
+
+export Modele_Su_24M_AT2_SOV_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/URSS/Avion/Su_24M_SOV/Su_24M_SOV_Train.fbx'
+)

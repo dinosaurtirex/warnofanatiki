@@ -1,0 +1,95 @@
+export Scaling_TestAuto_Strategy is TIAGeneralStrategy
+(
+    StrategyName = "SupTAIA"
+    FirstGenerator = TestAuto_Scaling_Choose_Strategy
+    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
+    TransitionList =
+    [
+        TestAuto_Scaling_Transition_StartToPhaseCommand,
+        TestAuto_Scaling_Transition_StartToGeneric,
+        TestAuto_Scaling_Transition_DeployToCommandPhase,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//---------------------------- CONDITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Condition_GotoGeneric is TSequenceCondition_Not
+(
+    Condition = ~/TestAuto_Scaling_Condition_CommandPhase
+)
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Condition_CommandPhase is TSequenceCondition_Phase
+(
+    PhaseType = CommandPhase
+)
+//-------------------------------------------------------------------------
+//--------------------------- TRANSITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Transition_StartToPhaseCommand is TIAGeneralStrategyTransition
+(
+    Origine = TestAuto_Scaling_Choose_Strategy
+    Condition = TestAuto_Scaling_Condition_CommandPhase
+    Destination = TestAuto_Scaling_Phase_Command
+)
+export TestAuto_Scaling_Transition_StartToGeneric is TIAGeneralStrategyTransition
+(
+    Origine = TestAuto_Scaling_Choose_Strategy
+    Condition = TestAuto_Scaling_Condition_GotoGeneric
+    Destination = TestAuto_Scaling_Phase_Deploiement
+)
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Transition_DeployToCommandPhase is TIAGeneralStrategyTransition
+(
+    Origine = TestAuto_Scaling_Phase_Deploiement
+    Condition = TestAuto_Scaling_Condition_CommandPhase
+    Destination = TestAuto_Scaling_Phase_Command
+)
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Choose_Strategy is TSequenceGeneratorDescriptor
+(
+    // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+        ~/Support_Transports,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Phase_Deploiement is TSequenceGeneratorDescriptor
+(
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+        ~/Attack_Objectives_OnlyTestAuto,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export TestAuto_Scaling_Phase_Command is TSequenceGeneratorDescriptor
+(
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+        ~/Attack_Objectives_OnlyTestAuto,
+    ]
+
+    ScalingGeneratorList =
+    [
+        ~/Attack_Objectives_OnlyTestAuto,
+        ~/Attack_Objectives_OnlyTestAuto,
+        ~/Attack_Objectives_OnlyTestAuto,
+        ~/Attack_Objectives_OnlyTestAuto,
+        ~/Attack_Objectives_OnlyTestAuto,
+        ~/Attack_Objectives_OnlyTestAuto,
+    ]
+)
+

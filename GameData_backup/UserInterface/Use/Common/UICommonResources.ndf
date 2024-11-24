@@ -1,0 +1,188 @@
+template InterfaceSound
+[
+    FileName  : string
+] is TSoundDescriptor
+(
+    SoundSettings = $/SoundSettings/HUD_SoundSettings
+    TheSoundStream = TSoundStream ( FileName = <FileName> )
+)
+
+//=======================================================================================================================
+// SOUNDS DATABASE
+
+ButtonClickSound is InterfaceSound( FileName = "GameData:/Assets/Sounds/Hud/mouse.wav" )
+ClickSound_folder is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/folder.wav" )
+ClickSound_page is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/folder2.wav" )
+ClickSound_folder3 is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/folder3.wav" )
+ClickSound_computer is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/computer.wav" )
+ClickSound_boutonFilter is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/boutonFilter.wav" )
+ClickSound_boutonCountry is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/boutonCountry.wav" )
+ClickSound_boutonSide is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/boutonSide.wav" )
+ClickSound_boutonRole is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/boutonRole.wav" )
+ClickSound_focusHub is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/focusHub.wav" )
+ClickSound_whoosh is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/whoosh.wav" )
+ClickSound_keyboard is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Keyboard.wav" )
+ClickSound_RadioBlip is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Radio_Blip.wav" )
+ClickSound_Back is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_back.wav" )
+ClickSound_NotepadSweep is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Notepad_sweep.wav" )
+ClickSound_PaperSweep is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Paper_sweep.wav" )
+ClickSound_BitchingBetty is InterfaceSound( FileName = "GameData:/Assets/Sounds/Hud/AirRaid.wav" )
+ClickSound_Frequency_search is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Frequency_search.wav" )
+ClickSound_Over_And_Out_Radio_Effect is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Over_And_Out.wav" )
+ClickSound_Over_And_Out_Radio_Effect_2 is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Over_And_Out_2.wav" )
+ClickSound_Over_And_Out_Radio_Effect_3 is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Over_And_Out_3.wav" )
+ClickSound_Over_And_Out_Radio_Effect_4 is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Over_And_Out_4.wav" )
+ClickSound_Add_Card is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Add_Card.wav" )
+ClickSound_Remove_Card is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Remove_Card.wav" )
+ClickSound_Change_Selector is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/Selector_Change.wav" )
+
+HoverSound_hub_armory is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_armory.wav" )
+HoverSound_hub_armory_exit is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_armory_exit.wav" )
+HoverSound_hub_mod is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_mod.wav" )
+HoverSound_hub_Enter_multi is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_multi_enter.wav" )
+HoverSound_hub_multi is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_multi.wav" )
+HoverSound_hub_solo is InterfaceSound( FileName = "GameData:/Assets/Sounds/OutGame/hub_solo.wav" )
+
+NoSound is InterfaceSound( FileName = "GameData:/Assets/Sounds/InGame/Silence.ogg" )
+
+//=======================================================================================================================
+// SOUND EVENTS
+
+// General
+SoundEvent_CheckBoxTick                     is ButtonClickSound
+SoundEvent_OpenCloseWarchat                 is ClickSound_RadioBlip
+SoundEvent_TreeLineButtonSound              is ClickSound_Remove_Card // Currently used for steelman Order of battle tree view
+SoundEvent_LDHintButton                     is ClickSound_Over_And_Out_Radio_Effect_3 //ClickSound_boutonCountry //ClickSound_RadioBlip
+
+// Main menu
+SoundEvent_EnterArmory                      is HoverSound_hub_armory
+SoundEvent_EnterMods                        is HoverSound_hub_mod
+SoundEvent_EnterMulti                       is HoverSound_hub_Enter_multi
+SoundEvent_EnterSolo                        is HoverSound_hub_solo
+SoundEvent_EnterOptions                     is ClickSound_folder
+SoundEvent_BackToMainMenu                   is ClickSound_Back
+SoundEvent_BackToMainMenuFromArmory         is HoverSound_hub_armory_exit
+SoundEvent_QuitGame                         is ClickSound_boutonFilter
+
+// Options
+SoundEvent_OptionsSwitchCategory            is ClickSound_page
+
+// Profile
+SoundEvent_CloseProfile                     is ClickSound_folder3
+SoundEvent_ProfileSwitchTab                 is ClickSound_page
+SoundEvent_MainMenuOpenProfile              is ClickSound_folder
+SoundEvent_LeaderboardViewProfile           is ClickSound_folder
+
+// Login menu
+SoundEvent_LoginMenuStandardButton          is ClickSound_keyboard
+SoundEvent_LoginMenuSecondaryButton         is ClickSound_boutonFilter
+
+// Solo menu
+SoundEvent_EnterSoloTutorial                is ClickSound_NotepadSweep
+SoundEvent_EnterSoloCampaign                is ClickSound_NotepadSweep
+SoundEvent_EnterSoloSkirmish                is ClickSound_folder
+SoundEvent_EnterSoloChallenge               is ClickSound_NotepadSweep
+SoundEvent_EnterSoloLoad                    is ClickSound_folder
+SoundEvent_SaveLoadSwitchTab                is ClickSound_page
+SoundEvent_SelectTutorialOrChallenge        is ClickSound_PaperSweep
+SoundEvent_SoloNavigationButton             is ClickSound_Remove_Card //ButtonClickSound //ClickSound_PaperSweep
+
+// Multi menu
+SoundEvent_MultiClickJoinWithCode           is ClickSound_keyboard
+SoundEvent_MultiClickJoinGame               is ClickSound_folder
+SoundEvent_MultiClickSpectate               is HoverSound_hub_Enter_multi
+SoundEvent_MultiClickRefresh                is ClickSound_Frequency_search
+SoundEvent_MultiClickShowLobby              is ClickSound_folder
+SoundEvent_MultiClickHostGame               is ClickSound_keyboard
+SoundEvent_MultiClickRankedGame             is ClickSound_keyboard
+SoundEvent_MultiClickLoadGame               is ClickSound_folder
+SoundEvent_MultiCreateLobby                 is ClickSound_folder
+SoundEvent_MultiLaunchRanked                is ClickSound_BitchingBetty
+SoundEvent_LeaderboardAddFriend             is HoverSound_hub_mod
+
+// Showroom
+SoundEvent_ShowHideUnitInfoSheet            is ClickSound_NotepadSweep
+SoundEvent_ArmorySwitchCategory             is ClickSound_boutonRole
+SoundEvent_ArmorySelectRole                 is ClickSound_boutonRole
+SoundEvent_ArmorySelectAlliance             is ClickSound_boutonSide
+SoundEvent_ArmorySelectCountry              is ClickSound_boutonCountry
+SoundEvent_ArmorySelectDivision             is ClickSound_boutonFilter
+SoundEvent_DeckEditorShowHideUnitsPanel     is ClickSound_NotepadSweep
+SoundEvent_DeckEditorSwitchCategory         is ClickSound_PaperSweep
+SoundEvent_DeckEditorAddUnit                is ClickSound_Add_Card
+SoundEvent_DeckEditorRemoveUnit             is ClickSound_Remove_Card
+SoundEvent_DeckEditorSetUnitXP              is ClickSound_Change_Selector
+SoundEvent_SmartGroupsSwitchCompany         is ClickSound_PaperSweep
+SoundEvent_SmartGroupsShowHidePanel         is ClickSound_NotepadSweep
+SoundEvent_AddUnitToCombatGroup             is ClickSound_Add_Card
+SoundEvent_RemoveUnitFromCombatGroup        is ClickSound_Remove_Card
+
+// Battlegroups panel
+SoundEvent_OpenBattlegroupsList             is ClickSound_folder
+SoundEvent_OpenImportDeckModal              is ClickSound_keyboard
+SoundEvent_OpenCreateDeckModal              is ClickSound_keyboard
+SoundEvent_CloseDeckList                    is ClickSound_folder3
+SoundEvent_EditDeck                         is ClickSound_keyboard
+SoundEvent_ViewDeck                         is ClickSound_folder
+SoundEvent_RenameDeck                       is ClickSound_keyboard
+SoundEvent_RemoveDeck                       is HoverSound_hub_mod
+SoundEvent_CopyDeck                         is HoverSound_hub_solo
+SoundEvent_ExportDeck                       is ClickSound_computer
+SoundEvent_SaveDeck                         is HoverSound_hub_solo
+SoundEvent_AutofillDeck                     is ClickSound_computer
+SoundEvent_SortDeck                         is ClickSound_computer
+SoundEvent_CombatGroupUnitAmount            is ClickSound_Change_Selector
+
+// Lobby
+SoundEvent_SelectDeck                       is ClickSound_folder3
+SoundEvent_OpenDeckList                     is ClickSound_folder
+SoundEvent_OpenNewSlot                      is HoverSound_hub_Enter_multi
+SoundEvent_OpenOptionDropdown               is ClickSound_Change_Selector
+SoundEvent_SelectOption                     is ClickSound_Change_Selector
+
+// Steelman
+SoundEvent_SteelmanNextTurn                 is ClickSound_keyboard //ClickSound_Frequency_search //ClickSound_RadioBlip
+SoundEvent_SteelmanCampaignStatus           is ClickSound_NotepadSweep
+SoundEvent_SteelmanOrderOfBattle            is ClickSound_NotepadSweep
+SoundEvent_SteelmanCasualtiesList           is ClickSound_NotepadSweep
+SoundEvent_SteelmanChat                     is NoSound
+SoundEvent_SteelmanGameSpeed                is ClickSound_boutonSide //ClickSound_Change_Selector
+SoundEvent_SteelmanPawnCombatGroup          is ClickSound_Add_Card //ClickSound_page
+SoundEvent_SteelmanPanelButton              is ClickSound_PaperSweep //ClickSound_page
+SoundEvent_SteelmanReinforcementsButton     is ClickSound_Change_Selector //ClickSound_NotepadSweep
+SoundEvent_SteelmanReinforcementsDayButton  is ClickSound_Change_Selector
+SoundEvent_SteelmanOOBLine                  is ClickSound_Add_Card // See 'SoundEvent_TreeLineButtonSound' as well
+SoundEvent_SteelmanOOBAllianceSwitch        is ClickSound_Change_Selector
+SoundEvent_SteelmanAirDeny                  is NoSound // Branché dans le vide
+SoundEvent_SteelmanChoiceButton             is ClickSound_Over_And_Out_Radio_Effect_2 // Scenario choice large buttons (e.g. choosing new troops)
+SoundEvent_SteelmanReinforcementsPawnButton is ClickSound_Change_Selector //ClickSound_boutonRole //ClickSound_Add_Card
+
+
+// Steelman - Attack preparation
+SoundEvent_SteelmanAttackPreparationButton  is ClickSound_Over_And_Out_Radio_Effect_2
+SoundEvent_SteelmanAddUnitOpenList          is ClickSound_Add_Card
+SoundEvent_SteelmanAttackPrepareAddUnit     is ClickSound_Over_And_Out_Radio_Effect //ClickSound_Add_Card
+SoundEvent_SteelmanAttackPrepareRemoveUnit  is ClickSound_Remove_Card
+SoundEvent_SteelmanTacticPrepChangeTeam     is ClickSound_Change_Selector //ClickSound_page
+SoundEvent_SteelmanTacticPrepBack           is ClickSound_Back //ClickSound_folder
+SoundEvent_SteelmanTacticPrepStart          is ClickSound_Over_And_Out_Radio_Effect_4 //ClickSound_RadioBlip //ClickSound_keyboard
+SoundEvent_SteelmanTacticShowMap            is NoSound
+SoundEvent_SteelmanTacticCloseMap           is NoSound
+
+// Steelman - Unit actions "cube action" (like 'Deploy AA')
+// -> For button click, modify directly CubeActionStrategicButtonDescriptor.ndf
+// -> For action validation (like clicking somewhere on the map for Air interdiction confirmation), we'll se later if we do it
+
+//=======================================================================================================================
+
+UICommonResource is TUICommonResources
+(
+    DistortTextureDrawer            = $/UserInterface/UIDistortTextureDrawer
+
+    UniformDrawer                   = $/UserInterface/UIUniformDrawer
+    UniformAntiAliasedDrawer        = $/UserInterface/UIUniformAntiAliasedDrawer
+
+    VideoDrawer                     = $/UserInterface/UIVideoDrawer
+
+    TextureDrawer                   = "ColorMultiply"
+)

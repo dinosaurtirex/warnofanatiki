@@ -1,0 +1,11 @@
+// Enum TUnitMovingType
+EUnitMovingType is TBaseClass
+(
+    Invalid                      is 0
+    Infantry                     is 1
+    AllTerrainWheel              is 2
+    Track                        is 3
+    Flying                       is 4
+    AllTerrainWheelAmphibious    is 5
+    TrackAmphibious              is 6
+)

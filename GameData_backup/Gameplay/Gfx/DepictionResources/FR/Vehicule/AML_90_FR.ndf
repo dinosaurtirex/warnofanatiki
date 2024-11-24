@@ -1,0 +1,14 @@
+export Modele_AML_90_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90/AML_90.fbx'
+)
+
+export Modele_AML_90_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/AML_90_MID/AML_90_MID.fbx'
+)
+
+export Modele_AML_90_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/LODS/AML_90_LOW.fbx'
+)

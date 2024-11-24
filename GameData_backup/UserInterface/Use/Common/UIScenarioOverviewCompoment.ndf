@@ -1,0 +1,29 @@
+template ScenarioOverviewComponent
+[
+    ElementName : string,
+    CommandPointsSize : float = 30.0,
+    AlignOnTop : bool = false,
+] is TUISpecificScenarioMapOverviewComponentDescriptor
+(
+    ElementName = <ElementName>
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 1.0]
+    )
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+    UniformAntiAliasedDrawer = $/UserInterface/UIUniformAntiAliasedDrawer
+
+    AreaDrawingLineWidth = 4.0
+
+    PlayerColorByAllianceStyle = MAP
+    [
+        (EAllianceStyle/BLUFOR, PlayerColor/Bleu),
+        (EAllianceStyle/REDFOR, PlayerColor/Rouge)
+    ]
+
+    CommandPointsTypefaceToken = "IBM"
+    CommandPointsParagraphStyle = paragraphStyleTextCenter
+    CommandPointsSize = <CommandPointsSize>
+    AlignOnTop = <AlignOnTop>
+)

@@ -1,0 +1,17 @@
+export Modele_DCA_Rapier_FSA_UK is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/DCA/Towed_Rapier/Towed_Rapier.fbx'
+)
+
+export Modele_DCA_Rapier_FSA_UK_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/DCA/Towed_Rapier/Towed_Rapier.fbx'
+)
+
+export Modele_DCA_Rapier_FSA_UK_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/UK/DCA/Towed_Rapier/Towed_Rapier.fbx'
+)
+
+
+

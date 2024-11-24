@@ -1,0 +1,119 @@
+// Ne pas éditer, ce fichier est généré par DistrictCadavreDescriptorFileWriter_Specific
+
+
+export Descriptor_UnitCadavre_Big_District is TEntityDescriptor(
+    DescriptorId       = GUID:{2387bae3-7504-42c3-948d-9fa745ef79a6}
+    ClassNameForDebug  = 'CadavreBig_District'
+    ModulesDescriptors =
+    [
+        TTypeUnitModuleDescriptor
+        (
+        ),
+        ~/BuildingTagsModuleDescriptor,
+        ~/DistrictFlagsModuleDescriptor,
+        ~/DistrictCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/DebugModuleDescriptor,
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 1
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        BuildingCadavreModuleDescriptor
+        (
+            CadavreDuration = $/GFX/Unit/CadavreDurationApresFeu_Batiment
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_District_Big_District/ApparenceModel,
+            ]
+        ),
+        ~/Descriptor_District_Big_District/ApparenceModel,
+    ]
+)
+export Descriptor_UnitCadavre_HLM_District is TEntityDescriptor(
+    DescriptorId       = GUID:{72eb94a2-0963-444d-8f8f-3c693f4c422e}
+    ClassNameForDebug  = 'CadavreHLM_District'
+    ModulesDescriptors =
+    [
+        TTypeUnitModuleDescriptor
+        (
+        ),
+        ~/BuildingTagsModuleDescriptor,
+        ~/DistrictFlagsModuleDescriptor,
+        ~/DistrictCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/DebugModuleDescriptor,
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 1
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        BuildingCadavreModuleDescriptor
+        (
+            CadavreDuration = $/GFX/Unit/CadavreDurationApresFeu_Batiment
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_District_HLM_District/ApparenceModel,
+            ]
+        ),
+        ~/Descriptor_District_HLM_District/ApparenceModel,
+    ]
+)
+export Descriptor_UnitCadavre_Mid_District is TEntityDescriptor(
+    DescriptorId       = GUID:{b48f05b1-cc13-4d3b-ace2-c5fb0062c44c}
+    ClassNameForDebug  = 'CadavreMid_District'
+    ModulesDescriptors =
+    [
+        TTypeUnitModuleDescriptor
+        (
+        ),
+        ~/BuildingTagsModuleDescriptor,
+        ~/DistrictFlagsModuleDescriptor,
+        ~/DistrictCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/DebugModuleDescriptor,
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 1
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        BuildingCadavreModuleDescriptor
+        (
+            CadavreDuration = $/GFX/Unit/CadavreDurationApresFeu_Batiment
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_District_Mid_District/ApparenceModel,
+            ]
+        ),
+        ~/Descriptor_District_Mid_District/ApparenceModel,
+    ]
+)
+export Descriptor_UnitCadavre_Small_District is TEntityDescriptor(
+    DescriptorId       = GUID:{8ba7a9ce-1db8-4d75-8420-c43e92fa6ef3}
+    ClassNameForDebug  = 'CadavreSmall_District'
+    ModulesDescriptors =
+    [
+        TTypeUnitModuleDescriptor
+        (
+        ),
+        ~/BuildingTagsModuleDescriptor,
+        ~/DistrictFlagsModuleDescriptor,
+        ~/DistrictCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/DebugModuleDescriptor,
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 1
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        BuildingCadavreModuleDescriptor
+        (
+            CadavreDuration = $/GFX/Unit/CadavreDurationApresFeu_Batiment
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_District_Small_District/ApparenceModel,
+            ]
+        ),
+        ~/Descriptor_District_Small_District/ApparenceModel,
+    ]
+)

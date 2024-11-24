@@ -1,0 +1,17 @@
+export Modele_Mortier_2B14_82mm_DShV_SOV is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_2B14_82mm_SOV
+)
+
+export Modele_Mortier_2B14_82mm_DShV_SOV_MID is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_2B14_82mm_SOV_MID
+)
+
+export Modele_Mortier_2B14_82mm_DShV_SOV_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_Mortier_2B14_82mm_SOV_LOW
+)
+
+
+

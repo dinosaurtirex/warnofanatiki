@@ -1,0 +1,19 @@
+export Modele_F4E_Phantom_II_HE_US is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F4E_Phantom_II/F4E_Phantom_II.fbx'
+)
+
+export Modele_F4E_Phantom_II_HE_US_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F4E_Phantom_II_MID/F4E_Phantom_II_MID.fbx'
+)
+
+export Modele_F4E_Phantom_II_HE_US_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/LODS/F4E_Phantom_II_LOW.fbx'
+)
+
+export Modele_F4E_Phantom_II_HE_US_train is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/US/Avion/F4E_Phantom_II/F4E_Phantom_II_train.fbx'
+)

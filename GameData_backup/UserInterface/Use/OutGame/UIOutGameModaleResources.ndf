@@ -1,0 +1,392 @@
+MagnifiableModaleContentWidth is 848 - 2 * MagnifiableMarginForContent
+
+ModaleWindowFrame is SpecificModalWindow
+(
+)
+
+// Modal needs to be updated to WARNO style when it will be possible to show it
+ModaleWindowFrameWithTexture is SpecificModaleWindowFrame
+(
+    UniqueName = 'ModaleWindowFrameWithTexture'
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight= [1335.0, 0.0]
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+
+    TitleToken = ''
+    ButtonList = []
+
+    FirstMargin = TRTTILength( Magnifiable = 32.0 )
+    LastMargin = TRTTILength( Magnifiable = 32.0 )
+
+    ContentMagnifiableWidthHeight = [0.0, 760.0]
+    ContentComponents =
+    [
+        BUCKTextureDescriptor
+        (
+            ElementName = "ScreenTexture"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [1274,720]
+                AlignementToFather = [0.5,0]
+                AlignementToAnchor = [0.5,0]
+                MagnifiableOffset = [0.0, -40.0]
+            )
+
+            Components =
+            [
+                BUCKButtonDescriptor
+                (
+                    ElementName = "ScreenTextureButton"
+                    ComponentFrame = TUIFramePropertyRTTI
+                    (
+                        RelativeWidthHeight = [1.0, 1.0]
+                    )
+                )
+            ]
+        ),
+        BUCKTextDescriptor
+        (
+            ElementName = "ScreenBody"
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                MagnifiableWidthHeight = [1274.0, 0.0]
+                AlignementToFather  = [0.5,0]
+                AlignementToAnchor  = [0.5,0]
+                MagnifiableOffset = [0,700]
+            )
+
+            ParagraphStyle = ~/paragraphStyleTextCenter
+            TextStyle = "Default"
+
+            HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
+            VerticalFitStyle = ~/FitStyle/FitToContent
+
+            BigLineAction   = ~/BigLineAction/MultiLine
+            TextColor       = "Blanc"
+            TextSize        = "FenetreDLC/Corps"
+            TextDico        = ~/LocalisationConstantes/dico_interface_outgame
+
+            TypefaceToken   = "UIMainFont"
+        ),
+    ]
+
+)
+
+ModaleWindowResourceForPrivacyPolicy is SpecificModalWindow
+(
+    TitleToken = "RGPD_TITLE"
+    ContentMagnifiableWidthHeight = [0.0, 560.0]
+
+    ButtonList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalButton
+            (
+                ElementName = "ConfirmButton"
+                TextToken = "BTN_ACCEPT"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                IsFilled = true
+            )
+        ),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKSpecificScrollingContainerDescriptor
+            (
+                ElementName = "ScrollingContainer"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [800.0, 540.0]
+                    AlignementToFather = [0.5, 0.0]
+                    AlignementToAnchor = [0.5, 0.0]
+                )
+
+                ExternalScrollbar = true
+                HasVerticalScrollbar = true
+
+                VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [7.0, 0.0]
+                    MagnifiableOffset = [5.0, 0.0]
+                    AlignementToFather = [1.0, 0.0]
+                    AlignementToAnchor = [0.0, 0.0]
+                )
+
+                Components =
+                [
+                    BUCKTextDescriptor
+                    (
+                        ElementName = "BodyPPModal"
+
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [ 1.0, 0.0 ]
+                        )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Left
+                            VerticalAlignment = UIText_VerticalCenter
+                            BigWordAction = ~/BigWordAction/BigWordNewLine
+                            InterLine = 0
+                        )
+
+                        TextStyle = "Default"
+
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle = ~/FitStyle/FitToContent
+
+                        BigLineAction = ~/BigLineAction/MultiLine
+
+                        TextSize = "StandardTextInModal"
+                        TextColor = "Blanc"
+
+                        TextToken = "RGPD_BODYE"
+                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                        TypefaceToken = "Liberator"
+                    )
+                ]
+            )
+        ),
+        BUCKListElementSpacer(Magnifiable = 20.0)
+    ]
+)
+
+// Modal needs to be updated to WARNO style when it will be possible to show it
+ModaleWindowResourceForOutdatedMods is SpecificModaleWindowFrame
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [848.0, 0.0]
+        AlignementToAnchor = [0.5, 0.5]
+        AlignementToFather = [0.5, 0.5]
+    )
+
+    ContentRelativeWidthHeight = [1.0, 0.0]
+    ContentMagnifiableWidthHeight = [0.0, 500.0]
+    TitleToken = "WARNING"
+    ButtonList =
+    [
+        BUCKListElementDescriptor( ComponentDescriptor = ~/OkButton ),
+    ]
+
+    ContentComponents =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 0.0]
+            )
+
+            Axis = ~/ListAxis/Vertical
+            BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromFrameProperty
+            InterItemMargin = TRTTILength( Magnifiable = 10.0 )
+            LastMargin = TRTTILength( Magnifiable = 10.0 )
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [700.0 , 0.0]
+                            AlignementToAnchor = [0.5, 0.0]
+                            AlignementToFather = [0.5, 0.0]
+                        )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Center
+                            VerticalAlignment = UIText_VerticalCenter
+                        )
+
+                        TextStyle = "Default"
+
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        VerticalFitStyle = ~/FitStyle/FitToContent
+
+                        BigLineAction = ~/BigLineAction/MultiLine
+
+                        TextSize = "StandardTextInModal"
+                        TextColor = "Blanc"
+
+                        TextToken = "SR_MSGMOUT"
+                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                        TypefaceToken = "Liberator"
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ExtendWeight = 1.0
+                    ComponentDescriptor = BUCKSpecificScrollingContainerDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            RelativeWidthHeight = [1.0, 1.0]
+                        )
+
+                        HasVerticalScrollbar = true
+
+                        Components =
+                        [
+                            BUCKRackDescriptor
+                            (
+                                ElementName = 'ListOutDatedMods'
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    AlignementToAnchor = [0.5, 0.0]
+                                    AlignementToFather = [0.5, 0.0]
+                                )
+
+                                Axis = ~/ListAxis/Vertical
+                                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+
+                                FirstMargin = TRTTILength( Magnifiable = 16.0 )
+                                InterItemMargin = TRTTILength( Magnifiable = 2.0 )
+
+                                BladeDescriptor = BUCKTextDescriptor
+                                (
+                                    ElementName = "OutdatedModsText"
+
+                                    TextStyle = "Default"
+
+                                    HorizontalFitStyle = ~/FitStyle/FitToContent
+                                    VerticalFitStyle = ~/FitStyle/FitToContent
+
+                                    BigLineAction = ~/BigLineAction/MultiLine
+
+                                    TextSize = "StandardTextInModal"
+                                    TextColor = "Blanc"
+
+                                    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                                    TypefaceToken = "Liberator"
+                                )
+                            )
+                        ]
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+ModaleButtonListDescriptor is BUCKListDescriptor
+(
+    InterItemMargin = TRTTILength(Magnifiable = 20.0)
+    Axis = ~/ListAxis/Horizontal
+)
+
+ModaleButton is SpecificModalButton
+(
+    ElementName = "ModaleButton"
+    HintableAreaElementName = "HintableAreaElement"
+    IsFilled = false
+)
+
+OkButton is SpecificModalButton
+(
+    ElementName = "OkButton"
+    HintableAreaElementName = "HintableAreaElement"
+    TextToken = "BTN_OK"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    IsFilled = true
+)
+
+ModaleConfirmButton is SpecificModalButton
+(
+    ElementName = "ModaleConfirmButton"
+    HintableAreaElementName = "HintableAreaElement"
+    TextToken = "BTN_CONFIR"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    IsFilled = true
+)
+
+ModaleConfirmButtonAt14 is SpecificModalButton
+(
+    ElementName = "ModaleConfirmButton"
+    HintableAreaElementName = "HintableAreaElement"
+    TextToken = "BTN_CONFIR"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+    IsFilled = true
+    TextSizeToken = "14"
+)
+
+ModaleCancelButton is SpecificModalButton
+(
+    ElementName = "ModaleCancelButton"
+    HintableAreaElementName = "HintableAreaElement"
+    TextToken = "BTN_CANCEL"
+    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
+    IsFilled = false
+)
+
+private RenameEditableTextDescriptor is BUCKEditableTextInputFieldDescriptor
+(
+    ElementName = 'EditableText'
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [600.0, 35.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+)
+
+private RenameModal is SpecificModalWindow
+(
+    ButtonList =
+    [
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalConfirmButton),
+        BUCKListElementDescriptor(ComponentDescriptor = SpecificModalCancelButton)
+    ]
+
+    ElementsList =
+    [
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/RenameEditableTextDescriptor
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = SpecificModalErrorText
+        )
+    ]
+)
+
+ModaleResource is TUISpecificOutGameModaleResource
+(
+    ErrorText          = ~/SpecificModalErrorText
+    ModaleContentWidth = ~/MagnifiableModaleContentWidth
+    ModaleWindow       = ~/ModaleWindowFrame
+    ModaleText         = SpecificModalText()
+    ModaleButtonList   = ~/ModaleButtonListDescriptor
+    ModaleButton       = ~/ModaleButton
+    ModaleConfirmButton = ~/ModaleConfirmButton
+    ModaleCancelButton = ~/ModaleCancelButton
+    ModaleEditableText = ~/RenameEditableTextDescriptor
+
+    ModaleWindowResourceForPrivacyPolicy = ~/ModaleWindowResourceForPrivacyPolicy
+
+    ModaleWindowResourceForOutdatedMods = ~/ModaleWindowResourceForOutdatedMods
+    ModaleRename = ~/RenameModal
+
+    ModaleWindowResourceForMissingDLCs = ~/ModaleWindowFrameWithTexture
+    ModaleButtonResourceForMissingDLCs = ~/ModaleButton
+    ModaleConfirmButtonResourceForMissingDLCs = ~/ModaleConfirmButtonAt14
+    ModaleCancelButtonResourceForMissingDLCs = ~/ModaleCancelButton
+)

@@ -1,0 +1,97 @@
+RenderLayersManager_UIDebugConsole is TUIRenderLayersManager
+(
+    RenderLayerArray = $/M3D/Scene/Scene_2D_AlwaysOnTopInterface/LayerArray_UIDebug
+)
+
+UILayer_UIDebugConsole is TUILayer
+(
+    UserInputLayer = $/M3D/Input/UserInputLayerHandler/DEBUG_GAME_InputLayer
+    Scene = $/M3D/Scene/Scene_2D_AlwaysOnTopInterface
+    RenderLayersManager = ~/RenderLayersManager_UIDebugConsole
+)
+
+UIDebugConsoleDescriptor is TUIDebugConsoleDescriptor
+(
+    UniqueName = "GameDebugConsoleName"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.3]
+        RelativeOffset = [0, -1.0]
+    )
+
+    IsClippable = true
+
+    HasBackground = true
+    BackgroundBlockColorToken = "Console/Background"
+
+    HasBorder = true
+    BorderLineColorToken = "Console/Border"
+
+    UniformDrawer = $/UserInterface/UIUniformDrawer
+
+    Components =
+    [
+        BUCKSensibleAreaDescriptor
+        (
+            ElementName = "AllConsoleSensibleArea"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [1.0, 1.0]
+            )
+        ),
+    ]
+
+    TextSize = 14.0
+    TextColor = [255,255,255, 255]
+    InfoTextColor = [125,175,255,255]
+    SecondaryInfoTextColor = [125,125,255,255]
+    SuccessTextColor = [0,255,0,255]
+    FailureTextColor = [255,0,0,255]
+    TextSelectionColor = [0,0,0,255]
+    SelectionColor = [255,255,255,255]
+    SelectionColorNoFocus = [128,128,128,255]
+    MaxNumberOfCharacters = 140
+    TextPosPixel = [1.0,1.0]
+    TextPosMagnifiable = [5.0, 0.0]
+    TextPosRelative = [0.0,0.5]
+    TextWidthPixel = 0.0
+    TextWidthMagnifiable = 0.0
+    TextWidthRelative = 0.0
+    TextMarginMagnifiable = [5.0,0.0]
+    MinFrameRelativeWidthHeight = [1.0,1.0]
+
+    TextStyle = TUIFormattedTextStyle
+    (
+        TextStyle = TTextStyle
+        (
+            ColorBottom = [255, 255, 255, 255]
+            ColorUp     = [255, 255, 255, 255]
+            ColorStroke = [  0,   0,   0, 255]
+            Stroke = false
+            FontSize = 1
+        )
+        ParagraphStyle = TParagraphStyle
+        (
+            Alignment = UIText_Left
+            VerticalAlignment = UIText_Up
+        )
+        Typeface = $/M3D/Typefaces/Typeface_Debug
+    )
+
+    SpeedAnimRatio = 0.1
+)
+
+UIDebugConsoleResources is TUIDebugConsoleResources
+(
+    Handler = $/UI/ResourcesHandler/DebugConsoleResourcesHandler
+
+    DebugConsole = ~/UIDebugConsoleDescriptor
+    UserInputLayer = $/M3D/Input/DEBUG_GLOBAL_InputLayer
+    LayerConsole = ~/UILayer_UIDebugConsole
+    StyleGuide = ~/CommonStyleGuide
+
+    UserInputBinder = $/GameOptionsInterface/UserInputBinder
+    Camera = $/M3D/Misc/CameraPrincipale
+    World3D = $/M3D/Scene/DefaultWorld
+    Scene3D = $/M3D/Scene/Scene_2D_Interface
+)

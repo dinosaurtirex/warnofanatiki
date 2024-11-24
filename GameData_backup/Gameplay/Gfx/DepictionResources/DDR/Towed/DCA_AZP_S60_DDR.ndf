@@ -1,0 +1,18 @@
+export ModelFile_DCA_AZP_S60_DDR is 'GameData:/Assets/3D/Units/DDR/Canon/DCA_AZP_S60/DCA_AZP_S60.fbx'
+export Modele_DCA_AZP_S60_DDR is ModelDescriptor
+(
+    FileName     = ModelFile_DCA_AZP_S60_DDR
+
+)
+
+export ModelFile_DCA_AZP_S60_DDR_MID is 'GameData:/Assets/3D/Units/DDR/Canon/DCA_AZP_S60_MID/DCA_AZP_S60_MID.fbx'
+export Modele_DCA_AZP_S60_DDR_MID is ModelDescriptor
+(
+    FileName     = ModelFile_DCA_AZP_S60_DDR_MID
+)
+
+export ModelFile_DCA_AZP_S60_DDR_LOW is 'GameData:/Assets/3D/Units/DDR/Canon/DCA_AZP_S60_LOW/DCA_AZP_S60_LOW.fbx'
+export Modele_DCA_AZP_S60_DDR_LOW is ModelDescriptor
+(
+    FileName     = ModelFile_DCA_AZP_S60_DDR_LOW
+)

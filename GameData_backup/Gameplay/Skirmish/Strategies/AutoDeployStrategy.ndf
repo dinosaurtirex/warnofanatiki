@@ -1,0 +1,57 @@
+//-------------------------------------------------------------------------
+//----------------------------- STRATEGY ----------------------------------
+//-------------------------------------------------------------------------
+export AutoDeployStrategy is TIAGeneralStrategy
+(
+    StrategyName = "AutoDepAI"
+    FirstGenerator = AutoDeploy_DoNothing
+    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
+    DoNotCancelProduction = true
+    TransitionList =
+    [
+        AutoDeploy_Transition_DoNothingToDeploy,
+        AutoDeploy_Transition_DeployToDoNothing,
+    ]
+)
+
+//-------------------------------------------------------------------------
+//---------------------------- CONDITIONS ---------------------------------
+//-------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+export AutoDeploy_Condition_ToDeploy is TSequenceCondition_AutoDeployFlagValue
+(
+    Value = true
+)
+//-------------------------------------------------------------------------
+export AutoDeploy_Condition_ToDoNothing is TSequenceCondition_AutoDeployFlagValue
+(
+    Value = false
+)
+//-------------------------------------------------------------------------
+//--------------------------- TRANSITIONS ---------------------------------
+//-------------------------------------------------------------------------
+export AutoDeploy_Transition_DoNothingToDeploy is TIAGeneralStrategyTransition
+(
+    Origine = AutoDeploy_DoNothing
+    Condition = AutoDeploy_Condition_ToDeploy
+    Destination = Gen_Phase_Deploiement
+)
+//-------------------------------------------------------------------------
+export AutoDeploy_Transition_DeployToDoNothing is TIAGeneralStrategyTransition
+(
+    Origine = Gen_Phase_Deploiement
+    Condition = AutoDeploy_Condition_ToDoNothing
+    Destination = AutoDeploy_DoNothing
+)
+
+//-------------------------------------------------------------------------
+//------------------------------ PHASES -----------------------------------
+//-------------------------------------------------------------------------
+export AutoDeploy_DoNothing is TSequenceGeneratorDescriptor
+(
+    // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
+    NbMacroActionAllowedToProduceSimultaneous = 9001
+    GeneratorList =
+    [
+    ]
+)

@@ -1,0 +1,17 @@
+export Modele_ZSU_23_Shilka_DDR is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/DCA/ZSU_23_Shilka/ZSU_23_Shilka.fbx'
+)
+
+export Modele_ZSU_23_Shilka_DDR_MID is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/DCA/ZSU_23_Shilka_MID/ZSU_23_Shilka_MID.fbx'
+)
+
+export Modele_ZSU_23_Shilka_DDR_LOW is ModelDescriptor
+(
+    FileName     = 'GameData:/Assets/3D/Units/DDR/DCA/LODS/ZSU_23_Shilka_LOW.fbx'
+)
+
+
+

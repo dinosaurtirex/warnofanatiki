@@ -1,0 +1,14 @@
+export Modele_FV4201_Chieftain_Mk11_UK is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Char/Chieftain_Mk11/Chieftain_Mk11.fbx'
+)
+
+export Modele_FV4201_Chieftain_Mk11_UK_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Char/Chieftain_Mk11_MID/Chieftain_Mk11_MID.fbx'
+)
+
+export Modele_FV4201_Chieftain_Mk11_UK_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/UK/Char/LODS/Chieftain_Mk11_LOW.fbx'
+)

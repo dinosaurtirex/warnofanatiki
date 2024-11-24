@@ -1,0 +1,4 @@
+ExperienceTexturesResources is TUICommonExperienceTexturesResources
+(
+    ExpTextures = [ "CommonTexture_Chevron_0", "CommonTexture_Chevron_1", "CommonTexture_Chevron_2", "CommonTexture_Chevron_3"]
+)

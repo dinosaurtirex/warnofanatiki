@@ -1,0 +1,278 @@
+
+TextStyleDefault is TTextStyle
+(
+    ColorBottom = [  0,  0,  0,  0]
+    ColorUp     = [  0,  0,  0,  0]
+    ColorStroke = [  0,  0,  0,  0]
+    Stroke = false
+    FontSize = 1
+)
+
+TextStyleEcranMoniteur is TTextStyle
+(
+    ColorBottom = [200, 255, 200, 255]
+    ColorUp     = [255, 255, 255, 255]
+    ColorStroke = [  30,   255,   80, 65]
+    Stroke = true
+    FontSize = 1
+    StrokeSize = 0.2
+    StrokeHardness = 1
+)
+TextStyleEcranMoniteur_cyan is TTextStyle
+(
+    ColorBottom = [0, 255, 255, 255]
+    ColorUp     = [255, 255, 255, 255]
+    ColorStroke = [  30,   255,   255, 65]
+    Stroke = true
+    FontSize = 1
+    StrokeSize = 0.2
+    StrokeHardness = 1
+)
+TextStyleEcranMoniteur_jaune is TTextStyle
+(
+    ColorBottom = [222,   211,   92, 255]
+    ColorUp     = [255, 255, 255, 255]
+    ColorStroke = [230,215,56, 65]
+    Stroke = true
+    FontSize = 1
+    StrokeSize = 0.2
+    StrokeHardness = 1
+)
+TextStyleEcranMoniteur_solo is TTextStyle
+(
+    ColorBottom = [188, 217, 202, 255]
+    ColorUp     = [255, 255, 255, 255]
+    ColorStroke = [225, 227, 197, 65]
+    Stroke = true
+    FontSize = 1
+    StrokeSize = 0.2
+    StrokeHardness = 1
+)
+
+TextStyleStrokeLabelUnit is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeHardness = 1
+    StrokeSize = 0.56
+    TextThickness = 0.16
+    FontSize = 1
+)
+
+TextStyleFeedbackLabel is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke      = true
+    StrokeSize = 0.40
+    StrokeHardness = 0.30
+    FontSize = 1
+)
+
+TextStyleWithStroke is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    FontSize = 1
+)
+
+TitreChallenge_strokeBig is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 180]
+    Stroke = true
+    //StrokeHardness = 1
+    StrokeSize = 1
+    FontSize = 1
+)
+TextStyleDefaultWithStroke_labelVille is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 180]
+    Stroke = true
+    StrokeSize = 0.916
+    StrokeHardness = 1
+    TextThickness = 0.39
+    FontSize = 1
+)
+
+TextStyleStroke0806 is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.8
+    StrokeHardness = 0.6
+    FontSize = 1
+)
+
+TextStyleStroke080604 is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.8
+    StrokeHardness = 0.6
+    TextThickness = 0.4
+    FontSize = 1
+)
+
+TextStyleStroke0705 is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.7
+    StrokeHardness = 0.5
+    FontSize = 1
+)
+
+TextStyleStroke070535 is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.7
+    StrokeHardness = 0.5
+    TextThickness = 0.35
+    FontSize = 1
+)
+
+TextStyleStroke0503 is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.55
+    StrokeHardness = 0.3
+    FontSize = 1
+)
+
+///////////////////////////////////////////////////////////////////////////////
+
+TextStyleFactoryName is TTextStyle
+(
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp     = [0, 0, 0, 0]
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.75
+    StrokeHardness = 0.7
+    TextThickness = 0.25
+    FontSize = 1
+)
+TextStyleEngagement is TTextStyle
+(
+    ColorBottom     = [  255,   255,   255, 255]
+    ColorUp = [  255,   255,   255, 255]
+    ColorStroke = [  255,   255,   255, 0]
+    Stroke = false
+    StrokeSize = 1
+    StrokeHardness = 0
+    TextThickness = 0.1
+    FontSize = 1
+)
+TextStyleUnlockingPhase is TTextStyle
+(
+    ColorBottom = GrisClair6 //GrisClair
+    ColorUp     = BlancPur
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 0.55
+    StrokeHardness = 0.4
+    TextThickness = 0.3
+    FontSize = 1
+)
+
+TextStyleMouseWidgetTextModule is TTextStyle
+(
+    FontSize = 1
+    ColorBottom = [0, 0, 0, 0]
+    ColorUp = [0, 0, 0, 0]
+    ColorStroke = [0, 0, 0, 255]
+    Stroke = true
+    StrokeSize = 0.99
+    StrokeHardness = 0.84
+    TextThickness = 0.06
+)
+
+TextStyleActivationPoint is TTextStyle
+(
+    ColorBottom = [210,202,191,255]
+    ColorUp     = [233,225,210,255]
+    ColorStroke = [43,35,36,245]
+    Stroke = true
+    StrokeSize = 0.3
+    StrokeHardness = 0.23
+    TextThickness = 0.59
+    FontSize = 1
+)
+
+TextStyleActivationPointTemp is TTextStyle
+(
+    ColorBottom = BleuSelection
+    ColorUp     = BleuSelectionQuasiBlanc
+    ColorStroke = [43,35,36,245]
+    Stroke = true
+    StrokeSize = 0.3
+    StrokeHardness = 0.23
+    TextThickness = 0.59
+    FontSize = 1
+)
+
+TextStylePointAction is TTextStyle
+(
+    ColorBottom = [  125,   125,   125, 255]
+    ColorUp     = BlancPur
+    ColorStroke = [  0,   0,   0, 255]
+    Stroke = true
+    StrokeSize = 1
+    StrokeHardness = 0.96
+    TextThickness = 0.21
+    FontSize = 1
+)
+
+TextStyle_EGWin is TTextStyle
+(
+    ColorBottom = [  200,   200,   200, 255]
+    ColorUp     = [  255,   255,   255, 255]
+    ColorStroke = [  30,   32,   33, 255]
+    Stroke = true
+    StrokeSize = 0.93
+    StrokeHardness = 0.09
+    TextThickness = 0.38
+    FontSize = 1
+)
+
+TextStyle_EGWin2 is TTextStyle
+(
+    ColorBottom = [  255,   234,   0, 255]
+    ColorUp     = [  255,   234,   0, 255]
+    ColorStroke = [  200,   62,   13, 255]
+    Stroke = true
+    StrokeSize = 1
+    StrokeHardness = 0.01
+    TextThickness = 0.38
+    FontSize = 1
+)
+
+TextStyleUpperCase is TTextStyle
+(
+    ColorBottom = [  0,  0,  0,  0]
+    ColorUp     = [  0,  0,  0,  0]
+    ColorStroke = [  0,  0,  0,  0]
+    FontSize = 1.0
+    UpperCase = true
+)

@@ -1,0 +1,377 @@
+//-------------------------------------------------------------------------------------
+
+
+template TemplateDepictionDriver
+[
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+]
+is TemplateDepictionPose
+(
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow = <MeshDescriptorLow>
+    Selector = CommonPilotDepictionSelector
+    Animation = $/GFX/DepictionResources/DriverStand
+)
+
+template TemplateDepictionDriverLSV
+[
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+]
+is TemplateDepictionPose
+(
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow = <MeshDescriptorLow>
+    Selector = CommonPilotDepictionSelector
+    Animation = $/GFX/DepictionResources/DriverLSV
+)
+
+template TemplateDepictionPose
+[
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+    Selector,
+    Animation,
+]
+is TDepictionTemplate
+(
+    ShadowLessInitialValue = true
+    Selector = <Selector>
+    DepictionAlternatives = [
+        TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptorHigh> ),
+        TDepictionDescriptor( SelectorId = [LOD_Low]  MeshDescriptor = <MeshDescriptorLow> ),
+    ]
+
+    Operators = [
+        TCosmeticFreezeSkeletalAnimationOperatorDesc(Animation = <Animation>)
+    ]
+)
+
+template TemplateDepictionPilote
+[
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+]
+is TemplateDepictionPose
+(
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow = <MeshDescriptorLow>
+    Selector = CommonPilotDepictionSelector
+    Animation = $/GFX/DepictionResources/PilotStand
+)
+
+// Ci-dessus les anciennes versions des sous-dépictions pour gérer les sous-dépictions des véhicules et avions, du temps où les dépictions étaient configurées à la main.
+// Ci-dessous les nouvelles versions destinées à être utilisée par le générateur de NDF de dépictions.
+// À terme, l'énorme liste de possibilitées ci-dessus est vouée à disparaitre. On préserve les deux uniquement le temps d'effectuer la transition.
+
+// ----------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------- AVIONS/HÉLICOS -------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------
+
+// IMPORTANT : si vous rajoutez de nouveaux templates de sous-dépictions d'humains dans des avions/helicos,
+// Pensez à le rajouter aussi dans la liste __anchorToSubDepictionTemplate du script DepictionAerialUnitsFileWriter.py.
+
+template SubDepiction_Driver [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriver(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
+
+template SubDepiction_DriverLSV [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriverLSV(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
+
+template SubDepiction_DriverUndeployed [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction
+(
+    Anchors = ['driver']
+    Depiction = TemplateDepictionPose
+    (
+        MeshDescriptorHigh = <MeshDescriptorHigh>
+        MeshDescriptorLow = <MeshDescriptorLow>
+        Selector = HumanVisibleWhenUndeployedSelector
+        Animation = $/GFX/DepictionResources/DriverStand
+    )
+)
+
+template SubDepiction_GunnerDeployed [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction
+(
+    Anchors = ['tireur']
+    Depiction = TemplateDepictionPose
+    (
+        MeshDescriptorHigh = <MeshDescriptorHigh>
+        MeshDescriptorLow = <MeshDescriptorLow>
+        Selector = HumanVisibleWhenDeployedSelector
+        Animation = $/GFX/DepictionResources/GunnerSittingDown
+    )
+)
+
+template SubDepiction_GunnerStandingUpDeployed [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction
+(
+    Anchors = ['tireur']
+    Depiction = TemplateDepictionPose
+    (
+        MeshDescriptorHigh = <MeshDescriptorHigh>
+        MeshDescriptorLow = <MeshDescriptorLow>
+        Selector = HumanVisibleWhenDeployedSelector
+        Animation = $/GFX/DepictionResources/GunnerStandingUp
+    )
+)
+
+template SubDepiction_ServantTemplate
+[
+    Anchor,
+    Selector,
+    AnimationOperator,
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+] is TSubDepiction
+(
+    Anchors = [<Anchor>]
+    Depiction = TDepictionTemplate
+    (
+        Selector = <Selector>
+        DepictionAlternatives = [
+            TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptorHigh> ),
+            TDepictionDescriptor( SelectorId = [LOD_Low]  MeshDescriptor = <MeshDescriptorLow> ),
+        ]
+
+        Operators = [ <AnimationOperator> ]
+    )
+)
+
+template SubDepiction_ServantLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'servant_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanAlwaysVisibleSelector
+    AnimationOperator = DepictionOperator_AnimationServant_Cannon_Left
+)
+template SubDepiction_ServantRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'servant_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanAlwaysVisibleSelector
+    AnimationOperator = DepictionOperator_AnimationServant_Cannon_Right
+)
+template SubDepiction_ATGMServantLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'servant_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanAlwaysVisibleSelector
+    AnimationOperator = DepictionOperator_AnimationServant_ATGM_Left
+)
+template SubDepiction_ATGMServantRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'servant_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanAlwaysVisibleSelector
+    AnimationOperator = DepictionOperator_AnimationServant_ATGM_Right
+)
+template SubDepiction_ServantWalkOnlyLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'servant_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenUndeployedSelector
+    AnimationOperator = DepictionOperator_AnimationServant_Cannon_Left
+)
+template SubDepiction_ServantWalkOnlyRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
+(
+    Anchor = 'servant_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenUndeployedSelector
+    AnimationOperator = DepictionOperator_AnimationServant_Cannon_Right
+)
+
+
+template SubDepiction_GunnerTemplate
+[
+    Anchor,
+    Selector,
+    Animation,
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+] is TSubDepiction
+(
+    Anchors = [<Anchor>]
+    Depiction = TemplateDepictionPose
+    (
+        MeshDescriptorHigh = <MeshDescriptorHigh>
+        MeshDescriptorLow  = <MeshDescriptorLow>
+        Selector = <Selector>
+        Animation = <Animation>
+    )
+)
+template SubDepiction_GunnerIdleOnlyLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    Animation = $/GFX/DepictionResources/GunnerSittingDown
+)
+template SubDepiction_GunnerIdleOnlyRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    Animation = $/GFX/DepictionResources/GunnerSittingDown
+)
+
+template SubDepiction_GunnerLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenAliveSelector
+    Animation = $/GFX/DepictionResources/GunnerSittingDown
+)
+template SubDepiction_GunnerRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenAliveSelector
+    Animation = $/GFX/DepictionResources/GunnerSittingDown
+)
+
+template SubDepiction_GunnerStandingUpIdleOnlyLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    Animation = $/GFX/DepictionResources/GunnerStandingUp
+)
+template SubDepiction_GunnerStandingUpIdleOnlyRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    Animation = $/GFX/DepictionResources/GunnerStandingUp
+)
+
+template SubDepiction_GunnerStandingUpLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenAliveSelector
+    Animation = $/GFX/DepictionResources/GunnerStandingUp
+)
+template SubDepiction_GunnerStandingUpRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_d'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenAliveSelector
+    Animation = $/GFX/DepictionResources/GunnerStandingUp
+)
+
+template SubDepiction_GunnerSittingDown_6U6IdleOnlyLeft [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenDeployedSelector
+    Animation = $/GFX/DepictionResources/GunnerSittingDown_6U6
+)
+
+template SubDepiction_GunnerSittingDown_6U6Left [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_GunnerTemplate
+(
+    Anchor = 'tireur_g'
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow  = <MeshDescriptorLow>
+    Selector = HumanVisibleWhenAliveSelector
+    Animation = $/GFX/DepictionResources/GunnerSittingDown_6U6
+)
+
+template ShowroomSubDepiction_Template
+[
+    Anchor,
+    Animation,
+    MeshDescriptor,
+] is TSubDepiction
+(
+    Anchors = [<Anchor>]
+    Depiction = TDepictionTemplate
+    (
+        Selector = OnlyHighDepictionSelector
+        DepictionAlternatives = [ TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> ) ]
+
+        Operators = [
+            TCosmeticSingleSkeletalAnimationOperatorDesc(Animation = <Animation>)
+        ]
+    )
+)
+
+template ShowroomSubDepiction_ServantLeft [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'servant_g'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/ServantLeftIdle
+)
+
+template ShowroomSubDepiction_ServantRight [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'servant_d'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/ServantRightIdle
+)
+
+template ShowroomSubDepiction_ATGMServantLeft [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'servant_g'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/ServantATGMLeftIdle
+)
+
+template ShowroomSubDepiction_ATGMServantRight [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'servant_d'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/ServantATGMRightIdle
+)
+
+template ShowroomSubDepiction_GunnerLeft [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_g'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/GunnerSittingDown
+)
+
+template ShowroomSubDepiction_GunnerRight [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_d'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/GunnerSittingDown
+)
+
+template ShowroomSubDepiction_GunnerStandingUpLeft [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_g'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/GunnerStandingUp
+)
+
+template ShowroomSubDepiction_GunnerStandingUpRight [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_d'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/GunnerStandingUp
+)
+
+template ShowroomSubDepiction_GunnerSittingDown_6U6_Left [ MeshDescriptor ] is ShowroomSubDepiction_Template
+(
+    Anchor = 'tireur_g'
+    MeshDescriptor = <MeshDescriptor>
+    Animation = $/GFX/DepictionResources/GunnerSittingDown_6U6
+)
+

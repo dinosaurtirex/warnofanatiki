@@ -1,0 +1,14 @@
+export Modele_TRM_2000_supply_FR is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/TRM_2000/TRM_2000.fbx'
+)
+
+export Modele_TRM_2000_supply_FR_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/TRM_2000_MID/TRM_2000_MID.fbx'
+)
+
+export Modele_TRM_2000_supply_FR_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/FR/Vehicule/LODS/TRM_2000_LOW.fbx'
+)

@@ -1,0 +1,136 @@
+// Ne pas éditer, ce fichier est généré par PawnAirportDescriptorFileWriter_Specific
+
+
+export Descriptor_Unit_TestAirport is TEntityDescriptor
+(
+    DescriptorId       = GUID:{ccffdf1a-1ace-4ad7-8b0d-816327e1e54c}
+    ClassNameForDebug  = 'Pawn_TestAirport'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite          = ENationalite/Allied
+            MotherCountry        = 'HON'
+            AcknowUnitType       = ~/TAcknowUnitType_Tank
+            TypeUnitFormation    = 'Building'
+        ),
+        DefaultFlagsModuleDescriptor,
+        ~/BuildingPositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TInfluenceMapModuleDescriptor
+        (
+            InfluenceStrength = 1.0
+            MinimumInfluenceStrength = 1.0
+            StrengthDecayPerSecond = 0.0
+            PreventsDecayInZone = True
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+            ]
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        ~/DebugModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TStrategicSupplierModuleDescriptor
+        (
+            SupplyActionPoint = -1
+        ),
+        ~/PackSignauxModuleDescriptor,
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+            VisionUnitType       = EVisionUnitType/Undefined
+        ),
+        ~/PawnAirportScannerConfigurationDescriptor,
+        TReverseScannerWithIdentificationDescriptor
+        (
+            VisibilityRollRule = TModernWarfareVisibilityRollRule
+            (
+                IdentifyBaseProbability     = 1.0
+                TimeBetweenEachIdentifyRoll = 0.0
+                VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+            )
+        ),
+        ~/StrategicBuildingModuleDescriptor,
+        TStrategicAirportModuleDescriptor(),
+        StrategicUIModuleDescriptor
+        (
+            NameToken ='TAirport'
+            ProdMenuTexture = 'Texture_Button_Pawn_TestAirport'
+        ),
+        TStrategicPositionModuleDescriptor( IsAirport = True ),
+    ]
+)
+export Descriptor_Unit_TestDepotRavitaillement is TEntityDescriptor
+(
+    DescriptorId       = GUID:{68437117-d02d-4f0b-994e-3e9f5dd12a5a}
+    ClassNameForDebug  = 'Pawn_TestDepotRavitaillement'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite          = ENationalite/Allied
+            MotherCountry        = 'HON'
+            AcknowUnitType       = ~/TAcknowUnitType_Tank
+            TypeUnitFormation    = 'Building'
+        ),
+        DefaultFlagsModuleDescriptor,
+        ~/BuildingPositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TInfluenceMapModuleDescriptor
+        (
+            InfluenceStrength = 0.3
+            MinimumInfluenceStrength = 0.0
+            StrengthDecayPerSecond = 0.3
+            PreventsDecayInZone = True
+        ),
+        ~/InfluencePositionModuleDescriptor,
+        ~/InfluenceDataModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+            ]
+        ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        ~/DebugModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TStrategicSupplierModuleDescriptor
+        (
+            SupplyActionPoint = -1
+        ),
+        ~/PackSignauxModuleDescriptor,
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+            VisionUnitType       = EVisionUnitType/Undefined
+        ),
+        ~/PawnAirportScannerConfigurationDescriptor,
+        TReverseScannerWithIdentificationDescriptor
+        (
+            VisibilityRollRule = TModernWarfareVisibilityRollRule
+            (
+                IdentifyBaseProbability     = 1.0
+                TimeBetweenEachIdentifyRoll = 0.0
+                VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+            )
+        ),
+        ~/StrategicBuildingModuleDescriptor,
+        StrategicUIModuleDescriptor
+        (
+            NameToken ='TAirport'
+            ProdMenuTexture = 'Texture_Button_Pawn_TestDepotRavitaillement'
+        ),
+        TStrategicPositionModuleDescriptor( IsAirport = False ),
+    ]
+)

@@ -1,0 +1,14 @@
+export Modele_AIFV_B_50_BEL is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/BEL/APC/AIFV_B_50/AIFV_B_50.fbx'
+)
+
+export Modele_AIFV_B_50_BEL_MID is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/BEL/APC/AIFV_B_50_MID/AIFV_B_50_MID.fbx'
+)
+
+export Modele_AIFV_B_50_BEL_LOW is ModelDescriptor
+(
+    FileName = 'GameData:/Assets/3D/Units/BEL/APC/LODS/AIFV_B_50_LOW.fbx'
+)

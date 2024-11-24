@@ -1,0 +1,3 @@
+export Modele_DCA_M167A2_Vulcan_20mm_Aero_US is ModelDescriptor (FileName = DCA_M167A2_Vulcan_20mm_US)
+export Modele_DCA_M167A2_Vulcan_20mm_Aero_US_MID is ModelDescriptor (FileName = DCA_M167A2_Vulcan_20mm_US_MID)
+export Modele_DCA_M167A2_Vulcan_20mm_Aero_US_LOW is ModelDescriptor (FileName = DCA_M167A2_Vulcan_20mm_US_LOW)
